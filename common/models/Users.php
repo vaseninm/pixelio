@@ -15,7 +15,7 @@ class Users extends EActiveRecord
 
     const ROLE_GUEST = 'guest';
     const ROLE_USER = 'user';
-    const ROLE_ADMIN = 'admin';
+    const ROLE_ADMIN = 'administrator';
 
 	/**
 	 * @return string имя таблицы
