@@ -10,6 +10,7 @@
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
 return array(
+    'language' => 'ru',
 	'preload' => array('log'),
 	'aliases' => array(
 		'frontend' => dirname(__FILE__) . '/../..' . '/frontend',
@@ -25,7 +26,8 @@ return array(
 		'application.controllers.*',
 		'application.extensions.*',
 		'application.helpers.*',
-		'application.models.*'
+		'application.models.*',
+        'vendor.2amigos.yiistrap.helpers.*',
 	),
 	'components' => array(
 		'errorHandler' => array(
@@ -41,6 +43,13 @@ return array(
 				),
 			),
 		),
+        'authManager' => array(
+            'class' => 'PxPhpAuthManager',
+            'defaultRoles' => array('guest'),
+        ),
+        'user'=>array(
+            'class' => 'PxWebUser',
+        ),
 	),
 	'params' => array(
 		// php configuration

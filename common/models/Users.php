@@ -1,9 +1,8 @@
 <?php
 
 /**
- * This is the model class for table "users".
+ * Модель пользователи "users".
  *
- * The followings are the available columns in table 'users':
  * @property integer $id
  * @property string $username
  * @property string $email
@@ -11,10 +10,15 @@
  * @property string $role
  * @property integer $createTime
  */
-class Users extends CActiveRecord
+class Users extends EActiveRecord
 {
+
+    const ROLE_GUEST = 'guest';
+    const ROLE_USER = 'user';
+    const ROLE_ADMIN = 'admin';
+
 	/**
-	 * @return string the associated database table name
+	 * @return string имя таблицы
 	 */
 	public function tableName()
 	{
@@ -22,36 +26,30 @@ class Users extends CActiveRecord
 	}
 
 	/**
-	 * @return array validation rules for model attributes.
+	 * @return array правила валидации
 	 */
 	public function rules()
 	{
-		// NOTE: you should only define rules for those attributes that
-		// will receive user inputs.
 		return array(
 			array('createTime', 'numerical', 'integerOnly'=>true),
 			array('username', 'length', 'max'=>64),
 			array('email, password', 'length', 'max'=>256),
 			array('role', 'length', 'max'=>20),
-			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
 			array('id, username, email, password, role, createTime', 'safe', 'on'=>'search'),
 		);
 	}
 
 	/**
-	 * @return array relational rules.
+	 * @return array зависимости
 	 */
 	public function relations()
 	{
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
 		return array(
 		);
 	}
 
 	/**
-	 * @return array customized attribute labels (name=>label)
+	 * @return array метки
 	 */
 	public function attributeLabels()
 	{
@@ -66,21 +64,10 @@ class Users extends CActiveRecord
 	}
 
 	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
-	 * Typical usecase:
-	 * - Initialize the model fields with values from filter form.
-	 * - Execute this method to get CActiveDataProvider instance which will filter
-	 * models according to data in model fields.
-	 * - Pass data provider to CGridView, CListView or any similar widget.
-	 *
-	 * @return CActiveDataProvider the data provider that can return the models
-	 * based on the search/filter conditions.
+	 * @return CActiveDataProvider датапровайдер для поиска
 	 */
 	public function search()
 	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
-
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
@@ -96,13 +83,51 @@ class Users extends CActiveRecord
 	}
 
 	/**
-	 * Returns the static model of the specified AR class.
-	 * Please note that you should have this exact method in all your CActiveRecord descendants!
-	 * @param string $className active record class name.
-	 * @return Users the static model class
+	 * @param string $className имя класса
+	 * @return Users модель
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
+
+    /**
+     * Фильтр для аунтификации пользователя
+     */
+    public function authenticate($attribute,$params)
+    {
+        if(!$this->hasErrors()) {
+            $this->_identity = new PxUserIdentity($this->username,$this->password);
+            if(!$this->_identity->authenticate())
+                $this->addError('password','Incorrect username or password.');
+        }
+    }
+
+    /**
+     * Логин польщователя
+     * @return boolean удачно ли авторизовался
+     */
+    public function login()
+    {
+        if($this->_identity === null)
+        {
+            $this->_identity = new PxUserIdentity($this->username,$this->password);
+            $this->_identity->authenticate();
+        }
+        if($this->_identity->errorCode === PxUserIdentity::ERROR_NONE)
+        {
+            $duration= 3600*24*1;
+            Yii::app()->user->login($this->_identity,$duration);
+            return true;
+        }
+        else
+            return false;
+    }
+
+    private $_identity;
+
+    protected function afterConstruct() {
+        $this->createTime = time();
+    }
+
 }
