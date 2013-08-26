@@ -1,22 +1,80 @@
+/* Сброс стилей */
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0; /* обнуляем внешние отступы */
+	padding: 0; /* обнуляем внутренние отступы */
+	border: 0; /* убираем бордюры */
+	outline: 0; /* убираем контуры */
+	font-size: 10pt; /* задаем базовый размер шрифта, значение по умолчанию = 16px */
+	vertical-align: baseline; /* устанавливаем базовое вертикальное выравнивание */
+	background: transparent; /* устанавливаем фон прозрачным */
+}
+body {line-height: 1} /* устанавливаем базовую высоту */
+ol, ul {list-style: none} /* убираем маркеры для нумерованных и обычных списков */
+blockquote, q {quotes: none} /* убираем кавычки для цитат */
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: ''; /* убираем */
+	content: none; /* и скрываем генерируемое содержимое */
+}
+:focus {outline: 0} /* убираем контуры вокруг ссылок при фокусе */
+ins {text-decoration: none} /* убираем подчеркивание для вставленного текста */
+del {text-decoration: line-through} /* убираем перечеркивание для удаленного текста */
+table {
+	border-collapse: collapse; /* убираем рамки двойной толщины */
+	border-spacing: 0; /* убираем расстояние между ячейками */
+}
+/* reset webkit search input styles */
+input[type=search] {
+	-webkit-appearance: none;
+	outline: none;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+	display: none;
+}
+/* set image max width to 100% */
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+}
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+figure{	margin: 0; /* обнуляем внешние отступы */
+	padding: 0;}
 
+/* Разметка и стили PIXELIO */
+body{background:#f1f1f1;}
+body{font-family: Tahoma, "Geneva CY", sans-serif;}
+#container{width:1024px;margin:0 auto}
+#container{text-align: justify;text-justify:newspaper}
+#header{position: relative;text-align:center;}
+.logo h1 a{display:block;text-indent: -9999px;height:100px;width:200px;background: url(../img/logo.png) no-repeat;margin:10px auto 0 auto}
+.logo h2 a{display:none;text-indent: -9999px;}
+.topImg img{margin: 10px auto 10px auto;-moz-border-radius: 20px;-webkit-border-radius: 20px;border-radius: 20px}
 
+.clr{clear:both}
 
+div#footer{clear:both;width:100%;text-align:center;}
+div.pagination ul li{display: inline}
+div.pagination ul li.active{color:#333}
+div.pagination ul li.bull{color:#aeaeae}
+div.pagination ul li a{color:#29728e}
+div.pagination ul li a:hover{text-decoration:none}
+div.pagination ul li.active, div.pagination ul li.bull, div.pagination ul li a{font-size:22pt;margin:5px}
+.bottomSpacer{padding:2% 0}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0}
+.clearfix {display: block; zoom: 1}

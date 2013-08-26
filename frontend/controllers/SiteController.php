@@ -3,11 +3,6 @@
  *
  * SiteController class
  *
- * @author Antonio Ramirez <amigo.cobos@gmail.com>
- * @link http://www.ramirezcobos.com/
- * @link http://www.2amigos.us/
- * @copyright 2013 2amigOS! Consultation Group LLC
- * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
 class SiteController extends EController
 {
@@ -29,4 +24,22 @@ class SiteController extends EController
 				$this->render('error', $error);
 		}
 	}
+
+    public function actionProject($name){
+
+        $allowView = array(
+            'about',
+            'flash',
+            'banners',
+            'promo',
+            'sites',
+            'contacts'
+        );
+
+        if (!in_array($name, $allowView)){
+            throw new CHttpException(404);
+        }
+
+        $this->render($name);
+    }
 }

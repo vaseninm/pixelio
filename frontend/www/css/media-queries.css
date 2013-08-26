@@ -1,0 +1,110 @@
+/************************************************************************************
+smaller than 1280
+*************************************************************************************/
+/*@media screen and (max-width: 1280px) {
+	#container {width: 95%;}
+	div#content .itemImg0{width:13%;}
+}*/
+
+/************************************************************************************
+smaller than 1024
+*************************************************************************************/
+@media screen and (max-width: 1024px) {
+	#container {width: 95%;}
+	div#content .itemImg0{width:16%;}
+}
+
+/************************************************************************************
+smaller than 980
+*************************************************************************************/
+@media screen and (max-width: 980px) {
+	div#content .itemImg0{width:20%;}
+}
+
+/************************************************************************************
+smaller than 966
+*************************************************************************************/
+@media screen and (max-width: 966px) {
+	div#content .itemImg0{width:17%;}
+}
+
+/************************************************************************************
+smaller than 800
+*************************************************************************************/
+@media screen and (max-width: 800px) {
+	div#content .itemImg0{width:21%;}
+	
+	.nav{position:absolute; top:0;right:0.5em;width:100%}
+	nav > ul { display: none; }
+	.anchor-link, #mobile-nav { display: block; }
+	nav { width:100%; background: transparent;position:relative}
+	ul.open { 
+		background-color: #F4F4F4;
+	    box-shadow: 2px 2px 3px #444444;
+	    display: block;
+	    list-style: none outside none;
+	    margin: 0;
+	    padding: 0;
+	    position: absolute;
+	    right: 5px;
+	    top: 40px;
+	    width: 40%;
+	    z-index: 500; 
+	}
+	ul.open li { display: block; list-style: none; text-align: center; }
+	ul.open li a { display: block; padding: 20px 10px; border-bottom: 1px solid #ccc; text-decoration: none; }
+	ul.open li a:hover { background-color: #ccc; color: #fff; }
+	
+}
+
+/************************************************************************************
+smaller than 685
+*************************************************************************************/
+@media screen and (max-width: 685px) {
+	.logo h1 a{margin:0px auto}
+	.topImg img{margin:0px auto}
+	div#content .itemImg{width:25%}
+	div#content .itemImg0{width:25%;}
+	ul.open {width:45%}
+}
+
+/************************************************************************************
+smaller than 568
+*************************************************************************************/
+@media screen and (max-width: 568px) {
+	/* disable webkit text size adjust (for iPhone) */
+	html {-webkit-text-size-adjust: none;}
+	.topImg img{-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px}
+	ul.open {width:55%}
+}
+
+/************************************************************************************
+smaller than 480
+*************************************************************************************/
+@media screen and (max-width: 480px) {
+	#header{float:left}
+	.topImg{display:none}
+	.logo{margin-bottom:0.5em}
+	.logo h1 a{margin:0px auto;height:74px;width:200px;}
+	.logo h2 a{display:none}
+	div#content .itemImg{width:30%}
+	div#content .itemImg0{width:30%;}
+	ul.open {width:70%}
+}
+
+/************************************************************************************
+smaller than 320
+*************************************************************************************/
+@media screen and (max-width: 320px) {
+	
+	div#content .itemImg{width:45%}
+	ul.open {width:92%}
+	
+}
+
+/************************************************************************************
+smaller than 140
+*************************************************************************************/
+@media screen and (max-width: 240px) {
+	.logo h1 a{width:115px;height:50px;background: url(../img/logo.png) no-repeat -80px -20px;margin:0}
+}
