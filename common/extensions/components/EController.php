@@ -15,6 +15,7 @@ class EController extends CController
 	public $meta_keywords = array();
 	public $meta_description = array();
 	public $breadcrumbs;
+    public $menu;
 
 
 	/**
