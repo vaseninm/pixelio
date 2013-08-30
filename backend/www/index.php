@@ -16,5 +16,3 @@ Yiinitializr\Helpers\Initializer::create('./../', 'backend', array(
 	__DIR__ .'/../../common/config/env.php',
 	__DIR__ .'/../../common/config/local.php',
 ))->run();
-
-require('./../../common/lib/vendor/yiisoft/yii/framework/yii.php');
