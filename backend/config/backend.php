@@ -37,6 +37,10 @@ return array(
 			'class' => 'bootstrap.components.TbApi',
 		),
 
+        'yiiwheels' => array(
+            'class' => 'yiiwheels.YiiWheels',
+        ),
+
 		'clientScript' => array(
 			'scriptMap' => array(
 				'bootstrap.min.css' => false,

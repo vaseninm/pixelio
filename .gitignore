@@ -18,3 +18,5 @@ console/config/env/dev.php
 console/config/env/prod.php
 .idea/
 common/lib/vendor
+frontend/www/uploads/*
+!.gitkeep
