@@ -12,7 +12,6 @@
         'enableAjaxValidation' => true,
     )); ?>
 
-    <p class="help-block">Fields with <span class="required">*</span> are required.</p>
 
     <?php echo $form->errorSummary($works); ?>
 

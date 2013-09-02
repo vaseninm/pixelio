@@ -9,8 +9,30 @@
  * @copyright 2013 2amigOS! Consultation Group LLC
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
-class SiteController extends EController
+class SiteController extends PxAdminController
 {
+    public function filters()
+    {
+        return array(
+            'accessControl',
+        );
+    }
+
+    public function accessRules()
+    {
+        return array(
+            array('allow',
+                'roles' => array(Users::ROLE_ADMIN),
+            ),
+            array('allow',
+                'actions' => array('login'),
+            ),
+            array('deny',
+                'users' => array('*'),
+            ),
+        );
+    }
+
     public function actionIndex()
     {
         $this->render('index');

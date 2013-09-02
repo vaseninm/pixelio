@@ -21,6 +21,13 @@ return array(
 		'yiiwheels' =>  dirname(__FILE__) . '/../..' . '/common/lib/vendor/2amigos/yiiwheels'
 	),
 
+    'import' => array(
+        'backend.extensions.components.*',
+        'backend.components.*',
+        'backend.helpers.*',
+        'backend.models.*',
+    ),
+
 	// application behaviors
 	'behaviors' => array(),
 
@@ -67,4 +74,18 @@ return array(
 			'errorAction' => 'site/error',
 		)
 	),
+    'params' => array(
+        'adminCategories' => array(
+            array(
+                'title' => 'Пользователи',
+                'desc' => 'В этом разделе можно управлять пользователями, менять их права, имена, пароли, явки...',
+                'controller' => 'users',
+            ),
+            array(
+                'title' => 'Портфолио',
+                'desc' => 'Тут вы сможете управлять вашим замечательным порфтолио. Делайте это грамотно =)',
+                'controller' => 'portfolio',
+            ),
+        ),
+    ),
 );

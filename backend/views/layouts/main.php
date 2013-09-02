@@ -1,14 +1,5 @@
 <?php
-/**
- *
- * main.php layout
- *
- * @author Antonio Ramirez <amigo.cobos@gmail.com>
- * @link http://www.ramirezcobos.com/
- * @link http://www.2amigos.us/
- * @copyright 2013 2amigOS! Consultation Group LLC
- * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
- */
+/* @var $this PxAdminController */
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>
@@ -22,20 +13,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title></title>
+	<title><?= $this->pageTitle ?></title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
-
-	<link rel="stylesheet" href="/css/bootstrap.min.css">
-	<style>
-		body {
-			padding-top: 60px;
-			padding-bottom: 40px;
-		}
-	</style>
-
-	<link rel="stylesheet" href="/css/main.css">
-
 	<script src="/js/libs/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 <body>
@@ -46,26 +26,44 @@
 <![endif]-->
 
 <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
-
+<? if (!Yii::app()->user->isGuest) { ?>
 <div class="navbar navbar-inverse navbar-fixed-top">
-	<div class="navbar-inner">
-		<div class="container">
-			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</a>
-			<a class="brand" href=""><?= Yii::app()->name ?>             Привет, <?= Yii::app()->user->name ?>!
-            </a>
-			</div>
-			<!--/.nav-collapse -->
-		</div>
-	</div>
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="http://pixelio.tld/">Pixelio Web Studio</a>
+            <?php $this->widget('bootstrap.widgets.TbNav', array(
+                'type' => TbHtml::NAV_TYPE_PILLS,
+                'items' => array(
+                    array('label' => 'Главная админки', 'url' => '/'),
+                    array('label' => 'Разделы админки', 'url'=>'#', 'items' => $this->adminMenu),
+                    array('label' => 'Действия', 'url'=>'#', 'items' => $this->menu, 'visible' => !empty($this->menu)),
+                ),
+            )); ?>
+            <span class="pull-right">
+                    <span class="lead muted text-right">Привет, <?= Yii::app()->user->name ?>!</span>
+                    <?php echo TbHtml::linkButton('Выход', array(
+                        'color' => TbHtml::BUTTON_COLOR_DANGER,
+                        'size' => TbHtml::BUTTON_SIZE_DEFAULT,
+                        'url' => $this->createUrl('/site/logout'),
+                    )); ?>
+            </span>
+
+        </div>
+    </div>
+</div>
+<? } ?>
+<div class="container">
+    <?php $this->widget('bootstrap.widgets.TbBreadcrumb', array(
+        'links' => $this->breadcrumbs,
+    )); ?>
+    <?php echo $content; ?>
+    <hr>
+    <footer>
+        <p>&copy; Pixelio 2008 &#8211 <?= date('Y') ?>. <?= Yii::t('app', '{n} года|{n} год|{n} лет|{n} года', (date('Y') - 2008));?> на рынке.</p>
+    </footer>
 </div>
 
-<?php echo $content; ?>
-
-<script src="/js/libs/bootstrap.min.js"></script>
+<script src="/js/libs/bootstrap.js"></script>
 <script src="/js/plugins.js"></script>
 <script src="/js/main.js"></script>
 </body>

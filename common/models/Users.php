@@ -31,6 +31,7 @@ class Users extends EActiveRecord
 	public function rules()
 	{
 		return array(
+            array('password', 'authenticate'),
 			array('createTime', 'numerical', 'integerOnly'=>true),
 			array('username', 'length', 'max'=>64),
 			array('email, password', 'length', 'max'=>256),
@@ -99,7 +100,7 @@ class Users extends EActiveRecord
         if(!$this->hasErrors()) {
             $this->_identity = new PxUserIdentity($this->username,$this->password);
             if(!$this->_identity->authenticate())
-                $this->addError('password','Incorrect username or password.');
+                $this->addError('password','Не верные данные.');
         }
     }
 

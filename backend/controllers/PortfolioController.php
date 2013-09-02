@@ -1,6 +1,6 @@
 <?php
 
-class PortfolioController extends EController
+class PortfolioController extends PxAdminController
 {
 
     public $defaultAction = 'works';
@@ -23,6 +23,15 @@ class PortfolioController extends EController
                 'users' => array('*'),
             ),
         );
+    }
+
+    protected function beforeAction($action) {
+        $return = parent::beforeAction($action);
+        $this->menu = array(
+            array('label' => 'Работы', 'url' => array('works')),
+            array('label' => 'Создать работу', 'url' => array('create')),
+        );
+        return $return;
     }
 
     public function actionWorks()

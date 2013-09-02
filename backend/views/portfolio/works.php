@@ -4,21 +4,15 @@
 
 
 $this->breadcrumbs = array(
-    'Pf Works' => array('index'),
-    'Manage',
+    'Работы',
 );
-
-$this->menu = array(
-    array('label' => 'List PfWorks', 'url' => array('index')),
-    array('label' => 'Create PfWorks', 'url' => array('create')),
-);
-
 ?>
 
-    Поиск
+<h2>Портфолио</h2>
 
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
     'id' => 'pf-works-grid',
+    'type' => TbHtml::GRID_TYPE_BORDERED,
     'dataProvider' => $model->search(),
 //    'filter' => $model,
     'columns' => array(
@@ -30,4 +24,9 @@ $this->menu = array(
             'template' => '{update}{delete}',
         ),
     ),
+)); ?>
+
+<?php echo TbHtml::linkButton('Создать', array(
+    'color' => TbHtml::BUTTON_COLOR_PRIMARY,
+    'url' => $this->createUrl('create'),
 )); ?>

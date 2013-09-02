@@ -1,6 +1,6 @@
 <?php
 
-class UsersController extends EController
+class UsersController extends PxAdminController
 {
 
     public $defaultAction = 'admin';
@@ -8,8 +8,8 @@ class UsersController extends EController
     public function filters()
     {
         return array(
-            'accessControl', // perform access control for CRUD operations
-            'postOnly + delete', // we only allow deletion via POST request
+            'accessControl',
+            'postOnly + delete',
         );
     }
 
@@ -23,6 +23,15 @@ class UsersController extends EController
                 'users' => array('*'),
             ),
         );
+    }
+
+    protected function beforeAction($action) {
+        $return = parent::beforeAction($action);
+        $this->menu = array(
+            array('label' => 'Пользователи', 'url' => array('admin')),
+            array('label' => 'Создать пользователя', 'url' => array('create')),
+        );
+        return $return;
     }
 
     public function actionCreate()
