@@ -6,7 +6,7 @@ use Intervention\Image\Image;
  * The followings are the available columns in table 'pfPages':
  * @property integer $id
  * @property string $title
- * @property integer $order
+ * @property integer $position
  * @property integer $work_id
  *
  * The followings are the available model relations:
@@ -35,10 +35,11 @@ class PfPages extends EActiveRecord
 	public function rules()
 	{
 		return array(
+            array('title,face,full,work_id','required'),
             array('face,full', 'file', 'types'=>'png, jpg, gif'),
             array('face', 'faceValidator'),
             array('full', 'imageTypeFilter'),
-            array('order, work_id', 'numerical', 'integerOnly'=>true),
+            array('position, work_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>255),
 			array('title', 'safe', 'on'=>'search'),
 		);
@@ -51,12 +52,23 @@ class PfPages extends EActiveRecord
 		);
 	}
 
+    public function behaviors()
+    {
+        return array(
+            'sortable' => array(
+                'class' => 'backend.extensions.sortable.SortableBehavior',
+                'column' => 'position',
+            )
+        );
+    }
+
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'title' => 'Title',
-			'work_id' => 'Work',
+			'id' => '#',
+			'title' => 'Название',
+			'face' => 'Превью',
+            'full' => 'Изображение',
 		);
 	}
 

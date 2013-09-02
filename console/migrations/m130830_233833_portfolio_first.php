@@ -9,7 +9,7 @@ class m130830_233833_portfolio_first extends CDbMigration
             'title' => 'string',
             'desc' => 'text',
             'status' => 'int',
-            'order' => 'int',
+            'position' => 'int',
             'face_id' => 'int',
         ));
         $this->createTable('pfPages', array(
@@ -17,7 +17,7 @@ class m130830_233833_portfolio_first extends CDbMigration
             'title' => 'string',
             'type' => 'int',
             'work_id' => 'int',
-            'order' => 'int',
+            'position' => 'int',
         ));
         $this->addForeignKey('pfPageWorks', 'pfPages', 'work_id', 'pfWorks', 'id', 'CASCADE');
 	}

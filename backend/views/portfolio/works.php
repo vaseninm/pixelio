@@ -10,10 +10,11 @@ $this->breadcrumbs = array(
 
 <h2>Портфолио</h2>
 
-<?php $this->widget('bootstrap.widgets.TbGridView', array(
+<?php $this->widget('backend.extensions.sortable.SortableGridView', array(
     'id' => 'pf-works-grid',
     'type' => TbHtml::GRID_TYPE_BORDERED,
     'dataProvider' => $model->search(),
+    'sortUrl' =>  $this->createUrl('sortableWorks'),
 //    'filter' => $model,
     'columns' => array(
         'title',

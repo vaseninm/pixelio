@@ -25,6 +25,22 @@ class PortfolioController extends PxAdminController
         );
     }
 
+    public function actions()
+    {
+        return array(
+            'sortableWorks' => array(
+                'class' => 'backend.extensions.sortable.SortableAction',
+                'model' => PfWorks::model(),
+                'column' => 'position',
+            ),
+            'sortablePages' => array(
+                'class' => 'backend.extensions.sortable.SortableAction',
+                'model' => PfPages::model(),
+                'column' => 'position',
+            ),
+        );
+    }
+
     protected function beforeAction($action) {
         $return = parent::beforeAction($action);
         $this->menu = array(
@@ -56,7 +72,7 @@ class PortfolioController extends PxAdminController
             $works->attributes = $_POST['PfWorks'];
             $works->status = PfWorks::STATUS_UNAPPROVED;
             if ($works->save()) {
-                $this->redirect(array('view', 'id' => $works->id));
+                $this->redirect(array('works'));
             }
         }
 
@@ -98,12 +114,17 @@ class PortfolioController extends PxAdminController
     public function actionDelete($id)
     {
         if (Yii::app()->request->isPostRequest) {
-            $this->loadModel('PfWorks', $id)->delete();
-
-            if (!isset($_GET['ajax']))
-                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-        } else
-            throw new CHttpException(400, 'Invalid request. Please do not repeat this request again.');
+            CVarDumper::dump();die();
+            switch (Yii::app()->request->getParam('ajax')) {
+                case 'pf-works-grid':
+                    return $this->loadModel('PfWorks', $id)->delete();
+                    break;
+                case 'pf-pages-grid':
+                    return $this->loadModel('PfPages', $id)->delete();
+                    break;
+            }
+        }
+        throw new CHttpException(400, 'Invalid request. Please do not repeat this request again.');
     }
 
 }

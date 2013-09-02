@@ -8,7 +8,7 @@
  * @property string $title
  * @property string $desc
  * @property integer $status
- * @property integer $order
+ * @property integer $position
  * @property integer $face_id
  *
  * The followings are the available model relations:
@@ -28,16 +28,14 @@ class PfWorks extends CActiveRecord
 	public function rules()
 	{
 		return array(
-			array('status, order, face_id', 'numerical', 'integerOnly'=>true),
+            array('title,desc','required'),
+			array('status, position, face_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>255),
 			array('desc', 'safe'),
 			array('title, desc, status', 'safe', 'on'=>'search'),
 		);
 	}
 
-	/**
-	 * @return array relational rules.
-	 */
 	public function relations()
 	{
 		return array(
@@ -45,17 +43,23 @@ class PfWorks extends CActiveRecord
 		);
 	}
 
-	/**
-	 * @return array customized attribute labels (name=>label)
-	 */
+    public function behaviors()
+    {
+        return array(
+            'sortable' => array(
+                'class' => 'backend.extensions.sortable.SortableBehavior',
+                'column' => 'position',
+            )
+        );
+    }
+
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'title' => 'Title',
-			'desc' => 'Desc',
-			'status' => 'Status',
-			'face_id' => 'Face',
+			'id' => '#',
+			'title' => 'Название',
+			'desc' => 'Описание',
+			'status' => 'Опубликован',
 		);
 	}
 
