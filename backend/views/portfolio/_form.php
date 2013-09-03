@@ -17,25 +17,49 @@
 
     <?php echo $form->textFieldControlGroup($works, 'title', array('span' => 5, 'maxlength' => 255)); ?>
 
-    <?php $this->widget('yiiwheels.widgets.redactor.WhRedactor', array(
-        'model' => $works,
-        'attribute' => 'desc',
-        'pluginOptions' => array(
-            'minHeight' => 200,
-        ),
-    ));?>
+    <div class="control-group">
+        <?php $this->widget('yiiwheels.widgets.redactor.WhRedactor', array(
+            'model' => $works,
+            'attribute' => 'desc',
+            'pluginOptions' => array(
+                'minHeight' => 200,
+            ),
+        ));?>
+    </div>
 
     <?php if (!$works->isNewRecord) { ?>
 
-        <?php $this->widget('yiiwheels.widgets.switch.WhSwitch', array(
-            'model' => $works,
-            'attribute' => 'status',
-        ));?>
+        <div class="control-group">
+            <?php $this->widget('yiiwheels.widgets.switch.WhSwitch', array(
+                'model' => $works,
+                'attribute' => 'status',
+            ));?>
+        </div>
+
+        <div class="control-group">
+            <?php
+            $this->widget('yiiwheels.widgets.select2.WhSelect2', array(
+                'asDropDownList' => true,
+                'model' => $works,
+                'attribute' => 'tags',
+                'data' => PfTags::getTagsList(),
+                'htmlOptions' => array(
+                    'multiple' => true,
+                ),
+                'pluginOptions' => array(
+                    'placeholder' => 'Выберите теги',
+                    'tokenSeparators' => array(',', ' '),
+                    'width' => 500,
+                )
+            ));
+            ?>
+        </div>
+
 
     <?php } ?>
 
     <div class="form-actions">
-        <?php echo TbHtml::submitButton($works->isNewRecord ? 'Create' : 'Save', array(
+        <?php echo TbHtml::submitButton($works->isNewRecord ? 'Создать' : 'Сохранить', array(
             'color' => TbHtml::BUTTON_COLOR_PRIMARY,
             'size' => TbHtml::BUTTON_SIZE_LARGE,
         )); ?>

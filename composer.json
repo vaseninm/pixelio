@@ -36,7 +36,8 @@
     "require": {
         "yiisoft/yii": "1.1.14",
         "2amigos/yiiwheels": "1.0.3",
-        "intervention/image": "dev-master"
+        "intervention/image": "dev-master",
+        "yiiext/activerecord-relation-behavior": "dev-master"
     },
     "autoload": {
         "psr-0": {

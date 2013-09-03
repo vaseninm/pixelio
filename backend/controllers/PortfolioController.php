@@ -44,8 +44,10 @@ class PortfolioController extends PxAdminController
     protected function beforeAction($action) {
         $return = parent::beforeAction($action);
         $this->menu = array(
-            array('label' => 'Работы', 'url' => array('works')),
-            array('label' => 'Создать работу', 'url' => array('create')),
+            array('label' => 'Работы', 'url' => array('/portfolio/works')),
+            array('label' => 'Создать работу', 'url' => array('/portfolio/create')),
+            array('label' => 'Управление тегами', 'url' => array('/tags/admin')),
+            array('label' => 'Создать тег', 'url' => array('/tags/create')),
         );
         return $return;
     }
@@ -90,7 +92,6 @@ class PortfolioController extends PxAdminController
         $this->performAjaxValidation($works);
         $this->performAjaxValidation($pages);
 
-
         if (isset($_POST['PfWorks'])) {
             $works->attributes = $_POST['PfWorks'];
             if ($works->save()) {
@@ -114,7 +115,6 @@ class PortfolioController extends PxAdminController
     public function actionDelete($id)
     {
         if (Yii::app()->request->isPostRequest) {
-            CVarDumper::dump();die();
             switch (Yii::app()->request->getParam('ajax')) {
                 case 'pf-works-grid':
                     return $this->loadModel('PfWorks', $id)->delete();

@@ -12,7 +12,8 @@
  * @property integer $face_id
  *
  * The followings are the available model relations:
- * @property PfPages[] $pfPages
+ * @property PfPages[] $pages
+ * @property PfTags[] $tags
  */
 class PfWorks extends CActiveRecord
 {
@@ -31,7 +32,7 @@ class PfWorks extends CActiveRecord
             array('title,desc','required'),
 			array('status, position, face_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>255),
-			array('desc', 'safe'),
+			array('desc,tags', 'safe'),
 			array('title, desc, status', 'safe', 'on'=>'search'),
 		);
 	}
@@ -39,8 +40,9 @@ class PfWorks extends CActiveRecord
 	public function relations()
 	{
 		return array(
-			'pfPages' => array(self::HAS_MANY, 'PfPages', 'work_id'),
-		);
+			'pages' => array(self::HAS_MANY, 'PfPages', 'work_id'),
+            'tags' => array(self::MANY_MANY, 'PfTags', 'pfTagWorkRelation(work_id, tag_id)'),
+        );
 	}
 
     public function behaviors()
@@ -49,7 +51,10 @@ class PfWorks extends CActiveRecord
             'sortable' => array(
                 'class' => 'backend.extensions.sortable.SortableBehavior',
                 'column' => 'position',
-            )
+            ),
+            'activerecord-relation'=>array(
+                'class'=>'vendor.yiiext.activerecord-relation-behavior.EActiveRecordRelationBehavior',
+            ),
         );
     }
 
@@ -63,17 +68,11 @@ class PfWorks extends CActiveRecord
 		);
 	}
 
-	/**
-	 * @return CActiveDataProvider the data provider that can return the models
-	 * based on the search/filter conditions.
-	 */
+
 	public function search()
 	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
-
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('desc',$this->desc,true);
 		$criteria->compare('status',$this->status);

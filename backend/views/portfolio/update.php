@@ -17,6 +17,7 @@ $this->breadcrumbs = array(
     'works' => $works,
 )); ?>
 
+
 <div class="form">
     <?php $this->widget('backend.extensions.sortable.SortableGridView', array(
         'id' => 'pf-pages-grid',
@@ -33,7 +34,7 @@ $this->breadcrumbs = array(
             ),
             array(
                 'class' => 'bootstrap.widgets.TbButtonColumn',
-                'template' => '{update}{delete}',
+                'template' => '{delete}',
             ),
         ),
     )); ?>
@@ -53,7 +54,7 @@ $this->breadcrumbs = array(
     <?php echo $form->fileFieldControlGroup($pages, 'full'); ?>
 
     <div class="form-actions">
-        <?php echo TbHtml::submitButton($works->isNewRecord ? 'Create' : 'Save', array(
+        <?php echo TbHtml::submitButton('Загрузить', array(
             'color' => TbHtml::BUTTON_COLOR_SUCCESS,
             'size' => TbHtml::BUTTON_SIZE_LARGE,
         )); ?>

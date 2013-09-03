@@ -35,8 +35,8 @@ class PfPages extends EActiveRecord
 	public function rules()
 	{
 		return array(
-            array('title,face,full,work_id','required'),
-            array('face,full', 'file', 'types'=>'png, jpg, gif'),
+            array('title,work_id','required'),
+            array('face,full', 'file', 'types'=>'png, jpg, gif', 'allowEmpty' => false,),
             array('face', 'faceValidator'),
             array('full', 'imageTypeFilter'),
             array('position, work_id', 'numerical', 'integerOnly'=>true),
@@ -85,16 +85,19 @@ class PfPages extends EActiveRecord
 	}
 
     public function faceValidator ($attribute, $params) {
-        $image = Image::make(CUploadedFile::getInstance($this, $attribute)->tempName);
+        $file = CUploadedFile::getInstance($this, $attribute);
+        if (!$file) return false;
+        $image = Image::make($file->tempName);
         if (!($image->width == self::SIZE_FACE_WIDTH && $image->height == self::SIZE_FACE_HEIGHT)) {
             $this->addError($attribute, Yii::t('portfolio', 'Выбраны не правильные размеры превью.'));
         }
     }
 
     public function imageTypeFilter ($attribute, $params) {
-        $image = CUploadedFile::getInstance($this, $attribute);
-        $imageInfo = getimagesize($image->tempName);
-        if ($imageInfo[0] < self::SIZE_IMAGE_WIDTH) {
+        $file = CUploadedFile::getInstance($this, $attribute);
+        if (!$file) return false;
+        $image = Image::make($file->tempName);;
+        if ($image->width < self::SIZE_IMAGE_WIDTH) {
             $this->addError($attribute, Yii::t('portfolio', 'Слишком маленькое изображение.'));
         }
     }
