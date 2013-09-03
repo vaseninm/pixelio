@@ -86,4 +86,11 @@ class PfWorks extends EActiveRecord
 	{
 		return parent::model($className);
 	}
+
+    protected function beforeDelete() {
+        foreach ($this->pages as $page) {
+            $page->delete();
+        }
+        return parent::beforeDelete();
+    }
 }
