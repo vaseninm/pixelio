@@ -56,8 +56,10 @@ class TagsController extends PxAdminController
 
         if (isset($_POST['PfTags'])) {
             $model->attributes = $_POST['PfTags'];
-            if ($model->save())
+            if ($model->save()){
+                Yii::app()->user->setFlash(TbHtml::ALERT_COLOR_SUCCESS, '<strong>Отлично</strong> Новый тег удачно добавлен.');
                 $this->redirect(array('admin'));
+            }
         }
 
         $this->render('create', array(
@@ -73,8 +75,10 @@ class TagsController extends PxAdminController
 
         if (isset($_POST['PfTags'])) {
             $model->attributes = $_POST['PfTags'];
-            if ($model->save())
+            if ($model->save()) {
+                Yii::app()->user->setFlash(TbHtml::ALERT_COLOR_SUCCESS, '<strong>Отлично</strong> Тег удачно изменен.');
                 $this->refresh();
+            }
         }
 
         $this->render('update', array(

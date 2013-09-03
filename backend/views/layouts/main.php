@@ -56,6 +56,9 @@
     <?php $this->widget('bootstrap.widgets.TbBreadcrumb', array(
         'links' => $this->breadcrumbs,
     )); ?>
+
+    <?php $this->widget('bootstrap.widgets.TbAlert'); ?>
+
     <?php echo $content; ?>
     <hr>
     <footer>

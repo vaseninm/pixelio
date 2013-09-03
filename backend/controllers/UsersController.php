@@ -44,8 +44,10 @@ class UsersController extends PxAdminController
             $model->attributes = $_POST['Users'];
             $model->password = CPasswordHelper::hashPassword($model->password);
 
-            if ($model->save())
+            if ($model->save()){
+                Yii::app()->user->setFlash(TbHtml::ALERT_COLOR_SUCCESS, '<strong>Отлично</strong> Пользователь удачно добавлен.');
                 $this->redirect(array('admin'));
+            }
         }
 
         $this->render('create', array(
@@ -66,8 +68,10 @@ class UsersController extends PxAdminController
             } else {
                 unset($model->password);
             }
-            if ($model->save())
-                $this->redirect(array('update', 'id' => $model->id));
+            if ($model->save()) {
+                Yii::app()->user->setFlash(TbHtml::ALERT_COLOR_SUCCESS, '<strong>Отлично</strong> Пользователь удачно изменен.');
+                $this->refresh();
+            }
         }
 
         $model->password = '';

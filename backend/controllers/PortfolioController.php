@@ -74,6 +74,7 @@ class PortfolioController extends PxAdminController
             $works->attributes = $_POST['PfWorks'];
             $works->status = PfWorks::STATUS_UNAPPROVED;
             if ($works->save()) {
+                Yii::app()->user->setFlash(TbHtml::ALERT_COLOR_SUCCESS, '<strong>Отлично</strong> Новая работа удачно добавлена.');
                 $this->redirect(array('works'));
             }
         }
@@ -95,12 +96,14 @@ class PortfolioController extends PxAdminController
         if (isset($_POST['PfWorks'])) {
             $works->attributes = $_POST['PfWorks'];
             if ($works->save()) {
+                Yii::app()->user->setFlash(TbHtml::ALERT_COLOR_SUCCESS, '<strong>Отлично</strong> Работа удачно изменена.');
                 $this->refresh();
             }
         } elseif (isset($_POST['PfPages'])) {
             $pages->attributes = $_POST['PfPages'];
             $pages->work_id = $works->id;
             if ($pages->save()) {
+                Yii::app()->user->setFlash(TbHtml::ALERT_COLOR_SUCCESS, '<strong>Отлично</strong> Новая страница удачно добавлена.');
                 $this->refresh();
             }
         }

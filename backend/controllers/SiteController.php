@@ -43,6 +43,7 @@ class SiteController extends PxAdminController
         $model = new Users('login');
         if ($model->attributes = Yii::app()->request->getPost('Users')) {
             if ($model->validate() && $model->login()) {
+                Yii::app()->user->setFlash(TbHtml::ALERT_COLOR_SUCCESS, '<strong>Отлично</strong> Вы удачно авторизованы.');
                 $this->redirect(Yii::app()->user->returnUrl);
             }
         }

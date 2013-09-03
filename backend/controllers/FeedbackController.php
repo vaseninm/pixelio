@@ -53,8 +53,10 @@ class FeedbackController extends PxAdminController
 
         if (isset($_POST['Feedback'])) {
             $model->attributes = $_POST['Feedback'];
-            if ($model->save())
+            if ($model->save()) {
+                Yii::app()->user->setFlash(TbHtml::ALERT_COLOR_SUCCESS, '<strong>Отлично</strong> Отзыв оставлен удачно.');
                 $this->redirect(array('index'));
+            }
         }
 
         $this->render('create', array(
@@ -71,8 +73,10 @@ class FeedbackController extends PxAdminController
 
         if (isset($_POST['Feedback'])) {
             $model->attributes = $_POST['Feedback'];
-            if ($model->save())
+            if ($model->save()){
+                Yii::app()->user->setFlash(TbHtml::ALERT_COLOR_SUCCESS, '<strong>Отлично</strong> Отзыв сохранен удачно.');
                 $this->refresh();
+            }
         }
 
         $this->render('update', array(
