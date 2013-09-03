@@ -59,7 +59,7 @@
     <?php echo $content; ?>
     <hr>
     <footer>
-        <p>&copy; Pixelio 2008 &#8211 <?= date('Y') ?>. <?= Yii::t('app', '{n} год|{n} года|{n} лет|{n} года', (date('Y') - 2008));?> на рынке.</p>
+        <p>&copy; Pixelio <?= Yii::app()->params->itemAt('since') ?> &#8211 <?= date('Y') ?>. <?= Yii::t('app', '{n} год|{n} года|{n} лет|{n} года', (date('Y') - Yii::app()->params->itemAt('since')));?> на рынке.</p>
     </footer>
 </div>
 

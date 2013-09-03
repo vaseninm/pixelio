@@ -1,9 +1,7 @@
 <?php
 
-class TagsController extends PxAdminController
+class FeedbackController extends PxAdminController
 {
-
-    public $defaultAction = 'admin';
 
     public function filters()
     {
@@ -25,39 +23,38 @@ class TagsController extends PxAdminController
         );
     }
 
-    protected function beforeAction($action) {
+    protected function beforeAction($action)
+    {
         $return = parent::beforeAction($action);
         $this->menu = array(
-            array('label' => 'Работы', 'url' => array('/portfolio/works')),
-            array('label' => 'Создать работу', 'url' => array('/portfolio/create')),
-            array('label' => 'Управление тегами', 'url' => array('/tags/admin')),
-            array('label' => 'Создать тег', 'url' => array('/tags/create')),
+            array('label' => 'Отзывы', 'url' => array('index')),
+            array('label' => 'Создать отзыв', 'url' => array('create')),
         );
         return $return;
     }
 
-    public function actionAdmin()
+    public function actionIndex()
     {
-        $model = new PfTags('search');
-        $model->unsetAttributes();
-        if (isset($_GET['PfTags']))
-            $model->attributes = $_GET['PfTags'];
+        $model = new Feedback('search');
+        $model->unsetAttributes(); // clear any default values
+        if (isset($_GET['Feedback']))
+            $model->attributes = $_GET['Feedback'];
 
-        $this->render('admin', array(
+        $this->render('index', array(
             'model' => $model,
         ));
     }
 
     public function actionCreate()
     {
-        $model = new PfTags;
+        $model = new Feedback;
 
-         $this->performAjaxValidation($model);
+        $this->performAjaxValidation($model);
 
-        if (isset($_POST['PfTags'])) {
-            $model->attributes = $_POST['PfTags'];
+        if (isset($_POST['Feedback'])) {
+            $model->attributes = $_POST['Feedback'];
             if ($model->save())
-                $this->redirect(array('admin'));
+                $this->redirect(array('index'));
         }
 
         $this->render('create', array(
@@ -65,14 +62,15 @@ class TagsController extends PxAdminController
         ));
     }
 
+
     public function actionUpdate($id)
     {
-        $model = $this->loadModel('PfTags', $id);
+        $model = $this->loadModel('Feedback', $id);
 
         $this->performAjaxValidation($model);
 
-        if (isset($_POST['PfTags'])) {
-            $model->attributes = $_POST['PfTags'];
+        if (isset($_POST['Feedback'])) {
+            $model->attributes = $_POST['Feedback'];
             if ($model->save())
                 $this->refresh();
         }
@@ -85,11 +83,12 @@ class TagsController extends PxAdminController
     public function actionDelete($id)
     {
         if (Yii::app()->request->isPostRequest) {
-            $this->loadModel('PfTags', $id)->delete();
+            $this->loadModel('Feedback', $id)->delete();
 
             if (!isset($_GET['ajax']))
-                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
         } else
             throw new CHttpException(400, 'Invalid request. Please do not repeat this request again.');
     }
+
 }

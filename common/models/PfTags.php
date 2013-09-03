@@ -6,11 +6,12 @@
  * The followings are the available columns in table 'pfTags':
  * @property integer $id
  * @property string $title
+ * @property integer $price
  *
  * The followings are the available model relations:
  * @property PfWorks[] works
  */
-class PfTags extends CActiveRecord
+class PfTags extends EActiveRecord
 {
 	public function tableName()
 	{
@@ -20,9 +21,9 @@ class PfTags extends CActiveRecord
 	public function rules()
 	{
 		return array(
-            array('title', 'required'),
+            array('title, price', 'required'),
 			array('title', 'length', 'max'=>255),
-			array('title', 'safe', 'on'=>'search'),
+			array('title, price', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -38,6 +39,7 @@ class PfTags extends CActiveRecord
 		return array(
 			'id' => '#',
 			'title' => 'Заголовок',
+			'price' => 'Стоимость',
 		);
 	}
 
@@ -47,6 +49,7 @@ class PfTags extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('title',$this->title,true);
+        $criteria->compare('price',$this->price);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

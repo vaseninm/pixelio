@@ -33,6 +33,8 @@
             <?php $this->widget('yiiwheels.widgets.switch.WhSwitch', array(
                 'model' => $works,
                 'attribute' => 'status',
+                'onLabel' => TbHtml::icon(TbHtml::ICON_OK),
+                'offLabel' => TbHtml::icon(TbHtml::ICON_REMOVE),
             ));?>
         </div>
 

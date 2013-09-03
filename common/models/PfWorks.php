@@ -15,7 +15,7 @@
  * @property PfPages[] $pages
  * @property PfTags[] $tags
  */
-class PfWorks extends CActiveRecord
+class PfWorks extends EActiveRecord
 {
 
     const STATUS_APPROVED = 1;

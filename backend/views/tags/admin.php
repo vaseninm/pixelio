@@ -20,9 +20,15 @@ $this->breadcrumbs = array(
 //    'filter' => $model,
     'columns' => array(
         'title',
+        'price',
         array(
             'class' => 'bootstrap.widgets.TbButtonColumn',
             'template' => '{update}{delete}',
         ),
     ),
+)); ?>
+
+<?php echo TbHtml::linkButton('Создать', array(
+    'color' => TbHtml::BUTTON_COLOR_PRIMARY,
+    'url' => $this->createUrl('create'),
 )); ?>

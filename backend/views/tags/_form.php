@@ -15,6 +15,8 @@
 
             <?php echo $form->textFieldControlGroup($model,'title',array('span'=>5,'maxlength'=>255)); ?>
 
+            <?php echo $form->textFieldControlGroup($model,'price',array('span'=>5,'maxlength'=>255, 'append' => 'р.')); ?>
+
         <div class="form-actions">
         <?php echo TbHtml::submitButton($model->isNewRecord ? 'Создать' : 'Сохранить',array(
 		    'color'=>TbHtml::BUTTON_COLOR_PRIMARY,
