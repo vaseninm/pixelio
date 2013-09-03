@@ -40,7 +40,7 @@ class SiteController extends PxAdminController
 
     public function actionLogin()
     {
-        $model = new Users();
+        $model = new Users('login');
         if ($model->attributes = Yii::app()->request->getPost('Users')) {
             if ($model->validate() && $model->login()) {
                 $this->redirect(Yii::app()->user->returnUrl);

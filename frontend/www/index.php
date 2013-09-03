@@ -19,5 +19,3 @@ Yiinitializr\Helpers\Initializer::create('./../', 'frontend', array(
 	'env',
 	'local'
 ))->run();
-
-require('./../../common/lib/vendor/yiisoft/yii/framework/yii.php');

@@ -21,6 +21,8 @@
     <?php echo $form->passwordFieldControlGroup($model, 'password', array('span' => 5, 'maxlength' => 256)); ?>
 
     <div class="control-group">
+
+        <?php echo $form->label($model, 'role'); ?>
         <?php
         $this->widget(
             'yiiwheels.widgets.formhelpers.WhSelectBox',
@@ -32,8 +34,6 @@
         );
         ?>
     </div>
-
-    <?php echo $form->textFieldControlGroup($model, 'createTime', array('span' => 5)); ?>
 
     <div class="form-actions">
         <?php echo TbHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array(

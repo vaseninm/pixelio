@@ -31,11 +31,11 @@ class Users extends EActiveRecord
 	public function rules()
 	{
 		return array(
-            array('password', 'authenticate'),
-            array('username,email', 'required'),
+            array('password', 'authenticate', 'on' => 'login'),
+            array('username,email', 'required', 'except' => 'login'),
             array('username', 'match', 'pattern' => '/^[a-z0-9_]+$/i'),
             array('email', 'email'),
-            array('username,email', 'unique'),
+            array('username,email', 'unique', 'on' => 'insert'),
 			array('createTime', 'numerical', 'integerOnly'=>true),
 			array('username', 'length', 'max'=>64),
 			array('email, password', 'length', 'max'=>256),
