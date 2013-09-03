@@ -21,6 +21,7 @@ class PfTags extends EActiveRecord
 	public function rules()
 	{
 		return array(
+            array('title', 'unique'),
             array('title, price', 'required'),
 			array('title', 'length', 'max'=>255),
 			array('title, price', 'safe', 'on'=>'search'),

@@ -20,7 +20,18 @@
 
     <?php echo $form->passwordFieldControlGroup($model, 'password', array('span' => 5, 'maxlength' => 256)); ?>
 
-    <?php echo $form->textFieldControlGroup($model, 'role', array('span' => 5, 'maxlength' => 20)); ?>
+    <div class="control-group">
+        <?php
+        $this->widget(
+            'yiiwheels.widgets.formhelpers.WhSelectBox',
+            array(
+                'model' => $model,
+                'attribute' => 'role',
+                'data' => Users::getRoles(),
+            )
+        );
+        ?>
+    </div>
 
     <?php echo $form->textFieldControlGroup($model, 'createTime', array('span' => 5)); ?>
 

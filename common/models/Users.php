@@ -32,6 +32,10 @@ class Users extends EActiveRecord
 	{
 		return array(
             array('password', 'authenticate'),
+            array('username,email', 'required'),
+            array('username', 'match', 'pattern' => '/^[a-z0-9_]+$/i'),
+            array('email', 'email'),
+            array('username,email', 'unique'),
 			array('createTime', 'numerical', 'integerOnly'=>true),
 			array('username', 'length', 'max'=>64),
 			array('email, password', 'length', 'max'=>256),
@@ -55,12 +59,12 @@ class Users extends EActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'username' => 'Username',
-			'email' => 'Email',
-			'password' => 'Password',
-			'role' => 'Role',
-			'createTime' => 'Create Time',
+			'id' => '#',
+			'username' => 'Имя пользователя',
+			'email' => 'Почта',
+			'password' => 'Пароль',
+			'role' => 'Роль',
+			'createTime' => 'Дата регистрации',
 		);
 	}
 
@@ -123,6 +127,13 @@ class Users extends EActiveRecord
         }
         else
             return false;
+    }
+
+    public static function getRoles(){
+        return array(
+            self::ROLE_USER => 'Пользователь',
+            self::ROLE_ADMIN => 'Администратор',
+        );
     }
 
     private $_identity;
