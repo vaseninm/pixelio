@@ -13,8 +13,6 @@
 
     <?php echo $form->errorSummary($model); ?>
 
-    <?php echo $form->textFieldControlGroup($model, 'title', array('span' => 5, 'maxlength' => 255)); ?>
-
     <?php echo $form->textAreaControlGroup($model, 'text', array('rows' => 6, 'span' => 8)); ?>
 
     <?php echo $form->textFieldControlGroup($model, 'author', array('span' => 5, 'maxlength' => 255)); ?>

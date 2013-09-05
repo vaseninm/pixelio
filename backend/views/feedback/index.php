@@ -17,7 +17,6 @@ $this->breadcrumbs=array(
 //'filter'=>$model,
 'columns'=>array(
 		'id',
-		'title',
 		'text',
 		'author',
 		'approve:boolean',

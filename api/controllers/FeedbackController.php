@@ -32,6 +32,7 @@ class FeedbackController extends PxApiController {
 //        $model->title = $this->request->title;
         $model->text = $this->request->text;
         $model->author = $this->request->author;
+        $model->approve = 0;
         $result = $model->save();
         $this->answer = array(
             'result' => $result,
