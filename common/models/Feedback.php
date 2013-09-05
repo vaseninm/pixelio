@@ -5,7 +5,6 @@
  *
  * The followings are the available columns in table 'feedback':
  * @property integer $id
- * @property string $title
  * @property string $text
  * @property string $author
  * @property boolean $approve
@@ -23,9 +22,9 @@ class Feedback extends EActiveRecord
     {
         return array(
             array('approve', 'boolean'),
-            array('title, author', 'length', 'max' => 255),
+            array('author', 'length', 'max' => 255),
             array('text', 'safe'),
-            array('id, title, text, author, approve', 'safe', 'on' => 'search'),
+            array('id, text, author, approve', 'safe', 'on' => 'search'),
         );
     }
 
@@ -33,7 +32,6 @@ class Feedback extends EActiveRecord
     {
         return array(
             'id' => '#',
-            'title' => 'Заголовок',
             'text' => 'Текст',
             'author' => 'Имя автора',
             'approve' => 'Статус',
@@ -54,7 +52,6 @@ class Feedback extends EActiveRecord
         $criteria = new CDbCriteria;
 
         $criteria->compare('id', $this->id);
-        $criteria->compare('title', $this->title, true);
         $criteria->compare('text', $this->text, true);
         $criteria->compare('author', $this->author, true);
         $criteria->compare('approve', $this->approve);

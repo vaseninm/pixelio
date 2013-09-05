@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'pfTags':
  * @property integer $id
  * @property string $title
+ * @property string $desc
  * @property integer $price
  *
  * The followings are the available model relations:
@@ -24,6 +25,7 @@ class PfTags extends EActiveRecord
             array('title', 'unique'),
             array('title, price', 'required'),
 			array('title', 'length', 'max'=>255),
+            array('desc', 'safe'),
 			array('title, price', 'safe', 'on'=>'search'),
 		);
 	}
@@ -41,6 +43,7 @@ class PfTags extends EActiveRecord
 			'id' => '#',
 			'title' => 'Заголовок',
 			'price' => 'Стоимость',
+			'desc' => 'Описание',
 		);
 	}
 
@@ -50,6 +53,7 @@ class PfTags extends EActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('title',$this->title,true);
+		$criteria->compare('desc',$this->title,true);
         $criteria->compare('price',$this->price);
 
 		return new CActiveDataProvider($this, array(
@@ -77,7 +81,7 @@ class PfTags extends EActiveRecord
         return $this;
     }
 
-	public static function model($className=__CLASS__)
+    public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}

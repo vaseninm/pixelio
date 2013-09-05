@@ -20,6 +20,7 @@ $this->breadcrumbs = array(
 //    'filter' => $model,
     'columns' => array(
         'title',
+        'desc',
         'price',
         array(
             'class' => 'bootstrap.widgets.TbButtonColumn',
