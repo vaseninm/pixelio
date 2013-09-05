@@ -17,6 +17,33 @@ $this->breadcrumbs = array(
     'works' => $works,
 )); ?>
 
+<?php
+$csrf = "";
+if(Yii::app()->request->enableCsrfValidation)
+{
+    $csrfTokenName = Yii::app()->request->csrfTokenName;
+    $csrfToken = Yii::app()->request->csrfToken;
+    $csrf = "\n\t\tdata:{ '$csrfTokenName':'$csrfToken' },";
+}
+$js=<<<EOD
+function() {
+	if(!confirm('Назначить эту страницу лицом проекта?')) return false;
+	var th = this;
+	jQuery('#pf-pages-grid').yiiGridView('update', {
+		type: 'POST',
+		url: jQuery(this).attr('href'),$csrf
+		success: function(data) {
+			jQuery('#pf-pages-grid').yiiGridView('update');
+		},
+		error: function(XHR) {
+			return true;
+		}
+	});
+	return false;
+}
+EOD;
+?>
+
 
 <div class="form">
     <?php $this->widget('backend.extensions.sortable.SortableGridView', array(
@@ -34,7 +61,15 @@ $this->breadcrumbs = array(
             ),
             array(
                 'class' => 'bootstrap.widgets.TbButtonColumn',
-                'template' => '{delete}',
+                'template' => '{face}{delete}',
+                'buttons' => array(
+                    'face' => array(
+                        'url'=>'Yii::app()->createUrl("/portfolio/setFace", array("page"=>$data->id))',
+                        'icon' => TbHtml::ICON_OK,
+                        'click'=>$js,
+                        'visible'=>'!$data->isFace()',
+                    ),
+                ),
             ),
         ),
     )); ?>

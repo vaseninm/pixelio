@@ -9,7 +9,7 @@ class PortfolioController extends PxAdminController
     {
         return array(
             'accessControl', // perform access control for CRUD operations
-            'postOnly + delete', // we only allow deletion via POST request
+            'postOnly + delete,SetFace', // we only allow deletion via POST request
         );
     }
 
@@ -41,7 +41,8 @@ class PortfolioController extends PxAdminController
         );
     }
 
-    protected function beforeAction($action) {
+    protected function beforeAction($action)
+    {
         $return = parent::beforeAction($action);
         $this->menu = array(
             array('label' => 'Работы', 'url' => array('/portfolio/works')),
@@ -128,6 +129,18 @@ class PortfolioController extends PxAdminController
             }
         }
         throw new CHttpException(400, 'Invalid request. Please do not repeat this request again.');
+    }
+
+    public function actionSetFace($page)
+    {
+        if (Yii::app()->request->isPostRequest) {
+            $model = PfPages::model()->findByPk($page);
+            if (!$model) throw new CHttpException(500, 'Не существует выбранной страницы');
+            $model->work->face_id = $page;
+            $model->work->save();
+        } else {
+            throw new CHttpException(400, 'Invalid request. Please do not repeat this request again.');
+        }
     }
 
 }

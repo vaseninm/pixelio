@@ -41,6 +41,7 @@ class PfWorks extends EActiveRecord
 	{
 		return array(
 			'pages' => array(self::HAS_MANY, 'PfPages', 'work_id'),
+			'face' => array(self::BELONGS_TO, 'PfPages', 'face_id'),
             'tags' => array(self::MANY_MANY, 'PfTags', 'pfTagWorkRelation(work_id, tag_id)'),
         );
 	}

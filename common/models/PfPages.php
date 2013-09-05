@@ -102,6 +102,10 @@ class PfPages extends EActiveRecord
         }
     }
 
+    public function isFace() {
+        return ($this->work->face_id == $this->id);
+    }
+
     public function getImageUrl($type = self::TYPE_IMAGE) {
         return "/uploads/works/{$type}-{$this->id}.png";
     }
