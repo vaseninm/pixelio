@@ -16,6 +16,9 @@ common/config/env/prod.php
 console/config/env.php
 console/config/env/dev.php
 console/config/env/prod.php
+api/config/env.php
+api/config/env/dev.php
+api/config/env/prod.php
 .idea/
 common/lib/vendor
 frontend/www/uploads/*

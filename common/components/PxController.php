@@ -14,9 +14,5 @@ class PxController extends EController {
     public function init() {
         Yii::app()->clientScript->registerCoreScript('jquery');
 //        Yii::app()->clientScript->registerCoreScript('jquery.ui');
-
-
     }
-
-
 }

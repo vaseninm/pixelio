@@ -12,49 +12,69 @@
  */
 class Feedback extends EActiveRecord
 {
-	public function tableName()
-	{
-		return 'feedback';
-	}
+    const PAGE_SIZE = 3;
 
-	public function rules()
-	{
-		return array(
-			array('approve', 'boolean'),
-			array('title, author', 'length', 'max'=>255),
-			array('text', 'safe'),
-			array('id, title, text, author, approve', 'safe', 'on'=>'search'),
-		);
-	}
+    public function tableName()
+    {
+        return 'feedback';
+    }
 
-	public function attributeLabels()
-	{
-		return array(
-			'id' => '#',
-			'title' => 'Заголовок',
-			'text' => 'Текст',
-			'author' => 'Имя автора',
-			'approve' => 'Статус',
-		);
-	}
+    public function rules()
+    {
+        return array(
+            array('approve', 'boolean'),
+            array('title, author', 'length', 'max' => 255),
+            array('text', 'safe'),
+            array('id, title, text, author, approve', 'safe', 'on' => 'search'),
+        );
+    }
 
-	public function search()
-	{
-		$criteria=new CDbCriteria;
+    public function attributeLabels()
+    {
+        return array(
+            'id' => '#',
+            'title' => 'Заголовок',
+            'text' => 'Текст',
+            'author' => 'Имя автора',
+            'approve' => 'Статус',
+        );
+    }
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('title',$this->title,true);
-		$criteria->compare('text',$this->text,true);
-		$criteria->compare('author',$this->author,true);
-		$criteria->compare('approve',$this->approve);
+    public function scopes()
+    {
+        return array(
+            'approve' => array(
+                'condition'=>"approve = 1",
+            ),
+        );
+    }
 
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
-	}
+    public function search()
+    {
+        $criteria = new CDbCriteria;
 
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
-	}
+        $criteria->compare('id', $this->id);
+        $criteria->compare('title', $this->title, true);
+        $criteria->compare('text', $this->text, true);
+        $criteria->compare('author', $this->author, true);
+        $criteria->compare('approve', $this->approve);
+
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+        ));
+    }
+
+    public function page($currentPage)
+    {
+        $criteria = new CDbCriteria();
+        $criteria->limit = self::PAGE_SIZE;
+        $criteria->offset = ($currentPage - 1)*self::PAGE_SIZE;
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+    }
+
+    public static function model($className = __CLASS__)
+    {
+        return parent::model($className);
+    }
 }
