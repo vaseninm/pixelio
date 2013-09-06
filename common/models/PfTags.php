@@ -34,7 +34,8 @@ class PfTags extends EActiveRecord
 	{
 		return array(
 			'works' => array(self::MANY_MANY, 'PfWorks', 'pfTagWorkRelation(tag_id, work_id)'),
-		);
+            'worksCount'=>array(self::STAT, 'PfWorks', 'pfTagWorkRelation(tag_id, work_id)'),
+        );
 	}
 
 	public function attributeLabels()

@@ -9,6 +9,7 @@
  * @property string $desc
  * @property integer $status
  * @property integer $position
+ * @property integer $createTime
  * @property integer $face_id
  *
  * The followings are the available model relations:
@@ -21,6 +22,8 @@ class PfWorks extends EActiveRecord
     const STATUS_APPROVED = 1;
     const STATUS_UNAPPROVED = 0;
 
+    const PAGE_SIZE = 8;
+
 	public function tableName()
 	{
 		return 'pfWorks';
@@ -30,10 +33,10 @@ class PfWorks extends EActiveRecord
 	{
 		return array(
             array('title,desc','required'),
-			array('status, position, face_id', 'numerical', 'integerOnly'=>true),
+			array('status, position, face_id, createTime', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>255),
 			array('desc,tags', 'safe'),
-			array('title, desc, status', 'safe', 'on'=>'search'),
+			array('title, desc, status, createTime', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,6 +62,15 @@ class PfWorks extends EActiveRecord
         );
     }
 
+    public function scopes()
+    {
+        return array(
+            'approve' => array(
+                'condition'=>"status = " . self::STATUS_APPROVED,
+            ),
+        );
+    }
+
 	public function attributeLabels()
 	{
 		return array(
@@ -66,6 +78,7 @@ class PfWorks extends EActiveRecord
 			'title' => 'Название',
 			'desc' => 'Описание',
 			'status' => 'Опубликован',
+			'createTime' => 'Время публикации',
 		);
 	}
 
@@ -83,6 +96,31 @@ class PfWorks extends EActiveRecord
 		));
 	}
 
+    public function tag($id)
+    {
+        $this->getDbCriteria()->mergeWith(array(
+            'with' => array(
+                'tags' => array(
+                    'condition' => 'tags.id = :id',
+                    'params' => array(
+                        ':id' => $id,
+                    ),
+                    'together'=>true,
+                ),
+            )
+        ));
+        return $this;
+    }
+
+    public function page($currentPage)
+    {
+        $criteria = new CDbCriteria();
+        $criteria->limit = self::PAGE_SIZE;
+        $criteria->offset = ($currentPage - 1)*self::PAGE_SIZE;
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+    }
+
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
@@ -93,5 +131,10 @@ class PfWorks extends EActiveRecord
             $page->delete();
         }
         return parent::beforeDelete();
+    }
+
+    protected function afterConstruct(){
+        parent::afterConstruct();
+        $this->createTime = time();
     }
 }

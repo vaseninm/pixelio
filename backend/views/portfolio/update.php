@@ -27,7 +27,7 @@ if(Yii::app()->request->enableCsrfValidation)
 }
 $js=<<<EOD
 function() {
-	if(!confirm('Назначить эту страницу лицом проекта?')) return false;
+	//0if(!confirm('Назначить эту страницу лицом проекта?')) return false;
 	var th = this;
 	jQuery('#pf-pages-grid').yiiGridView('update', {
 		type: 'POST',

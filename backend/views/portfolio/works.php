@@ -19,6 +19,7 @@ $this->breadcrumbs = array(
     'columns' => array(
         'title',
         'desc:html',
+        'createTime:date',
         'status:boolean',
         array(
             'class' => 'bootstrap.widgets.TbButtonColumn',
