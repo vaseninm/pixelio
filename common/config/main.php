@@ -14,6 +14,7 @@ return array(
 	'preload' => array('log'),
 	'aliases' => array(
 		'frontend' => dirname(__FILE__) . '/../..' . '/frontend',
+		'api' => dirname(__FILE__) . '/../..' . '/api',
 		'common' => dirname(__FILE__) . '/../..' . '/common',
 		'backend' => dirname(__FILE__) . '/../..' . '/backend',
 		'vendor' => dirname(__FILE__) . '/../..' . '/common/lib/vendor'

@@ -21,5 +21,5 @@ api/config/env/dev.php
 api/config/env/prod.php
 .idea/
 common/lib/vendor
-frontend/www/uploads/*
+api/www/uploads/*
 !.gitkeep
