@@ -57,7 +57,7 @@ EOD;
             array(
                 'class' => 'yiiwheels.widgets.grid.WhImageColumn',
                 'htmlOptions' => array('class' => 'span1'),
-                'imagePathExpression' => 'Yii::app()->params["domain"] . $data->getImageUrl(PfPages::TYPE_FACE)',
+                'imagePathExpression' => '$data->getImageUrl(PfPages::TYPE_FACE)',
             ),
             array(
                 'class' => 'bootstrap.widgets.TbButtonColumn',
