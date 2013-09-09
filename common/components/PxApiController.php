@@ -15,7 +15,10 @@ class PxApiController extends CController
 
     protected function beforeAction($action)
     {
-        $this->request = CJSON::decode(Yii::app()->request->getPost('request', array()), false);
+        header('Content-Type: application/json');
+        header("Access-Control-Allow-Origin: http://pixelio.tld");
+        header("Access-Control-Allow-Headers: Content-Type");
+        $this->request = CJSON::decode(trim(file_get_contents('php://input')), false);
         $this->request = isset($this->request->params) ? $this->request->params : array();
         return parent::beforeAction($action);
     }

@@ -1,0 +1,10 @@
+<div class="cost clearfix">
+    <div ng-repeat="tag in tags">
+        <div class="all clearfix">
+            <div class="fl"><h1>{{ tag.title }}</h1></div>
+            <div class="dashed"><a class="brownBox" href="#/works/{{ tag.id }}">Посмотреть примеры</a></div>
+            <span class="price">от <span class="green">{{ tag.price }}</span>р.</span>
+        </div>
+        <p>{{ tag.desc }}</p>
+    </div>
+</div>

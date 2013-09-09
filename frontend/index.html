@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html ng-app>
+<html lang="ru" ng-app="pixelio">
 <head>
-    <title></title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
+    <title>Pixelio WebStudio</title>
+
+    <meta charset='utf-8'>
+    <meta name="Description" content="Описание"/>
+    <meta name="keywords" content="Ключевые слова"/>
+    <meta name="author" content="Pixelio"/>
+
+    <script src="libs/angular.js"></script>
+    <script src="controllers/PortfolioControllers.js"></script>
+    <script src="controllers/PageControllers.js"></script>
+    <script src="controllers/FeedbackControllers.js"></script>
+    <script src="modules/Router.js"></script>
+    <!--<script src="modules/HttpProvider.js"></script>-->
+    <link rel="stylesheet" href="/css/content.css" type="text/css" media="screen, projection">
 </head>
-<body>
+<body class="{{ bodyClass }}">
+<div class="bodyBg">
+    <div class="wrapper">
+        <div class="decorContainer">
+            <div class="topSection"></div>
+            <a title="Супер пупер и всё такое" href="/" id="logo"></a>
+            <!-- Меню главное -->
+            <nav>
+                <ul id="nav">
+                    <li ng-class="{ true:'selected', false: '' }[selected.main]"><a href="#/works">Главная</a></li>
+                    <li ng-class="{ true:'selected', false: '' }[selected.page_about]"><a href="#/page/about">Обо мне</a></li>
+                    <li ng-class="{ true:'selected', false: '' }[selected.cost]"><a href="#/cost">Стоимость</a></li>
+                    <li ng-class="{ true:'selected', false: '' }[selected.feedback]"><a href="#/feedback">Отзывы</a></li>
+                    <li ng-class="{ true:'selected', false: '' }[selected.page_contact]"><a href="#/page/contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <!-- /Меню главное -->
+            <div class="content" ng-view>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
