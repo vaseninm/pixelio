@@ -107,7 +107,7 @@ class PfPages extends EActiveRecord
     }
 
     public function getImageUrl($type = self::TYPE_IMAGE) {
-        return Yii::app()->params->itemAt('domain') . "/uploads/works/{$type}-{$this->id}.png";
+        return Yii::app()->params->itemAt('domain') . "uploads/works/{$type}-{$this->id}.png";
     }
 
     protected function deleteImages() {
@@ -132,8 +132,8 @@ class PfPages extends EActiveRecord
         Image::make($facePath)->save($this->getPathToImages() . "/". self::TYPE_FACE ."-{$this->id}.png");
 
         $imagePath = CUploadedFile::getInstance($this, 'full')->tempName;
-        Image::make($imagePath)->widen(self::SIZE_IMAGE_WIDTH)->save($this->getPathToImages() . "/". self::TYPE_IMAGE ."-{$this->id}.png");
         Image::make($imagePath)->save($this->getPathToImages() . "/". self::TYPE_FULL ."-{$this->id}.png");
+        Image::make($imagePath)->widen(self::SIZE_IMAGE_WIDTH)->save($this->getPathToImages() . "/". self::TYPE_IMAGE ."-{$this->id}.png");
     }
 
     protected function afterSave() {

@@ -1,60 +1,34 @@
-
 <!-- Описание работы -->
 <div class="jobDescription">
-    <div class="jobTime">11 март 2012</div>
-    <h1>Super Auto Rent</h1>
-    <p>Аренда элитных автомобилей, продажа автотехники, доменстрация возможностей макета. Текст в две строчки, не больше, ведь никто не читает абзацы. ;)</p>
+    <div class="jobTime">{{ work.createTime }}</div>
+    <h1>{{ work.title }}</h1>
+    <p>{{ work.desc }}</p>
 </div>
-
 <!-- Показ элементов работы -->
 <div class="jobImg">
     <div class="imgBox">
         <div class="fade clearfix">
-            <a title="Открыть в новой вкладке?" href="/">
-                <img alt="" src="upload/sites/site_1/job_1.jpg" />
+            <a title="Открыть в новой вкладке?" href="{{ current.full }}">
+                <img alt="{{ current.title }}" ng-src="{{ current.image }}" />
                 <p><span>Открыть в новой вкладке?</span></p>
                 <p><span>Открыть в новой вкладке?</span></p>
             </a>
         </div>
-        <div class="fade clearfix" style="display:none">
-            <a title="Открыть в новой вкладке?" href="/">
-                <img alt="" src="upload/sites/site_1/job_3.jpg" />
-                <p><span>Открыть в новой вкладке?</span></p>
-                <p><span>Открыть в новой вкладке?</span></p>
-            </a>
-        </div>
-        <div class="fade clearfix" style="display:none">
-            <a title="Открыть в новой вкладке?" href="/">
-                <img alt="" src="upload/sites/site_1/job_2.jpg" />
-                <p><span>Открыть в новой вкладке?</span></p>
-                <p><span>Открыть в новой вкладке?</span></p>
-            </a>
-        </div>
-        <div class="fade clearfix" style="display:none">
-            <a title="Открыть в новой вкладке?" href="/">
-                <img alt="" src="upload/sites/site_1/job_4.jpg" />
-                <p><span>Открыть в новой вкладке?</span></p>
-                <p><span>Открыть в новой вкладке?</span></p>
-            </a>
-        </div>
-        <span class="endPrev"><span class="prevImg"></span></span>
-        <span class="endNext"><span class="nextImg"></span></span>
+        <span class="endPrev"><span class="prevImg" ng-click="prevPage($event)" ng-hide="first == current"></span></span>
+        <span class="endNext"><span class="nextImg" ng-click="nextPage($event)" ng-hide="last == current"></span></span>
     </div>
 </div>
 
 <!-- Превьюшки элементов работы -->
 <div class="jobTumb clearfix">
-    <a title="" href="/" class="active"><img alt="" src="upload/sites/site_1/job_1_tumb_2.jpg"></a>
-    <a title="" href="/"><img alt="" src="upload/sites/site_1/job_1_tumb_3.jpg"></a>
-    <a title="" href="/"><img alt="" src="upload/sites/site_1/job_1_tumb_2.jpg"></a>
-    <a title="" href="/"><img alt="" src="upload/sites/site_1/job_1_tumb_1.jpg"></a>
-    <a title="" href="/"><img alt="" src="upload/sites/site_1/job_1_tumb_3.jpg"></a>
-    <a title="" href="/"><img alt="" src="upload/sites/site_1/job_1_tumb_1.jpg"></a>
+    <a title="{{ page.title }}" href="#" ng-class="{ true:'active', false: '' }[current == page]" ng-repeat="page in pages" ng-click="setPage(page.id, $event)">
+        <img alt="{{ page.title }}" ng-src="{{ page.face }}">
+    </a>
 </div>
 
 <!-- Пагинация по проектам -->
 <div class="pagination">
-    <a class="prewJob" href="/">Предыдущий проект</a>
+    <a class="prewJob" href="#/work/{{ prev.id }}" title="{{ prev.title }}" ng-show="prev.id">Предыдущий проект</a>
     <em class="green"><a class="green" href="javascript:history.back()">Вернуться назад</a></em>
-    <a class="nextJob" href="/">Следующий проект</a>
+    <a class="nextJob" href="#/work/{{ next.id }}" title="{{ next.title }}" ng-show="next.id">Следующий проект</a>
 </div>

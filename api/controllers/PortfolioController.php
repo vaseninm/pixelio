@@ -64,13 +64,13 @@ class PortfolioController extends PxApiController {
 
     public function actionWork() {
         $work = PfWorks::model()->findByPk($this->request->work);
-        $next=PfWorks::model()->find(array(
+        $next=PfWorks::model()->approve()->find(array(
             'condition' => 'id>:current_id',
             'order' => 'id ASC',
             'limit' => 1,
             'params'=>array(':current_id'=>$this->request->work),
         ));
-        $prev=PfWorks::model()->find(array(
+        $prev=PfWorks::model()->approve()->find(array(
             'condition' => 'id<:current_id',
             'order' => 'id DESC',
             'limit' => 1,
@@ -104,12 +104,12 @@ class PortfolioController extends PxApiController {
                 'createTime' => $work->createTime,
             ),
             'next' => array(
-                'id' => $next->id,
-                'title' => $next->title,
+                'id' => isset($next) ? $next->id : false,
+                'title' => isset($next) ? $next->title : false,
             ),
             'prev' => array(
-                'id' => $prev->id,
-                'title' => $prev->title,
+                'id' => isset($prev) ? $prev->id : false,
+                'title' => isset($prev) ? $prev->title : false,
             ),
         );
     }

@@ -17,15 +17,8 @@
 
     <?php echo $form->textFieldControlGroup($works, 'title', array('span' => 5, 'maxlength' => 255)); ?>
 
-    <div class="control-group">
-        <?php $this->widget('yiiwheels.widgets.redactor.WhRedactor', array(
-            'model' => $works,
-            'attribute' => 'desc',
-            'pluginOptions' => array(
-                'minHeight' => 200,
-            ),
-        ));?>
-    </div>
+    <?php echo $form->textAreaControlGroup($works, 'desc', array('span' => 5, 'maxlength' => 255)); ?>
+
 
     <?php if (!$works->isNewRecord) { ?>
 

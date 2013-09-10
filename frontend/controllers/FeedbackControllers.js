@@ -6,14 +6,14 @@ function FeedbackController($scope, $routeParams, $rootScope, $http, $location) 
     $scope.page = $routeParams.page ? $routeParams.page : 1;
     getFeedBack($scope.page);
     $scope.prevPage = function (event) {
-        var page = $scope.page - 1;
-        getFeedBack(page);
-        $location.search({page: page}).replace();
+        $scope.page = $scope.page - 1;
+        getFeedBack($scope.page);
+        $location.search({page: $scope.page});
     }
     $scope.nextPage = function (event) {
-        var page = $scope.page + 1;
-        getFeedBack(page);
-        $location.search({page: page}).replace();
+        $scope.page = $scope.page + 1;
+        getFeedBack($scope.page);
+        $location.search({page: $scope.page});
     }
 
 
@@ -49,8 +49,8 @@ function FeedbackController($scope, $routeParams, $rootScope, $http, $location) 
         }).success(function (data) {
                 $scope.items = data.params.items;
                 $scope.pages = data.params.pages;
-                if (page <= 1) $scope.isFirst = true;
-                if (page >= $scope.pages) $scope.isLast = true;
+                $scope.isFirst = (page <= 1);
+                $scope.isLast = (page >= $scope.pages);
             });
     }
 }
