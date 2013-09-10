@@ -1,4 +1,4 @@
-angular.module('pixelio', ['spasticNav']).
+angular.module('pixelio', ['spasticNav', 'ngRoute', 'ngAnimate']).
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.
             when('/works', {templateUrl: 'views/portfolio/works.html', controller: WorksController, reloadOnSearch: false}).
