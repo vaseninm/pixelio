@@ -28,14 +28,14 @@ angular.module('spasticNav', [])
                         scope.el.animate({
                             width: $(this).outerWidth(),
                             left: $(this).position().left
-                        });
+                        }, 1200);
                     });
                     $(el).bind('mouseleave', function (e) {
                         timeout = setTimeout(function() {
                             scope.el.animate({
                                 width: scope.current.outerWidth(),
                                 left: scope.current.position().left
-                            });
+                            }, 600);
                         }, 500);
 
                     });
