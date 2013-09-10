@@ -8,8 +8,8 @@
             </div>
         </div>
     </div>
-    <span class="endPrev"><span class="prevImg" ng-click="prevPage(event)"></span></span>
-    <span class="endNext"><span class="nextImg" ng-click="nextPage(event)"></span></span>
+    <span class="endPrev"><span class="prevImg" ng-click="prevPage(event)" ng-hide="isFirst"></span></span>
+    <span class="endNext"><span class="nextImg" ng-click="nextPage(event)" ng-hide="isLast"></span></span>
 </div>
 <div class="bottomComments">
     <div class="popUp">

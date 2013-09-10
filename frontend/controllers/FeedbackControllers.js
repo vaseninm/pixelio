@@ -49,14 +49,8 @@ function FeedbackController($scope, $routeParams, $rootScope, $http, $location) 
         }).success(function (data) {
                 $scope.items = data.params.items;
                 $scope.pages = data.params.pages;
-                if (page <= 1) {
-                    $('span.prevImg').hide();
-                    if ($scope.pages > 1) $('span.nextImg').show();
-                }
-                if (page >= $scope.pages) {
-                    $('span.nextImg').hide();
-                    if ($scope.pages > 1) $('span.prevImg').show();
-                }
+                if (page <= 1) $scope.isFirst = true;
+                if (page >= $scope.pages) $scope.isLast = true;
             });
     }
 }

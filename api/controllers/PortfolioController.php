@@ -29,12 +29,12 @@ class PortfolioController extends PxApiController {
         $criteria = new CDbCriteria();
         $criteria->scopes = array('approve');
         $currentTag = 0;
-        if (isset($this->request->tag)) {
+        if (isset($this->request->tag) && $this->request->tag > 0) {
             $criteria->scopes['tag'] = array($this->request->tag);
-            $currentTag = $this->request->tag;
         }
         $page = isset($this->request->page) ? $this->request->page : 1;
-        $countPages = ceil(PfWorks::model()->count($criteria) / PfWorks::PAGE_SIZE);
+        $countWorks = PfWorks::model()->count($criteria);
+        $countPages = ceil($countWorks / PfWorks::PAGE_SIZE);
         $criteria->scopes['page'] = array($page);
         $workModels = PfWorks::model()->findAll($criteria);
         $worksList = array();
@@ -55,11 +55,10 @@ class PortfolioController extends PxApiController {
             );
         }
         $this->answer = array(
-            'currentTag' => $currentTag,
-            'countPages' => $countPages,
-            'currentPage' => $page,
+            'pages' => $countPages,
             'works' => $worksList,
-            'tags' => $tags,
+            'tags' => $tagList,
+            'countWorks' => $countWorks,
         );
     }
 
