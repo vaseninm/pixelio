@@ -25,7 +25,7 @@ angular.module('spasticNav', [])
                 $.each($(element).find('li.nav'), function (i, el) {
                     $(el).bind('mouseenter', function (e) {
                         clearTimeout(timeout);
-                        scope.el.animate({
+                        scope.el.stop(true, false).animate({
                             width: $(this).outerWidth(),
                             left: $(this).position().left
                         }, 1200);
