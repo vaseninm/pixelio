@@ -10,29 +10,27 @@
 class FeedbackController extends PxApiController {
 
     public function actionList() {
-        $count = Feedback::model()->approve()->count();
-        $models = Feedback::model()->approve()->page($this->request->page)->findAll();
+        $pages = ceil(Feedback::model()->approve()->count() / Feedback::PAGE_SIZE);
+        $models = Feedback::model()->approve()->page($this->request->page)->findAll(array('order' => 'id DESC'));
         $items = array();
         foreach ($models as $model) {
             $items[] = array(
                 'id' => $model->id,
-//                'title' => $model->title,
                 'text' => $model->text,
                 'author' => $model->author,
             );
         }
         $this->answer = array(
             'items' => $items,
-            'count' => $count,
+            'pages' => $pages,
         );
     }
 
     public function actionAdd() {
         $model = new Feedback();
-//        $model->title = $this->request->title;
         $model->text = $this->request->text;
         $model->author = $this->request->author;
-        $model->approve = 0;
+        $model->approve = 1;
         $result = $model->save();
         $this->answer = array(
             'result' => $result,

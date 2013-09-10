@@ -23,5 +23,4 @@ function CostController($scope, $routeParams, $rootScope, $http) {
     $http.post('http://api.pixelio.tld/portfolio/cost', {}).success(function(data) {
         $scope.tags = data.params.tags;
     });
-    $scope.tags = [];
 }

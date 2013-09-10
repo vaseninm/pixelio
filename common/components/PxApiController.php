@@ -18,8 +18,9 @@ class PxApiController extends CController
         header('Content-Type: application/json');
         header("Access-Control-Allow-Origin: http://pixelio.tld");
         header("Access-Control-Allow-Headers: Content-Type");
+        if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') Yii::app()->end('200');
         $this->request = CJSON::decode(trim(file_get_contents('php://input')), false);
-        $this->request = isset($this->request->params) ? $this->request->params : array();
+        $this->request = isset($this->request) ? $this->request : array();
         return parent::beforeAction($action);
     }
 

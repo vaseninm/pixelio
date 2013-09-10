@@ -1,77 +1,38 @@
 <div class="jobComments">
     <div class="viewWindow">
         <div class="fade clearfix">
-            <div class="comment">
-                <p class="user">Алексей</p>
-                <p>Молодец, хрошая работа, школьник остался довольным, как если бы сдал экзамен и оценик домой принес отличные.</p>
-                <div class="num">№221</div>
-            </div>
-            <div class="comment">
-                <p class="user">Алексей</p>
-                <p>Молодец, хрошая работа, школьник остался довольным.</p>
-                <div class="num">№34</div>
-            </div>
-            <div class="comment">
-                <p class="user">Алексей</p>
-                <p>Молодец, хрошая работа, школьник остался довольным, как если бы сдал экзамен и оценик домой принес отличные.</p>
-                <div class="num">№1</div>
-            </div>
-            <div class="comment" style="display:none">
-                <p class="user">Вася 1</p>
-                <p>Молодец, хрошая работа, школьник остался довольным, как если бы сдал экзамен и оценик домой принес отличные.</p>
-                <div class="num">№222</div>
-            </div>
-            <div class="comment" style="display:none">
-                <p class="user">Вася 2</p>
-                <p>Молодец, хрошая работа, школьник остался довольным.</p>
-                <div class="num">№35</div>
-            </div>
-            <div class="comment" style="display:none">
-                <p class="user">Вася 3</p>
-                <p>Молодец, хрошая работа, школьник остался довольным, как если бы сдал экзамен и оценик домой принес отличные.</p>
-                <div class="num">№2</div>
-            </div>
-            <div class="comment" style="display:none">
-                <p class="user">Вася 4</p>
-                <p>Молодец, хрошая работа, школьник остался довольным, как если бы сдал экзамен и оценик домой принес отличные.</p>
-                <div class="num">№222</div>
-            </div>
-            <div class="comment" style="display:none">
-                <p class="user">Вася 5</p>
-                <p>Молодец, хрошая работа, школьник остался довольным.</p>
-                <div class="num">№35</div>
-            </div>
-            <div class="comment" style="display:none">
-                <p class="user">Вася 6</p>
-                <p>Молодец, хрошая работа, школьник остался довольным, как если бы сдал экзамен и оценик домой принес отличные.</p>
-                <div class="num">№2</div>
+            <div class="comment" ng-repeat="item in items">
+                <p class="user">{{ item.author }}</p>
+                <p>{{ item.text }}</p>
+                <div class="num">№{{ item.id }}</div>
             </div>
         </div>
     </div>
-    <span class="endPrev"><span class="prevImg"></span></span>
-    <span class="endNext"><span class="nextImg"></span></span>
+    <span class="endPrev"><span class="prevImg" ng-click="prevPage(event)"></span></span>
+    <span class="endNext"><span class="nextImg" ng-click="nextPage(event)"></span></span>
 </div>
 <div class="bottomComments">
     <div class="popUp">
         <div class="popUpInLight">
-            <form>
-                <div class="inputField"><div class="inLight"><input type="text" id="" name="" maxlength="40" class="" placeholder="Ваше имя?" /></div></div>
-                <div class="textArea"><div class="inLight"><textarea id="" name="" cols="" rows="" placeholder="Текст отзыва"></textarea></div></div>
+            <form name="feedbackForm" ng-submit="submitNewFeedback()">
+                <div class="inputField"><div class="inLight">
+                    <input type="text" maxlength="40" placeholder="Ваше имя?" ng-model="newFeedback.author" ng-required="true"/>
+                </div></div>
+                <div class="textArea"><div class="inLight">
+                    <textarea placeholder="Текст отзыва" ng-model="newFeedback.text" ng-required="true"></textarea>
+                </div></div>
                 <div class="send clearfix">
-                    <div class="capthaBox fl">
-                        <style type="text/css">input.code{background:transparent url(static/img/captcha.png) no-repeat 7px 11px}</style>
-                        <div class="inLight"><input type="text" id="" name="" maxlength="2" class="code" autocomplete="off" /></div></div>
                     <div class="buttonOrange">
                         <div>
-                            <input type="submit" value="Оставить отзыв">
+                            <input type="submit" value="Оставить отзыв" ng-disabled="feedbackForm.$invalid">
                             <span></span>
                         </div>
                     </div>
                 </div>
-                <div class="errorMessage">Все поля надо заполнить.</div>
+                <div class="errorMessage" ng-show="feedbackForm.$invalid">Все поля надо заполнить.</div>
             </form>
         </div>
     </div>
-    <em class="green open"><a class="green"  href="#">Оставить отзыв</a></em>
-    <em class="green close" style="display:none;"><a class="green" href="#">Отмена</a></em>
+    <em class="green open"><a class="green" href="#" ng-click="openDialog($event)">Оставить отзыв</a></em>
+    <em class="green close" style="display:none;"><a class="green" href="#" ng-click="closeDialog($event)">Отмена</a></em>
 </div>

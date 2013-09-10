@@ -8,12 +8,15 @@
     <meta name="keywords" content="Ключевые слова"/>
     <meta name="author" content="Pixelio"/>
 
+    <script src="libs/jquery.js"></script>
+    <script src="libs/jPlugins/spasticNav.js"></script>
     <script src="libs/angular.js"></script>
     <script src="controllers/PortfolioControllers.js"></script>
     <script src="controllers/PageControllers.js"></script>
     <script src="controllers/FeedbackControllers.js"></script>
-    <script src="modules/Router.js"></script>
-    <!--<script src="modules/HttpProvider.js"></script>-->
+    <script src="modules/Config.js"></script>
+    <script src="modules/jPlugins.js"></script>
+
     <link rel="stylesheet" href="/css/content.css" type="text/css" media="screen, projection">
 </head>
 <body class="{{ bodyClass }}">
@@ -24,7 +27,7 @@
             <a title="Супер пупер и всё такое" href="/" id="logo"></a>
             <!-- Меню главное -->
             <nav>
-                <ul id="nav">
+                <ul id="nav" spastic-nav="{speed:800, easing: 'swing'}">
                     <li ng-class="{ true:'selected', false: '' }[selected.main]"><a href="#/works">Главная</a></li>
                     <li ng-class="{ true:'selected', false: '' }[selected.page_about]"><a href="#/page/about">Обо мне</a></li>
                     <li ng-class="{ true:'selected', false: '' }[selected.cost]"><a href="#/cost">Стоимость</a></li>
@@ -38,6 +41,9 @@
         </div>
     </div>
 </div>
+
+
+<script src="libs/user.js"></script>
 
 </body>
 </html>
