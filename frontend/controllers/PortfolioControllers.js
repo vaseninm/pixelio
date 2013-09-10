@@ -1,7 +1,7 @@
 function WorksController($scope, $routeParams, $rootScope, $http, $location) {
     $rootScope.bodyClass = 'one';
-    $rootScope.selected = [];
-    $rootScope.selected.main = true;
+    $rootScope.setActiveMenu('main');
+
 
     $scope.currentTag = $routeParams.tag ? $routeParams.tag : 0;
     $scope.page = $routeParams.page ? $routeParams.page : 1;
@@ -36,8 +36,8 @@ function WorksController($scope, $routeParams, $rootScope, $http, $location) {
 
 function WorkController($scope, $routeParams, $rootScope, $http, $location) {
     $rootScope.bodyClass = 'two';
-    $rootScope.selected = [];
-    $rootScope.selected.main = true;
+    $rootScope.setActiveMenu('main');
+
 
     $scope.workId = $routeParams.work;
 

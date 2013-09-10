@@ -943,7 +943,7 @@ function encodeUriQuery(val, pctEncodeSpaces) {
  * @element ANY
  * @param {angular.Module} ngApp an optional application
  *   {@link angular.module module} name to load.
- *
+ve *
  * @description
  *
  * Use this directive to auto-bootstrap an application. Only

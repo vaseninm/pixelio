@@ -3,11 +3,9 @@
     $.fn.spasticNav = function(options) {
 
         options = $.extend({
-            overlap : 20,
-            speed : 500,
-            reset : 1500,
-            color : '#0b2b61',
-            easing : 'easeOutExpo'
+            speed : 800,
+            reset : 500,
+            easing : 'swim' //easeOutElastic easeOutExpo
         }, options);
 
         return this.each(function() {
@@ -17,18 +15,15 @@
                 blob,
                 reset;
 
-            $('<li id="blob"></li>').css({
+            $('<li class="menuArrow"></li>').css({
                 width : currentPageItem.outerWidth(),
-                height : currentPageItem.outerHeight() + options.overlap,
                 left : currentPageItem.position().left,
-                top : currentPageItem.position().top - options.overlap / 2,
-                backgroundColor : options.color
             }).appendTo(this);
 
-            blob = $('#blob', nav);
+            blob = $('.menuArrow', nav);
 
-            $('li:not(#blob)', nav).hover(function() {
-                // mouse over
+            $('li:not(.menuArrow)', nav).hover(function() {
+                // курсор мыши над объектом
                 clearTimeout(reset);
                 blob.animate(
                     {
@@ -42,7 +37,7 @@
                     }
                 );
             }, function() {
-                // mouse out
+                // курсор мыши сдвинулся с объекта
                 reset = setTimeout(function() {
                     blob.animate({
                         width : currentPageItem.outerWidth(),
@@ -52,7 +47,7 @@
 
             });
 
-        }); // end each
+        }); // each()
 
     };
 

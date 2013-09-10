@@ -1,7 +1,6 @@
 function FeedbackController($scope, $routeParams, $rootScope, $http, $location) {
     $rootScope.bodyClass = 'one';
-    $rootScope.selected = [];
-    $rootScope.selected.feedback = true;
+    $rootScope.setActiveMenu('feedback');
 
     $scope.page = $routeParams.page ? $routeParams.page : 1;
     getFeedBack($scope.page);
