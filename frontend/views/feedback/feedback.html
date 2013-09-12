@@ -1,6 +1,6 @@
 <div class="jobComments">
     <div class="viewWindow">
-        <div class="fade clearfix" px-animate-show="visible">
+        <div class="fade clearfix">
             <div class="comment" ng-repeat="item in items">
                 <p class="user">{{ item.author }}</p>
                 <p>{{ item.text }}</p>
@@ -12,7 +12,7 @@
     <span class="endNext"><span class="nextImg" ng-click="nextPage(event)" ng-hide="isLast"></span></span>
 </div>
 <div class="bottomComments">
-    <div class="popUp" px-simple-animate-show="isOpenDialog">
+    <div class="popUp" ng-class="animate" ng-show="isOpenDialog">
         <div class="popUpInLight">
             <form name="feedbackForm" ng-submit="submitNewFeedback()">
                 <div class="inputField"><div class="inLight">
@@ -33,6 +33,6 @@
             </form>
         </div>
     </div>
-    <em class="green open" ng-show="!isOpenDialog"><a class="green" href="#" ng-click="switchDialog($event)">Оставить отзыв</a></em>
+    <em class="green open" ng-hide="isOpenDialog"><a class="green" href="#" ng-click="switchDialog($event)">Оставить отзыв</a></em>
     <em class="green close" ng-show="isOpenDialog"><a class="green" href="#" ng-click="switchDialog($event)">Отмена</a></em>
 </div>

@@ -1,10 +1,11 @@
 function WorksController($scope, $routeParams, $rootScope, $http, $location) {
     $rootScope.bodyClass = 'one';
+    $rootScope.animate = 'animate-view';
     $rootScope.setActiveMenu('main');
 
 
     $scope.currentTag = $routeParams.tag ? $routeParams.tag : 0;
-    $scope.page = $routeParams.page ? $routeParams.page : 1;
+    $scope.page = $routeParams.page ? parseInt($routeParams.page) : 1;
 
     getItems($scope.page);
     $scope.prevPage = function (event) {
@@ -36,6 +37,7 @@ function WorksController($scope, $routeParams, $rootScope, $http, $location) {
 
 function WorkController($scope, $routeParams, $rootScope, $http, $location) {
     $rootScope.bodyClass = 'two';
+    $rootScope.animate = 'animate-view';
     $rootScope.setActiveMenu('main');
 
 
@@ -64,42 +66,47 @@ function WorkController($scope, $routeParams, $rootScope, $http, $location) {
 
     $scope.nextPage = function ($event) {
         $event.preventDefault();
+        var pageId;
         for (var page in $scope.pages) {
             if ($scope.pages[page] == $scope.current) {
-                $scope.current = $scope.pages[parseInt(page)+1];
+//                $scope.current = $scope.pages[parseInt(page) + 1];
+                pageId = $scope.pages[parseInt(page) + 1].id;
                 break;
             }
         }
-        $location.search({page: $scope.current.id});
+        $location.search({page: pageId});
     }
 
     $scope.prevPage = function ($event) {
         $event.preventDefault();
+        var pageId;
         for (var page in $scope.pages) {
             if ($scope.pages[page] == $scope.current) {
-                $scope.current = $scope.pages[parseInt(page)-1];
+//                $scope.current = $scope.pages[parseInt(page) - 1];
+                pageId = $scope.pages[parseInt(page) - 1].id;
                 break;
             }
         }
-        $location.search({page: $scope.current.id});
+        $location.search({page: pageId});
     }
 
     $scope.setPage = function (pageId, $event) {
-        $event.preventDefault();
-        for (var page in $scope.pages) {
-            if ($scope.pages[page].id == pageId) {
-                $scope.current = $scope.pages[page];
-                break;
-            }
-        }
-        $location.search({page: $scope.current.id});
+        if ($event) $event.preventDefault();
+//        for (var page in $scope.pages) {
+//            if ($scope.pages[page].id == pageId) {
+//                $scope.current = $scope.pages[page];
+//                break;
+//            }
+//        }
+        $location.search({page: pageId});
     }
 }
 
 function CostController($scope, $routeParams, $rootScope, $http) {
     $rootScope.bodyClass = 'one';
-    $rootScope.selected = [];
-    $rootScope.selected.cost = true;
+    $rootScope.animate = 'animate-view';
+    $rootScope.setActiveMenu('cost');
+
 
     $http.post('http://api.pixelio.tld/portfolio/cost', {}).success(function (data) {
         $scope.tags = data.params.tags;
