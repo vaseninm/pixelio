@@ -17,9 +17,11 @@
     <script src="controllers/PageControllers.js"></script>
     <script src="controllers/FeedbackControllers.js"></script>
     <script src="modules/Config.js"></script>
-    <script src="modules/jPlugins.js"></script>
+    <script src="modules/SpasticNav.js"></script>
+    <script src="modules/PxAnimate.js"></script>
 
     <link rel="stylesheet" href="/css/content.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/css/animate.css" type="text/css" media="screen, projection">
 </head>
 <body class="{{ bodyClass }}">
 <div class="bodyBg">
@@ -41,6 +43,7 @@
             <!-- /Меню главное -->
             <div class="content" ng-view>
             </div>
+            <footer ng-show="'two' == bodyClass"></footer>
         </div>
     </div>
 </div>

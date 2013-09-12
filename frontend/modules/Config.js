@@ -1,4 +1,4 @@
-angular.module('pixelio', ['spasticNav', 'ngRoute', 'ngAnimate']).
+angular.module('pixelio', ['spasticNav', 'ngRoute', 'ngAnimate', 'pxAnimate']).
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.
             when('/works', {templateUrl: 'views/portfolio/works.html', controller: WorksController, reloadOnSearch: false}).
@@ -9,8 +9,7 @@ angular.module('pixelio', ['spasticNav', 'ngRoute', 'ngAnimate']).
             when('/page/:pageCanonical', {templateUrl: 'views/page/route.html', controller: PageController}).
             otherwise({redirectTo: '/works'});
     }]).config(['$httpProvider', function ($httpProvider) {
-        delete $httpProvider.defaults.headers.common["X-Requested-With"]
+        delete $httpProvider.defaults.headers.common["X-Requested-With"];
 //    }]).config(['$locationProvider', function ($locationProvider) {
 //        $locationProvider.html5Mode(true).hashPrefix('!');
     }]);
-;

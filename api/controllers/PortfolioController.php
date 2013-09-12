@@ -28,13 +28,13 @@ class PortfolioController extends PxApiController {
     public function actionWorks() {
         $criteria = new CDbCriteria();
         $criteria->scopes = array('approve');
+        $countWorks = PfWorks::model()->count($criteria);
         $currentTag = 0;
         if (isset($this->request->tag) && $this->request->tag > 0) {
             $criteria->scopes['tag'] = array($this->request->tag);
         }
         $page = isset($this->request->page) ? $this->request->page : 1;
-        $countWorks = PfWorks::model()->count($criteria);
-        $countPages = ceil($countWorks / PfWorks::PAGE_SIZE);
+        $countPages = ceil(PfWorks::model()->count($criteria) / PfWorks::PAGE_SIZE);
         $criteria->scopes['page'] = array($page);
         $workModels = PfWorks::model()->findAll($criteria);
         $worksList = array();

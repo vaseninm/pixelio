@@ -2,7 +2,7 @@ function FeedbackController($scope, $routeParams, $rootScope, $http, $location) 
     $rootScope.bodyClass = 'one';
     $rootScope.setActiveMenu('feedback');
 
-    $scope.page = $routeParams.page ? $routeParams.page : 1;
+    $scope.page = $routeParams.page ? parseInt($routeParams.page) : 1;
     getFeedBack($scope.page);
     $scope.prevPage = function (event) {
         $scope.page = $scope.page - 1;
@@ -20,7 +20,7 @@ function FeedbackController($scope, $routeParams, $rootScope, $http, $location) 
     $scope.submitNewFeedback = function(){
         $http.post('http://api.pixelio.tld/feedback/add', $scope.newFeedback).success(function (data) {
                 if (data.params.result) {
-                    $scope.closeDialog();
+                    $scope.isOpenDialog = false;
                     getFeedBack($scope.page)
                 } else {
                     alert('Ошибка на сервере');
@@ -28,28 +28,28 @@ function FeedbackController($scope, $routeParams, $rootScope, $http, $location) 
             });
     }
 
-    $scope.openDialog = function ($event) {
-        if ($event) $event.preventDefault();
-        $('.open').hide();
-        $('.close').show();
-        $('.popUp').show();
-    }
-    $scope.closeDialog = function ($event) {
-        if ($event) $event.preventDefault();
-        $('.open').show();
-        $('.close').hide();
-        $('.popUp').hide();
+    $scope.switchDialog = function($event){
+        $event.preventDefault();
+        $scope.isOpenDialog = !$scope.isOpenDialog;
     }
 
 
     function getFeedBack(page) {
+        $scope.visible = 'start-hide';
         $http.post('http://api.pixelio.tld/feedback/list', {
             page: page
         }).success(function (data) {
-                $scope.items = data.params.items;
-                $scope.pages = data.params.pages;
-                $scope.isFirst = (page <= 1);
-                $scope.isLast = (page >= $scope.pages);
+                var stop = $scope.$watch('visible', function (value) {
+                    console.log(value);
+                    if (value == 'stop-hide') {
+                        $scope.items = data.params.items;
+                        $scope.pages = data.params.pages;
+                        $scope.isFirst = (page <= 1);
+                        $scope.isLast = (page >= $scope.pages);
+                        $scope.visible = 'start-show';
+                        stop();
+                    }
+                });
             });
     }
 }

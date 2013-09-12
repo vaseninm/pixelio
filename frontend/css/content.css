@@ -122,7 +122,7 @@ p.user{font:italic normal normal 18px/12px Georgia, "Century Schoolbook L", Seri
 .num{position:absolute;min-width:40px;padding:0 6px;height:20px;top:-11px;right:20px;color:#6d524a;font-size:13px;background: transparent url(../img/border_bg.png)}
 
 .open, .close{width:170px}
-.popUp{display:none;position:absolute;bottom:70px;left:50%;margin-left:-152px;border:2px solid #3e2b25;border-radius:12px;background: transparent url(../img/pop_up_bg.png);box-shadow: 0 0 30px rgba(0,0,0,0.5);-moz-box-shadow: 0 0 30px rgba(0,0,0,0.5); -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.5);}
+.popUp{position:absolute;bottom:70px;left:50%;margin-left:-152px;border:2px solid #3e2b25;border-radius:12px;background: transparent url(../img/pop_up_bg.png);box-shadow: 0 0 30px rgba(0,0,0,0.5);-moz-box-shadow: 0 0 30px rgba(0,0,0,0.5); -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.5);}
 .popUpInLight{width:304px;height:306px;padding-top:20px;border-radius:11px;box-shadow: 0 0 15px rgba(62,43,37,0.8) inset;-moz-box-shadow: 0 0 15px rgba(62,43,37,0.8) inset; -webkit-box-shadow: 0 0 15px rgba(62,43,37,0.8) inset;}
 .popUp:before{content: url(../img/pop_up_triangle.png);bottom:0;position:absolute;left:50%;margin-left:-15px;display:block;width:0;height:0;}
 .inputField, .textArea, .capthaBox{box-shadow: 0 0 10px rgba(62,43,37,0.8);-moz-box-shadow: 0 0 10px rgba(62,43,37,0.8); -webkit-box-shadow: 0 0 10px rgba(62,43,37,0.8);border:1px solid #3e2b25;border-radius:10px;}
@@ -283,30 +283,3 @@ ul.yiiPager li.last{margin-right:0}
 
 .first:hover, .previous:hover, .page:hover, .next:hover, .last:hover{background: rgba(122, 122, 122, 0.2)}
 .page.selected:hover{background: rgba(0, 124, 187, 0.1)}*/
-
-/***************************************************************
-ANIMATION
-***************************************************************/
-.animate-enter,
-.animate-leave
-{
-    -webkit-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -moz-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -ms-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -o-transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    transition: 2000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-}
-
-.animate-enter {
-    left: 100%;
-}
-.animate-enter.animate-enter-active {
-    left: 0;
-}
-
-.animate-leave {
-    left: 0;
-}
-.animate-leave.animate-leave-active{
-    left: -100%;
-}

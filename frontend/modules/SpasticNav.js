@@ -40,6 +40,8 @@ angular.module('spasticNav', [])
 
                     });
                 });
-            }
+            },
+            terminal: false,
+            priority: 1
         };
     });
