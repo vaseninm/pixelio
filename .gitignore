@@ -1,4 +1,4 @@
-composer.lock
+common/lib/Yiinitializr/config/env.lock
 frontend/runtime
 backend/runtime
 console/runtime
