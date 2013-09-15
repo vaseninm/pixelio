@@ -29,7 +29,7 @@ LOGO
 /************************************************************************************
 CONTENT
 *************************************************************************************/
-.content{padding:10px 55px;min-height:415px}
+.content{padding:10px 55px;min-height:415px;position:absolute;margin-left:60px}
 
 /** INDEX PAGE **/
 .one .content{padding:13px 55px 10px 55px;min-height:415px}
@@ -73,7 +73,7 @@ CONTENT
 .bottomMenu div a:hover{color: #6C5048}
 
 /*** ABOUT PAGE ***/
-.about{padding:2px 60px 0}
+.about{padding:2px 60px 0 0}
 .about p{padding:7px 0 17px}
 .picture{text-align:center;width:150px;padding-top:15px}
 a.vk, a.facebook{display:inline-block;height:24px;width:25px;margin:13px 2px;background: transparent url(../img/soc_icons.png)}

@@ -3,7 +3,7 @@
 *************************/
 .animate-show.ng-hide-add,
 .animate-show.ng-hide-remove {
-    -webkit-transition:all linear 4.5s;
+    -webkit-transition:all linear 0.5s;
     -moz-transition:all linear 0.5s;
     -o-transition:all linear 0.5s;
     transition:all linear 0.5s;
@@ -21,7 +21,7 @@
 ***********VIEW**********
 *************************/
 .animate-view.ng-enter, .animate-view.ng-leave {
-    -webkit-transition:all linear 4.5s;
+    -webkit-transition:all linear 0.5s;
     -moz-transition:all linear 0.5s;
     -o-transition:all linear 0.5s;
     transition:all linear 0.5s;
