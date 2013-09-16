@@ -30,10 +30,9 @@ LOGO
 CONTENT
 *************************************************************************************/
 .content{padding:10px 55px;min-height:415px;}
-.unexpectedAnimation{position:absolute;margin-left:60px}
 
 /** INDEX PAGE **/
-.one .content{padding:13px 55px 10px 55px;min-height:415px}
+.one .content{padding:13px 55px 10px 55px;min-height:415px;position:absolute;margin-left:60px}
 .jobTumb .viewWindow{height:320px;width:620px;overflow:hidden;background: transparent url(../img/empty.png)}
 .one .prevImg{left:-60px}
 .one .nextImg{right:-60px}
