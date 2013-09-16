@@ -101,7 +101,7 @@ a.facebook{background-position: -25px 0}
 .green{color:#589c00}
 
 /*** CONTACT PAGE ***/
-.contact{padding:0 60px}
+.contact{padding:4px 60px 0 0}
 .contact img{margin: 12px 28px 10px 0}
 .contact p{padding:7px 0 10px}
 .contactDesc{margin: 0 0 0 0;overflow: hidden;}
