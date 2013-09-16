@@ -29,7 +29,8 @@ LOGO
 /************************************************************************************
 CONTENT
 *************************************************************************************/
-.content{padding:10px 55px;min-height:415px;position:absolute;margin-left:60px}
+.content{padding:10px 55px;min-height:415px;}
+.unexpectedAnimation{position:absolute;margin-left:60px}
 
 /** INDEX PAGE **/
 .one .content{padding:13px 55px 10px 55px;min-height:415px}
