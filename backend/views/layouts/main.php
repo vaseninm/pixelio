@@ -30,7 +30,7 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="http://pixelio.tld/">Pixelio Web Studio</a>
+            <a class="brand" href="<?= Yii::app()->params->itemAt('frontendUrl') ?>">Pixelio Web Studio</a>
             <?php $this->widget('bootstrap.widgets.TbNav', array(
                 'type' => TbHtml::NAV_TYPE_PILLS,
                 'items' => array(

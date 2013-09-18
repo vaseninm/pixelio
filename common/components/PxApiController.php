@@ -16,7 +16,7 @@ class PxApiController extends CController
     protected function beforeAction($action)
     {
         header('Content-Type: application/json');
-        header("Access-Control-Allow-Origin: http://pixelio.tld");
+        header("Access-Control-Allow-Origin: " . Yii::app()->params->itemAt('frontendUrl'));
         header("Access-Control-Allow-Headers: Content-Type");
         if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') Yii::app()->end('200');
         $this->request = CJSON::decode(trim(file_get_contents('php://input')), false);
