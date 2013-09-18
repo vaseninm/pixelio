@@ -23,8 +23,8 @@ return array(
 		'yii.debug' => false,
 		'yii.traceLevel' => 0,
 		'yii.handleErrors'   => APP_CONFIG_NAME !== 'test',
-        'frontendUrl' => 'http://pixelio.tld/',
-        'apiUrl' => 'http://api.pixelio.tld/',
-        'backendUrl' => 'http://admin.pixelio.tld/',
+        'frontendUrl' => 'http://pixelio.tld',
+        'apiUrl' => 'http://api.pixelio.tld',
+        'backendUrl' => 'http://admin.pixelio.tld',
 	)
 );
