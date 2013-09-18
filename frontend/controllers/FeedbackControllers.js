@@ -18,7 +18,7 @@ function FeedbackController($scope, $routeParams, $rootScope, $http, $location, 
 
     $scope.newFeedback = {};
     $scope.submitNewFeedback = function () {
-        $http.post('http://api.pixelio.tld/feedback/add', $scope.newFeedback).success(function (data) {
+        $http.post(config.apiUrl + 'feedback/add', $scope.newFeedback).success(function (data) {
             if (data.params.result) {
                 $scope.isOpenDialog = false;
 //                getFeedBack($scope.page)
@@ -37,7 +37,7 @@ function FeedbackController($scope, $routeParams, $rootScope, $http, $location, 
 
 
     function getFeedBack(page) {
-        $http.post('http://api.pixelio.tld/feedback/list', {
+        $http.post(config.apiUrl + 'feedback/list', {
             page: page
         }).success(function (data) {
                 $scope.items = data.params.items;

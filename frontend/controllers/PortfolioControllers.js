@@ -20,7 +20,7 @@ function WorksController($scope, $routeParams, $rootScope, $http, $location) {
     }
 
     function getItems(page) {
-        $http.post('http://api.pixelio.tld/portfolio/works', {
+        $http.post(config.apiUrl + 'portfolio/works', {
             page: page,
             tag: $scope.currentTag
         }).success(function (data) {
@@ -43,7 +43,7 @@ function WorkController($scope, $routeParams, $rootScope, $http, $location) {
 
     $scope.workId = $routeParams.work;
 
-    $http.post('http://api.pixelio.tld/portfolio/work', {
+    $http.post(config.apiUrl + 'portfolio/work', {
         'work': $scope.workId
     }).success(function (data) {
             $scope.work = data.params.work;
@@ -108,7 +108,7 @@ function CostController($scope, $routeParams, $rootScope, $http) {
     $rootScope.setActiveMenu('cost');
 
 
-    $http.post('http://api.pixelio.tld/portfolio/cost', {}).success(function (data) {
+    $http.post(config.apiUrl + 'portfolio/cost', {}).success(function (data) {
         $scope.tags = data.params.tags;
     });
 }

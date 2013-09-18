@@ -1,12 +1,8 @@
 common/lib/Yiinitializr/config/env.lock
-frontend/runtime
+frontend/libs/config.js
 backend/runtime
 console/runtime
-frontend/www/assets
 backend/www/assets
-frontend/config/env.php
-frontend/config/env/dev.php
-frontend/config/env/prod.php
 backend/config/env.php
 backend/config/env/dev.php
 backend/config/env/prod.php

@@ -107,7 +107,7 @@ class PfPages extends EActiveRecord
     }
 
     public function getImageUrl($type = self::TYPE_IMAGE) {
-        return Yii::app()->params->itemAt('frontendUrl') . "uploads/works/{$type}-{$this->id}.png";
+        return Yii::app()->params->itemAt('apiUrl') . "/uploads/works/{$type}-{$this->id}.png";
     }
 
     protected function deleteImages() {
