@@ -7,7 +7,7 @@
 <div class="form">
 
     <?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-        'id' => 'feedback-form',
+        'id' => $model->getFormId(),
         'enableAjaxValidation' => true,
     )); ?>
 

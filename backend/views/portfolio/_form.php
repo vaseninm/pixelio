@@ -8,7 +8,7 @@
 <div class="form">
 
     <?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-        'id' => 'pf-works-form',
+        'id' => $works->getFormId(),
         'enableAjaxValidation' => true,
     )); ?>
 

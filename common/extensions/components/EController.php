@@ -64,7 +64,7 @@ class EController extends CController
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if (isset($_POST['ajax']) && $_POST['ajax'] === $model->formId)
+        if (isset($_POST['ajax']) && $_POST['ajax'] === $model->formId)
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
