@@ -1,6 +1,6 @@
 <!-- Описание работы -->
 <div class="jobDescription">
-    <div class="jobTime">{{ work.createTime }}</div>
+    <div class="jobTime">{{ (work.createTime * 1000) | date:'dd.MM.yyyy' }}</div>
     <h1>{{ work.title }}</h1>
     <p>{{ work.desc }}</p>
 </div>
