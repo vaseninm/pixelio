@@ -35,6 +35,7 @@ class PfWorks extends EActiveRecord
             array('title,desc','required'),
 			array('status, position, face_id, createTime', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>255),
+			array('status', 'issetFace'),
 			array('desc,tags', 'safe'),
 			array('title, desc, status, createTime', 'safe', 'on'=>'search'),
 		);
@@ -110,6 +111,12 @@ class PfWorks extends EActiveRecord
             )
         ));
         return $this;
+    }
+
+    public function issetFace($attribute, $params){
+        if ($this->$attribute && !isset($this->face)) {
+            $this->addError($attribute, Yii::t('portfolio', 'Не указана лицевая страница.'));
+        }
     }
 
     public function page($currentPage)

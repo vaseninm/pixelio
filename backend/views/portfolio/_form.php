@@ -23,12 +23,16 @@
     <?php if (!$works->isNewRecord) { ?>
 
         <div class="control-group">
+            <? if (isset($works->face)) { ?>
             <?php $this->widget('yiiwheels.widgets.switch.WhSwitch', array(
                 'model' => $works,
                 'attribute' => 'status',
                 'onLabel' => TbHtml::icon(TbHtml::ICON_OK),
                 'offLabel' => TbHtml::icon(TbHtml::ICON_REMOVE),
             ));?>
+            <? } else { ?>
+                <p>Вывести работу можно будет только после того, как будет указана лицевая страница (<?= TbHtml::icon(TbHtml::ICON_OK) ?>)</p>
+            <? } ?>
         </div>
 
         <div class="control-group">
