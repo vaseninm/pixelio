@@ -58,7 +58,6 @@ STRUCTURE & DECOR
 .decorContainer{width:850px;position:relative;background: transparent url(../img/top_section_bg.png) no-repeat}
 /*.topSection{position:absolute;width:850px;height:130px;top:-130px;background: transparent url(../img/lamp.png) no-repeat center bottom}*/
 .topSection{position:absolute;width:825px;height:274px;top:-180px;padding-left:23px;background: transparent url(../img/lamp.png) no-repeat 0 0}
-.topSection div{width:811px;height:274px}
 
 .fl{float:left}
 .fr{float:right}
