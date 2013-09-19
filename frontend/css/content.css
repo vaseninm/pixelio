@@ -40,19 +40,19 @@ CONTENT
 .one .endPrev{left:-60px}
 .one .endNext{right:-60px}
 
-.one .fade a img{opacity:1;
+.one .viewWindow .fade a img{opacity:1;
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
   -ms-transition: opacity 0.5s ease-in-out;
   -o-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;}
-.one .fade:hover a img{opacity:0.2;
+.one .viewWindow:hover .fade a img{opacity:0.2;
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
   -ms-transition: opacity 0.5s ease-in-out;
   -o-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;}
-.one .fade a img:hover{opacity:1;}
+.one .viewWindow .fade a img:hover{opacity:1;}
 
 .bottomMenu{text-align:center;padding:5px 0 0 0;}
 .bottomMenu a{color:#62443c;font-size:13px;margin:0 2px 0 4px;padding:0 7px 3px 7px;}
