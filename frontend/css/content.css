@@ -127,7 +127,7 @@ p.user{font:italic normal normal 18px/12px Georgia, "Century Schoolbook L", Seri
 .popUp:before{content: url(../img/pop_up_triangle.png);bottom:0;position:absolute;left:50%;margin-left:-15px;display:block;width:0;height:0;}
 .inputField, .textArea, .capthaBox{box-shadow: 0 0 10px rgba(62,43,37,0.8);-moz-box-shadow: 0 0 10px rgba(62,43,37,0.8); -webkit-box-shadow: 0 0 10px rgba(62,43,37,0.8);border:1px solid #3e2b25;border-radius:10px;}
 .inputField, .textArea, .send{width:246px;margin:0 auto 0 auto;}
-.send{margin-top:10px;}
+.send{margin-top:15px;}
 .capthaBox, .capthaBox .inLight{width:88px;}
 .inLight, .inLight, .capthaBox .inLight{box-shadow: 0 0 15px rgba(0,0,0,0.2) inset;-moz-box-shadow: 0 0 15px rgba(0,0,0,0.2) inset; -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.2) inset;border-radius:10px;background:rgba(0, 0, 0, 0.1);}
 .inLight, .inLight{width:246px;}
