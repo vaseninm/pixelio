@@ -3,6 +3,9 @@ function FeedbackController($scope, $routeParams, $rootScope, $http, $location, 
     $rootScope.animate = 'animate-view';
     $rootScope.setActiveMenu('feedback');
 
+    $scope.isFirst = true;
+    $scope.isLast = true;
+
     $scope.page = $routeParams.page ? parseInt($routeParams.page) : 1;
     getFeedBack($scope.page);
     $scope.prevPage = function (event) {

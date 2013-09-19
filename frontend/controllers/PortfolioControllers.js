@@ -7,6 +7,9 @@ function WorksController($scope, $routeParams, $rootScope, $http, $location) {
     $scope.currentTag = $routeParams.tag ? $routeParams.tag : 0;
     $scope.page = $routeParams.page ? parseInt($routeParams.page) : 1;
 
+    $scope.isFirst = true;
+    $scope.isLast = true;
+
     getItems($scope.page);
     $scope.prevPage = function (event) {
         $scope.page = $scope.page - 1;
