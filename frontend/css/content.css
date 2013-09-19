@@ -149,7 +149,7 @@ input.code{width:21px;padding:8px 10px 8px 55px;border:none;color:#6d524a;backgr
 /*** JOB PAGE ***/
 .jobDescription{position:relative;width:620px;margin:0 auto;padding-bottom:25px}
 .jobTime{position:absolute;top:13px;right:10px;color:#594742;font-size:13px;}
-.jobImg{border:1px solid #332825;padding:9px;width:601px;margin:0 auto 10px auto;min-height:50px}
+.jobImg{border:1px solid #332825;padding:9px;width:601px;margin:0 auto 10px auto;min-height:50px;text-align:center}
 .imgBox, .fade{position:relative;}
 .two .fade{background:#000}
 .two .fade a{display:block;}
