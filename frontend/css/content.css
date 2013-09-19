@@ -3,7 +3,7 @@
 /************************************************************************************
 TOP MENU
 *************************************************************************************/
-nav{background: transparent url(../img/top_menu_bg.png) no-repeat center top;text-align:center;padding-top:12px;position:relative}
+nav{background: transparent url(../img/top_menu_bg.png) no-repeat center 44px;text-align:center;height:56px;padding-top:58px;position:relative}
 nav ul{height:30px;padding-top:30px;position:relative}
 nav ul li {display: inline-block;list-style: none outside none;margin-left: -3px;}
 nav ul li a{color:#6a4a41;margin:0 5px;font-size:17px;font-family:Georgia, "Century Schoolbook L", Serif;font-style:italic;
