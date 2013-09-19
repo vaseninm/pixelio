@@ -18,14 +18,13 @@
     opacity:1;
 }
 /*************************
-***********VIEW**********
+***********VIEW SHORT PAGE**********
 *************************/
 .animate-view.ng-enter, .animate-view.ng-leave {
     -webkit-transition:all linear 0.5s;
     -moz-transition:all linear 0.5s;
     -o-transition:all linear 0.5s;
     transition:all linear 0.5s;
-    display:block!important;
 }
 
 .animate-view.ng-enter {
