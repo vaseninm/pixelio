@@ -11,8 +11,8 @@
             <a title="Увеличить" href="{{ current.full }}" fancy-box>
                 <img alt="{{ current.title }}" ng-src="{{ current.image }}" />
             </a>
-			<p><a title="Открыть в новой вкладке?" href="/"><span>Открыть в новой вкладке?</span></a></p>
-            <p><a title="Открыть в новой вкладке?" href="/"><span>Открыть в новой вкладке?</span></a></p>
+			<p><a title="Открыть в новой вкладке?" href="{{ current.full }}"><span>Открыть в новой вкладке?</span></a></p>
+            <p><a title="Открыть в новой вкладке?" href="{{ current.full }}"><span>Открыть в новой вкладке?</span></a></p>
         </div>
         <span class="endPrev"><span class="prevImg" ng-click="prevPage($event)" ng-hide="first == current"></span></span>
         <span class="endNext"><span class="nextImg" ng-click="nextPage($event)" ng-hide="last == current"></span></span>

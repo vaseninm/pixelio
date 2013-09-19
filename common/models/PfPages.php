@@ -38,7 +38,7 @@ class PfPages extends EActiveRecord
             array('title,work_id','required'),
             array('face,full', 'file', 'types'=>'png, jpg, gif', 'allowEmpty' => false,),
             array('face', 'faceValidator'),
-            array('full', 'imageTypeFilter'),
+//            array('full', 'imageTypeFilter'),
             array('position, work_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>255),
 			array('title', 'safe', 'on'=>'search'),
@@ -133,7 +133,7 @@ class PfPages extends EActiveRecord
 
         $imagePath = CUploadedFile::getInstance($this, 'full')->tempName;
         Image::make($imagePath)->save($this->getPathToImages() . "/". self::TYPE_FULL ."-{$this->id}.png");
-        Image::make($imagePath)->widen(self::SIZE_IMAGE_WIDTH)->save($this->getPathToImages() . "/". self::TYPE_IMAGE ."-{$this->id}.png");
+        Image::make($imagePath)->resize(self::SIZE_IMAGE_WIDTH, null, true, false)->save($this->getPathToImages() . "/". self::TYPE_IMAGE ."-{$this->id}.png");
     }
 
     protected function afterSave() {
