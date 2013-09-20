@@ -150,11 +150,12 @@ input.code{width:21px;padding:8px 10px 8px 55px;border:none;color:#6d524a;backgr
 /*** JOB PAGE ***/
 .jobDescription{position:relative;width:620px;margin:0 auto;padding-bottom:25px}
 .jobTime{position:absolute;top:13px;right:10px;color:#594742;font-size:13px;}
-.jobImg{border:1px solid #332825;padding:9px;width:601px;margin:0 auto 10px auto;min-height:50px;text-align:center}
+.jobImg{border:1px solid #332825;padding:9px;width:601px;margin:0 auto 10px auto;min-height:50px;text-align:center;}
+.imgBox{}
 .imgBox, .fade{position:relative;}
-.two .fade{/*background:#000*/}
-.two .fade a{display:block;}
-.two .fade img{max-width:100%;height: auto;margin-bottom:-4px}
+.two .fade{height:601px;width:601px;display: table-cell;vertical-align: middle;}
+.two .fade a{}
+.two .fade img{/*max-width:100%;*/height: auto;margin-bottom:-4px;}
 .two .fade p{position:absolute;color:#dedede;padding:0;border-radius:6px;min-width:200px;left:50%;margin-left:-114px;font-family:Georgia, "Century Schoolbook L", Serif;font-style:italic;}
 .two .fade p:nth-of-type(1){top:35px;}
 .two .fade p:nth-of-type(2){bottom:35px;}
@@ -185,20 +186,20 @@ input.code{width:21px;padding:8px 10px 8px 55px;border:none;color:#6d524a;backgr
 .two .fade p:hover{border-top:1px solid #bce55e;border-bottom:1px solid #75983b;border-left:1px solid #92b84a;border-right:1px solid #92b84a;box-shadow: 0 0 9px rgba(205,255,127,0.3);-moz-box-shadow: 0 0 9px rgba(205,255,127,0.3); -webkit-box-shadow: 0 0 9px rgba(205,255,127,0.3);}
 
 .two .fade:hover{background: /*rgba(0, 0, 0, 0.8)*/ url(../img/zoom.png) no-repeat 50% 50%;}
-/* без яваскрипта */
+
 .two .fade img{opacity:1;
 	-webkit-transition: opacity 0.5s ease-in-out;
 	   -moz-transition: opacity 0.5s ease-in-out;
 	    -ms-transition: opacity 0.5s ease-in-out;
 	     -o-transition: opacity 0.5s ease-in-out;
 		    transition: opacity 0.5s ease-in-out;}
-.two .fade:hover img{opacity:0.1;
+.two .fade:hover img{opacity:0.2;
 	-webkit-transition: opacity 0.5s ease-in-out;
 	   -moz-transition: opacity 0.5s ease-in-out;
 	    -ms-transition: opacity 0.5s ease-in-out;
 	     -o-transition: opacity 0.5s ease-in-out;
 		    transition: opacity 0.5s ease-in-out;}
-/* /без яваскрипта */
+
 
 
 .two .jobTumb{position:relative;width:620px;margin:0 auto;}
