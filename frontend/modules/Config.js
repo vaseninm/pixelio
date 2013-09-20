@@ -12,4 +12,4 @@ angular.module('pixelio', ['spasticNav', 'ngRoute', 'ngAnimate', 'pxAnimate']).
         delete $httpProvider.defaults.headers.common["X-Requested-With"];
 //    }]).config(['$locationProvider', function ($locationProvider) {
 //        $locationProvider.html5Mode(true).hashPrefix('!');
-    }]);
+    }]).value('$anchorScroll', angular.noop);
