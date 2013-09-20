@@ -54,7 +54,7 @@ CONTENT
 		    transition: opacity 0.5s ease-in-out;}
 .one .viewWindow .fade a img:hover{opacity:1;}
 
-.bottomMenu{text-align:center;padding:5px 0 0 0;}
+.bottomMenu{text-align:left;padding:5px 0 0 0;}
 .bottomMenu a{color:#62443c;font-size:13px;margin:0 2px 0 4px;padding:0 7px 3px 7px;}
 .bottomMenu div{display:inline-block;position:relative;color:#3e2b27;font-size:18px;vertical-align:top}
 .bottomMenu div:before{content: url(../img/slash.png);}
