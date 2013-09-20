@@ -6,8 +6,8 @@
             </a>
         </div>
     </div>
-    <span class="endPrev"><span class="prevImg" ng-click="prevPage(event)" ng-hide="isFirst"></span></span>
-    <span class="endNext"><span class="nextImg" ng-click="nextPage(event)" ng-hide="isLast"></span></span>
+    <span class="endPrev"><span class="prevImg" ng-click="prevPage(event)" ng-hide="isFirst"><img class="normal" src="../../img/prevImg.png" /><img class="hover" src="../../img/prevImgHover.png" /></span></span>
+    <span class="endNext"><span class="nextImg" ng-click="nextPage(event)" ng-hide="isLast"><img class="normal" src="../../img/nextImg.png" /><img class="hover" src="../../img/nextImgHover.png" /></span></span>
 </div>
 <div class="bottomMenu">
     <div><a href="/#/works" ng-class="{ true:'active', false: '' }[currentTag == 0]">Все работы</a><span>{{ countWorks }}</span></div>

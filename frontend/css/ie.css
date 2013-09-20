@@ -1,10 +1,10 @@
 /* для IE8-9 */
-.one .wrapper{position:fixed;top:50%;left:50%;margin:-278px 0 0 -425px;width:850px;height:556px;background:transparent url(../img/wrapper_bg.png) no-repeat center top;zoom: 1;}
-.two .wrapper{width:850px;min-height:600px;margin:0 auto;background:transparent url(../img/page_bg.png) repeat-y center bottom;zoom: 1;}
+.one .wrapper{zoom: 1;}
+.two .wrapper{zoom: 1;}
 
-.one .fade a img{-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);filter: alpha(opacity=100);zoom: 1;}
-.one .fade:hover a img{-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);filter: alpha(opacity=20);zoom: 1;}
-.one .fade a img:hover{-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);filter: alpha(opacity=100);zoom: 1;}
+.one .viewWindow .fade a img{-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);filter: alpha(opacity=100);zoom: 1;}
+.one .viewWindow .fade:hover a img{-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);filter: alpha(opacity=20);zoom: 1;}
+.one .viewWindow .fade a img:hover{-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);filter: alpha(opacity=100);zoom: 1;}
 
 .two .fade p{display:none;zoom: 1;}
 .two .fade:hover p{display:block;zoom: 1;}
