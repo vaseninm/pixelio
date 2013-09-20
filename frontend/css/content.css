@@ -55,7 +55,7 @@ CONTENT
 .one .viewWindow .fade a img:hover{opacity:1;}
 
 .bottomMenu{text-align:left;padding:5px 0 0 0;/*margin-left:-11px*/}
-.bottomMenu a{color:#62443c;font-size:13px;margin:0 2px 0 4px;padding:0 7px 3px 7px;}
+.bottomMenu a{color:#62443c;font-size:13px;margin:0 6px 0 0;padding:0 7px 3px 7px;}
 .bottomMenu div{display:inline-block;position:relative;color:#3e2b27;font-size:18px;vertical-align:top;text-align:center;}
 .bottomMenu div:before{content: url(../img/slash.png);}
 .bottomMenu div:first-child:before{content:""}
@@ -153,7 +153,7 @@ input.code{width:21px;padding:8px 10px 8px 55px;border:none;color:#6d524a;backgr
 .jobImg{border:1px solid #332825;padding:9px;width:601px;margin:0 auto 10px auto;min-height:50px;text-align:center;}
 .imgBox{}
 .imgBox, .fade{position:relative;}
-.two .fade{height:601px;width:601px;display: table-cell;vertical-align: middle;}
+.two .fade{height:601px;width:601px;display:table-cell;vertical-align: middle;}
 .two .fade a{}
 .two .fade img{/*max-width:100%;*/height: auto;margin-bottom:-4px;}
 .two .fade p{position:absolute;color:#dedede;padding:0;border-radius:6px;min-width:200px;left:50%;margin-left:-114px;font-family:Georgia, "Century Schoolbook L", Serif;font-style:italic;}
