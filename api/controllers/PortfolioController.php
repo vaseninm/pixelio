@@ -26,6 +26,7 @@ class PortfolioController extends PxApiController {
     }
 
     public function actionWorks() {
+        sleep(3);
         $criteria = new CDbCriteria();
         $criteria->scopes = array('approve');
         $countWorks = PfWorks::model()->count($criteria);

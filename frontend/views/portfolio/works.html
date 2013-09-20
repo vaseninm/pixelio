@@ -11,7 +11,7 @@
 </div>
 <div class="bottomMenu">
     <div><a href="/#/works" ng-class="{ true:'active', false: '' }[currentTag == 0]">Все работы</a><span>{{ countWorks }}</span></div>
-    <div ng-repeat="tag in tags">
+    <div class="animate-view" ng-repeat="tag in tags">
         <a href="#/works/{{ tag.id }}" ng-class="{ true:'active', false: '' }[tag.id == currentTag]">{{ tag.title }}</a>
         <span>{{ tag.worksCount }}</span>
     </div>
