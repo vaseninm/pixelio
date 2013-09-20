@@ -120,6 +120,7 @@ a.facebook{background-position: -25px 0}
 .comment{height:62px;border:2px solid #30221e;border-radius:12px;margin-bottom:20px;padding:10px;position:relative}
 .bottomComments{text-align:center;padding:25px 0 20px 0;position:relative}
 p.user{font:italic normal normal 18px/12px Georgia, "Century Schoolbook L", Serif;color:#6c5048;padding:0}
+.itemText{height:50px;overflow:hidden}
 .num{position:absolute;min-width:40px;padding:0 6px;height:20px;top:-11px;right:20px;color:#6d524a;font-size:13px;background: transparent url(../img/border_bg.png)}
 
 .open, .close{width:170px}
