@@ -19,7 +19,7 @@
                     <input type="text" maxlength="40" placeholder="Ваше имя?" ng-model="newFeedback.author" ng-required="true"/>
                 </div></div>
                 <div class="textArea"><div class="inLight">
-                    <textarea placeholder="Текст отзыва" ng-model="newFeedback.text" ng-required="true"></textarea>
+                    <textarea placeholder="Текст отзыва" ng-model="newFeedback.text" ng-required="true" ng-maxlength="180"></textarea>
                 </div></div>
                 <div class="send clearfix">
                     <div class="buttonOrange">
@@ -29,7 +29,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="errorMessage" ng-show="feedbackForm.$invalid">Все поля надо заполнить.</div>
+                <div class="errorMessage" ng-show="feedbackForm.$error.required">Все поля надо заполнить.</div>
+                <div class="errorMessage" ng-show="feedbackForm.$error.maxlength">Превышено максимальное колличество символов в отзыве.</div>
             </form>
         </div>
     </div>
