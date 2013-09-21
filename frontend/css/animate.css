@@ -27,10 +27,10 @@
     transition:all linear 0.5s;
 }
 
-.animate-view.ng-enter {
+.animate-view.ng-enter {position:absolute;margin-left:59px;
     opacity:0;
 }
-.animate-view.ng-enter.ng-enter-active {
+.animate-view.ng-enter.ng-enter-active {position:absolute;margin-left:59px;
     opacity:1;
 }
 
