@@ -115,7 +115,7 @@ a.facebook{background-position: -25px 0}
 
 
 /*** COMMENTS PAGE ***/
-.jobComments{position:relative;width:620px;margin:0 auto;}
+.jobComments{position:relative;width:620px;/*margin:0 auto;*/}
 .jobComments .viewWindow{height:305px;width:620px;overflow:hidden;padding-top:7px;margin-top:7px}
 .comment{height:62px;border:2px solid #30221e;border-radius:12px;margin-bottom:20px;padding:10px;position:relative}
 .bottomComments{text-align:center;padding:25px 0 20px 0;position:relative}
