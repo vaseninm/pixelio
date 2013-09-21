@@ -32,7 +32,7 @@ CONTENT
 .content{padding:10px 55px;min-height:415px;}
 
 /** INDEX PAGE **/
-.one .content{padding:13px 55px 10px 55px;min-height:415px;position:absolute;margin-left:60px}
+.one .content{padding:13px 55px 10px 55px;min-height:415px;position:absolute;left:59px}
 .jobTumb .viewWindow{height:320px;/*width:620px;overflow:hidden;*/background: transparent url(../img/empty.png)}
 .one .prevImg{left:-60px}
 .one .nextImg{right:-60px}
@@ -74,7 +74,7 @@ CONTENT
 .bottomMenu div a:hover{color: #6C5048}
 
 /*** ABOUT PAGE ***/
-.about{padding:0 60px 0 0}
+.about{width:620px}
 .about p{padding:7px 0 17px}
 .picture{text-align:center;width:150px;padding-top:15px}
 a.vk, a.facebook{display:inline-block;height:24px;width:25px;margin:13px 2px;background: transparent url(../img/soc_icons.png)}
@@ -102,7 +102,7 @@ a.facebook{background-position: -25px 0}
 .green{color:#589c00}
 
 /*** CONTACT PAGE ***/
-.contact{padding:4px 60px 0 0}
+.contact{padding:4px 0 0 0;width:620px}
 .contact img{margin: 12px 28px 10px 0}
 .contact p{padding:7px 0 10px}
 .contactDesc{margin: 0 0 0 0;overflow: hidden;}
@@ -116,7 +116,7 @@ a.facebook{background-position: -25px 0}
 
 /*** COMMENTS PAGE ***/
 .jobComments{position:relative;width:620px;margin:0 auto;}
-.jobComments .viewWindow{height:300px;width:620px;overflow:hidden;padding-top:5px;margin-top:7px}
+.jobComments .viewWindow{height:300px;width:620px;overflow:hidden;padding-top:10px;margin-top:7px}
 .comment{height:62px;border:2px solid #30221e;border-radius:12px;margin-bottom:20px;padding:10px;position:relative}
 .bottomComments{text-align:center;padding:25px 0 20px 0;position:relative}
 p.user{font:italic normal normal 18px/12px Georgia, "Century Schoolbook L", Serif;color:#6c5048;padding:0}
