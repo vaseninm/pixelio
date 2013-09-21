@@ -22,8 +22,8 @@ class Feedback extends EActiveRecord
     {
         return array(
             array('approve', 'boolean'),
-            array('author', 'length', 'max' => 255),
-            array('text', 'safe'),
+            array('author', 'length', 'max' => 40),
+            array('text', 'length', 'max' => 180),
             array('id, text, author, approve', 'safe', 'on' => 'search'),
         );
     }
