@@ -17,7 +17,7 @@ function WorksController($scope, $routeParams, $rootScope, $http, $location) {
         $location.search({page: $scope.page});
     }
     $scope.nextPage = function (event) {
-        var page = $scope.page + 1;
+        $scope.page = $scope.page + 1;
         getItems($scope.page);
         $location.search({page: $scope.page});
     }
