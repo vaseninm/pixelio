@@ -230,11 +230,10 @@ input.code{width:21px;padding:8px 10px 8px 55px;border:none;color:#6d524a;backgr
 .two .jobTumb a img:hover{opacity:1;}
 
 .endPrev, .endNext{width:53px;height:54px;display:block;background: transparent url(../img/endImg.png);position:absolute;top:50%;margin-top:-25px}
-/*.endPrev{background-position: 0 -104px;left:-70px}
-.endNext{background-position: -52px -104px;right:-70px}
-.prevImg, .nextImg{width:53px;height:54px;display:block;background: transparent url(../img/next_prew.png);cursor:pointer;}*/
+.endPrev{left:-70px}
+.endNext{right:-70px}
 
-.prevImg img, .nextImg img{display: block;width: 53px;height: 54px;position: absolute;
+.prevImg img, .nextImg img{display: block;width: 53px;height: 54px;position: absolute;cursor:pointer;
     -webkit-transition: all .5s ease;
        -moz-transition: all .5s ease;
         -ms-transition: all .5s ease;
@@ -244,11 +243,6 @@ input.code{width:21px;padding:8px 10px 8px 55px;border:none;color:#6d524a;backgr
 .prevImg > img.hover, .nextImg > img.hover{opacity: 0;z-index: 1;}
 .prevImg:hover > img.normal, .nextImg:hover > img.normal{opacity: 0;z-index: 1;}
 .prevImg:hover > img.hover, .nextImg:hover > img.hover{opacity: 1;z-index: 2;}
-
-/*.prevImg{background-position: 0 0;}
-.nextImg{background-position: -52px 0;}
-.prevImg:hover{background-position: 0 -52px;}
-.nextImg:hover{background-position: -52px -52px;}*/
 
 /************************************************************************************
 FOOTER
