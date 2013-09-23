@@ -76,11 +76,11 @@ CONTENT
 /*** ABOUT PAGE ***/
 .about{width:620px}
 .about p{padding:7px 0 17px}
-.picture{text-align:center;width:150px;padding-top:15px}
+.picture{text-align:center;width:170px;padding-top:15px}
 a.vk, a.facebook{display:inline-block;height:24px;width:25px;margin:13px 2px;background: transparent url(../img/soc_icons.png)}
 a.vk{background-position: 0 0}
 a.facebook{background-position: -25px 0}
-.hello{padding:0 0 0 30px;width:440px}
+.hello{padding:0 0 0 10px;width:440px}
 .softBlock{margin-top:-6px}
 .soft:first-child{background: none}
 .soft{height:50px;position:relative;padding:0 0 0 65px;background: transparent url(../img/soft_line.png) repeat-x}
