@@ -21,9 +21,9 @@ angular.module('pxAnimate', [])
             link: function ($scope, element, attrs) {
                 if (element.context.nodeName !== 'IMG') return false;
                 attrs.$observe('ngSrc', function (value) {
-                    attrs.src = attrs.pxLoader;
+                    element.attr('src', attrs.pxLoader);
                     $('<img />').attr('src', value).load(function() {
-                            attrs.src = value;
+                        element.attr('src', value);
                     });
                 });
             },
