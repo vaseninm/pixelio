@@ -27,6 +27,9 @@ angular.module('pxAnimate', [])
                     });
                 });
             },
+            compile: function(tplElement, tplAttr){
+                $('<img />').attr('src', tplAttr.pxLoader);
+            },
             restrict: 'A'
         }
     });
