@@ -16,4 +16,17 @@ angular.module('pxAnimate', [])
                 });
             }
         }
+    }).directive('pxLoader', function () {
+        return {
+            link: function ($scope, element, attrs) {
+                if (element.context.nodeName !== 'IMG') return false;
+                attrs.$observe('ngSrc', function (value) {
+                    attrs.src = attrs.pxLoader;
+                    $('<img />').attr('src', value).load(function() {
+                            attrs.src = value;
+                    });
+                });
+            },
+            restrict: 'A'
+        }
     });
