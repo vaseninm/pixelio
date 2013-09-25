@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+<title>Шаблон магазина</title>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+<meta name="generator" content="" />
+<link rel="stylesheet" href="css/main.css" title="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/content.css" title="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+  <div id="container">
+    <div id="header">
+<!-- Вход регистрация -->
+      <div class="superTop">
+        <div class="entReg fr"><a class="enter" href="#">Войти</a><a class="signUp" href="#">Регистрация</a></div>
+        <div class="time fr"><img alt="Ежедневно 9:00 - 22:00" class="fl" src="img/clock.png" /><b>Ежедневно</b><br />9:00 - 22:00</div>
+        <div class="clr"></div>
+      </div>
+<!-- Логотип, поиск, город, телефон -->
+      <div class="top">
+        <div class="logo fl"><h1><a href="/">Интернет магазин "Название"</a></h1></div>
+        <div class="search fl">
+          <form action="">
+            <input type="search" onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" value="поиск по товарам" />
+          </form>
+        </div>
+        <div class="town fl">
+          <span><a href="#">Астана</a></span>
+          <div class="popup-town city-select" style="display: block;">
+            <div class="title"><div class="a"><span class="pseudo">Астана</span></div></div>
+              <div class="sub">
+                <ul>
+                  <li><a href="#1">Москва</a></li>
+                  <li><a href="#2">Санкт-Петербург</a></li>
+                  <li><a href="#3">Воронеж</a></li>
+                  <li><a href="#4">Владивосток</a></li>
+                  <li><a href="#5">Петропавловск-Камчатский</a></li>
+                  <li><a href="#6">Ростов на Дону</a></li>
+                  <li><a href="#7">Великий Устюг</a></li>
+                  <li><a href="#8">Краснодар</a></li>
+                  <li><a href="#9">Кривой рог</a></li>
+                  <li><a href="#10">Воркута</a></li>
+                </ul>
+             </div>
+           </div>
+        </div>
+        <div class="phone fr"><span>(7172)</span> 32–26–45 <span>(701)</span> 943–34–72</div>
+      </div>
+      <div class="clr"></div>
+<!-- Верхнее меню, корзина -->
+      <div class="topMenu">
+        <div class="fl">
+          <ul class="menu">
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Помощь</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        <div class="clr"></div>
+        </div>
+<!-- Корзина -->
+        <div class="basket fr">
+          <p>В корзине 3 товара</p>
+          <p>на сумму 167880<span class="hyphen"></span><span class="ruble">p</span><span class="dot">уб.</span></p>
+        </div>
+        <div class="fr">
+          <a href="#"><img alt="" src="img/shopping_basket.png" /></a>
+        </div>
+        <div class="myBasket fr">
+          <a href="#">Моя корзина </a>
+        </div>
+        <div class="clr"></div>
+      </div>
+      <div class="clr"></div>
+      </div>
+<!-- Блок HOT-OFFER -->
+      <div id="offer">
+        <div class="topHotOffer"><div class="left fl"></div><div class="center fl"></div><div class="right fr"></div><div class="clr"></div></div>
+        <div class="hotOffer">
+          <div class="fl">
+            <img alt="" src="img/htc_sensation_xl.jpg" />
+            <div class="cena"><span class="red">119 900</span>,- <span class="hyphen"></span><span class="ruble">p</span><span class="dot">уб.</span></div>
+          </div>
+          <div class="next fr"></div>
+          <div class="clr"></div>
+        </div>
+        <div class="newsFlash">
+          <ul>
+            <li class="active"><h2>HTC Sensation XL c Beats by Dr. Dre</h2><p>Новый смартфон по невероятно низкой цене с несравненным качеством звука.</p></li>
+            <li><h2>Apple Magic Trackpad</h2><p>Первый в мире мультитач трекпад. Для самых широких жестов.</p></li>
+            <li><h2>Apple Magic Mouse</h2><p>Первая в мире Multi-Touch мышь. Для самой комфотной работы.</p></li>
+          </ul>
+        </div>
+        <div class="clr"></div>
+      </div>
+<!--
+* Контент
+* Левый блок
+* Реклама
+* Футер
+-->
+    <div id="wrapper">
+<!-- Контент -->
+      <div id="content">
+        <div class="titleFlash">
+          <ul>
+            <li class="active"><a href="#">Хиты продаж</a></li>
+            <li><a href="#">Новинки</a></li>
+            <li><a href="#">Аксессуары</a></li>
+            <li><a href="#">Распродажа</a></li>
+          </ul>
+        </div>
+        <div class="clr"></div>
+
+        <!-- Продукт № 1 -->
+        <div class="product fl">
+           <div class="productPhoto fl">
+             <div class="fl"><a href="#"><img alt="" src="img/product1.jpg" /></a></div>
+             <div class="discount" style="display:block"><img alt="" src="img/discount.png" /></div>
+             <div class="miracle"><img alt="" src="img/miracle.png" /></div>
+             <a class="buttonBuy" href="#">Купить</a>
+           </div>
+           <div class="productDescription fl">
+             <p class="title"><a href="#">Apple Magic Mouse</a></p>
+             <p class="description">Представляем Magic Mouse. Первую в мире мышь Multi-Touch.</p>
+             <p class="yandex">Яндекс маркет 17990 тг.</p>
+           </div>
+           <div class="price fr">
+             <span class="red">10990</span>,- <span class="hyphen"></span><span class="ruble">p</span><span class="dot">уб.</span>
+           </div>
+           <div class="clr"></div>
+        </div>
+
+        <!-- Продукт № 2 -->
+        <div class="product fl">
+           <div class="productPhoto fl">
+             <div class="fl"><a href="#"><img alt="" src="img/product2.jpg" /></a></div>
+             <div class="discount"><img alt="" src="img/discount.png" /></div>
+             <div class="miracle" style="display:block"><img alt="" src="img/miracle.png" /></div>
+             <a class="buttonBuy" href="#">Купить</a>
+           </div>
+           <div class="productDescription fl">
+             <p class="title"><a href="#">Apple iPad 2 Wi–Fi + 3G 64 ГБ</a></p>
+             <p class="description">Второе поколение планшетного Apple-компьютера представлено Стивом Джобсом.</p>
+             <p class="yandex">Яндекс маркет 17990 тг.</p>
+           </div>
+           <div class="price fr">
+             <span>167990</span>,- <span class="hyphen"></span><span class="ruble">p</span><span class="dot">уб.</span>
+           </div>
+           <div class="clr"></div>
+        </div>
+
+<!-- Обязательно генерить после каждой пары блоков с товаром, что-бы корректно всё отображалось при длинном описании -->
+        <div class="clr"></div>
+<!-- /Обязательно генерить после каждой пары блоков с товаром, что-бы корректно всё отображалось при длинном описании -->
+
+        <!-- Продукт № 3 -->
+        <div class="product fl">
+           <div class="productPhoto fl">
+             <div class="fl"><a href="#"><img alt="" src="img/product3.jpg" /></a></div>
+             <div class="discount"><img alt="" src="img/discount.png" /></div>
+             <div class="miracle"><img alt="" src="img/miracle.png" /></div>
+             <a class="buttonBuy" href="#">Купить</a>
+           </div>
+           <div class="productDescription fl">
+             <p class="title"><a href="#">iPhone 4S 16 ГБ</a></p>
+             <p class="description">Двухъядерный чип A5 - в 2 раза выше скорость работы, и в 7 раз быстрее графика.</p>
+             <p class="yandex">Яндекс маркет 17990 тг.</p>
+           </div>
+           <div class="price fr">
+             <span>129990</span>,- <span class="hyphen"></span><span class="ruble">p</span><span class="dot">уб.</span>
+           </div>
+           <div class="clr"></div>
+        </div>
+
+        <!-- Продукт № 4 -->
+        <div class="product fl">
+           <div class="productPhoto fl">
+             <div class="fl"><a href="#"><img alt="" src="img/product4.jpg" /></a></div>
+             <div class="discount"><img alt="" src="img/discount.png" /></div>
+             <div class="miracle"><img alt="" src="img/miracle.png" /></div>
+             <a class="buttonBuy" href="#">Купить</a>
+           </div>
+           <div class="productDescription fl">
+             <p class="title"><a href="#">iPhone 4S 16 ГБ</a></p>
+             <p class="description">Двухъядерный чип A5 - в 2 раза выше скорость работы, и в 7 раз быстрее графика. </p>
+             <p class="yandex">Яндекс маркет 17990 тг.</p>
+           </div>
+           <div class="price fr">
+             <span>129990</span>,- <span class="hyphen"></span><span class="ruble">p</span><span class="dot">уб.</span>
+           </div>
+           <div class="clr"></div>
+        </div>
+<!-- Обязательно генерить после каждой пары блоков с товаром, что-бы корректно всё отображалось при длинном описании -->
+        <div class="clr"></div>
+<!-- /Обязательно генерить после каждой пары блоков с товаром, что-бы корректно всё отображалось при длинном описании -->
+        <!-- /конец блоков продуктов -->
+
+        <div class="clr"></div><!-- Нужен обязательно, если блоков с продуктами не чётное число-->
+
+        <div class="blogBlog">
+          <div class="blogTitle">
+            Блог
+          </div>
+          <div class="blogEntries">
+            <div class="blogImg fl"><a href="#"><img alt="" src="img/blog_img_1.jpg" /></a></div>
+            <div class="blogTxt fl">
+              <p class="blogTxtTitle"><a href="#">Как включить поддержку TRIM для SSD накопителей сторонних производителей в Mac OS X</a></p>              <p class="blogAutor">автор <a href="#">Doxvill</a> опубликовал <span class="blogDate">5 января 2012</span><span class="blogDoted">•</span><a href="#">4 комментария</a></p>              <p>Выход в широкие массы большого разнообразия SSD накопителей по относительно доступной цене подстегнул пользователей к обновлению не очень быстрых HDD, а разработчиков, в свою очередь, задуматься над софтверным вопросом своих операционных систем дабы обеспечить быструю, правильную, долговечную и стабильную работу этих накопителей в своих ОС.</p>
+              <p class="readMore"><a href="#">Читать далее &rarr;</a></p>
+            </div>
+            <div class="clr"></div>
+          </div>
+          <div class="blogEntries">
+            <div class="blogImg fl"><a href="#"><img alt="" src="img/blog_img_2.jpg" /></a></div>
+            <div class="blogTxt fl">
+              <p class="blogTxtTitle"><a href="#">Как настроить Mail.ru в Adium</a></p>
+              <p class="blogAutor">автор <a href="#">Doxvill</a> опубликовал <span class="blogDate">5 января 2012</span><span class="blogDoted">•</span><a href="#">4 комментария</a></p>
+              <p>В этой заметке я расскажу о том, как настроить транспорт сообщений Mail.ru через Jabber при помощи клиента мгновенных сообщений Adium. Хочется заметить, что с выходом официального Агента Mail.ru под Mac вопрос транспорта стал не таким актуальным как ранее, однако любителям минимализма (имеется ввиду количества установленных программ) эта инструкция может быть кстати</p>
+              <p class="readMore"><a href="#">Читать далее &rarr;</a></p>
+            </div>
+            <div class="clr"></div>
+          </div>
+          <div class="blogEntries">
+            <div class="blogImg fl"><a href="#"><img alt="" src="img/blog_img_3.jpg" /></a></div>
+            <div class="blogTxt fl">
+              <p class="blogTxtTitle"><a href="#">Порция приятных бесплатностей в iTunes Store!</a></p>
+              <p class="blogAutor">автор <a href="#">Doxvill</a> опубликовал <span class="blogDate">5 января 2012</span><span class="blogDoted">•</span><a href="#">4 комментария</a></p>
+              <p>Сегодня я был очень приятно удивлён, заглянувши в раздел бесплатных приложений в iTunes Store! Перед предстоящими праздниками множество именных и популярных разработчиков  игр и программ для iOS не поскупились на свои некоторые самые-самые хиты! Не буду долго томить вас, уважаемые читатели! И так, что мы сегодня имеем?</p>
+              <p class="readMore"><a href="#">Читать далее &rarr;</a></p>
+            </div>
+            <div class="clr"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Левый блок (навигация, реклама)-->
+    <div id="leftNavigation">
+      <div class="title-menu">Apple</div>
+      <ul>
+        <li><a href="#">iMac</a></li>
+        <li><a href="#">Mac mini</a></li>
+        <li><a href="#">MacBook Pro</a></li>
+        <li><a href="#">MacBook Air</a></li>
+        <li><a href="#">iPad</a></li>
+        <li><a href="#">iPod</a></li>
+        <li><a href="#">iPhone</a></li>
+        <li><a href="#">Перефирия</a></li>
+        <li><a href="#">Аксессуары</a></li>
+      </ul>
+      <div class="title-menu">HTC</div>
+      <ul>
+        <li><a href="#">Android</a></li>
+        <li><a href="#">Windows</a></li>
+        <li><a href="#">Аксессуары</a></li>
+      </ul>
+      <div class="title-menu">Google</div>
+      <ul>
+        <li><a href="#">Nexus S</a></li>
+        <li><a href="#">Аксессуары</a></li>
+      </ul>
+      <div class="title-menu">Игровые приставки</div>
+      <ul>
+        <li><a href="#">PlayStation 3</a></li>
+        <li><a href="#">PlayStation Vita</a></li>
+        <li><a href="#">Nintendo DS</a></li>
+      </ul>
+    </div>
+<!-- Реклама -->
+    <div id="extra">
+      <div class="ads">
+        <a href="#"><img alt="" src="img/ads.jpg" /></a>
+      </div>
+    </div>
+<!-- Футер -->
+    <div id="footer">
+     <div class="logoBottom fl">2011 &copy; GeekStore</div>
+     <div class="contact fl">
+       <p>Телефон: + 7(701) 943-34-72</p>       <p>Email: info@geekstore.kz</p>       <p>ICQ: 909-906</p>
+     </div>
+     <div class="menuBottom fl">
+       <div class="fl"><p>Разделы</p>
+         <div class="item">
+           <p><a href="#">Блог</a></p>
+           <p><a href="#">Рплата</a></p>
+           <p><a href="#">Доставка</a></p>
+         </div>
+         <div class="item">
+           <p><a href="#">Отзывы</a></p>
+           <p><a href="#">Помощь</a></p>
+           <p><a href="#">Контакты</a></p>
+         </div>
+         <div class="clr"></div>
+       </div>
+       <div class="fl"><p>Производители</p>
+         <div class="item">
+           <p><a href="#">Apple</a></p>
+           <p><a href="#">HTC</a></p>
+           <p><a href="#">Google</a></p>
+         </div>
+         <div class="item">
+           <p><a href="#">Sony</a></p>
+           <p><a href="#">Nintendo</a></p>
+           <p><a href="#">Microsoft</a></p>
+         </div>
+         <div class="clr"></div>
+       </div>
+       <div class="clr"></div>
+     </div>
+     <div class="reclBottom fr">
+       <p>У нас можно купить официальную продукцию Apple: в том числе iMac 21 и iMac 27, ноутбуки macbook pro и любую другую беспроводную технику.</p>
+     </div>
+     <div class="clr"></div>
+    </div>
+
+    <div class="bottomSpacer"></div>
+  </div>
+
+</body>
+</html>

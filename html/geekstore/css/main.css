@@ -1,0 +1,175 @@
+/* Сброс стилей */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0; /* обнуляем внешние отступы */
+	padding: 0; /* обнуляем внутренние отступы */
+	border: 0; /* убираем бордюры */
+	outline: 0; /* убираем контуры */
+	font-size: 10pt; /* задаем базовый размер шрифта, значение по умолчанию = 16px */
+	vertical-align: baseline; /* устанавливаем базовое вертикальное выравнивание */
+	background: transparent; /* устанавливаем фон прозрачным */
+}
+body {line-height: 1} /* устанавливаем базовую высоту */
+ol, ul {list-style: none} /* убираем маркеры для нумерованных и обычных списков */
+blockquote, q {quotes: none} /* убираем кавычки для цитат */
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: ''; /* убираем */
+	content: none; /* и скрываем генерируемое содержимое */
+}
+:focus {outline: 0} /* убираем контуры вокруг ссылок при фокусе */
+ins {text-decoration: none} /* убираем подчеркивание для вставленного текста */
+del {text-decoration: line-through} /* убираем перечеркивание для удаленного текста */
+table {
+	border-collapse: collapse; /* убираем рамки двойной толщины */
+	border-spacing: 0; /* убираем расстояние между ячейками */
+}
+
+/* reset webkit search input styles */
+input[type=search] {
+	-webkit-appearance: none;
+	outline: none;
+}
+input[type="search"]::-webkit-search-decoration, /* Removes inner padding and search cancel button in Safari 5 and Chrome on OS X. */
+input[type="search"]::-webkit-search-cancel-button {
+	display: none;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* Addresses `appearance` set to `searchfield` in Safari 5 and Chrome. */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome(include `-moz` to future-proof). */
+    box-sizing: content-box;
+}
+
+/* Стили магазина */
+/* Общие стили */
+body{font-family: arial,sans-serif;text-align:center;color:#4c4c4c;background:#FFF url(../img/page_bg.png) repeat-x center top }
+p{margin:0 10px 10px}
+a{/*display:block;*/color: #005498}
+a:hover{color:#c00065}
+div#container{text-align:left;}
+div#content p{line-height:1.4}
+div#leftNavigation{}
+.clr{clear:both}
+.fl{float:left}
+.fr{float:right}
+
+/* Общая разметка */
+div#header{background:#F3F3F3 url(../img/page_bg.png) repeat-x center top}
+div#container{width:1024px;margin:0 auto}
+div#content{float:right;width:824px}
+div#leftNavigation{float:left;width:200px}
+div#extra{float:left;clear:left;width:200px}
+div#footer{clear:both;width:100%}
+
+/* Супер топ */
+.superTop{height:20px;padding-top:25px;}
+.entReg{width:270px;text-align:right}
+.time{width:100px;font-size:8pt;}
+.time b{font-size:8pt;}
+.entReg a{background:#FFF;margin-left: 15px;padding: 5px 10px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px}
+.entReg a:hover{background-color:transparent}
+a.enter{}
+a.signUp{}
+
+/* Логотип, поиск, город, телефон */
+.top{padding-bottom:20px;height:50px}
+.logo a{display:block;text-indent: -9999px;height:50px;width:200px;background: url(../img/logo.png) no-repeat}
+
+.search{height:25px;width:280px;text-align:center;padding-top:25px}
+input[type=search] {-webkit-appearance: none; width: 186px; height: 22px; border: none; background: url(../img/search_form_bg.png); padding:0 10px 0 20px; font-style:italic; color:#959595; box-sizing: border-box; -moz-box-sizing: border-box;}
+@media \0screen { input[type=search] {font-size:13px;padding:3px 10px 0 20px;}} /* хак IE8 */
+input[type="search"]:focus {outline: none;}
+input[type="search"]::-webkit-search-cancel-button { /* псевдо что-то, что отвечает за кнопку очистки */
+	-webkit-appearance: none; /* без сброса оформление не применится */
+	width: 17px; /* размеры кастомного крестика */
+	height: 16px;
+	background: url(../img/search_form_uploaded_close.png); /* новый вид крестика */
+	margin-right: 2px; /* его даже можно позиционировать */
+	cursor: pointer; /* вот это не работает */
+}
+
+.town{height:25px;width:240px;padding-top:25px}
+.town span{padding-right:15px;background: url(../img/town_arow.png) no-repeat center right}
+.town span a{color:#4c4c4c;font-size:14pt;text-decoration:none;border-bottom: 1px dashed #4c4c4c;}
+.popup-town {display: none; position: relative; top: -27px; left: -10px; width: auto; z-index: 1000; zoom: 1; }
+.popup-town .title {float: left; height: 33px; white-space: nowrap; background: #FFF; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: #666 0px 0px 5px; -moz-box-shadow: #666 0px 0px 5px; box-shadow: #666 0px 0px 5px;}
+.popup-town .title .pseudo {color:#4c4c4c;font-size:14pt; padding-right: 15px; border-bottom: 0 none; background: url(../img/town_arow.png) center right no-repeat; }
+.popup-town .title .a {position: relative; float: left; padding: 0 10px; margin-top: 2px; color:#4c4c4c;font-size:14pt; white-space: nowrap; clear: right; line-height: 31px; height: 36px; height: 31px; background: #FFF; z-index: 2; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
+.popup-town .sub {position: relative; top: -6px;  float: left; min-width: 220px; white-space: nowrap; clear: left; background: #FFF; padding: 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: #666 0px 0px 5px; -moz-box-shadow: #666 0px 0px 5px; box-shadow: #666 0px 0px 5px;}
+.popup-town .sub ul {display: block; font-size: 10pt; }
+.popup-town .sub ul li {display: block; float: none!important; padding: 0 5px 0 0; margin: 0; color: #4c4c4c; line-height: 20px; height:20px; width:200px; }
+
+.phone{height:22px;width:300px;font-size:14pt;padding-top:28px}
+.phone span{font-size:10pt;padding-left:10px}
+
+
+
+/* Верхнее меню*/
+ul.menu{padding: 20px 0;height:28px}
+ul.menu li{float:left;}
+ul.menu li a{margin-right: 2px;padding: 7px 15px 8px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px}
+ul.menu li a:hover{color:#FFF;background:#980050 url(../img/menu_bg.png) repeat-x;text-decoration:none;}
+
+/* Корзина*/
+.topMenu .myBasket{height:68px;line-height:54px}
+.topMenu .myBasket a{font-style: italic}
+.topMenu .fr img{border:none;margin:12px 0 10px 10px}
+.topMenu .basket{padding: 14px 0 0 0}
+.topMenu .basket p{margin:0 0 5px 10px;font-size:8pt;font-style:italic}
+.topMenu .basket span{font-size:8pt;}
+
+/* Блок HOT-OFFER */
+#offer{background-color:transparent}
+.topHotOffer{height:20px}
+.topHotOffer .left{height:20px;width:10px;background: url(../img/rounding_corners.png) no-repeat}
+.topHotOffer .right{height:20px;width:10px;background: url(../img/rounding_corners.png) no-repeat -10px 0}
+.topHotOffer .center{height:20px;width:1004px;background:#FFF}
+.hotOffer{height:280px;background:#FFF;}
+.hotOffer .fl img{position:absolute;z-index:5}
+.cena{height:40px;width:250px;position:relative;z-index:6;font-size:30pt;top:155px;left:360px}
+.cena span{font-size:30pt}
+.cena span.red{font-size:30pt;color:#d20f0a}
+    span.dot { position:absolute; text-indent: -1000em; }
+    span.ruble { text-transform:uppercase;padding-left:4px }
+    span.hyphen:after { content: '\2013'; }
+    span.hyphen { position:absolute; margin:.1ex 0 0; behavior: expression(this.innerHTML = '&ndash;');padding-left:4px}
+.next{height:280px;width:80px;background: #FFF url(../img/next_arrow.png) no-repeat center center;cursor:pointer}
+
+/* Блок коротких новостей */
+.newsFlash{height:130px;background:#FFF}
+.newsFlash ul{padding-top:20px}
+.newsFlash li{float:left;width:321px;margin-left:20px;padding-top:20px;color:#B9B9B9;cursor:pointer}
+.newsFlash li:hover{color:#4c4c4c;cursor:pointer}
+.newsFlash li.active{background: url(../img/activ_line.png) no-repeat center top;color: #4c4c4c;cursor:default}
+.newsFlash p{margin:10px 0}
+
+/* Левая навигация */
+div#leftNavigation div.title-menu{padding:5px 0 15px 0;font-size:14pt}
+div#leftNavigation ul{padding-bottom:20px;margin:0}
+div#leftNavigation ul li{padding:5px 0}
+
+/* Реклама */
+div#extra{background:#FFF}
+.ads{width:180px;padding:20px 0;margin:0 0 20px 0;border:1px solid #e1e1e1;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px}
+
+/* Футер */
+div#footer{background: #FFF;color: #4c4c4c;border-top:1px solid #e1e1e1;padding-top:20px}
+div#footer p{margin:0;padding:0 0 0 10px;font-size:8pt;line-height:12pt;}
+.logoBottom{width:130px;background: url(../img/logo_bottom.png) no-repeat;padding-top:45px;font-size:8pt;}
+.contact{padding: 0 45px;}
+.menuBottom .fl .item{float:left;padding-right:20px}
+.menuBottom .fl{font-weight: bold;width:210px;}
+.menuBottom .fl .item a{font-weight: normal;font-size:8pt}
+.reclBottom{width:220px;text-align:right}
+.reclBottom p{color:#898989}
+.bottomSpacer{height:30px;background:#FFF}
