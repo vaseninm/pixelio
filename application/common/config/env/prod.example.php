@@ -9,22 +9,18 @@
  */
 return array(
 	'components' => array(
-//		'db' => array(
-//			// setup to suit your needs
-//			'connectionString' => '{DB_CONNECTION}',
-//			'username' => '{DB_USER}',
-//			'password' => '{DB_PASSWORD}',
-//			'enableProfiling' => false,
-//			'enableParamLogging' => false,
-//			'charset' => 'utf8',
-//		),
+        /*	'db' => array(
+                'connectionString' => 'mysql:host=localhost;dbname=pixelio',
+                'username' => 'pixelio',
+                'password' => 'password',
+                'enableProfiling' => false,
+                'enableParamLogging' => false,
+                'charset' => 'utf8',
+            ), */
 	),
 	'params' => array(
 		'yii.debug' => false,
 		'yii.traceLevel' => 0,
 		'yii.handleErrors'   => APP_CONFIG_NAME !== 'test',
-        'frontendUrl' => '/',
-        'apiUrl' => '/api',
-        'backendUrl' => '/admin',
 	)
 );

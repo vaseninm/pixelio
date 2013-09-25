@@ -57,7 +57,9 @@ return array(
 		// php configuration
 		'php.defaultCharset' => 'utf-8',
 		'php.timezone'       => 'UTC',
-
+        'frontendUrl' => '/',
+        'apiUrl' => '/api',
+        'backendUrl' => '/admin',
         'since' => '2008',
 	)
 );
