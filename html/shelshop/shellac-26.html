@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Demo: shellac maket</title>
+
+<!-- main css -->
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/content.css" rel="stylesheet" type="text/css">
+
+<!-- html5.js for IE less than 9 -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+<div id="g_content">
+	<div id="header-container">
+		<div id="pagewrap">
+			<header id="header" class="fl">
+				<div id="site-logo-bg">
+					<hgroup>
+						<h1><a id="logo" href="/">shellshop</a></h1>
+					</hgroup>
+				</div>
+			</header>
+			<div id="phone" class="fr">
+				<div class="number">+7 <span>916 716-74-81</span></div>
+				<div class="time">с 10:00 до 20:00 / <a href="shipping_and_payment.html">доставка бесплатно</a></div>
+			</div>
+			<div id="navigation">
+				<ul>
+					<li><a href="index.html">Каталог лаков</a></li>
+					<li><a href="shipping_and_payment.html">Доставка и оплата</a></li>
+					<li><a href="contact.html">Контакты</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="pagewrap">
+
+<!-- #content -->
+		<div id="content">
+
+				<div class="other_page ml fl">
+					<img src="catalog_pic/shellac-26.png">
+				</div>
+				<div class="other_page ml2 fl">
+					<h1>Strawberry Smoothie</h1>
+					<p class="small"><span>Стразберри смуфи</span>Номер в каталоге: 26</p>
+					<p>Цвет Strawberry Smoothie имеет ...</p>
+					<p><a href="index.html">Вернуться в каталог</a> / <a href="shipping_and_payment.html">Купить</a></p>
+					<img src="catalog_pic/large_pic26.jpg">
+				</div>
+				<div class="clr spacer"></div>
+
+		</div>
+<!-- /#content -->
+	</div>
+
+</div>
+
+<div id="g_footer">
+<!-- #footer -->
+		<footer id="footer">
+			<div id="pagewrap">
+				<div class="footer_navigation fl">
+					<ul>
+						<li><a href="index.html">Каталог лаков</a></li>
+						<li><a href="shipping_and_payment.html">Доставка и оплата</a></li>
+						<li><a href="contact.html">Контакты</a></li>
+					</ul>
+				</div>
+
+				<div class="count fl">
+					<img src="img/88x31.png">
+					<span></span>
+					<img src="img/88x31.png">
+				</div>
+
+
+					<a href="index.html" class="footer_logo fr">shellshop</a>
+
+				<div class="clr"></div>
+			</div>
+		</footer>
+<!-- /#footer -->
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jq.scrollTo-min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("a.ancLinks").click(function () {
+      elementClick = $(this).attr("href");
+      destination = $(elementClick).offset().top;
+      if($.browser.safari){
+        $('body').animate( { scrollTop: destination }, 1100 );
+      }else{
+        $('html').animate( { scrollTop: destination }, 1100 );
+      }
+      return false;
+    });
+  });
+</script>
+
+
+</body>
+</html>

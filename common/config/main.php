@@ -26,6 +26,7 @@ return array(
 		'common.models.*',
 		'application.controllers.*',
 		'application.extensions.*',
+		'application.components.*',
 		'application.helpers.*',
 		'application.models.*',
         'vendor.2amigos.yiistrap.helpers.*',

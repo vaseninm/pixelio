@@ -18,14 +18,19 @@ angular.module('pxAnimate', [])
         }
     }).directive('pxLoader', function () {
         return {
-            link: function ($scope, element, attrs) {
-                if (element.context.nodeName !== 'IMG') return false;
-                attrs.$observe('ngSrc', function (value) {
-                    attrs.src = attrs.pxLoader;
-                    $('<img />').attr('src', value).load(function() {
-                            attrs.src = value;
-                    });
-                });
+            compile: function(tplElement, tplAttr){
+                $('<img />').attr('src', tplAttr.pxLoader);
+                return {
+                    post: function ($scope, element, attrs) {
+                        if (element.context.nodeName !== 'IMG') return false;
+                        attrs.$observe('ngSrc', function (value) {
+                            element.attr('src', attrs.pxLoader);
+                            $('<img />').attr('src', value).load(function() {
+                                element.attr('src', value);
+                            });
+                        });
+                    }
+                };
             },
             restrict: 'A'
         }
