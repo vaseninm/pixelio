@@ -1,5 +1,4 @@
 application/common/lib/Yiinitializr/config/env.lock
-angular/libs/config.js
 application/backend/runtime
 application/console/runtime
 application/api/runtime

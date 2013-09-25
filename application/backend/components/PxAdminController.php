@@ -15,8 +15,8 @@ class PxAdminController extends PxController
     public function init()
     {
         parent::init();
-        Yii::app()->clientScript->registerCssFile('/css/bootstrap.css');
-        Yii::app()->clientScript->registerCssFile('/css/main.css');
+        Yii::app()->clientScript->registerCssFile('/admin/css/bootstrap.css');
+        Yii::app()->clientScript->registerCssFile('/admin/css/main.css');
         foreach (Yii::app()->params->itemAt('adminCategories') as $category) {
             $this->adminMenu[] = array(
                 'label' => $category['title'],

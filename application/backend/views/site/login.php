@@ -2,7 +2,7 @@
 /* @var $this SiteController */
 /* @var $model Users */
 /* @var $form TbActiveForm */
-Yii::app()->clientScript->registerCssFile('/css/singin.css');
+Yii::app()->clientScript->registerCssFile('/admin/css/singin.css');
 ?>
 <?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     'layout' => TbHtml::FORM_LAYOUT_HORIZONTAL,

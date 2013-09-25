@@ -30,7 +30,8 @@ return array(
 		'yii.handleErrors'   => true,
 		'yii.debug' => true,
 		'yii.traceLevel' => 3,
-        'frontendUrl' => 'http://pixelio.tld',
-        'apiUrl' => 'http://api.pixelio.tld',
-        'backendUrl' => 'http://admin.pixelio.tld',    )
+        'frontendUrl' => '/',
+        'apiUrl' => '/api',
+        'backendUrl' => '/admin',
+    )
 );
