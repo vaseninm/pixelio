@@ -37,7 +37,7 @@ return array(
 				),
 				'assets' => array(
 //					$root . '/frontend/www',
-					$root . '/backend/www',
+					$root . '/../admin/',
 				)
 			),
 			'files' => array(
