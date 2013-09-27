@@ -110,11 +110,12 @@ a.tw{background-position: 0 0}
 .contact img{margin: 12px 28px 10px 0}
 .contact p{padding:7px 0 10px}
 .contactDesc{margin: 0 0 0 0;overflow: hidden;}
-.mail, .phone, .skype, .doc{background: transparent url(../img/icons.png) no-repeat;padding-left: 25px;margin:5px 0 5px 0;}
-.mail, .phone, .skype{font:italic normal normal 17px Georgia, "Century Schoolbook L", Serif;color:#d6a685}
+.mail, .phone, .skype, .doc, .icq{background: transparent url(../img/icons.png) no-repeat;padding-left: 25px;margin:5px 0 5px 0;}
+.mail, .phone, .skype, .icq{font:italic normal normal 17px Georgia, "Century Schoolbook L", Serif;color:#d6a685}
 .mail{background-position: 0 2px} 
 .phone{background-position: 0 -24px} 
-.skype{background-position: 0 -50px} 
+.skype{background-position: 0 -48px}
+.icq{background-position: 0 -100px} 
 .doc{background-position: 0 -76px}
 
 
