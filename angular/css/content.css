@@ -87,7 +87,7 @@ a.tw{background-position: 0 0}
 .softBlock{margin-top:-6px}
 .soft:first-child{background: none}
 .soft{height:50px;position:relative;padding:0 0 0 65px;background: transparent url(../img/soft_line.png) repeat-x}
-.soft p{padding:17px 0 0 0}
+.soft p{padding:5px 0 0 0}
 .ps div, .fla div, .ai div, .code div{position:absolute;height:60px;width:60px;left:0;top:-5px;} 
 .ps div{background: transparent url(../img/icon_ps.png);}
 .fla div{background: transparent url(../img/icon_fla.png)}
