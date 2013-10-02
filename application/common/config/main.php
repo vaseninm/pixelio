@@ -17,7 +17,8 @@ return array(
 		'api' => dirname(__FILE__) . '/../..' . '/api',
 		'common' => dirname(__FILE__) . '/../..' . '/common',
 		'backend' => dirname(__FILE__) . '/../..' . '/backend',
-		'vendor' => dirname(__FILE__) . '/../..' . '/common/lib/vendor'
+		'vendor' => dirname(__FILE__) . '/../..' . '/common/lib/vendor',
+		'root' => dirname(__FILE__) . '/../../..' . ''
 	),
 	'import' => array(
 		'common.extensions.components.*',

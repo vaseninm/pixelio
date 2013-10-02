@@ -119,7 +119,7 @@ class PfPages extends EActiveRecord
     }
 
     protected function getPathToImages(){
-        return Yii::getPathOfAlias('api.www.uploads.works');
+        return Yii::getPathOfAlias('root.api.uploads.works');
     }
 
     protected function afterDelete() {
