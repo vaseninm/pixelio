@@ -84,11 +84,12 @@ a.vk{background-position: -20px 0}
 a.fb{background-position: -40px 0}
 a.tw{background-position: 0 0}
 .hello{padding:0 0 0 10px;width:440px}
-.softBlock{margin-top:-6px}
-.soft:first-child{background: none}
-.soft{height:50px;position:relative;padding:0 0 0 65px;background: transparent url(../img/soft_line.png) repeat-x}
-.soft p{padding:15px 0 0 0}
-.ps div, .fla div, .ai div, .code div, .icon1 div, .icon2 div, .icon3 div{position:absolute;height:60px;width:60px;left:0;top:-5px;} 
+.softBlock{margin:0 -25px}
+/*.soft:first-child{background: none}
+.soft{height:50px;position:relative;padding:0 0 0 65px;background: transparent url(../img/soft_line.png) repeat-x}*/
+.soft p{/*padding:15px 0 0 0;*/font:italic normal normal 14px Georgia, "Century Schoolbook L", Serif;color:#6C5048}
+.soft{display:inline-block;width:160px;text-align:center} 
+.ps div, .fla div, .ai div, .code div, .icon1 div, .icon2 div, .icon3 div{/*position:absolute;*/height:60px;width:60px;/*left:0;top:-5px;*/margin:0 auto} 
 .ps div{background: transparent url(../img/icon_ps.png);}
 .fla div{background: transparent url(../img/icon_fla.png)}
 .ai div{background: transparent url(../img/icon_ai.png)}
