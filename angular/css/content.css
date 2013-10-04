@@ -121,6 +121,8 @@ a.tw{background-position: 0 0}
 .skype{background-position: 0 -48px}
 .icq{background-position: 0 -100px} 
 .doc{background-position: 0 -76px}
+.brif{background:#261616;border:1px solid #3A2828;padding:10px 20px;margin-top:30px;font:italic normal normal 14px Georgia, "Century Schoolbook L", Serif;color:#635451}
+.brif a{color:#CBAFA4}
 
 
 /*** COMMENTS PAGE ***/
