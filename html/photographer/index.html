@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset='utf-8'>
+	<title>Фотограф Екатерина Капустина</title>
+	<meta name="Description" content="Описание" />
+	<meta name="keywords" content="Ключевые слова" />
+	<meta name="author" content="Pixelio" />
+
+    <!-- html5.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<link rel="stylesheet" href="angular/css/ie.css" type="text/css" />
+    <![endif]-->
+	
+	<link rel="stylesheet" href="angular/css/content.css" type="text/css" />
+
+</head>
+<body class="">
+	<div class="wrapper">
+		<header>
+			<hgroup>
+				<h1>Фотограф</h1>
+				<h2><img src="angular/img/vin_l.png" />Екатерина Капустина<img src="angular/img/vin_r.png" /></h2>
+			</hgroup>
+		</header>
+
+		<!-- Меню -->
+		<nav>
+			<ul id="nav">
+				<li class="selected"><a href="index.html">Главная</a></li>
+				<li><a href="portfolio.html">Портфолио</a></li>
+				<li><a href="about.html">Обо мне</a></li>
+				<li><a href="cost.html">Услуги и цены</a></li>
+				<li><a href="contact.html">Контакты</a></li>
+			</ul>
+		</nav>
+		<!-- /Меню -->
+		
+		<!-- Контент -->
+		<section>
+			<div class="job">					
+				<div class="fade">
+				<a title="" href="portfolio.html"><img alt="" src="angular/img/job_1.jpg" /></a>
+				</div>
+				<div class="fade" style="display:none">
+				<a title="" href="portfolio.html"><img alt="" src="angular/img/job_2.jpg" /></a>
+				</div>
+				<span class="endPrev"><span class="prevImg"></span></span>
+				<span class="endNext"><span class="nextImg"></span></span>
+			</div>
+			<div class="txtBlock clearfix">
+				<div class="left fl">
+					<h2><img src="angular/img/face.png" />Кто я?</h2>
+					<p>
+						Я - детский и семейный фотограф. Мир вокруг нас изменяется каждый день, но нежные и чистые цвета всегда останутся в моде. 
+					</p>
+					<p>
+						Я хочу предложить Вам  не просто фотографию. Мне хочется подарить историю о счастье. Счастье именно Вашей семьи!
+					</p>
+				</div>
+				<div class="right fl">
+					<h2><img src="angular/img/photo.png" />Что я фотографирую?</h2>
+					<p>
+						<span class="mark">Семейная фотосессия</span> - это фотоистория, посвященная Вашей семье. О том, что делает Вашу семью уникальной и неповторимой.  
+					</p>
+					<p>
+						<span class="mark">Фотосессия Беременности</span> - это история о самых нежных моментах Вашего ожидания.
+					</p>
+					<p>
+						<span class="mark">Детские фотосессии</span> - это фотоистории для Ваших детей. У Вас дома, в студии, или на прогулке - на Ваш выбор. Главный герой, конечно же, Ваш малыш!
+					</p>
+				</div>
+			</div>
+		</section>
+		<!-- /Контент -->
+		
+		<div class="footer-push"></div>
+	</div>
+	
+	<footer>
+        <p>Фотограф Екатерина Капустина &nbsp; \ &nbsp; 2013-2014</p>
+		<a href="#" class="vk"></a>
+		<a href="#" class="fb"></a>
+		<a href="#" class="tw"></a>
+    </footer>
+	
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript" src="angular/js/jquery.spasticNav.js"></script>
+
+<script type="text/javascript">
+    $('#nav').spasticNav();
+</script>
+
+       <script type="text/javascript">
+            $(function(){
+
+                    $('.prevImg').hide();
+
+                    var els = $('.fade');
+
+                    $('.nextImg').click(function(){
+                        var cur = els.filter(':visible');
+                        cur = cur.hide().next().show();
+                        if (cur.is('.fade:last')){
+                            $('.nextImg').hide();
+                        }
+                        $('.prevImg').show();
+                    });
+
+                    $('.prevImg').click(function(){
+                        var cur = els.filter(':visible');
+                        cur = cur.hide().prev().show();
+                        if (cur.is('.fade:first')){
+                            $('.prevImg').hide();
+                        }
+                        $('.nextImg').show();
+                    });
+            });
+        </script>
+</body>
+</html>

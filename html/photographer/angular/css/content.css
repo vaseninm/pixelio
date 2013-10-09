@@ -1,0 +1,168 @@
+@import url(reset.css);
+@import url(main.css);
+/************************************************************************************
+HEADER
+*************************************************************************************/
+header{text-align:center}
+header h1{font-size:16px;color:#543c31;padding-top:43px}
+header h2{font-size:35px;color:#ac0000;padding:10px 0 40px 0}
+header img{margin:0 18px -6px 20px}
+
+
+/************************************************************************************
+TOP MENU
+*************************************************************************************/
+nav{text-align:center;width:848px;height:56px;border-top:7px solid #543c31;margin:0 auto;position:relative}
+nav ul{height:30px;padding-top:16px;position:relative}
+nav ul li {display: inline-block;list-style: none outside none;margin-left: -3px;}
+nav ul li a{color:#543c31;margin:0 15px;font-size:17px;font-family:Georgia, "Century Schoolbook L", Serif;font-style:italic;text-shadow: 0px 1px 0px #fff;}
+nav ul li a:visited{color:#543c31}
+.menuArrow{position:absolute;height:15px;margin:0;padding:0;background: transparent url(../img/menu_arrow.png) no-repeat center top;z-index: 1;top: -2px;}
+
+
+/************************************************************************************
+CONTENT
+*************************************************************************************/
+
+
+/** INDEX PAGE **/
+.job{width:750px;min-height:300px;margin:14px auto;padding:9px 9px 5px 9px;border:1px solid #cebfa8;position:relative}
+.job img{max-width:750px;}
+.txtBlock{width:770px;margin:0 auto;padding:20px 0 0 0}
+div.left{width:48%;padding-right:2%}
+div.right{width:48%;padding-left:2%}
+.txtBlock h2{color:#543c31}
+.txtBlock h2 img, .txtBlock h2 img{margin:0 10px -3px 0}
+.mark{color:#543c31}
+
+/** PORTFOLIO **/
+.jobTumbs{width:800px;height:600px;margin:14px auto;position:relative}
+.jobItems a{float:left}
+.jobItems img{width:200px;height:200px;margin-bottom:-4px}
+.jobItems a img{opacity:1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;}
+.jobItems:hover a img{opacity:0.2;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;}
+.jobItems a img:hover{opacity:1;}
+
+/*** ABOUT PAGE ***/
+.aboutMe{width:500px;min-height:400px;padding-top:30px}
+.aboutBg{width:900px;margin:0 auto;background: transparent url(../img/about_bg.png) no-repeat right top;}
+
+/*** COST PAGE ***/
+
+
+/*** CONTACT PAGE ***/
+
+
+
+
+/*** JOB PAGE ***/
+.jobPhoto{width:780px;min-height:300px;margin:14px auto;padding:9px 9px 5px 9px;border:1px solid #cebfa8;position:relative}
+.jobTumb{width:800px;margin:30px auto 0 auto;}
+.jobTumb a{float:left;background:#000;display:block;}
+.jobTumb img{width:200px;height:200px;margin-bottom:-4px}
+.jobTumb a.active{cursor:default}
+
+
+.jobTumb a img{opacity:1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;}
+.jobTumb a.active img{opacity:0.5;}
+.jobTumb:hover a img{opacity:0.5;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;}
+.jobTumb:hover a.active img{opacity:0.5;}
+.jobTumb a img:hover{opacity:1;}
+
+.endPrev, .endNext{width:46px;height:46px;display:block;background: transparent url(../img/next_prew.png) no-repeat 0 -92px;position:absolute;top:50%;margin-top:-25px}
+.endPrev{left:-65px}
+.endNext{right:-65px}
+
+.prevImg, .nextImg{width:46px;height:46px;display:block;background: transparent url(../img/next_prew.png);cursor:pointer;}
+.prevImg{background-position: 0 0;}
+.nextImg{background-position: 0 -46px;}
+
+
+/*.prevImg img, .nextImg img{display: block;width: 46px;height: 46px;position: absolute;cursor:pointer;
+    -webkit-transition: all .5s ease;
+       -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+         -o-transition: all .5s ease;
+            transition: all .5s ease;}
+.prevImg > img.normal, .nextImg > img.normal{opacity: 1;z-index: 2;}
+.prevImg > img.hover, .nextImg > img.hover{opacity: 0;z-index: 1;}
+.prevImg:hover > img.normal, .nextImg:hover > img.normal{opacity: 0;z-index: 1;}
+.prevImg:hover > img.hover, .nextImg:hover > img.hover{opacity: 1;z-index: 2;}*/
+
+/************************************************************************************
+FOOTER
+*************************************************************************************/
+footer{text-align:center}
+footer p{width:848px;border-top:1px solid #cebfa8;color:#a9a092;text-shadow: 0px 1px 0px #fff;margin:0 auto;padding-top:15px;text-align:center;font-size:13px}
+a.vk, a.fb, a.tw{height:46px;width:46px;display:inline-block;margin:20px 7px 0 7px;background:transparent url(../img/icon_soc.png) no-repeat}
+a.vk{background-position: 0 0} 
+a.fb{background-position: 0 -46px}
+a.tw{background-position: 0 -92px}
+
+/************************************************************************************
+PAGINATION
+*************************************************************************************/
+/*.pagination{text-align:center;padding:35px 0 20px 0}
+.pagination a, a.green{color:#594742;font-family:Georgia, "Century Schoolbook L", Serif;font-style:italic}
+.pagination a:hover{color:#675854}
+a.green{color:#dedede;border:1px solid #30221e;border-radius:6px;padding:5px 15px;display:block}
+em.green{border:1px solid #30221e;border-radius:8px;margin:0 30px;display:inline-block;}
+a.green, em.green {
+	-webkit-transition: border 500ms ease-out; 
+	   -moz-transition: border 500ms ease-out;
+	    -ms-transition: border 500ms ease-out;
+	     -o-transition: border 500ms ease-out;
+		    transition: border 500ms ease-out;}
+a.green:hover{color:#dedede;}
+em.green:hover a.green{border-top:1px solid #bce55e;border-bottom:1px solid #75983b;border-left:1px solid #92b84a;border-right:1px solid #92b84a;box-shadow: 0 0 8px rgba(220,225,145,0.34) inset;-moz-box-shadow: 0 0 8px rgba(220,225,145,0.34) inset; -webkit-box-shadow: 0 0 8px rgba(220,225,145,0.34) inset;}
+em.green:hover{border-top:1px solid #bce55e;border-bottom:1px solid #75983b;border-left:1px solid #92b84a;border-right:1px solid #92b84a;box-shadow: 0 0 9px rgba(205,255,127,0.3);-moz-box-shadow: 0 0 9px rgba(205,255,127,0.3); -webkit-box-shadow: 0 0 9px rgba(205,255,127,0.3);}
+.prewJob:before{content: url(../img/arrow_left.png);padding:0 10px 0 0;}
+.nextJob:after{content: url(../img/arrow_right.png);padding:0 0 0 10px;}*/
+
+
+/*.pager{padding-top:30px;overflow:hidden;}
+.pager ul.yiiPager{text-align:center}
+ul.yiiPager li a{text-decoration:none;display:block;padding:4px 6px;color:#878787;font-size:15px}
+ul.yiiPager li {display: inline-block;margin: 0 5px 0 -3px;text-align: center;}
+
+ul.yiiPager li.first{margin-left:0}
+ul.yiiPager li.last{margin-right:0}
+
+.first,
+.previous,
+.page,
+.next,
+.last{background: rgba(122, 122, 122, 0.1)}
+.page.selected{background: rgba(0, 124, 187, 0.1)}
+
+.first a{width:30px;}
+.previous a{width:20px;margin-right:5px}
+.page a{}
+.page.selected a{color:#5e544e;cursor:default;}
+.next a{width:20px;margin-left:5px}
+.last a{width:30px;}
+.pager .hidden {visibility:hidden}
+
+
+.first:hover, .previous:hover, .page:hover, .next:hover, .last:hover{background: rgba(122, 122, 122, 0.2)}
+.page.selected:hover{background: rgba(0, 124, 187, 0.1)}*/
