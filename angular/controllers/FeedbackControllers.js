@@ -1,4 +1,4 @@
-function FeedbackController($scope, $routeParams, $rootScope, $http, $location, $route) {
+function FeedbackController($scope, $routeParams, $rootScope, $http, $location, $route, CONFIG) {
     $rootScope.bodyClass = 'one';
     $rootScope.animate = 'animate-view';
     $rootScope.setActiveMenu('feedback');
@@ -10,21 +10,18 @@ function FeedbackController($scope, $routeParams, $rootScope, $http, $location, 
     getFeedBack($scope.page);
     $scope.prevPage = function (event) {
         $scope.page = $scope.page - 1;
-//        getFeedBack($scope.page);
         $location.search({page: $scope.page});
     }
     $scope.nextPage = function (event) {
         $scope.page = $scope.page + 1;
-//        getFeedBack($scope.page);
         $location.search({page: $scope.page});
     }
 
     $scope.newFeedback = {};
     $scope.submitNewFeedback = function () {
-        $http.post(config.apiUrl + '/feedback/add', $scope.newFeedback).success(function (data) {
+        $http.post(CONFIG.API_URL + 'feedback/add', $scope.newFeedback).success(function (data) {
             if (data.params.result) {
                 $scope.isOpenDialog = false;
-//                getFeedBack($scope.page)
                 $route.reload();
             } else {
                 alert('Ошибка на сервере');
@@ -40,7 +37,7 @@ function FeedbackController($scope, $routeParams, $rootScope, $http, $location, 
 
 
     function getFeedBack(page) {
-        $http.post(config.apiUrl + '/feedback/list', {
+        $http.post(CONFIG.API_URL + 'feedback/list', {
             page: page
         }).success(function (data) {
                 $scope.items = data.params.items;

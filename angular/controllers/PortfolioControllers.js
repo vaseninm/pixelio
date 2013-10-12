@@ -1,4 +1,4 @@
-function WorksController($scope, $routeParams, $rootScope, $http, $location) {
+function WorksController($scope, $routeParams, $rootScope, $http, $location, CONFIG) {
     $rootScope.bodyClass = 'one';
     $rootScope.animate = 'animate-view';
     $rootScope.setActiveMenu('main');
@@ -23,7 +23,7 @@ function WorksController($scope, $routeParams, $rootScope, $http, $location) {
     }
 
     function getItems(page) {
-        $http.post(config.apiUrl + '/portfolio/works', {
+        $http.post(CONFIG.API_URL + 'portfolio/works', {
             page: page,
             tag: $scope.currentTag
         }).success(function (data) {
@@ -38,7 +38,7 @@ function WorksController($scope, $routeParams, $rootScope, $http, $location) {
 
 }
 
-function WorkController($scope, $routeParams, $rootScope, $http, $location) {
+function WorkController($scope, $routeParams, $rootScope, $http, $location, CONFIG) {
     $rootScope.bodyClass = 'two';
     $rootScope.animate = 'animate-view';
     $rootScope.setActiveMenu('main');
@@ -46,7 +46,7 @@ function WorkController($scope, $routeParams, $rootScope, $http, $location) {
 
     $scope.workId = $routeParams.work;
 
-    $http.post(config.apiUrl + '/portfolio/work', {
+    $http.post(CONFIG.API_URL + 'portfolio/work', {
         'work': $scope.workId
     }).success(function (data) {
             $scope.work = data.params.work;
@@ -72,7 +72,6 @@ function WorkController($scope, $routeParams, $rootScope, $http, $location) {
         var pageId;
         for (var page in $scope.pages) {
             if ($scope.pages[page] == $scope.current) {
-//                $scope.current = $scope.pages[parseInt(page) + 1];
                 pageId = $scope.pages[parseInt(page) + 1].id;
                 break;
             }
@@ -85,7 +84,6 @@ function WorkController($scope, $routeParams, $rootScope, $http, $location) {
         var pageId;
         for (var page in $scope.pages) {
             if ($scope.pages[page] == $scope.current) {
-//                $scope.current = $scope.pages[parseInt(page) - 1];
                 pageId = $scope.pages[parseInt(page) - 1].id;
                 break;
             }
@@ -95,23 +93,17 @@ function WorkController($scope, $routeParams, $rootScope, $http, $location) {
 
     $scope.setPage = function (pageId, $event) {
         if ($event) $event.preventDefault();
-//        for (var page in $scope.pages) {
-//            if ($scope.pages[page].id == pageId) {
-//                $scope.current = $scope.pages[page];
-//                break;
-//            }
-//        }
         $location.search({page: pageId});
     }
 }
 
-function CostController($scope, $routeParams, $rootScope, $http) {
+function CostController($scope, $routeParams, $rootScope, $http, CONFIG) {
     $rootScope.bodyClass = 'one';
     $rootScope.animate = 'animate-view';
     $rootScope.setActiveMenu('cost');
 
 
-    $http.post(config.apiUrl + '/portfolio/cost', {}).success(function (data) {
+    $http.post(CONFIG.API_URL + 'portfolio/cost', {}).success(function (data) {
         $scope.tags = data.params.tags;
     });
 }
