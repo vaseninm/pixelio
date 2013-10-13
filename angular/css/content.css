@@ -1,249 +1,106 @@
 @import url(reset.css);
 @import url(main.css);
 /************************************************************************************
-TOP MENU
+HEADER
 *************************************************************************************/
-nav{background: transparent url(../img/top_menu_bg.png) no-repeat center 44px;text-align:center;height:56px;padding-top:58px;position:relative}
-nav ul{height:30px;padding-top:30px;position:relative}
-nav ul li {display: inline-block;list-style: none outside none;margin-left: -3px;}
-nav ul li a{color:#6a4a41;margin:0 5px;font-size:17px;font-family:Georgia, "Century Schoolbook L", Serif;font-style:italic;
-transition : color 500ms ease-out; 
-  -webkit-transition : color 500ms ease-out; 
-  -moz-transition : color 500ms ease-out;
-  -o-transition : color 500ms ease-out;}
-nav ul li a:visited{color:#6a4a41}
-nav ul li.selected a{color:#c4997c}
-nav ul li a:hover{color: #c4997c}
-nav ul li:before{content: url(../img/arrow_duble.png);padding:0 3px 0 2px;}
-nav ul li:first-child:before{content:""}
-nav ul li:last-child:before{content:""}
-.menuArrow{position:absolute;height:19px;margin-left:2px;padding:0 2px;background: transparent url(../img/menu_arrow.png) no-repeat center top;z-index: 1;top: 0;}
+header{text-align:center}
+header h1{font-size:16px;color:#543c31;padding-top:43px}
+header h2{font-size:35px;color:#ac0000;padding:10px 0 40px 0}
+header img{margin:0 18px -6px 20px}
 
 
 /************************************************************************************
-LOADER
+TOP MENU
 *************************************************************************************/
-.loaderSwf{position:fixed;top:50%;left:50%;width:260px;height:100px;z-index:1000;margin:-50px 0 0 -130px}
-
+nav{text-align:center;width:848px;height:56px;border-top:7px solid #543c31;margin:0 auto;position:relative}
+nav ul{height:30px;padding-top:16px;position:relative}
+nav ul li {display: inline-block;list-style: none outside none;margin-left: -3px;}
+nav ul li a{color:#543c31;margin:0 15px;font-size:17px;font-family:Georgia, "Century Schoolbook L", Serif;font-style:italic;text-shadow: 0px 1px 0px #fff;}
+nav ul li a:visited{color:#543c31}
+.menuArrow{position:absolute;height:15px;margin:0;padding:0;background: transparent url(../img/menu_arrow.png) no-repeat center top;z-index: 1;top: -2px;}
 
 
 /************************************************************************************
 CONTENT
 *************************************************************************************/
-.content{padding:10px 55px;min-height:415px;}
+
 
 /** INDEX PAGE **/
-.one .content{padding:13px 55px 10px 55px;min-height:415px;/*position:absolute;*/margin-left:59px}
-.jobTumb .viewWindow{height:320px;/*width:620px;overflow:hidden;*/background: transparent url(../img/empty.png)}
-.one .prevImg{left:-60px}
-.one .nextImg{right:-60px}
+.job{width:750px;min-height:300px;margin:14px auto;padding:9px 9px 5px 9px;border:1px solid #cebfa8;position:relative}
+.job img{max-width:750px;}
+.txtBlock{width:770px;margin:0 auto;padding:20px 0 0 0}
+div.left{width:48%;padding-right:2%}
+div.right{width:48%;padding-left:2%}
+.txtBlock h2{color:#543c31}
+.txtBlock h2 img, .txtBlock h2 img{margin:0 10px -3px 0}
+.mark{color:#543c31}
 
-.one .endPrev{left:-60px}
-.one .endNext{right:-60px}
-
-.one .viewWindow .fade a img{opacity:1;
-	-webkit-transition: opacity 0.5s ease-in-out;
-	   -moz-transition: opacity 0.5s ease-in-out;
-	    -ms-transition: opacity 0.5s ease-in-out;
-	     -o-transition: opacity 0.5s ease-in-out;
-		    transition: opacity 0.5s ease-in-out;}
-.one .viewWindow:hover .fade a img{opacity:0.2;
-	-webkit-transition: opacity 0.5s ease-in-out;
-	   -moz-transition: opacity 0.5s ease-in-out;
-	    -ms-transition: opacity 0.5s ease-in-out;
-	     -o-transition: opacity 0.5s ease-in-out;
-		    transition: opacity 0.5s ease-in-out;}
-.one .viewWindow .fade a img:hover{opacity:1;}
-
-.bottomMenu{text-align:left;padding:5px 0 0 0;/*margin-left:-11px*/}
-.bottomMenu a{color:#62443c;font-size:13px;margin:0 6px 0 0;padding:0 7px 3px 7px;}
-.bottomMenu div{display:inline-block;position:relative;color:#3e2b27;font-size:18px;vertical-align:top;text-align:center;}
-.bottomMenu div:before{content: url(../img/slash.png);}
-.bottomMenu div:first-child:before{content:""}
-.bottomMenu a.active{position: relative;padding:0 6px 3px 6px;margin-bottom:2px;border:1px solid #3c2c26;border-radius:5px;background:#30221e;color:#c4997c;}
-.bottomMenu a.active:hover{color:#c4997c;}
-.bottomMenu a.active:before{content: url(../img/menu_triangle.png);top:-13px;position:absolute;right:50%;margin-right:8px;display:block;width:0;height:0;}
-/* Opera Only */noindex:-o-prefocus, .bottomMenu a.active:before {margin-right:16px;}/* Opera Only */
-.bottomMenu span{padding:5px 0 0 0;margin-left:10px;display:block;}
-.bottomMenu span{
-	-webkit-transition : color 500ms ease-out; 
-	   -moz-transition : color 500ms ease-out;
-	     -ms-transition: color 500ms ease-out;
-	     -o-transition : color 500ms ease-out;
-			transition : color 500ms ease-out;}
-.bottomMenu div a:hover + span{color: #6C5048}
-.bottomMenu div a:hover{color: #6C5048}
+/** PORTFOLIO **/
+.jobTumbs{width:800px;height:600px;margin:14px auto;position:relative;background: transparent url(../img/photo_bg.png)}
+.jobItems a{float:left}
+.jobItems img{width:200px;height:200px;margin-bottom:-4px}
+.jobItems a img{opacity:1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;}
+.jobItems:hover a img{opacity:0.2;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;}
+.jobItems a img:hover{opacity:1;}
 
 /*** ABOUT PAGE ***/
-.about{width:620px}
-.about p{padding:7px 0 17px}
-.picture{text-align:center;width:170px;padding-top:15px}
-a.vk, a.fb, a.tw{display:inline-block;height:20px;width:20px;margin:13px 2px;background: transparent url(../img/soc_icons.png);opacity:0.2;}
-a.vk:hover, a.fb:hover, a.tw:hover{opacity:1;}
-a.vk{background-position: -20px 0}
-a.fb{background-position: -40px 0}
-a.tw{background-position: 0 0}
-.hello{padding:0 0 0 10px;width:440px}
-.softBlock{margin:0 -25px}
-/*.soft:first-child{background: none}
-.soft{height:50px;position:relative;padding:0 0 0 65px;background: transparent url(../img/soft_line.png) repeat-x}*/
-.soft p{/*padding:15px 0 0 0;*/font:italic normal normal 14px Georgia, "Century Schoolbook L", Serif;color:#6C5048}
-.soft{display:inline-block;width:160px;text-align:center} 
-.ps div, .fla div, .ai div, .code div, .icon1 div, .icon2 div, .icon3 div{/*position:absolute;*/height:60px;width:60px;/*left:0;top:-5px;*/margin:0 auto} 
-.ps div{background: transparent url(../img/icon_ps.png);}
-.fla div{background: transparent url(../img/icon_fla.png)}
-.ai div{background: transparent url(../img/icon_ai.png)}
-.code div{background: transparent url(../img/icon_code.png)}
-.icon1 div{background: transparent url(../img/icon_1.png)}
-.icon2 div{background: transparent url(../img/icon_2.png)}
-.icon3 div{background: transparent url(../img/icon_3.png)}
+.aboutMe{width:500px;min-height:400px;padding-top:30px}
+.aboutMe p{padding-bottom:15px}
+.aboutBg{width:900px;margin:0 auto;background: transparent url(../img/about_bg.png) no-repeat right top;}
 
 /*** COST PAGE ***/
-.cost{padding:2px 0 0 0;width:620px}
-.cost p{padding:3px 0 17px}
-.all{width:100%;position:relative}
-.all h1{padding-right:10px} 
-.dashed{overflow:hidden;padding:13px 0 4px 0;background: transparent url(../img/dashed_line.png) repeat-x 0 24px;margin:0 140px 0 0;}
-.brownBox{font: 13px Tahoma, "Geneva CY", sans-serif;border:1px solid #2d211c;border-radius:6px;background:#281c19;color:#725848;padding:1px 5px 3px 5px;}
-.brownBox:hover{border:1px solid #3c2c26;background:#30221e;color:#c4997c}
-.price{width:130px;font:italic normal normal 23px/20px Georgia, "Century Schoolbook L", Serif;padding:13px 0 0 10px;color:#6c5048;position:absolute;top:0;right:0}
-.green{color:#589c00}
+
 
 /*** CONTACT PAGE ***/
-.contact{padding:4px 0 0 0;width:620px}
-.contact img{margin: 12px 28px 10px 0}
-.contact p{padding:7px 0 10px}
-.contactDesc{margin: 0 0 0 0;overflow: hidden;}
-.mail, .phone, .skype, .doc, .icq{background: transparent url(../img/icons.png) no-repeat;padding-left: 25px;margin:5px 0 5px 0;}
-.mail, .phone, .skype, .icq{font:italic normal normal 17px Georgia, "Century Schoolbook L", Serif;color:#d6a685}
-.mail{background-position: 0 2px} 
-.phone{background-position: 0 -24px} 
-.skype{background-position: 0 -48px}
-.icq{background-position: 0 -100px} 
-.doc{background-position: 0 -76px}
-.brif{background:#261616;border:1px solid #3A2828;padding:10px 20px;margin-top:30px;font:italic normal normal 14px Georgia, "Century Schoolbook L", Serif;color:#635451}
-.brif a{color:#CBAFA4}
 
 
-/*** COMMENTS PAGE ***/
-.jobComments{position:relative;width:620px;/*margin:0 auto;*/}
-.jobComments .viewWindow{height:305px;width:620px;overflow:hidden;padding-top:7px;margin-top:7px}
-.comment{height:62px;border:2px solid #30221e;border-radius:12px;margin-bottom:20px;padding:10px;position:relative}
-.bottomComments{width:620px;text-align:center;padding:25px 0 20px 0;position:relative}
-p.user{font:italic normal normal 18px/12px Georgia, "Century Schoolbook L", Serif;color:#6c5048;padding:0}
-.itemText{height:30px;overflow:hidden}
-.num{position:absolute;min-width:40px;padding:0 6px;height:20px;top:-11px;right:20px;color:#6d524a;font-size:13px;background: transparent url(../img/border_bg.png)}
-
-.open, .close{width:170px}
-.popUp{position:absolute;bottom:70px;left:50%;margin-left:-152px;border:2px solid #3e2b25;border-radius:12px;background: transparent url(../img/pop_up_bg.png);box-shadow: 0 0 30px rgba(0,0,0,0.5);-moz-box-shadow: 0 0 30px rgba(0,0,0,0.5); -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.5);}
-.popUpInLight{width:304px;height:306px;padding-top:20px;border-radius:11px;box-shadow: 0 0 15px rgba(62,43,37,0.8) inset;-moz-box-shadow: 0 0 15px rgba(62,43,37,0.8) inset; -webkit-box-shadow: 0 0 15px rgba(62,43,37,0.8) inset;}
-.popUp:before{content: url(../img/pop_up_triangle.png);bottom:0;position:absolute;left:50%;margin-left:-15px;display:block;width:0;height:0;}
-.inputField, .textArea, .capthaBox{box-shadow: 0 0 10px rgba(62,43,37,0.8);-moz-box-shadow: 0 0 10px rgba(62,43,37,0.8); -webkit-box-shadow: 0 0 10px rgba(62,43,37,0.8);border:1px solid #3e2b25;border-radius:10px;}
-.inputField, .textArea, .send{width:246px;margin:0 auto 0 auto;}
-.send{margin-top:15px;}
-.capthaBox, .capthaBox .inLight{width:88px;}
-.inLight, .inLight, .capthaBox .inLight{box-shadow: 0 0 15px rgba(0,0,0,0.2) inset;-moz-box-shadow: 0 0 15px rgba(0,0,0,0.2) inset; -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.2) inset;border-radius:10px;background:rgba(0, 0, 0, 0.1);}
-.inLight, .inLight{width:246px;}
-.textArea{margin-top:17px}
-
-textarea{min-height:140px;resize: none;}
-textarea, .inputField input{width:222px;padding:10px 8px;border:none;background:transparent;color:#6d524a}
-input.code{width:21px;padding:8px 10px 8px 55px;border:none;color:#6d524a;background-position: 5px 10px;}
-
-.errorMessage{color:#a83939;font-size:13px;text-align:left;padding:5px 0 0 30px}
-.buttonOrange {display: inline-block;}
-.buttonOrange div {position: relative;height: 31px;margin-top:4px;background: url(../img/orangeButton.png) no-repeat 0 0;}
-.buttonOrange span {background: url(../img/orangeButton.png) 100% -31px;height: 31px;width: 10px;display: block;position: absolute;z-index: 1;top: 0;right: -10px;overflow: hidden;}
-.buttonOrange input {height: 100%;margin: 0 -10px 0 0;padding: 3px 8px 4px 8px;overflow: visible;border: none;position: relative;z-index: 2;background: none;color: #dedede;font-family:Georgia, "Century Schoolbook L", Serif;font-style:italic;font-size:15px;text-shadow: 0px 1px 0px #000}
-.buttonOrange:hover div {position: relative;height: 31px;margin-top:4px;background: url(../img/orangeButton.png) no-repeat 0 -62px;}
-.buttonOrange:hover span {background: url(../img/orangeButton.png) 100% -93px;height: 31px;width: 10px;display: block;position: absolute;z-index: 1;top: 0;right: -10px;overflow: hidden;}
 
 
 /*** JOB PAGE ***/
-.jobDescription{position:relative;width:620px;margin:0 auto;padding-bottom:25px}
-.jobTime{position:absolute;top:13px;right:10px;color:#594742;font-size:13px;}
-.jobImg{border:1px solid #332825;padding:9px;width:602px;margin:0 auto 10px auto;min-height:50px;text-align:center;}
-.imgBox{}
-.imgBox, .fade{position:relative;}
-.two .fade{height:602px;width:602px;display:table-cell;vertical-align: middle;}
-.two .fade a{}
-.two .fade img{/*max-width:100%;*/height: auto;margin-bottom:-4px;}
-.two .fade p{position:absolute;color:#dedede;padding:0;border-radius:6px;min-width:200px;left:50%;margin-left:-114px;font-family:Georgia, "Century Schoolbook L", Serif;font-style:italic;}
-.two .fade p:nth-of-type(1){top:35px;}
-.two .fade p:nth-of-type(2){bottom:35px;}
-
-.two .fade p{opacity: 0;
-	-webkit-transition: opacity 0.5s ease-in-out;
-	   -moz-transition: opacity 0.5s ease-in-out;
-	    -ms-transition: opacity 0.5s ease-in-out;
-	     -o-transition: opacity 0.5s ease-in-out;
-		    transition: opacity 0.5s ease-in-out;}
-.two .fade:hover p{opacity: 1;
-	-webkit-transition: opacity 0.5s ease-in-out;
-	   -moz-transition: opacity 0.5s ease-in-out;
-	    -ms-transition: opacity 0.5s ease-in-out;
-	     -o-transition: opacity 0.5s ease-in-out;
-		    transition: opacity 0.5s ease-in-out;}
- 
-.two .fade p span{color:#dedede;border:1px solid #4a4a4a;border-radius:6px;padding:5px 15px;display:block}
-.two .fade p{border:1px solid #4a4a4a;border-radius:8px;}
-.two .fade p span, .two .fade p { 
-	-webkit-transition: border 500ms ease-out; 
-	   -moz-transition: border 500ms ease-out;
-	    -ms-transition: border 500ms ease-out;
-	     -o-transition: border 500ms ease-out;
-		    transition: border 500ms ease-out;}
-
-.two .fade p:hover span{border-top:1px solid #bce55e;border-bottom:1px solid #75983b;border-left:1px solid #92b84a;border-right:1px solid #92b84a;box-shadow: 0 0 8px rgba(220,225,145,0.34) inset;-moz-box-shadow: 0 0 8px rgba(220,225,145,0.34) inset; -webkit-box-shadow: 0 0 8px rgba(220,225,145,0.34) inset;}
-.two .fade p:hover{border-top:1px solid #bce55e;border-bottom:1px solid #75983b;border-left:1px solid #92b84a;border-right:1px solid #92b84a;box-shadow: 0 0 9px rgba(205,255,127,0.3);-moz-box-shadow: 0 0 9px rgba(205,255,127,0.3); -webkit-box-shadow: 0 0 9px rgba(205,255,127,0.3);}
-
-.two .fade:hover{background: /*rgba(0, 0, 0, 0.8)*/ url(../img/zoom.png) no-repeat 50% 50%;}
-
-.two .fade img{opacity:1;
-	-webkit-transition: opacity 0.5s ease-in-out;
-	   -moz-transition: opacity 0.5s ease-in-out;
-	    -ms-transition: opacity 0.5s ease-in-out;
-	     -o-transition: opacity 0.5s ease-in-out;
-		    transition: opacity 0.5s ease-in-out;}
-.two .fade:hover img{opacity:0.2;
-	-webkit-transition: opacity 0.5s ease-in-out;
-	   -moz-transition: opacity 0.5s ease-in-out;
-	    -ms-transition: opacity 0.5s ease-in-out;
-	     -o-transition: opacity 0.5s ease-in-out;
-		    transition: opacity 0.5s ease-in-out;}
-
-
-
-.two .jobTumb{position:relative;width:620px;margin:0 auto;}
-.one .jobTumb{position:relative;width:620px;padding-top:5px;}
-.jobTumb img{width:140px;height:140px;}
-.jobTumb a{float:left;background:#000;display:block;width:140px;height:140px;margin:10px}
-.jobTumb a:nth-child(4n+1){margin-left:0}
-.jobTumb a:nth-child(4n+4){margin-right:0}
+.jobPhoto{width:780px;min-height:300px;margin:14px auto;padding:9px 9px 5px 9px;border:1px solid #cebfa8;position:relative;text-align:center;}
+.jobPhoto .fade{height:580px;width:780px;display:table-cell;vertical-align: middle;}
+.jobTumb{width:800px;margin:30px auto 0 auto;}
+.jobTumb a{float:left;background:#000;display:block;}
+.jobTumb img{width:200px;height:200px;margin-bottom:-4px}
 .jobTumb a.active{cursor:default}
 
 
-.two .jobTumb a img{opacity:1;
-	-webkit-transition: opacity 0.5s ease-in-out;
-	   -moz-transition: opacity 0.5s ease-in-out;
-	    -ms-transition: opacity 0.5s ease-in-out;
-	     -o-transition: opacity 0.5s ease-in-out;
-		    transition: opacity 0.5s ease-in-out;}
-.jobTumb a.active img{opacity:0.2;}
-.two .jobTumb:hover a img{opacity:0.2;
-	-webkit-transition: opacity 0.5s ease-in-out;
-	   -moz-transition: opacity 0.5s ease-in-out;
-	    -ms-transition: opacity 0.5s ease-in-out;
-		 -o-transition: opacity 0.5s ease-in-out;
-			transition: opacity 0.5s ease-in-out;}
-.two .jobTumb:hover a.active img{opacity:0.2;}
-.two .jobTumb a img:hover{opacity:1;}
+.jobTumb a img{opacity:1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;}
+.jobTumb a.active img{opacity:0.5;}
+.jobTumb:hover a img{opacity:0.5;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;}
+.jobTumb:hover a.active img{opacity:0.5;}
+.jobTumb a img:hover{opacity:1;}
 
-.endPrev, .endNext{width:53px;height:54px;display:block;background: transparent url(../img/endImg.png);position:absolute;top:50%;margin-top:-25px}
-.endPrev{left:-70px}
-.endNext{right:-70px}
+.endPrev, .endNext{width:46px;height:46px;display:block;background: transparent url(../img/next_prew.png) no-repeat 0 -92px;position:absolute;top:50%;margin-top:-25px}
+.endPrev{left:-65px}
+.endNext{right:-65px}
 
-.prevImg img, .nextImg img{display: block;width: 53px;height: 54px;position: absolute;cursor:pointer;
+.prevImg, .nextImg{width:46px;height:46px;display:block;background: transparent url(../img/next_prew.png);cursor:pointer;}
+.prevImg{background-position: 0 0;}
+.nextImg{background-position: 0 -46px;}
+
+
+/*.prevImg img, .nextImg img{display: block;width: 46px;height: 46px;position: absolute;cursor:pointer;
     -webkit-transition: all .5s ease;
        -moz-transition: all .5s ease;
         -ms-transition: all .5s ease;
@@ -252,17 +109,22 @@ input.code{width:21px;padding:8px 10px 8px 55px;border:none;color:#6d524a;backgr
 .prevImg > img.normal, .nextImg > img.normal{opacity: 1;z-index: 2;}
 .prevImg > img.hover, .nextImg > img.hover{opacity: 0;z-index: 1;}
 .prevImg:hover > img.normal, .nextImg:hover > img.normal{opacity: 0;z-index: 1;}
-.prevImg:hover > img.hover, .nextImg:hover > img.hover{opacity: 1;z-index: 2;}
+.prevImg:hover > img.hover, .nextImg:hover > img.hover{opacity: 1;z-index: 2;}*/
 
 /************************************************************************************
 FOOTER
 *************************************************************************************/
-footer{width:850px;height:50px;background: transparent url(../img/wrapper_bg.png) no-repeat center bottom}
+footer{text-align:center}
+footer p{width:848px;border-top:1px solid #cebfa8;color:#a9a092;text-shadow: 0px 1px 0px #fff;margin:0 auto;padding-top:15px;text-align:center;font-size:13px}
+a.vk, a.fb, a.tw{height:46px;width:46px;display:inline-block;margin:20px 7px 0 7px;background:transparent url(../img/icon_soc.png) no-repeat}
+a.vk{background-position: 0 0} 
+a.fb{background-position: 0 -46px}
+a.tw{background-position: 0 -92px}
 
 /************************************************************************************
 PAGINATION
 *************************************************************************************/
-.pagination{text-align:center;padding:35px 0 20px 0}
+/*.pagination{text-align:center;padding:35px 0 20px 0}
 .pagination a, a.green{color:#594742;font-family:Georgia, "Century Schoolbook L", Serif;font-style:italic}
 .pagination a:hover{color:#675854}
 a.green{color:#dedede;border:1px solid #30221e;border-radius:6px;padding:5px 15px;display:block}
@@ -277,7 +139,7 @@ a.green:hover{color:#dedede;}
 em.green:hover a.green{border-top:1px solid #bce55e;border-bottom:1px solid #75983b;border-left:1px solid #92b84a;border-right:1px solid #92b84a;box-shadow: 0 0 8px rgba(220,225,145,0.34) inset;-moz-box-shadow: 0 0 8px rgba(220,225,145,0.34) inset; -webkit-box-shadow: 0 0 8px rgba(220,225,145,0.34) inset;}
 em.green:hover{border-top:1px solid #bce55e;border-bottom:1px solid #75983b;border-left:1px solid #92b84a;border-right:1px solid #92b84a;box-shadow: 0 0 9px rgba(205,255,127,0.3);-moz-box-shadow: 0 0 9px rgba(205,255,127,0.3); -webkit-box-shadow: 0 0 9px rgba(205,255,127,0.3);}
 .prewJob:before{content: url(../img/arrow_left.png);padding:0 10px 0 0;}
-.nextJob:after{content: url(../img/arrow_right.png);padding:0 0 0 10px;}
+.nextJob:after{content: url(../img/arrow_right.png);padding:0 0 0 10px;}*/
 
 
 /*.pager{padding-top:30px;overflow:hidden;}
