@@ -1,7 +1,7 @@
 function WorksController($scope, $routeParams, $rootScope, $http, $location, CONFIG) {
     $rootScope.bodyClass = 'one';
     $rootScope.animate = 'animate-view';
-    $rootScope.setActiveMenu('main');
+    $rootScope.setActiveMenu('portfolio');
 
 
     $scope.currentTag = $routeParams.tag ? $routeParams.tag : 0;
@@ -40,7 +40,7 @@ function WorksController($scope, $routeParams, $rootScope, $http, $location, CON
 }function MainController($scope, $routeParams, $rootScope, $http, $location, CONFIG) {
     $rootScope.bodyClass = 'one';
     $rootScope.animate = 'animate-view';
-    $rootScope.setActiveMenu('main');
+    $rootScope.setActiveMenu('works');
 
     $scope.isFirst = true;
     $scope.isLast = true;
@@ -77,7 +77,7 @@ function WorksController($scope, $routeParams, $rootScope, $http, $location, CON
 function WorkController($scope, $routeParams, $rootScope, $http, $location, CONFIG) {
     $rootScope.bodyClass = 'two';
     $rootScope.animate = 'animate-view';
-    $rootScope.setActiveMenu('main');
+    $rootScope.setActiveMenu('portfolio');
 
 
     $scope.workId = $routeParams.work;
