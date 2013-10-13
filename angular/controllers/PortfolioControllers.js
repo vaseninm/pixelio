@@ -11,6 +11,42 @@ function WorksController($scope, $routeParams, $rootScope, $http, $location, CON
     $scope.isLast = true;
 
     getItems($scope.page);
+
+    $scope.prevPage = function (event) {
+        $scope.page = $scope.page - 1;
+        getItems($scope.page);
+        $location.search({page: $scope.page});
+    }
+    $scope.nextPage = function (event) {
+        $scope.page = $scope.page + 1;
+        getItems($scope.page);
+        $location.search({page: $scope.page});
+    }
+
+    function getItems(page) {
+        $http.post(CONFIG.API_URL + 'portfolio/works', {
+            page: page,
+            tag: $scope.currentTag
+        }).success(function (data) {
+                $scope.works = data.params.works;
+                $scope.tags = data.params.tags;
+                $scope.pages = data.params.pages;
+                $scope.countWorks = data.params.countWorks;
+                $scope.isFirst = (page <= 1);
+                $scope.isLast = (page >= $scope.pages);
+            });
+    }
+
+}function MainController($scope, $routeParams, $rootScope, $http, $location, CONFIG) {
+    $rootScope.bodyClass = 'one';
+    $rootScope.animate = 'animate-view';
+    $rootScope.setActiveMenu('main');
+
+    $scope.isFirst = true;
+    $scope.isLast = true;
+
+    getItems($scope.page);
+
     $scope.prevPage = function (event) {
         $scope.page = $scope.page - 1;
         getItems($scope.page);
@@ -95,15 +131,4 @@ function WorkController($scope, $routeParams, $rootScope, $http, $location, CONF
         if ($event) $event.preventDefault();
         $location.search({page: pageId});
     }
-}
-
-function CostController($scope, $routeParams, $rootScope, $http, CONFIG) {
-    $rootScope.bodyClass = 'one';
-    $rootScope.animate = 'animate-view';
-    $rootScope.setActiveMenu('cost');
-
-
-    $http.post(CONFIG.API_URL + 'portfolio/cost', {}).success(function (data) {
-        $scope.tags = data.params.tags;
-    });
 }
