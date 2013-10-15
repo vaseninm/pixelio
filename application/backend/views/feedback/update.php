@@ -12,4 +12,4 @@ $this->breadcrumbs=array(
 
     <h1>Изменение отзыва #<?php echo $model->id; ?></h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form', array('model'=>$model, 'tags' => $this->tags)); ?>

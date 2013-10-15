@@ -36,24 +36,28 @@
         </div>
 
         <div class="control-group">
-            <?php
-            $this->widget('yiiwheels.widgets.select2.WhSelect2', array(
-                'asDropDownList' => true,
-                'model' => $works,
-                'attribute' => 'tags',
-                'data' => PfTags::getTagsList(),
-                'htmlOptions' => array(
-                    'multiple' => true,
-                ),
-                'pluginOptions' => array(
-                    'placeholder' => 'Выберите теги',
-                    'tokenSeparators' => array(',', ' '),
-                    'width' => 500,
-                )
-            ));
-            ?>
+        <?php
+        if (!empty($this->tags)){?>
+                <?php
+                $this->widget('yiiwheels.widgets.select2.WhSelect2', array(
+                    'asDropDownList' => true,
+                    'model' => $works,
+                    'attribute' => 'tags',
+                    'data' => $this->tags,
+                    'htmlOptions' => array(
+                        'multiple' => true,
+                    ),
+                    'pluginOptions' => array(
+                        'placeholder' => 'Выберите теги',
+                        'tokenSeparators' => array(',', ' '),
+                        'width' => 500,
+                    )
+                ));
+                ?>
+        <?} else {?>
+            <h2>Теги не найдены.</h2>
+        <?}?>
         </div>
-
 
     <?php } ?>
 

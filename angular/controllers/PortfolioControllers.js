@@ -37,7 +37,9 @@ function WorksController($scope, $routeParams, $rootScope, $http, $location, CON
             });
     }
 
-}function MainController($scope, $routeParams, $rootScope, $http, $location, CONFIG) {
+}
+
+function MainController($scope, $routeParams, $rootScope, $http, $location, CONFIG) {
     $rootScope.bodyClass = 'one';
     $rootScope.animate = 'animate-view';
     $rootScope.setActiveMenu('works');
