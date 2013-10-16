@@ -25,7 +25,7 @@ class SiteController extends PxAdminController
                 'roles' => array(Users::ROLE_ADMIN),
             ),
             array('allow',
-                'actions' => array('login'),
+                'actions' => array('login', 'install'),
             ),
             array('deny',
                 'users' => array('*'),
@@ -40,6 +40,9 @@ class SiteController extends PxAdminController
 
     public function actionLogin()
     {
+        if (YII_DEBUG && !$this->install()) {
+            throw new CHttpException('500', 'Не настроен файл конфигурации базы.');
+        }
         $model = new Users('login');
         if ($model->attributes = Yii::app()->request->getPost('Users')) {
             if ($model->validate() && $model->login()) {
@@ -66,5 +69,19 @@ class SiteController extends PxAdminController
     {
         Yii::app()->user->logout();
         $this->redirect(Yii::app()->homeUrl);
+    }
+
+    protected function install() {
+
+        if (Yii::app()->db->schema->getTable('tbl_migration', true) !== NULL) return true;
+        $runner=new CConsoleCommandRunner();
+        $commandPath = Yii::getFrameworkPath() . DIRECTORY_SEPARATOR . 'cli' . DIRECTORY_SEPARATOR . 'commands';
+        $runner->addCommands($commandPath);
+        $args = array('yiic', 'migrate', '--interactive=0', '--migrationPath=console.migrations');
+
+        ob_start();
+        $runner->run($args);
+        ob_clean();
+        return Yii::app()->db->schema->getTable('tbl_migration', true) !== NULL;
     }
 }
