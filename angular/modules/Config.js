@@ -1,5 +1,8 @@
-angular.module('pixelio', ['spasticNav', 'ngRoute', 'ngAnimate', 'pxAnimate']).
-    config(['$routeProvider', function ($routeProvider) {
+angular.module('pixelio', ['spasticNav', 'ngRoute', 'ngAnimate', 'pxAnimate'])
+    .constant('CONFIG', {
+        API_URL: '/api/'
+    })
+    .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.
             when('/works', {templateUrl: 'angular/views/portfolio/works.html', controller: WorksController}).
             when('/works/:tag', {templateUrl: 'angular/views/portfolio/works.html', controller: WorksController}).
