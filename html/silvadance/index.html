@@ -92,37 +92,55 @@ $(document).ready(function(){
 	$(".bottomA").click(function() {
 		$.arcticmodal({
 			type: "ajax",
-			url: "lpA.html"
+			url: "lpA.html",
+            afterOpen: function(data, el) {
+
+            }
 		});
 	});
 	$(".newsA").click(function() {
 		$.arcticmodal({
 			type: "ajax",
-			url: "lpA.html#news"
+			url: "lpA.html#news",
+            afterOpen: function(data, el) {
+
+            }
 		});
 	});
 	$(".hotA").click(function() {
 		$.arcticmodal({
 			type: "ajax",
-			url: "lpA.html#hot"
+			url: "lpA.html#hot",
+            afterOpen: function(data, el) {
+
+            }
 		});
 	});
 	$('.bottomB').click(function() {
 		$.arcticmodal({
 			type: 'ajax',
-			url: 'lpB.html'
+			url: 'lpB.html',
+            afterOpen: function(data, el) {
+
+            }
 		});
 	});
 		$(".newsB").click(function() {
 		$.arcticmodal({
 			type: "ajax",
-			url: "lpB.html#news"
+			url: "lpB.html#news",
+            afterOpen: function(data, el) {
+
+            }
 		});
 	});
 	$(".hotB").click(function() {
 		$.arcticmodal({
 			type: "ajax",
-			url: "lpB.html#hot"
+			url: "lpB.html#hot",
+            afterOpen: function(data, el) {
+
+            }
 		});
 	});
 });
