@@ -211,7 +211,7 @@
 		@media screen and (max-width: 1366px) {
 			.bottomA, .bottomB{height:83.5%;}
 		}
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 1280px) and (max-width:1024px) {
 			body{background: #F5F5F5 url('../img/1280.jpg') top left  fixed no-repeat;font-size:100%;
 			-o-background-size: 100%;
 			-webkit-background-size:100%;
