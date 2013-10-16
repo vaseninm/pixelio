@@ -73,6 +73,7 @@ img.bgImg{width: 100%; height: auto;position: fixed;top: 0;left: 0;}
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="js/jquery.arcticmodal-0.3.min.js"></script>
+<script src="js/jquery.scrollTo-min.js"></script>
 <script>
 $(document).ready(function(){
   $(".bgL").hover(function(){
@@ -93,9 +94,9 @@ $(document).ready(function(){
 		$.arcticmodal({
 			type: "ajax",
 			url: "lpA.html",
-            afterOpen: function(data, el) {
+           /* afterOpen: function(data, el) {
 
-            }
+            }*/
 		});
 	});
 	$(".newsA").click(function() {
@@ -103,7 +104,7 @@ $(document).ready(function(){
 			type: "ajax",
 			url: "lpA.html#news",
             afterOpen: function(data, el) {
-
+$.scrollTo('#news');
             }
 		});
 	});
@@ -112,7 +113,7 @@ $(document).ready(function(){
 			type: "ajax",
 			url: "lpA.html#hot",
             afterOpen: function(data, el) {
-
+$.scrollTo('#hot');
             }
 		});
 	});
@@ -120,9 +121,9 @@ $(document).ready(function(){
 		$.arcticmodal({
 			type: 'ajax',
 			url: 'lpB.html',
-            afterOpen: function(data, el) {
+            /*afterOpen: function(data, el) {
 
-            }
+            }*/
 		});
 	});
 		$(".newsB").click(function() {
