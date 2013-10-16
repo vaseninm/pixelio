@@ -104,7 +104,7 @@ $(document).ready(function(){
 			type: "ajax",
 			url: "lpA.html#news",
             afterOpen: function(data, el) {
-$.scrollTo('#news');
+                $('.arcticmodal-container').scrollTo('#news');
             }
 		});
 	});
@@ -113,7 +113,7 @@ $.scrollTo('#news');
 			type: "ajax",
 			url: "lpA.html#hot",
             afterOpen: function(data, el) {
-$.scrollTo('#hot');
+                $('.arcticmodal-container').scrollTo('#hot')
             }
 		});
 	});
