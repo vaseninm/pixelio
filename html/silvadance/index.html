@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset='utf-8'>
+
+<title>SilvaDance - танцевальный проект Кати Гусевой</title>
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="css/main.css" type="text/css" media="screen, projection">
+
+
+
+<!--[if lt IE 9]>
+<style type="text/css">
+body, html { zoom: 1; background: #F5F5F5 !important;}
+img.bgImg{width: 100%; height: auto;position: fixed;top: 0;left: 0;}
+</style>
+<![endif]-->
+
+</head>
+	<body>
+<!--[if lt IE 9]><img src="bg.jpg" class="bgImg" /><![endif]-->
+
+			<div class="top">
+				<div class="discriptor"><h1>Танцевальный проект Кати Гусевой <br>Санкт Петербург</h1></div>
+				<div class="logo">SilvaDance</div>
+				<div class="phohe">+7 921 1848596</div>
+				<div class="socIcons">
+					<a href="#"><img src="img/facebook_16.png" /></a>
+					<a href="#"><img src="img/twitter_16.png" /></a>
+					<a href="#"><img src="img/youtube_16.png" /></a>
+				</div>
+			</div>
+			
+			<div class="bottom">
+				<div class="silvaDance">SilvaDance</div>
+				<section class="bgL">
+					<div class="newsA"><a href="#"><div class="newsTxt">Впервые в <br>Санкт-Петербурге! Объявляется набор желающих, спешите!</div></a><div class="circle"><p>&uarr;</p></div></div>
+					<div class="hotA">
+						<div class="hotA6"></div>
+						<div class="hotA5"></div>
+						<div class="hotA4"></div>
+						<div class="hotA3"></div>
+						<div class="hotA2"></div>
+						<div class="hotA1"><a href="#">Акция <b>25%</b> скидка</a></div>
+					</div>
+					<a class="bottomA" href="#">
+						<h1>Похудей в ритме танца</h1>
+						<p><br>Без лишних нагрузок,<br> легко и непринуждённо, <br>под зажигательную музыку <br>весело худеем.</p>
+						<div class="arrowA"><h2>Начни прямо сейчас!<br>Не откладывай на завтра!</h2><div class="trianglA"></div></div>	
+					</a>
+				</section>
+				
+				<section class="bgR">
+					<div class="newsB"><a href="#"><div class="newsTxt">В честь Дня города - День открытых дверей, спешите! Мастер- класс по диско и go-go.</div></a><div class="circle"><p>&rarr;</p></div></div>
+					<div class="hotB">
+						<div class="hotB6"></div>
+						<div class="hotB5"></div>
+						<div class="hotB4"></div>
+						<div class="hotB3"></div>
+						<div class="hotB2"></div>
+						<div class="hotB1"><a href="#">Акция <b>100%</b> скидка</a></div>
+					</div>
+					<a class="bottomB" href="#">
+						<h1>Стань звездой танцпола</h1>
+						<p><br>Любишь двигаться в ритмах танца <br>и зажигать окружающих <br>своими движениями? <br>Значит твоё время <br>пришло!</p>
+						<div class="arrowB"><h2>Давай, зажигай!<br>Будь звездой танцпола!</h2><div class="trianglB"></div></div>
+					</a>
+				</section>
+			</div>
+			
+			<footer><div class="dev"><a href="http://pixelio.ru">Pixelio</a></div></footer>
+			
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/jquery.arcticmodal-0.3.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".bgL").hover(function(){
+    $(".newsB, .hotB, .bottomB").hide();
+    },function(){
+    $(".newsB, .hotB, .bottomB").show();
+  });
+    $(".bgR").hover(function(){
+    $(".newsA, .hotA, .bottomA").hide();
+    },function(){
+    $(".newsA, .hotA, .bottomA").show();
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+	$(".bottomA").click(function() {
+		$.arcticmodal({
+			type: "ajax",
+			url: "lpA.html"
+		});
+	});
+	$(".newsA").click(function() {
+		$.arcticmodal({
+			type: "ajax",
+			url: "lpA.html#news"
+		});
+	});
+	$(".hotA").click(function() {
+		$.arcticmodal({
+			type: "ajax",
+			url: "lpA.html#hot"
+		});
+	});
+	$('.bottomB').click(function() {
+		$.arcticmodal({
+			type: 'ajax',
+			url: 'lpB.html'
+		});
+	});
+		$(".newsB").click(function() {
+		$.arcticmodal({
+			type: "ajax",
+			url: "lpB.html#news"
+		});
+	});
+	$(".hotB").click(function() {
+		$.arcticmodal({
+			type: "ajax",
+			url: "lpB.html#hot"
+		});
+	});
+});
+</script>		
+	</body>
+</html>
