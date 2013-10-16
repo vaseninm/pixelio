@@ -133,6 +133,11 @@ class PfWorks extends EActiveRecord
 		return parent::model($className);
 	}
 
+    public static function getAll(){
+        $models = self::model()->findAll();
+        return CHtml::listData($models, 'id', 'title');
+    }
+
     protected function beforeDelete() {
         foreach ($this->pages as $page) {
             $page->delete();

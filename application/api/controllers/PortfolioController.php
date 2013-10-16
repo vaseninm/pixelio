@@ -25,6 +25,13 @@ class PortfolioController extends PxApiController {
         );
     }
 
+    public function actionMain() {
+        PfCarousel::model()->findAll(array(
+            'limit' => 10,
+            'order' => 'id DESC',
+        ));
+    }
+
     public function actionWorks() {
         $criteria = new CDbCriteria();
         $criteria->scopes = array('approve');

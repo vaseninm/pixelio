@@ -19,9 +19,9 @@ class PfPages extends EActiveRecord
     const TYPE_IMAGE = 'image';
     const TYPE_FULL = 'full';
 
-    const SIZE_IMAGE_WIDTH = 601;
-    const SIZE_FACE_WIDTH = 140;
-    const SIZE_FACE_HEIGHT = 140;
+    const SIZE_IMAGE_WIDTH = 780;
+    const SIZE_FACE_WIDTH = 200;
+    const SIZE_FACE_HEIGHT = 200;
 
     public $face;
     public $full;
@@ -38,7 +38,7 @@ class PfPages extends EActiveRecord
             array('title,work_id','required'),
             array('face,full', 'file', 'types'=>'png, jpg, gif', 'allowEmpty' => false,),
             array('face', 'faceValidator'),
-//            array('full', 'imageTypeFilter'),
+            array('full', 'imageTypeFilter'),
             array('position, work_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>255),
 			array('title', 'safe', 'on'=>'search'),

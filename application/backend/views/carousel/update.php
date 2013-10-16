@@ -5,9 +5,8 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Pf Carousels'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
+    'Работы' => array('index'),
+    'Редактирование работы',
 );
 ?>
 
