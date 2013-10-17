@@ -46,6 +46,7 @@ function MainController($scope, $routeParams, $rootScope, $http, $location, CONF
 
     $scope.isFirst = true;
     $scope.isLast = true;
+    var currentPage;
 
     $http.post(CONFIG.API_URL + 'portfolio/main', {}).success(function (data) {
         $scope.works = data.params.works;
@@ -53,10 +54,10 @@ function MainController($scope, $routeParams, $rootScope, $http, $location, CONF
     });
 
     $scope.prevPage = function (event) {
-        setPage($scope.page - 1);
+        setPage(currentPage - 1);
     }
     $scope.nextPage = function (event) {
-        setPage($scope.page + 1);
+        setPage(currentPage + 1);
     }
 
     function setPage (page) {
@@ -64,6 +65,7 @@ function MainController($scope, $routeParams, $rootScope, $http, $location, CONF
         $scope.isLast = (page >= ($scope.works.length - 1));
         if ($scope.works[page] !== undefined) {
             $scope.current = $scope.works[page];
+            currentPage = page;
         }
     }
 
