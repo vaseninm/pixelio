@@ -7,7 +7,13 @@
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen, projection">
 <link rel="stylesheet" href="css/main.css" type="text/css" media="screen, projection">
 
-
+	<!-- html5.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<!--[if lte IE 9]>
+    <link rel="stylesheet" href="css/ie.css" type="text/css"/>
+    <![endif]-->
 
 <!--[if lt IE 9]>
 <style type="text/css">
@@ -18,7 +24,7 @@ img.bgImg{width: 100%; height: auto;position: fixed;top: 0;left: 0;}
 
 </head>
 	<body>
-<!--[if lt IE 9]><img src="bg.jpg" class="bgImg" /><![endif]-->
+<!--[if lt IE 9]><img src="img/1920.jpg" class="bgImg" /><![endif]-->
 
 			<div class="top">
 				<div class="discriptor"><h1>Танцевальный проект Кати Гусевой <br>Санкт Петербург</h1></div>
@@ -45,9 +51,9 @@ img.bgImg{width: 100%; height: auto;position: fixed;top: 0;left: 0;}
 					</div>
 					<a class="bottomA" href="#">
 						<h1>Похудей в ритме танца</h1>
-						<p><br>Без лишних нагрузок,<br> легко и непринуждённо, <br>под зажигательную музыку <br>весело худеем.</p>
-						<div class="arrowA"><h2>Начни прямо сейчас!<br>Не откладывай на завтра!</h2><div class="trianglA"></div></div>	
+						<p><br>Без лишних нагрузок,<br> легко и непринуждённо, <br>под зажигательную музыку <br>весело худеем.</p>	
 					</a>
+					<div class="arrowA"><h2>Начни прямо сейчас!<br>Не откладывай на завтра!</h2><div class="trianglA"></div></div>
 				</section>
 				
 				<section class="bgR">
@@ -63,8 +69,8 @@ img.bgImg{width: 100%; height: auto;position: fixed;top: 0;left: 0;}
 					<a class="bottomB" href="#">
 						<h1>Стань звездой танцпола</h1>
 						<p><br>Любишь двигаться в ритмах танца <br>и зажигать окружающих <br>своими движениями? <br>Значит твоё время <br>пришло!</p>
-						<div class="arrowB"><h2>Давай, зажигай!<br>Будь звездой танцпола!</h2><div class="trianglB"></div></div>
 					</a>
+					<div class="arrowB"><h2>Давай, зажигай!<br>Будь звездой танцпола!</h2><div class="trianglB"></div></div>
 				</section>
 			</div>
 			
@@ -76,15 +82,21 @@ img.bgImg{width: 100%; height: auto;position: fixed;top: 0;left: 0;}
 <script src="js/jquery.scrollTo-min.js"></script>
 <script>
 $(document).ready(function(){
+  function clearAnimateStack(){
+    var stack = $(this).queue('fx');
+    if (stack.length > 2){
+      stack.splice(1, stack.length - 2);
+    }
+  }
   $(".bgL").hover(function(){
-    $(".newsB, .hotB, .bottomB").animate({opacity:'0'},800);
+      $(".newsB, .hotB, .arrowB, .bottomB").animate({opacity:'0'},800, '', clearAnimateStack)
     },function(){
-    $(".newsB, .hotB, .bottomB").animate({opacity:'1'},800);
+      $(".newsB, .hotB, .arrowB, .bottomB").animate({opacity:'1'},800, '', clearAnimateStack);
   });
   $(".bgR").hover(function(){
-    $(".newsA, .hotA, .bottomA").animate({opacity:'0'},800);
+      $(".newsA, .hotA, .arrowA, .bottomA").animate({opacity:'0'},800, '', clearAnimateStack);
     },function(){
-    $(".newsA, .hotA, .bottomA").animate({opacity:'1'},800);
+      $(".newsA, .hotA, .arrowA, .bottomA").animate({opacity:'1'},800, '', clearAnimateStack);
   });
 });
 </script>
@@ -96,7 +108,7 @@ $(document).ready(function(){
 			url: "lpA.html"
 		});
 	});
-	$(".newsA").click(function() {
+/*	$(".newsA").click(function() {
 		$.arcticmodal({
 			type: "ajax",
 			url: "lpA.html",
@@ -104,7 +116,7 @@ $(document).ready(function(){
                 $('.arcticmodal-container').scrollTo('#news', 600);
             }
 		});
-	});
+	});*/
 	$(".hotA").click(function() {
 		$.arcticmodal({
 			type: "ajax",
@@ -114,13 +126,22 @@ $(document).ready(function(){
             }
 		});
 	});
+	$(".arrowA").click(function() {
+		$.arcticmodal({
+			type: "ajax",
+			url: "lpA.html",
+            afterOpen: function(data, el) {
+                $('.arcticmodal-container').scrollTo('#call', 600)
+            }
+		});
+	});
 	$('.bottomB').click(function() {
 		$.arcticmodal({
 			type: 'ajax',
 			url: 'lpB.html'
 		});
 	});
-		$(".newsB").click(function() {
+/*		$(".newsB").click(function() {
 		$.arcticmodal({
 			type: "ajax",
 			url: "lpB.html",
@@ -128,13 +149,22 @@ $(document).ready(function(){
 				$('.arcticmodal-container').scrollTo('#news', 600);
             }
 		});
-	});
+	});*/
 	$(".hotB").click(function() {
 		$.arcticmodal({
 			type: "ajax",
 			url: "lpB.html",
             afterOpen: function(data, el) {
                 $('.arcticmodal-container').scrollTo('#hot', 600)
+            }
+		});
+	});
+	$(".arrowB").click(function() {
+		$.arcticmodal({
+			type: "ajax",
+			url: "lpB.html",
+            afterOpen: function(data, el) {
+                $('.arcticmodal-container').scrollTo('#call', 600)
             }
 		});
 	});

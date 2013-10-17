@@ -54,6 +54,7 @@
 		
 		.arrowA{top:65%;}
 		.arrowB{top:70%;}
+		.arrowA, .arrowB{cursor:pointer}
 		.arrowA{position:absolute;right:0;background:rgb(66, 174, 194);background:rgba(66, 174, 194, 0.7);padding:2%;}
 		.arrowA:hover{background:#42AEC2}
 		.arrowA:hover .trianglA{border-bottom-color: #42AEC2;}
@@ -71,7 +72,7 @@
 .trianglA{border-left:34px solid transparent; border-bottom:17px solid rgba(66, 174, 194, 0.7); border-right:34px solid transparent;position:absolute;left:5%;top:-17px}
 .trianglB{border-left:34px solid transparent; border-bottom:17px solid rgba(214, 91, 117, 0.7); border-right:34px solid transparent;position:absolute;right:5%;top:-17px}
 
-.newsA{height:150px;width:150px;padding:25px;border:4px solid rgba(66, 174, 194, 0.7);border-radius:50%;position:absolute;top:4%;right:67%;color:#42AEC2;text-align:center}
+/*.newsA{height:150px;width:150px;padding:25px;border:4px solid rgba(66, 174, 194, 0.7);border-radius:50%;position:absolute;top:4%;right:67%;color:#42AEC2;text-align:center}
 .newsA a{color:#42AEC2}
 .newsA:hover{border-color:rgba(66, 174, 194, 1);background:#42AEC2}
 .newsA .circle{height:40px;width:40px;border:4px solid rgba(66, 174, 194, 0.7);border-radius:50%;position:absolute;bottom:-80px;left:80px;}
@@ -84,7 +85,7 @@
 .newsA a, .newsB a{font-size:110%;}
 .newsTxt{margin:10px 0;height:90%}
 .circle p{padding-top:8px;display:none}
-.circle:hover p{display:block}
+.circle:hover p{display:block}*/
 
 .hotA{top:36%;right:15%;}
 .hotA, .hotA1, .hotA2, .hotA3, .hotA4, .hotA5, .hotA6{width: 160px;height: 160px;}
