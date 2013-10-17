@@ -74,6 +74,22 @@ class PfCarousel extends CActiveRecord
         return Yii::app()->params->itemAt('apiUrl') . "/uploads/carousels/{$type}-{$this->id}.png";
     }
 
+    public function approved()
+    {
+        $this->getDbCriteria()->mergeWith(array(
+            'with' => array(
+                'work' => array(
+                    'condition' => 'work.status = :status',
+                    'params' => array(
+                        ':status' => PfWorks::STATUS_APPROVED,
+                    ),
+                    'together'=>true,
+                ),
+            )
+        ));
+        return $this;
+    }
+
     protected function saveImages(){
         $image = CUploadedFile::getInstance($this, 'image');
         if ($image instanceof CUploadedFile){

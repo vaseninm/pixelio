@@ -42,36 +42,29 @@ function WorksController($scope, $routeParams, $rootScope, $http, $location, CON
 function MainController($scope, $routeParams, $rootScope, $http, $location, CONFIG) {
     $rootScope.bodyClass = 'one';
     $rootScope.animate = 'animate-view';
-    $rootScope.setActiveMenu('works');
+    $rootScope.setActiveMenu('main');
 
     $scope.isFirst = true;
     $scope.isLast = true;
 
-    getItems($scope.page);
+    $http.post(CONFIG.API_URL + 'portfolio/main', {}).success(function (data) {
+        $scope.works = data.params.works;
+        setPage(0);
+    });
 
     $scope.prevPage = function (event) {
-        $scope.page = $scope.page - 1;
-        getItems($scope.page);
-        $location.search({page: $scope.page});
+        setPage($scope.page - 1);
     }
     $scope.nextPage = function (event) {
-        $scope.page = $scope.page + 1;
-        getItems($scope.page);
-        $location.search({page: $scope.page});
+        setPage($scope.page + 1);
     }
 
-    function getItems(page) {
-        $http.post(CONFIG.API_URL + 'portfolio/works', {
-            page: page,
-            tag: $scope.currentTag
-        }).success(function (data) {
-                $scope.works = data.params.works;
-                $scope.tags = data.params.tags;
-                $scope.pages = data.params.pages;
-                $scope.countWorks = data.params.countWorks;
-                $scope.isFirst = (page <= 1);
-                $scope.isLast = (page >= $scope.pages);
-            });
+    function setPage (page) {
+        $scope.isFirst = (page <= 0);
+        $scope.isLast = (page >= ($scope.works.length - 1));
+        if ($scope.works[page] !== undefined) {
+            $scope.current = $scope.works[page];
+        }
     }
 
 }

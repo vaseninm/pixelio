@@ -26,10 +26,21 @@ class PortfolioController extends PxApiController {
     }
 
     public function actionMain() {
-        PfCarousel::model()->findAll(array(
+        $items = array();
+        $models = PfCarousel::model()->approved()->findAll(array(
             'limit' => 10,
-            'order' => 'id DESC',
+            'order' => '`t`.`id` DESC',
         ));
+        foreach ($models as $model) {
+            $items[] = array(
+                'img' => $model->getImageUrl(),
+                'title' => $model->work->title,
+                'work' => $model->work->id,
+            );
+        }
+        $this->answer = array(
+            'works' => $items,
+        );
     }
 
     public function actionWorks() {

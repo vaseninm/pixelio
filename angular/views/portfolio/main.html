@@ -1,6 +1,8 @@
 			<div class="job">					
 				<div class="fade">
-					<a title="" href="portfolio.html"><img alt="" src="angular/img/job_1.jpg" /></a>
+					<a title="{{ current.title }}" href="#/work/{{ current.id }}">
+                        <img alt="{{ current.title }}" ng-src="{{ current.img }}" px-loader="angular/img/loader.gif" />
+                    </a>
 				</div>
 				<span class="endPrev"><span class="prevImg" ng-click="prevPage(event)" ng-hide="isFirst"></span></span>
 				<span class="endNext"><span class="nextImg" ng-click="nextPage(event)" ng-hide="isLast"></span></span>
