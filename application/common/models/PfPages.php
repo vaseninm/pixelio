@@ -1,5 +1,4 @@
 <?php
-use Intervention\Image\Image;
 /**
  * This is the model class for table "pfPages".
  *
