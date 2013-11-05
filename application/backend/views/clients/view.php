@@ -21,6 +21,6 @@ $this->breadcrumbs = array(
     <li>Телефон: <?= CHtml::encode($model->phone) ?></li>
     <li>Сообщение: <?= CHtml::encode($model->message) ?></li>
     <li>Удобное время: <?= CHtml::encode($model->comfortTime) ?></li>
-    <li>Первое посещение: <?= date($model->firstVisit, 'd.m.Y H:i') ?></li>
-    <li>Пследнее посещение: <?= date($model->lastVisit, 'd.m.Y H:i') ?></li>
+    <li>Первое посещение: <?= date('d.m.Y H:i', $model->firstVisit) ?></li>
+    <li>Пследнее посещение: <?= date('d.m.Y H:i', $model->lastVisit) ?></li>
 </ul>

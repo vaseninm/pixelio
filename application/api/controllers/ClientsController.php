@@ -32,6 +32,7 @@ class ClientsController extends PxApiController {
         $model->message = $this->request->message;
         $this->answer = array(
             'error' => !$model->save(),
+            'errors' => $model->getErrors(),
         );
     }
 

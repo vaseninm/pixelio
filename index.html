@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html class=" js csstransitions" ng-app="pixelio" ng-controller="SiteController">
-<head>
+<html class=" js csstransitions" ng-app="pixelio">
+<head ng-controller="SiteController">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Pixelio Land</title>
@@ -76,11 +76,11 @@
 <!-- END NAVIGATION  -->
 
 <!-- WHAT WE DO SECTION  -->
-<section id="whatwedo">
+<section id="whatwedo" ng-controller="PortfolioController">
     <div class="container">
         <div class="row">
             <div class="span12 centered">
-                <h2>Изучите наши кейсы</h2>
+                <h2>Изучите наши работы</h2>
                 <div class="breaker"><span class="left"></span><div class="pixelio"></div><span class="right"></span></div>
             </div>
         </div>
@@ -287,7 +287,7 @@
 </section>
 <!-- END SERVICES  -->
 <!-- WHO ARE US SECTION  -->
-<section id="about">
+<section id="about" ng-controller="TeamController">
     <div class="container">
         <div class="row">
             <div class="span12 centered">
@@ -303,79 +303,13 @@
         </div>
 
         <div class="row">
-            <div class="span3">
+            <div class="span3" ng-repeat="item in items">
                 <div class="team">
-                    <img alt="altname" src="angular/img/Matvey.jpg">
-                    <span class="name">Матвей</span><br>
-                    <span class="position">Программист</span><br>
+                    <img alt="{{ item.fullname }}" ng-src="{{ item.faceImg }}">
+                    <span class="name">{{ item.fullname }}</span><br>
+                    <span class="position">{{ item.position }}</span><br>
                 </div>
             </div>
-            <div class="span3">
-                <div class="team">
-                    <img alt="altname" src="angular/img/Pchol.jpg">
-                    <span class="name">Дмитрий</span><br>
-                    <span class="position">Программист</span><br>
-                </div>
-            </div>
-            <div class="span3">
-                <div class="team">
-                    <img alt="altname" src="angular/img/Gleb.jpg">
-                    <span class="name">Глеб</span><br>
-                    <span class="position">Дизайнер</span><br>
-                </div>
-            </div>
-            <div class="span3">
-                <div class="team">
-                    <img alt="altname" src="angular/img/Gooos.jpg">
-                    <span class="name">Дмитрий</span><br>
-                    <span class="position">Front End</span><br>
-                    <!-- <span class="social">
-                         <a href="#" class="social-network facebook"></a>
-                         <a href="#" class="social-network skype"></a>
-                         <a href="#" class="social-network twitter"></a>
-
-                     </span> -->
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row">
-            <div class="span3">
-                <div class="team">
-                    <img alt="altname" src="angular/img/Matvey.jpg">
-                    <span class="name">Матвей</span><br>
-                    <span class="position">Программист</span><br>
-                </div>
-            </div>
-            <div class="span3">
-                <div class="team">
-                    <img alt="altname" src="angular/img/Pchol.jpg">
-                    <span class="name">Дмитрий</span><br>
-                    <span class="position">Программист</span><br>
-                </div>
-            </div>
-            <div class="span3">
-                <div class="team">
-                    <img alt="altname" src="angular/img/Gleb.jpg">
-                    <span class="name">Глеб</span><br>
-                    <span class="position">Дизайнер</span><br>
-                </div>
-            </div>
-            <div class="span3">
-                <div class="team">
-                    <img alt="altname" src="angular/img/Gooos.jpg">
-                    <span class="name">Дмитрий</span><br>
-                    <span class="position">Front End</span><br>
-                    <!-- <span class="social">
-                         <a href="#" class="social-network facebook"></a>
-                         <a href="#" class="social-network skype"></a>
-                         <a href="#" class="social-network twitter"></a>
-
-                     </span> -->
-                </div>
-            </div>
-
         </div>
 
         <div class="row">
@@ -388,7 +322,7 @@
 <!-- END WHO ARE US SECTION  -->
 
 <!-- CONTACT SECTION  -->
-<section id="contact">
+<section id="contact" ng-controller="ContactController">
     <div class="container">
         <div class="row">
             <div class="span12 centered">
@@ -407,11 +341,11 @@
         </div>
         <div class="row">
             <div class="span7">
-                <form name="" method="post" action="">
-                    <input name="first_name" placeholder="ВАШЕ ИМЯ" type="text">
-                    <input name="email" placeholder="ВАШ E-MAIL" type="email">
-                    <textarea name="comments" cols="1" rows="5" placeholder="ВАШЕ СООБЩЕНИЕ"></textarea>
-                    <button name="send" type="submit" class="button">Договориться о встрече</button>
+                <form name="ContactForm" method="post" action="" ng-submit="leftContact()">
+                    <input name="name" placeholder="ВАШЕ ИМЯ" type="text" ng-model="leftContactModel.name" ng-required="true">
+                    <input name="email" placeholder="ВАШ E-MAIL" type="email" ng-model="leftContactModel.email" ng-required="true">
+                    <textarea name="message" cols="1" rows="5" placeholder="ВАШЕ СООБЩЕНИЕ" ng-model="leftContactModel.message" ng-required="true"></textarea>
+                    <button name="send" type="submit" class="button" ng-disabled="ContactForm.$invalid">Договориться о встрече</button>
                 </form>
             </div>
             <div class="span5">
@@ -438,17 +372,6 @@
     </div>
 </section>
 <!-- END CONTACT SECTION  -->
-<!-- TWITTER MODULE  -->
-<!--<section id="twitter_module">
-    <div class="container">
-        <div class="row">
-            <div class="span12">
-                <div id="ticker" class="query"><p class="loading">loading tweets...</p></div>
-            </div>
-        </div>
-    </div>
-</section>-->
-<!-- END TWITTER MODULE  -->
 
 <!-- FOOTER  -->
 <footer>
@@ -507,24 +430,6 @@
 <script src="angular/libs/jquery.fancybox.pack.js" type="text/javascript"></script>
 <script src="angular/libs/jquery.fancybox-media.js" type="text/javascript"></script>
 <script src="angular/libs/retina.js"></script>
-
-<!--
-*************** RETINA JS FUNCTIONALITY   ****************
-
-The script assumes you use Apple's prescribed high-resolution modifier (@2x) to denote
-high-resolution image variants on your server.
-
-For example, if you have an image on your page that looks like this:
-<img src="/images/my_image.png" />
-
-The script will check your server to see if an alternative image exists at this path:
-"/images/my_image@2x.png"
-
-That's it!
-:)
-
-<!--RETINA JS END-->
-<!-- END JAVA SCRIPTS  -->
 
 
 </body></html>
