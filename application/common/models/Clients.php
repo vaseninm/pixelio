@@ -7,7 +7,7 @@
  * @property integer $id
  * @property string $ip
  * @property integer $visits
- * @property integer $name
+ * @property string $name
  * @property string $email
  * @property string $phone
  * @property string $message
@@ -26,8 +26,8 @@ class Clients extends CActiveRecord
 	public function rules()
 	{
 		return array(
-			array('visits, name, firstVisit, lastVisit', 'numerical', 'integerOnly'=>true),
-			array('ip, email, phone, comfortTime', 'length', 'max'=>255),
+			array('visits, firstVisit, lastVisit', 'numerical', 'integerOnly'=>true),
+			array('ip, email, phone, comfortTime, name', 'length', 'max'=>255),
             array('ip', 'unique'),
 			array('message', 'safe'),
 			array('ip, visits, name, email, phone', 'safe', 'on'=>'search'),

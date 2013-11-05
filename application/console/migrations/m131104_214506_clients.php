@@ -8,7 +8,7 @@ class m131104_214506_clients extends CDbMigration
             'id' => 'pk',
             'ip' => 'string',
             'visits' => 'int',
-            'name' => 'int',
+            'name' => 'string',
             'email' => 'string',
             'phone' => 'string',
             'message' => 'text',
