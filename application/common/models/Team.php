@@ -14,6 +14,8 @@ use Intervention\Image\Image;
 class Team extends CActiveRecord
 {
 
+    const PAGE_SIZE = 4;
+
 	public function tableName()
 	{
 		return 'team';
@@ -72,6 +74,15 @@ class Team extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+    public function page($currentPage)
+    {
+        $criteria = new CDbCriteria();
+        $criteria->limit = self::PAGE_SIZE;
+        $criteria->offset = ($currentPage - 1)*self::PAGE_SIZE;
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+    }
 
     const TYPE_FACE = 'face';
     const TYPE_IMAGE = 'image';

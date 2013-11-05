@@ -28,6 +28,7 @@ class Clients extends CActiveRecord
 		return array(
 			array('visits, name, firstVisit, lastVisit', 'numerical', 'integerOnly'=>true),
 			array('ip, email, phone, comfortTime', 'length', 'max'=>255),
+            array('ip', 'unique'),
 			array('message', 'safe'),
 			array('ip, visits, name, email, phone', 'safe', 'on'=>'search'),
 		);
@@ -62,7 +63,9 @@ class Clients extends CActiveRecord
     protected function beforeSave() {
         if ($this->isNewRecord) {
             $this->firstVisit = time();
+            $this->ip = Yii::app()->request->userHostAddress;
         }
+        $this->visits++;
         $this->lastVisit = time();
         return self::beforeSave();
     }
