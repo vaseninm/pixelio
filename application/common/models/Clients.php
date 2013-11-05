@@ -67,7 +67,7 @@ class Clients extends CActiveRecord
         }
         $this->visits++;
         $this->lastVisit = time();
-        return self::beforeSave();
+        return parent::beforeSave();
     }
 
 	public function search()

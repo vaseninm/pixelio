@@ -14,8 +14,12 @@ class ClientsController extends PxApiController {
         if (!$model) {
             $model = new Clients();
         }
-//        $model->lastVisit = time();
-        $model->save();
+        $error = !$model->save();
+        $this->answer = array(
+            'error' => $error,
+            'isNew' => $model->isNewRecord,
+            'visits' => $model->visits,
+        );
     }
 
     public function actionLeftContact() {
@@ -26,7 +30,9 @@ class ClientsController extends PxApiController {
         $model->name = $this->request->name;
         $model->email = $this->request->email;
         $model->message = $this->request->message;
-        $model->save();
+        $this->answer = array(
+            'error' => !$model->save(),
+        );
     }
 
     public function actionAskCallback() {
@@ -37,6 +43,8 @@ class ClientsController extends PxApiController {
         $model->name = $this->request->name;
         $model->phone = $this->request->phone;
         $model->comfortTime = $this->request->comfortTime;
-        $model->save();
+        $this->answer = array(
+            'error' => !$model->save(),
+        );
     }
 }

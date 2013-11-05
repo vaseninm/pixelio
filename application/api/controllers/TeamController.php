@@ -11,13 +11,15 @@ class TeamController extends PxApiController {
 
     public function actionList() {
         $pages = ceil(Feedback::model()->count() / Team::PAGE_SIZE);
-        $models = Team::model()->page($this->request->page)->findAll(array('order' => 'postion ASC, id DESC'));
+        $models = Team::model()
+            ->page(isset($this->request->page) ? $this->request->page : 1)
+            ->findAll(array('order' => 'sort ASC, id DESC'));
         $items = array();
         foreach ($models as $model) {
             $items[] = array(
                 'id' => $model->id,
                 'fullname' => $model->fullname,
-                'position' => $model->postion,
+                'position' => $model->position,
                 'about' => $model->about,
                 'faceImg' => $model->getImageUrl(Team::TYPE_FACE),
                 'fullImg' => $model->getImageUrl(Team::TYPE_IMAGE),
