@@ -1248,8 +1248,8 @@ a.button{text-decoration:none}
 .phone-header{
 
     position: absolute;
-    left: 5%;
-    bottom: 5%;
+    top: 0;
+    right: 3%;
 }
 .phone-header h2{font-size:32px;color:#fff}
 .phone-header h2 span{font-size:16px;color:#f5f5f5}
