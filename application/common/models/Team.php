@@ -47,6 +47,11 @@ class Team extends CActiveRecord
             'sortable' => array(
                 'class' => 'backend.extensions.sortable.SortableBehavior',
                 'column' => 'sort',
+            ),
+            self::TYPE_FACE => array(
+                'class' => 'common.extensions.image.ImageBehavior',
+                'folder' => 'team',
+                'attribute' => self::TYPE_FACE,
             )
         );
     }
