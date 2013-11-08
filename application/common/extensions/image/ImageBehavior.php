@@ -43,19 +43,14 @@ class ImageBehavior extends CActiveRecordBehavior {
             $image = CUploadedFile::getInstance($this->owner, $this->attribute);
             if ($image) {
                 $img = Image::make($image->tempName);
-                if (isset($params['resize'])) {
-                    $img->resize($params['resize']['width'], $params['resize']['height'], $params['resize']['ratio'], $params['resize']['upsize']);
-                }
                 if (isset($params['crop'])) {
                     $img->crop($params['crop']['width'], $params['crop']['height'], $params['crop']['x'], $params['crop']['y']);
                 }
+                if (isset($params['resize'])) {
+                    $img->resize($params['resize']['width'], $params['resize']['height'], $params['resize']['ratio'], $params['resize']['upsize']);
+                }
                 $img->save($this->getPathToImages() . "/{$type}-{$this->owner->id}.png");
             }
-        }
-
-        $image = CUploadedFile::getInstance($this->owner, 'full');
-        if ($image) {
-            Image::make($image->tempName)->save($this->getPathToImages() . "/". self::TYPE_IMAGE ."-{$this->id}.png");
         }
     }
 
