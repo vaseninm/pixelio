@@ -158,108 +158,7 @@
             </div>
         </div>
         <div class="row">
-
-            <div class="span3 project">
-
-                <img src="angular/img/thumbs/1.png" alt="" class="project-img">
-                <a href="angular/img/thumbs/1big.png" class="fancybox-media" data-title-id="title-01" rel="portfolio">
-                    <span class="overlay"></span>
-                    <div class="cnt"></div>
-                </a>
-                <div id="title-01" class="info hidden">
-                    <h2>Компания "Рога и копыта 1"</h2>
-                    <div class="fancybody">Тут написан текст о том как все довольны, что всё получилось и <a href="#">ссылочка</a> на рабочий проект. Ура все счастливы.</div>
-                </div>
-
-
-
-            </div>
-            <div class="span3 project">
-
-                <img src="angular/img/thumbs/2.png" alt="" class="project-img">
-                <a href="angular/img/thumbs/2big.png" class="fancybox-media" data-title-id="title-02" rel="portfolio">
-                    <span class="overlay"></span>
-                    <div class="cnt"></div>
-                </a>
-                <div id="title-02" class="info hidden">
-                    <h2>Компания "Рога и копыта 2"</h2>
-                    <div class="fancybody">Тут написан текст о том как все довольны, что всё получилось и <a href="#">ссылочка</a> на рабочий проект. Ура все счастливы.</div>
-                </div>
-
-
-
-            </div>
-            <div class="span3 project">
-
-                <img src="angular/img/thumbs/3.png" alt="" class="project-img">
-                <a href="angular/img/thumbs/3big.png" class="fancybox-media" data-title-id="title-03" rel="portfolio">
-                    <span class="overlay"></span>
-                    <div class="cnt"></div>
-                </a>
-                <div id="title-03" class="info hidden">
-                    <h2>Компания "Рога и копыта 3"</h2>
-                    <div class="fancybody">Тут написан текст о том как все довольны, что всё получилось и <a href="#">ссылочка</a> на рабочий проект. Ура все счастливы.</div>
-                </div>
-
-
-
-            </div>
-            <div class="span3 project">
-
-                <img src="angular/img/thumbs/4.png" alt="" class="project-img">
-                <a href="angular/img/thumbs/4big.png" class="fancybox-media" data-title-id="title-04" rel="portfolio">
-                    <span class="overlay"></span>
-                    <div class="cnt"></div>
-                </a>
-                <div id="title-04" class="info hidden">
-                    <h2>Компания "Рога и копыта 4"</h2>
-                    <div class="fancybody">Тут написан текст о том как все довольны, что всё получилось и <a href="#">ссылочка</a> на рабочий проект. Ура все счастливы.</div>
-                </div>
-
-
-
-            </div>
-            <div class="span3 project">
-
-                <img src="angular/img/thumbs/5.jpg" alt="" class="project-img">
-                <a href="angular/img/thumbs/5.jpg" class="fancybox-media" data-title-id="title-05" rel="portfolio">
-                    <span class="overlay"></span>
-                    <div class="cnt"></div>
-                </a>
-                <div id="title-05" class="info hidden">
-                    <h2>Компания "Рога и копыта 5"</h2>
-                    <div class="fancybody">Тут написан текст о том как все довольны, что всё получилось и <a href="#">ссылочка</a> на рабочий проект. Ура все счастливы.</div>
-                </div>
-
-            </div>
-            <div class="span3 project">
-
-                <img src="angular/img/thumbs/6.jpg" alt="" class="project-img">
-                <a href="angular/img/thumbs/6.jpg" class="fancybox-media" data-title-id="title-06" rel="portfolio">
-                    <span class="overlay"></span>
-                    <div class="cnt"></div>
-                </a>
-                <div id="title-06" class="info hidden">
-                    <h2>Компания "Рога и копыта 6"</h2>
-                    <div class="fancybody">Тут написан текст о том как все довольны, что всё получилось и <a href="#">ссылочка</a> на рабочий проект. Ура все счастливы.</div>
-                </div>
-
-            </div>
-            <div class="span3 project">
-
-                <img src="angular/img/thumbs/7.jpg" alt="" class="project-img">
-                <a href="angular/img/thumbs/7.jpg" class="fancybox-media" data-title-id="title-07" rel="portfolio">
-                    <span class="overlay"></span>
-                    <div class="cnt"></div>
-                </a>
-                <div id="title-07" class="info hidden">
-                    <h2>Компания "Рога и копыта 7"</h2>
-                    <div class="fancybody">Тут написан текст о том как все довольны, что всё получилось и <a href="#">ссылочка</a> на рабочий проект. Ура все счастливы.</div>
-                </div>
-
-            </div>
-            <div class="span3 project">
-
+            <div class="span3 project" ng-repeat="">
                 <img src="angular/img/thumbs/8.jpg" alt="" class="project-img">
                 <a href="angular/img/thumbs/8.jpg" class="fancybox-media" data-title-id="title-08" rel="portfolio">
                     <span class="overlay"></span>
@@ -269,7 +168,6 @@
                     <h2>Компания "Рога и копыта 8"</h2>
                     <div class="fancybody">Тут написан текст о том как все довольны, что всё получилось и <a href="#">ссылочка</a> на рабочий проект. Ура все счастливы.</div>
                 </div>
-
             </div>
         </div>
 		<div class="row">
@@ -378,7 +276,6 @@
         </div>
 
         <div class="row">
-
             <div class="span3" ng-repeat="item in items">
                 <div class="team">
                     <img alt="{{ item.fullname }}" ng-src="{{ item.faceImg }}">
@@ -386,7 +283,14 @@
                     <span class="position">{{ item.position }}</span><br>
                 </div>
             </div>
+        </div>
 
+        <div class="row">
+            <div class="span12 centered">
+                <a class="prev" href="#" ng-click="prevPage($event)" ng-hide="isFirst"></a>
+                <div class="subtext"></div>
+                <a class="next" href="#" ng-click="nextPage($event)" ng-hide="isLast"></a>
+            </div>
         </div>
 
         <div class="row">

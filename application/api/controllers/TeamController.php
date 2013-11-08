@@ -10,7 +10,7 @@
 class TeamController extends PxApiController {
 
     public function actionList() {
-        $pages = ceil(Feedback::model()->count() / Team::PAGE_SIZE);
+        $pages = ceil(Team::model()->count() / Team::PAGE_SIZE);
         $models = Team::model()
             ->page(isset($this->request->page) ? $this->request->page : 1)
             ->findAll(array('order' => 'sort ASC, id DESC'));

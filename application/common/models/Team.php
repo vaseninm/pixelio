@@ -72,6 +72,11 @@ class Team extends CActiveRecord
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+            'sort' => array(
+                'defaultOrder' => array(
+                    'sort' => CSort::SORT_ASC,
+                ),
+            ),
 		));
 	}
 
@@ -124,42 +129,7 @@ class Team extends CActiveRecord
         }
     }
 
-    public function getImageUrl($type = self::TYPE_IMAGE) {
-        return Yii::app()->params->itemAt('apiUrl') . "/uploads/team/{$type}-{$this->id}.png";
-    }
 
-    protected function deleteImages() {
-        foreach (array(self::TYPE_FACE, self::TYPE_IMAGE) as $type) {
-            if (is_file($this->getPathToImages() . "/{$type}-{$this->id}.png")) {
-                @unlink($this->getPathToImages() . "/{$type}-{$this->id}.png");
-            }
-        }
-    }
-
-    protected function getPathToImages(){
-        return Yii::getPathOfAlias('root.api.uploads.team');
-    }
-
-    protected function afterDelete() {
-        $this->deleteImages();
-        parent::afterDelete();
-    }
-
-    protected function saveImages(){
-        $face = CUploadedFile::getInstance($this, 'face');
-        if ($face) {
-            Image::make($face->tempName)->save($this->getPathToImages() . "/". self::TYPE_FACE ."-{$this->id}.png");
-        }
-        $image = CUploadedFile::getInstance($this, 'full');
-        if ($image) {
-            Image::make($image->tempName)->resize(self::SIZE_IMAGE_WIDTH, null, true, false)->save($this->getPathToImages() . "/". self::TYPE_IMAGE ."-{$this->id}.png");
-        }
-    }
-
-    protected function afterSave() {
-        parent::afterSave();
-        $this->saveImages();
-    }
 
 	public static function model($className=__CLASS__)
 	{
