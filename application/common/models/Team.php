@@ -1,5 +1,4 @@
 <?php
-use Intervention\Image\Image;
 
 /**
  * This is the model class for table "team".
@@ -11,88 +10,10 @@ use Intervention\Image\Image;
  * @property string $about
  * @property int $sort
  */
-class Team extends CActiveRecord
+class Team extends EActiveRecord
 {
 
     const PAGE_SIZE = 4;
-
-	public function tableName()
-	{
-		return 'team';
-	}
-
-	public function rules()
-	{
-		return array(
-			array('fullname, position', 'length', 'max'=>255),
-            array('fullname, position, about', 'required'),
-            array('face,full', 'file', 'types'=>'png, jpg, gif', 'allowEmpty' => true,),
-            array('about', 'safe'),
-			array('face', 'faceValidator'),
-			array('full', 'imageTypeValidator'),
-            array('sort', 'numerical', 'integerOnly'=>true),
-            array('fullname, position', 'safe', 'on'=>'search'),
-		);
-	}
-
-	public function relations()
-	{
-		return array(
-		);
-	}
-
-    public function behaviors()
-    {
-        return array(
-            'sortable' => array(
-                'class' => 'backend.extensions.sortable.SortableBehavior',
-                'column' => 'sort',
-            ),
-            self::TYPE_FACE => array(
-                'class' => 'common.extensions.image.ImageBehavior',
-                'folder' => 'team',
-                'attribute' => self::TYPE_FACE,
-            )
-        );
-    }
-
-	public function attributeLabels()
-	{
-		return array(
-			'id' => 'ID',
-			'fullname' => 'Полное имя',
-			'position' => 'Должность',
-			'about' => 'О себе',
-			'face' => 'Превью 300x300',
-			'full' => 'Фото',
-		);
-	}
-
-	public function search()
-	{
-		$criteria=new CDbCriteria;
-
-		$criteria->compare('fullname',$this->fullname,true);
-		$criteria->compare('position',$this->position,true);
-
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-            'sort' => array(
-                'defaultOrder' => array(
-                    'sort' => CSort::SORT_ASC,
-                ),
-            ),
-		));
-	}
-
-    public function page($currentPage)
-    {
-        $criteria = new CDbCriteria();
-        $criteria->limit = self::PAGE_SIZE;
-        $criteria->offset = ($currentPage - 1)*self::PAGE_SIZE;
-        $this->getDbCriteria()->mergeWith($criteria);
-        return $this;
-    }
 
     const TYPE_FACE = 'face';
     const TYPE_IMAGE = 'image';
@@ -104,40 +25,100 @@ class Team extends CActiveRecord
     public $face;
     public $full;
 
-    public function faceValidator ($attribute, $params) {
-        $file = CUploadedFile::getInstance($this, $attribute);
-        if (!$file) {
-            if ($this->isNewRecord) {
-                $this->addError($attribute, Yii::t('portfolio', 'Изобраение не загружено'));
-            } else {
-                return false;
-            }
-        }
-        $image = Image::make($file->tempName);
-        if (!($image->width == self::SIZE_FACE_WIDTH && $image->height == self::SIZE_FACE_HEIGHT)) {
-            $this->addError($attribute, Yii::t('portfolio', 'Выбраны не правильные размеры превью.'));
-        }
+    public function tableName()
+    {
+        return 'team';
     }
 
-    public function imageTypeValidator ($attribute, $params) {
-        $file = CUploadedFile::getInstance($this, $attribute);
-        if (!$file) {
-            if ($this->isNewRecord) {
-                $this->addError($attribute, Yii::t('portfolio', 'Изобраение не загружено'));
-            } else {
-                return false;
-            }
-        }
-        $image = Image::make($file->tempName);;
-        if ($image->width < self::SIZE_IMAGE_WIDTH) {
-            $this->addError($attribute, Yii::t('portfolio', 'Слишком маленькое изображение.'));
-        }
+    public function rules()
+    {
+        return array(
+            array('fullname, position', 'length', 'max' => 255),
+            array('fullname, position, about', 'required'),
+            array('face,full', 'file', 'types' => 'png, jpg, gif', 'allowEmpty' => !$this->isNewRecord,),
+            array('about', 'safe'),
+            array('face', 'common.extensions.image.ImageValidator', 'width' => self::SIZE_FACE_WIDTH, 'height' => self::SIZE_FACE_HEIGHT),
+            array('full', 'common.extensions.image.ImageValidator', 'width' => array('min' => self::SIZE_IMAGE_WIDTH)),
+            array('sort', 'numerical', 'integerOnly' => true),
+            array('fullname, position', 'safe', 'on' => 'search'),
+        );
     }
 
+    public function relations()
+    {
+        return array();
+    }
 
+    public function behaviors()
+    {
+        return array(
+            'sortable' => array(
+                'class' => 'backend.extensions.sortable.SortableBehavior',
+                'column' => 'sort',
+            ),
+            'faceImg' => array(
+                'class' => 'common.extensions.image.ImageBehavior',
+                'folder' => 'team',
+                'attribute' => 'face',
+                'types' => array(
+                    self::TYPE_FACE => array(),
+                ),
+            ),
+            'fullImg' => array(
+                'class' => 'common.extensions.image.ImageBehavior',
+                'folder' => 'team',
+                'attribute' => 'full',
+                'types' => array(
+                    self::TYPE_IMAGE => array(
+                        'resize' => array(
+                            'width' => self::SIZE_IMAGE_WIDTH,
+                        ),
+                    ),
+                ),
+            )
+        );
+    }
 
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
-	}
+    public function attributeLabels()
+    {
+        return array(
+            'id' => 'ID',
+            'fullname' => 'Полное имя',
+            'position' => 'Должность',
+            'about' => 'О себе',
+            'face' => 'Превью 300x300',
+            'full' => 'Фото',
+        );
+    }
+
+    public function search()
+    {
+        $criteria = new CDbCriteria;
+
+        $criteria->compare('fullname', $this->fullname, true);
+        $criteria->compare('position', $this->position, true);
+
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+            'sort' => array(
+                'defaultOrder' => array(
+                    'sort' => CSort::SORT_ASC,
+                ),
+            ),
+        ));
+    }
+
+    public function page($currentPage)
+    {
+        $criteria = new CDbCriteria();
+        $criteria->limit = self::PAGE_SIZE;
+        $criteria->offset = ($currentPage - 1) * self::PAGE_SIZE;
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+    }
+
+    public static function model($className = __CLASS__)
+    {
+        return parent::model($className);
+    }
 }

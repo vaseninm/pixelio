@@ -14,11 +14,11 @@
 
     <?php echo $form->errorSummary($model); ?>
 
-    <?php echo $form->textFieldControlGroup($model, 'fullname', array('span' => 5, 'maxlength' => 255)); ?>
+    <?php echo $form->textFieldControlGroup($model, 'title', array('span' => 5, 'maxlength' => 255)); ?>
 
-    <?php echo $form->textFieldControlGroup($model, 'position', array('span' => 5, 'maxlength' => 255)); ?>
+    <?php echo $form->textFieldControlGroup($model, 'url', array('span' => 5, 'maxlength' => 255)); ?>
 
-    <?php echo $form->textAreaControlGroup($model, 'about', array('rows' => 6, 'span' => 8)); ?>
+    <?php echo $form->textAreaControlGroup($model, 'desc', array('rows' => 6, 'span' => 8)); ?>
 
     <?php echo $form->fileFieldControlGroup($model, 'face'); ?>
 

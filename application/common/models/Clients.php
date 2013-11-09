@@ -15,7 +15,7 @@
  * @property integer $firstVisit
  * @property integer $lastVisit
  */
-class Clients extends CActiveRecord
+class Clients extends EActiveRecord
 {
 
 	public function tableName()

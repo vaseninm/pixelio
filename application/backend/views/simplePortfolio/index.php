@@ -4,21 +4,21 @@
 
 
 $this->breadcrumbs = array(
-    'Команда' => array('index'),
+    'Портфолио' => array('index'),
     'Управление',
 );
 ?>
 
-    <h1>Управление командой</h1>
+    <h1>Управление портфолио</h1>
 
 <?php $this->widget('backend.extensions.sortable.SortableGridView', array(
     'id' => $model->getGridId(),
     'type' => TbHtml::GRID_TYPE_BORDERED,
     'dataProvider' => $model->search(),
     'columns' => array(
-        'fullname',
-        'position',
-        'about',
+        'title',
+        'url',
+        'desc',
         array(
             'class' => 'bootstrap.widgets.TbButtonColumn',
             'template' => '{update}{delete}',

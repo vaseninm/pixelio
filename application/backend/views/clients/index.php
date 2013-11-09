@@ -12,7 +12,7 @@ $this->breadcrumbs = array(
     <h1>Список клиентов</h1>
 
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
-    'id' => 'clients-grid',
+    'id' => $model->getGridId(),
     'type' => TbHtml::GRID_TYPE_BORDERED,
     'dataProvider' => $model->search(),
     'columns' => array(

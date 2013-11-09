@@ -158,23 +158,23 @@
             </div>
         </div>
         <div class="row">
-            <div class="span3 project" ng-repeat="">
-                <img src="angular/img/thumbs/8.jpg" alt="" class="project-img">
-                <a href="angular/img/thumbs/8.jpg" class="fancybox-media" data-title-id="title-08" rel="portfolio">
+            <div class="span3 project" ng-repeat="item in items">
+                <img src="{{ item.faceImg }}" alt="{{ item.title }}" class="project-img">
+                <a href="{{ item.fullImg }}" class="fancybox-media" data-title-id="title-{{ item.id }}" rel="portfolio">
                     <span class="overlay"></span>
                     <div class="cnt"></div>
                 </a>
-                <div id="title-08" class="info hidden">
-                    <h2>Компания "Рога и копыта 8"</h2>
-                    <div class="fancybody">Тут написан текст о том как все довольны, что всё получилось и <a href="#">ссылочка</a> на рабочий проект. Ура все счастливы.</div>
+                <div id="title-{{ item.id }}" class="info hidden">
+                    <h2>{{ item.title }}</h2>
+                    <div class="fancybody">{{ item.desc }}. <br /> <a href="{{ item.url }}" title="{{ item.title }}">Проект "{{ item.title }}"</a></div>
                 </div>
             </div>
         </div>
 		<div class="row">
             <div class="span12 centered">
-                <a class="prev" href="#"></a>
-				<div class="subtext">все проекты</div>
-				<a class="next" href="#"></a>
+                <a class="prev" href="#" ng-click="prevPage($event)" ng-hide="isFirst"></a>
+                <div class="subtext"></div>
+                <a class="next" href="#" ng-click="nextPage($event)" ng-hide="isLast"></a>
             </div>
         </div>
 
