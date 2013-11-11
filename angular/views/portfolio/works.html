@@ -11,7 +11,7 @@
 </div>-->
 
 			<div class="jobTumbs">	
-				<img src="angular/img/empty_category.png" />			
+				<img src="angular/img/empty_category.png" ng-hide="works" />
 				<div class="jobItems clearfix">
 					<div class="fade">
 						<a title="{{ work.title }}" href="#/work/{{ work.id }}" ng-repeat="work in works">
@@ -23,12 +23,10 @@
 				<span class="endNext"><span class="nextImg" ng-click="nextPage(event)" ng-hide="isLast"></span></span>
 			</div>
 			<div class="jobMenu">
-				<ul>
-					<li><a class="active" href="#">Свадебные</a></li>
-					<li><a href="#">Детские</a></li>
-					<li><a href="#">Семейные</a></li>
-					<li><a href="#">Постановочные</a></li>
-					<li><a href="#">Лови момент!</a></li>
-					<li><a href="#">Разные</a></li>
+                <ul>
+                    <li><a ng-class="{true: 'active', false: ''}[currentTag === 0]" href="#/works">Всё</a></li>
+                    <li ng-repeat="tag in tags">
+                        <a ng-class="{true: 'active', false: ''}[tag.id==currentTag]" href="#/works/{{ tag.id }}">{{ tag.title }}</a>
+                    </li>
 				</ul>
 			</div>
