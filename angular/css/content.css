@@ -52,6 +52,13 @@ div.right{width:48%;padding-left:2%}
   -o-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;}
 .jobItems a img:hover{opacity:1;}
+.jobMenu{width:800px;margin:0 auto;text-align:center}
+.jobMenu ul{height:30px;padding-top:24px;position:relative}
+.jobMenu ul li{display: inline-block;list-style: none outside none;}
+.jobMenu ul li a{color:#cb5757;font-size:17px;border-top:2px solid #d2c3af;margin:0 15px;padding-top:5px;display:block;position:relative}
+.jobMenu ul li a.active{color:#ac0000;border-top:2px solid #543c31;}
+.jobMenu ul li a.active:after{content:"";position:absolute;left:50%;margin-left:-8px;border:8px solid transparent;/* reduce the damage in FF3.0 */display:block;width:0;}
+.jobMenu ul li a.active:after {top:-8px;border-bottom-color:#543c31;border-top:none}
 
 /*** ABOUT PAGE ***/
 .aboutMe{width:500px;min-height:400px;padding-top:30px}

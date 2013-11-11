@@ -10,7 +10,8 @@
     <span class="endNext"><span class="nextImg" ng-click="nextPage(event)" ng-hide="isLast"><img class="normal" src="angular/img/nextImg.png" /><img class="hover" src="angular/img/nextImgHover.png" /></span></span>
 </div>-->
 
-			<div class="jobTumbs">					
+			<div class="jobTumbs">	
+				<img src="angular/img/empty_category.png" />			
 				<div class="jobItems clearfix">
 					<div class="fade">
 						<a title="{{ work.title }}" href="#/work/{{ work.id }}" ng-repeat="work in works">
@@ -20,4 +21,14 @@
 				</div>
 				<span class="endPrev"><span class="prevImg" ng-click="prevPage(event)" ng-hide="isFirst"></span></span>
 				<span class="endNext"><span class="nextImg" ng-click="nextPage(event)" ng-hide="isLast"></span></span>
+			</div>
+			<div class="jobMenu">
+				<ul>
+					<li><a class="active" href="#">Свадебные</a></li>
+					<li><a href="#">Детские</a></li>
+					<li><a href="#">Семейные</a></li>
+					<li><a href="#">Постановочные</a></li>
+					<li><a href="#">Лови момент!</a></li>
+					<li><a href="#">Разные</a></li>
+				</ul>
 			</div>
