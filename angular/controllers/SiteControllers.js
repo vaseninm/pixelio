@@ -1,5 +1,8 @@
 function SiteController($scope, $rootScope, $http, CONFIG) {
-    $http.post(CONFIG.API_URL + 'clients/register', {}).success(function (data) {
+    $http.post(CONFIG.API_URL + 'clients/register', {
+        referrer: document.referrer,
+        url: document.location.href
+    }).success(function (data) {
         if (data.params.error) {
             console.error('Ошибка. Пользователь не добавлен.')
         } else {

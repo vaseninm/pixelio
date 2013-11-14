@@ -27,3 +27,7 @@ $this->breadcrumbs = array(
         ),
     ),
 )); ?>
+
+<div>
+    Конверсия: <?php echo round(($namedVisiters*100/$allVisiters),2); ?>%
+</div>

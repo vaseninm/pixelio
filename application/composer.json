@@ -37,7 +37,8 @@
         "yiisoft/yii": "1.1.14",
         "2amigos/yiiwheels": "1.0.3",
         "intervention/image": "dev-master",
-        "yiiext/activerecord-relation-behavior": "dev-master"
+        "yiiext/activerecord-relation-behavior": "dev-master",
+        "snowplow/referer-parser": "dev-master"
     },
     "autoload": {
         "psr-0": {

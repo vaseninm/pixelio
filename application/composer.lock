@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "0336a0bcc94ac308e0deea9d5c078f0a",
+    "hash": "37344f1dc4395103f2941f39c715e4be",
     "packages": [
         {
             "name": "2amigos/yiistrap",
@@ -199,6 +199,46 @@
             "time": "2013-08-29 15:01:04"
         },
         {
+            "name": "snowplow/referer-parser",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/snowplow/referer-parser.git",
+                "reference": "0cb681e61298bedfcf0ad541c91c1884327940e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/snowplow/referer-parser/zipball/0cb681e61298bedfcf0ad541c91c1884327940e9",
+                "reference": "0cb681e61298bedfcf0ad541c91c1884327940e9",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.*",
+                "symfony/yaml": "*"
+            },
+            "suggest": {
+                "symfony/yaml": "Support for YAML configuration file"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Snowplow\\RefererParser": "php/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lars Strojny",
+                    "email": "lars@strojny.net"
+                }
+            ],
+            "description": "Snowplow Refer(r)er parser for PHP",
+            "time": "2013-11-11 12:47:57"
+        },
+        {
             "name": "yiiext/activerecord-relation-behavior",
             "version": "dev-master",
             "source": {
@@ -266,7 +306,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "intervention/image": 20,
-        "yiiext/activerecord-relation-behavior": 20
+        "yiiext/activerecord-relation-behavior": 20,
+        "snowplow/referer-parser": 20
     },
     "platform": [
 

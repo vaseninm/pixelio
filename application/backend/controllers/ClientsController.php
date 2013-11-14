@@ -36,11 +36,16 @@ class ClientsController extends PxAdminController
     {
         $model = new Clients('search');
         $model->unsetAttributes(); // clear any default values
-        if (isset($_GET['Clients']))
+        if (isset($_GET['Clients'])) {
             $model->attributes = $_GET['Clients'];
 
+        }
+        $allVisiters = Clients::model()->count();
+        $namedVisiters = Clients::model()->count('`name` IS NOT NULL AND (`email` IS NOT NULL OR `phone` IS NOT NULL)');
         $this->render('index', array(
             'model' => $model,
+            'allVisiters' => $allVisiters,
+            'namedVisiters' => $namedVisiters,
         ));
     }
 

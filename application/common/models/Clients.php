@@ -1,4 +1,5 @@
 <?php
+use Snowplow\RefererParser\Parser;
 
 /**
  * This is the model class for table "clients".
@@ -12,6 +13,8 @@
  * @property string $phone
  * @property string $message
  * @property string $comfortTime
+ * @property string $referrerUrl
+ * @property string $referrerKey
  * @property integer $firstVisit
  * @property integer $lastVisit
  */
@@ -27,7 +30,7 @@ class Clients extends EActiveRecord
 	{
 		return array(
 			array('visits, firstVisit, lastVisit', 'numerical', 'integerOnly'=>true),
-			array('ip, email, phone, comfortTime, name', 'length', 'max'=>255),
+			array('ip, email, phone, comfortTime, name, referrerUrl, referrerKey', 'length', 'max'=>255),
             array('ip', 'unique'),
 			array('message', 'safe'),
 			array('ip, visits, name, email, phone', 'safe', 'on'=>'search'),
@@ -56,11 +59,15 @@ class Clients extends EActiveRecord
 			'email' => 'Почта',
 			'phone' => 'Телефон',
 			'message' => 'Сообщени',
+			'firstVisit' => 'Первое посещение',
+			'lastVisit' => 'Последнее посещение',
 			'comfortTime' => 'Удобное время',
+			'referrerUrl' => 'Страница рефера',
+			'referrerKey' => 'Запрос или URL',
 		);
 	}
 
-    protected function beforeSave() {
+    public function beforeSave() {
         if ($this->isNewRecord) {
             $this->firstVisit = time();
             $this->ip = Yii::app()->request->userHostAddress;
@@ -83,11 +90,25 @@ class Clients extends EActiveRecord
 		$criteria->compare('name',$this->name);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('phone',$this->phone,true);
+		$criteria->compare('referrerUrl',$this->phone,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+
+    public function parseReffer($referrer, $url) {
+        $parser = new Parser();
+        $referrer = $parser->parse($referrer, $url);
+        if ($referrer->isKnown()) {
+//            $referrer->getMedium(); // "Search"
+            $this->referrerUrl = $referrer->getSource(); // "Google"
+            $this->referrerKey = $referrer->getTerm();   // "gateway oracle cards denise linn"
+        } else {
+            $this->referrerUrl = $referrer;
+            $this->referrerKey = NULL;
+        }
+    }
 
 	public static function model($className=__CLASS__)
 	{
