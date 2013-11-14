@@ -18,6 +18,7 @@ $this->widget('yiiwheels.widgets.detail.WhDetailView', array(
     'attributes'=>array(
         'id',
         'ip',
+        'name',
         'visits',
         'email',
         'phone',

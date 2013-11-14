@@ -31,25 +31,15 @@ class ClientsController extends PxApiController {
         if (!$model) {
             $model = new Clients();
         }
-        $model->name = $this->request->name;
-        $model->email = $this->request->email;
-        $model->message = $this->request->message;
+        if (isset($this->request->name)) $model->name = $this->request->name;
+        if (isset($this->request->email)) $model->email = $this->request->email;
+        if (isset($this->request->message)) $model->message = $this->request->message;
+        if (isset($this->request->phone)) $model->phone = $this->request->phone;
+        if (isset($this->request->comfortTime)) $model->comfortTime = $this->request->comfortTime;
         $this->answer = array(
             'error' => !$model->save(),
             'errors' => $model->getErrors(),
         );
     }
 
-    public function actionAskCallback() {
-        $model = Clients::model()->findByAttributes(array('ip' => Yii::app()->request->userHostAddress));
-        if (!$model) {
-            $model = new Clients();
-        }
-        $model->name = $this->request->name;
-        $model->phone = $this->request->phone;
-        $model->comfortTime = $this->request->comfortTime;
-        $this->answer = array(
-            'error' => !$model->save(),
-        );
-    }
 }
