@@ -14,7 +14,7 @@ class ClientsController extends PxApiController {
         if (!$model) {
             $model = new Clients();
         }
-        $model->parseReffer($this->request->referrer, $this->request->url);
+        $model->parseRefferer($this->request->referrer, $this->request->url);
         $error = !$model->save();
 
         $this->answer = array(

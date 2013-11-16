@@ -97,13 +97,13 @@ class Clients extends EActiveRecord
 		));
 	}
 
-    public function parseReffer($referrer, $url) {
+    public function parseRefferer($referrer, $url) {
         $parser = new Parser();
-        $referrer = $parser->parse($referrer, $url);
-        if ($referrer->isKnown()) {
+        $parseRefferer = $parser->parse($referrer, $url);
+        if ($parseRefferer->isKnown()) {
 //            $referrer->getMedium(); // "Search"
-            $this->referrerUrl = $referrer->getSource(); // "Google"
-            $this->referrerKey = $referrer->getTerm();   // "gateway oracle cards denise linn"
+            $this->referrerUrl = $parseRefferer->getSource(); // "Google"
+            $this->referrerKey = $parseRefferer->getTerm();   // "gateway oracle cards denise linn"
         } else {
             $this->referrerUrl = $referrer;
             $this->referrerKey = NULL;
