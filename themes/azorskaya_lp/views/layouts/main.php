@@ -2,9 +2,7 @@
 /* @var $this PxAngularController */
 ?>
 <!DOCTYPE html>
-<!--[if IE 8 ]>
-	<link rel="stylesheet" type="text/css" href="css/style-ie.css" />
-<![endif]-->
+<html>
 	<head>
 		<!--Page Title-->
 		<title>ДИЗАЙН ИНТЕРЬЕРА ОТ ПЕРВОЙ ПЛАНИРОВКИ ДО ВЪЕЗДА</title>
@@ -18,25 +16,35 @@
 		
 		<link rel="stylesheet" href="<?= Yii::app()->theme->baseUrl ?>/files/css/bootstrap.min.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="<?= Yii::app()->theme->baseUrl ?>/files/css/supersized.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="<?= Yii::app()->theme->baseUrl ?>/files/css/flexslider.css">
-		<link rel="stylesheet" href="<?= Yii::app()->theme->baseUrl ?>/files/css/arcticmodal.css">
+		<link rel="stylesheet" href="<?= Yii::app()->theme->baseUrl ?>/files/css/flexslider.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="<?= Yii::app()->theme->baseUrl ?>/files/css/arcticmodal.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="<?= Yii::app()->theme->baseUrl ?>/files/css/style.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="<?= Yii::app()->theme->baseUrl ?>/files/css/bootstrap-responsive.css" type="text/css">
+		<link rel="stylesheet" href="<?= Yii::app()->theme->baseUrl ?>/files/css/bootstrap-responsive.css" type="text/css" media="screen" />
+		
+		<!--[if IE 8 ]>
+		<link rel="stylesheet" type="text/css" href="<?= Yii::app()->theme->baseUrl ?>/files/css/style-ie.css" />
+		<![endif]-->
+		
+		<!--Angular-->
+		<script src="angular/libs/angular.js"></script>
+		<script src="angular/controllers/SiteControllers.js"></script>
+		<script src="angular/modules/Config.js"></script>
 		
 	</head>
+	
 <body id="top">
-<div id="overlay"></div>
+	<div id="overlay"></div>
 <!-- Header div -->
-<header>
-	<div class="container">
-		<div id="logo"><a href="/"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/logoTop.png" alt="" class=""></a></div>
-		<div id="contTopRight">
-			<div id="top-phone"><p>+7 (905) 539-57-58</p></div>
-			<div id="top-email"><p>info@azorskaya.ru</p></div>
+	<header>
+		<div class="container">
+			<div id="logo"><a href="/"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/logoTop.png" alt="" class=""></a></div>
+			<div id="contTopRight">
+				<div id="top-phone"><p>+7 (905) 539-57-58</p></div>
+				<div id="top-email"><p>info@azorskaya.ru</p></div>
+			</div>
 		</div>
-	</div>
-	<h1>ДИЗАЙН ИНТЕРЬЕРА ОТ ПЕРВОЙ ПЛАНИРОВКИ ДО ВЪЕЗДА</h1>
-</header>
+		<h1>ДИЗАЙН ИНТЕРЬЕРА ОТ ПЕРВОЙ ПЛАНИРОВКИ ДО ВЪЕЗДА</h1>
+	</header>
 <!-- /Header div -->
 
 
