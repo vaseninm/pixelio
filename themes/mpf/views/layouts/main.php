@@ -1,3 +1,6 @@
+<?php
+/* @var $this PxAngularController */
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- saved from url=(0025)http://promo.mpfbrush.ru/ -->
 <html ng-app="pixelio">
@@ -13,10 +16,10 @@
     <!--/sprypay.tag.check:69e38a1107e67c1b8c59d7e3607ff5f8/-->
 
 
-    <script type="text/javascript" async="" src="./MPF_files/watch.js"></script>
-    <script src="./MPF_files/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" async="" src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/watch.js"></script>
+    <script src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/jquery-1.9.1.min.js"></script>
     <script type="text/javascript">jQuery.migrateMute = true;</script>
-    <script src="./MPF_files/jquery-migrate-1.2.1.min.js"></script>
+    <script src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript">
         if (window.jQuery == undefined) {
             document.write('<scr' + 'ipt type="text/javascript" src="/media/' + 'js/jquery-1.4.4.js">' + '<\/scr' + 'ipt>');
@@ -28,21 +31,21 @@
     <script src="angular/controllers/SiteControllers.js"></script>
     <script src="angular/modules/Config.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="./MPF_files/jquery-ui.min.css">
-    <script src="./MPF_files/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?= Yii::app()->theme->baseUrl ?>/MPF_files/jquery-ui.min.css">
+    <script src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/jquery-ui.min.js"></script>
 
 
-    <link href="./MPF_files/screen.css" rel="stylesheet" type="text/css" media="screen,projection">
-    <link href="./MPF_files/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="<?= Yii::app()->theme->baseUrl ?>/MPF_files/screen.css" rel="stylesheet" type="text/css" media="screen,projection">
+    <link href="<?= Yii::app()->theme->baseUrl ?>/MPF_files/print.css" rel="stylesheet" type="text/css" media="print">
 
     <!--[if lt IE 8]>
     <link href="/media/css/ie.css?2013.11.13" rel="stylesheet" type="text/css" media="screen,projection"/>
     <![endif]-->
 
-    <script type="text/javascript" src="./MPF_files/jquery.tools.min.js"></script>
-    <script type="text/javascript" src="./MPF_files/jquery.form.js"></script>
-    <script type="text/javascript" src="./MPF_files/jquery.watermark.min.js"></script>
-    <script type="text/javascript" src="./MPF_files/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/jquery.tools.min.js"></script>
+    <script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/jquery.form.js"></script>
+    <script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/jquery.watermark.min.js"></script>
+    <script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/jquery.maskedinput.min.js"></script>
 
 
     <script type="text/javascript">
@@ -50,64 +53,64 @@
     </script>
 
 
-    <link href="./MPF_files/public.css" rel="stylesheet" type="text/css" media="screen,projection">
+    <link href="<?= Yii::app()->theme->baseUrl ?>/MPF_files/public.css" rel="stylesheet" type="text/css" media="screen,projection">
 
     <style>.page_container {
-        width: 960px;
-        background: 50% 0% repeat-y #FFFFFF;
-        height: 100%;
-    }
+            width: 960px;
+            background: 50% 0% repeat-y #FFFFFF;
+            height: 100%;
+        }
 
-    #middle_container {
-        width: 960px;
-    }
+        #middle_container {
+            width: 960px;
+        }
 
-    .preview-main-container, .main-container {
-        background-image: url(http://media.lpgenerator.ru/images/45243/bkg-4.png#size_2161x1613);
-        migrated: 1;
-        background-repeat: repeat;
-        bg-color: FFFFFF;
-        width: 960;
-        z-index: 101;
-        bg-pos: 50% 0%;
-        action: message;
-        anchor-id: #block-page;
-        background-position: 50% 0%;
-        bg-repeat: repeat-y;
-    }
+        .preview-main-container, .main-container {
+            background-image: url(http://media.lpgenerator.ru/images/45243/bkg-4.png#size_2161x1613);
+            migrated: 1;
+            background-repeat: repeat;
+            bg-color: FFFFFF;
+            width: 960;
+            z-index: 101;
+            bg-pos: 50% 0%;
+            action: message;
+            anchor-id: #block-page;
+            background-position: 50% 0%;
+            bg-repeat: repeat-y;
+        }
 
-    .preview-main-container {
-        min-width: 960px !important;
-    }</style>
+        .preview-main-container {
+            min-width: 960px !important;
+        }</style>
 
 
     <style>.page_container {
-        width: 960px;
-        background: 50% 0% repeat-y #FFFFFF;
-        height: 100%;
-    }
+            width: 960px;
+            background: 50% 0% repeat-y #FFFFFF;
+            height: 100%;
+        }
 
-    #middle_container {
-        width: 960px;
-    }
+        #middle_container {
+            width: 960px;
+        }
 
-    .preview-main-container, .main-container {
-        background-image: url(http://media.lpgenerator.ru/images/45243/bkg-4.png#size_2161x1613);
-        migrated: 1;
-        background-repeat: repeat;
-        bg-color: FFFFFF;
-        width: 960;
-        z-index: 101;
-        bg-pos: 50% 0%;
-        action: message;
-        anchor-id: #block-page;
-        background-position: 50% 0%;
-        bg-repeat: repeat-y;
-    }
+        .preview-main-container, .main-container {
+            background-image: url(http://media.lpgenerator.ru/images/45243/bkg-4.png#size_2161x1613);
+            migrated: 1;
+            background-repeat: repeat;
+            bg-color: FFFFFF;
+            width: 960;
+            z-index: 101;
+            bg-pos: 50% 0%;
+            action: message;
+            anchor-id: #block-page;
+            background-position: 50% 0%;
+            bg-repeat: repeat-y;
+        }
 
-    .preview-main-container {
-        min-width: 960px !important;
-    }</style>
+        .preview-main-container {
+            min-width: 960px !important;
+        }</style>
 </head>
 <body style="height: 2821px;" class="body-editor">
 
@@ -144,7 +147,7 @@
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 128;top: 900px;height: 137px;width: 223px;anchor-id: #block-new39;left: 87px;background-color: transparent;background-image: none;">
     <p>
         <span style="color: rgb(62, 69, 80);"><span style="font-size: 14px;"><span
-                style="font-family: &#39;times new roman&#39;, times, serif;">Мне очень нравится, когда инструмент удобен по-весу и форме. Приятно творить!)&nbsp;</span></span></span>
+                    style="font-family: &#39;times new roman&#39;, times, serif;">Мне очень нравится, когда инструмент удобен по-весу и форме. Приятно творить!)&nbsp;</span></span></span>
     </p>
 
     <p>
@@ -156,15 +159,15 @@
 
 <div class="block block-image is-image" id="block-55387"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 103;top: 589px;height: 30px;width: 960px;anchor-id: #block-55387;border-style: none;left: 0;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/ecwideline_2.png" alt="" style="display: block; width: 960px; height: 30px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/ecwideline_2.png" alt="" style="display: block; width: 960px; height: 30px">
 </div>
 
 <div class="block block-text is-text" id="block-new58"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 129;top: 1871px;height: 60px;width: 842px;border-style: none;anchor-id: #block-new58;left: 68px;background-color: transparent;background-image: none;">
     <p style="text-align: center;">
         <span style="color:#ff3366;"><strong><span style="font-family: tahoma,geneva,sans-serif;"><span
-                style="font-size: 26px;"><span
-                style="font-size: 28px;">ТОГДА СТАНЬТЕ ПРЕДСТАВИТЕЛЕМ В СВОЁМ РЕГИОНЕ!</span></span></span></strong></span>
+                        style="font-size: 26px;"><span
+                            style="font-size: 28px;">ТОГДА СТАНЬТЕ ПРЕДСТАВИТЕЛЕМ В СВОЁМ РЕГИОНЕ!</span></span></span></strong></span>
     </p>
 
 </div>
@@ -189,15 +192,15 @@ line-height: 48px;
 text-decoration: none;
 border-radius: 6px;
 color: #ffffff;
-" id="render_new2">ОТПРАВИТЬ ЗАЯВКУ!</a><img src="./MPF_files/13_b.png" style="width: 0px; height: 0px;"><img
-        src="./MPF_files/11_b.png" style="width: 0px; height: 0px;">
+" id="render_new2">ОТПРАВИТЬ ЗАЯВКУ!</a><img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/13_b.png" style="width: 0px; height: 0px;"><img
+        src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/11_b.png" style="width: 0px; height: 0px;">
     <style>a#render_new2 {
-        background: 50% 50% no-repeat url(http://media.lpgenerator.ru/images/11_b.png#size_255x49);
-    }
+            background: 50% 50% no-repeat url(http://media.lpgenerator.ru/images/11_b.png#size_255x49);
+        }
 
-    a#render_new2:hover {
-        background: 50% 50% no-repeat url(http://media.lpgenerator.ru/images/13_b.png#size_299x73);
-    }
+        a#render_new2:hover {
+            background: 50% 50% no-repeat url(http://media.lpgenerator.ru/images/13_b.png#size_299x73);
+        }
     </style>
 </div>
 
@@ -205,16 +208,16 @@ color: #ffffff;
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 121;top: 145px;height: 48px;width: 288px;anchor-id: #block-new3;left: 20px;background-color: transparent;background-image: none;">
     <p style="line-height: 0.2;">
         <strong><span style="color:#333333;"><span style="font-size: 12px; line-height: 0.2;"><span
-                style="line-height: 0.2;"><span style="line-height: 0.2;"><span style="line-height: 0.2;"><span
-                style="font-family: tahoma, geneva, sans-serif; line-height: 0.2;"><span style="line-height: 0.2;"><span
-                style="line-height: 0.2;">ИНТЕРНЕТ-МАГАЗИН </span></span></span></span></span></span></span></span></strong>
+                        style="line-height: 0.2;"><span style="line-height: 0.2;"><span style="line-height: 0.2;"><span
+                                    style="font-family: tahoma, geneva, sans-serif; line-height: 0.2;"><span style="line-height: 0.2;"><span
+                                            style="line-height: 0.2;">ИНТЕРНЕТ-МАГАЗИН </span></span></span></span></span></span></span></span></strong>
     </p>
 
     <p style="line-height: 0.2;">
         <strong><span style="color:#333333;"><span style="font-size: 12px; line-height: 0.2;"><span
-                style="line-height: 0.2;"><span style="line-height: 0.2;"><span style="line-height: 0.2;"><span
-                style="font-family: tahoma, geneva, sans-serif; line-height: 0.2;"><span style="line-height: 0.2;"><span
-                style="line-height: 0.2;">ДЛЯ ЗУБНЫХ ТЕХНИКОВ</span></span></span></span></span></span></span></span></strong>
+                        style="line-height: 0.2;"><span style="line-height: 0.2;"><span style="line-height: 0.2;"><span
+                                    style="font-family: tahoma, geneva, sans-serif; line-height: 0.2;"><span style="line-height: 0.2;"><span
+                                            style="line-height: 0.2;">ДЛЯ ЗУБНЫХ ТЕХНИКОВ</span></span></span></span></span></span></span></span></strong>
     </p>
 
 </div>
@@ -608,9 +611,9 @@ color: #ffffff;
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 122;top: 10px;height: 76px;width: 379px;anchor-id: #block-new4;left: 570px;background-color: transparent;background-image: none;">
     <p style="text-align: right; line-height: 1;">
 	<span style="color:#333333;"><span style="font-size:22px;"><span style="line-height: 1;"><span
-            style="font-family: &quot;tahoma&quot;,&quot;geneva&quot;,sans-serif; line-height: 1;"><span
-            style="font-size:36px;"><span style="line-height: 1;">8-800-555-09-30</span></span><br
-            style="line-height: 1;">
+                    style="font-family: &quot;tahoma&quot;,&quot;geneva&quot;,sans-serif; line-height: 1;"><span
+                        style="font-size:36px;"><span style="line-height: 1;">8-800-555-09-30</span></span><br
+                        style="line-height: 1;">
 	Звонок по России бесплатный!</span></span></span></span></p>
 
 </div>
@@ -619,7 +622,7 @@ color: #ffffff;
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 87;top: 712px;height: 62px;width: 169px;border-style: none;anchor-id: #block-new18;left: 590px;background-color: transparent;background-image: none;">
     <p style="line-height: 1; text-align: center;">
 	<span style="color:#696969;"><strong><span style="font-size: 16px;"><span
-            style="font-family: arial,helvetica,sans-serif;"><span style="font-size: 22px;">ГАРАНТИЯ ВОЗВРАТА</span><br>
+                    style="font-family: arial,helvetica,sans-serif;"><span style="font-size: 22px;">ГАРАНТИЯ ВОЗВРАТА</span><br>
 	</span></span></strong></span></p>
 
 </div>
@@ -628,27 +631,27 @@ color: #ffffff;
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 116;top: 713px;height: 52px;width: 138px;border-style: none;anchor-id: #block-new19;left: 800px;background-color: transparent;background-image: none;">
     <p style="line-height: 1; text-align: center;">
 	<span style="color:#696969;"><strong><span style="font-size: 16px;"><span
-            style="font-family: arial,helvetica,sans-serif;"><span
-            style="font-size: 22px;">ЕД. ТОВАРА В НАЛИЧИИ</span><br>
+                    style="font-family: arial,helvetica,sans-serif;"><span
+                        style="font-size: 22px;">ЕД. ТОВАРА В НАЛИЧИИ</span><br>
 	</span></span></strong></span></p>
 
 </div>
 
 <div class="block block-image is-image" id="block-new30"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 86;top: 630px;height: 80px;width: 80px;anchor-id: #block-new30;left: 630px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/botlgy.png" alt="" style="display: block; width: 80px; height: 80px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/botlgy.png" alt="" style="display: block; width: 80px; height: 80px">
 </div>
 
 <div class="block block-image is-image" id="block-new31"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 90;top: 630px;height: 80px;width: 80px;anchor-id: #block-new31;left: 813px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/botlgy.png" alt="" style="display: block; width: 80px; height: 80px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/botlgy.png" alt="" style="display: block; width: 80px; height: 80px">
 </div>
 
 <div class="block block-text is-text" id="block-new37"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 87;top: 822px;height: 66px;width: 920px;border-style: none;anchor-id: #block-new37;left: 20px;background-color: transparent;background-image: none;">
     <p style="line-height: 1; text-align: center;">
 	<span style="color:#696969;"><strong><span style="font-size: 24px;"><span
-            style="font-family: tahoma,geneva,sans-serif;">Лучшая гарантия успешного сотрудничества с нами -<br>
+                    style="font-family: tahoma,geneva,sans-serif;">Лучшая гарантия успешного сотрудничества с нами -<br>
 	отзывы наших клиентов!</span></span></strong></span></p>
 
 </div>
@@ -657,13 +660,13 @@ color: #ffffff;
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 114;top: 712px;height: 40px;width: 195px;anchor-id: #block-55399;border-style: none;left: 10px;background-color: transparent;background-image: none;">
     <p style="line-height: 1; text-align: center;">
         <span style="font-size:22px;"><span style="color: rgb(102, 102, 102);"><strong><span
-                style="font-family: arial,helvetica,sans-serif;">СТРАН МИРА</span></strong></span></span></p>
+                        style="font-family: arial,helvetica,sans-serif;">СТРАН МИРА</span></strong></span></span></p>
 
 </div>
 
 <div class="block block-image is-image" id="block-new53"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 78;top: 1646px;height: 831px;width: 960px;anchor-id: #block-new53;left: 0px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/bkg-5.png" alt="" style="display: block; width: 960px; height: 831px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/bkg-5.png" alt="" style="display: block; width: 960px; height: 831px">
 </div>
 
 <div class="block block-button is-button" id="block-new10"
@@ -677,60 +680,60 @@ line-height: 48px;
 text-decoration: none;
 border-radius: 6px;
 color: #ffffff;
-" id="render_new10">СКАЧАТЬ КАТАЛОГ</a><img src="./MPF_files/13_b.png" style="width: 0px; height: 0px;"><img
-        src="./MPF_files/22_b.png" style="width: 0px; height: 0px;">
+" id="render_new10">СКАЧАТЬ КАТАЛОГ</a><img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/13_b.png" style="width: 0px; height: 0px;"><img
+        src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/22_b.png" style="width: 0px; height: 0px;">
     <style>a#render_new10 {
-        background: 50% 50% no-repeat url(http://media.lpgenerator.ru/images/22_b.png#size_299x73) #ffffff !important;
-    }
+            background: 50% 50% no-repeat url(http://media.lpgenerator.ru/images/22_b.png#size_299x73) #ffffff !important;
+        }
 
-    a#render_new10:hover {
-        background: 50% 50% no-repeat url(http://media.lpgenerator.ru/images/13_b.png#size_299x73) #ffffff !important;
-    }
+        a#render_new10:hover {
+            background: 50% 50% no-repeat url(http://media.lpgenerator.ru/images/13_b.png#size_299x73) #ffffff !important;
+        }
     </style>
 </div>
 
 <div class="block block-image is-image" id="block-new11"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 125;top: 155px;height: 75px;width: 74px;anchor-id: #block-new11;left: 887px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/badges2.png" alt="" style="display: block; width: 74px; height: 75px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/badges2.png" alt="" style="display: block; width: 74px; height: 75px">
 </div>
 
 <div class="block block-image is-image" id="block-new38"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 127;top: 885px;height: 60px;width: 70px;anchor-id: #block-new38;left: 10px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/08_q.png" alt="" style="display: block; width: 70px; height: 60px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/08_q.png" alt="" style="display: block; width: 70px; height: 60px">
 </div>
 
 <div class="block block-image is-image" id="block-new13"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 126;top: 187px;height: 101px;width: 54px;anchor-id: #block-new13;left: 0;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/03_ac.png" alt="" style="display: block; width: 54px; height: 101px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/03_ac.png" alt="" style="display: block; width: 54px; height: 101px">
 </div>
 
 <div class="block block-text is-text" id="block-55393"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 84;top: 200px;height: 51px;width: 425px;anchor-id: #block-55393;border-style: none;left: 60px;background-color: transparent;background-image: none;">
     <p>
         <span style="color:#ff3366;"><span style="font-size:22px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>Акция!
-            Оплатите заказ с сайта</strong></span></span></span></p>
+                        Оплатите заказ с сайта</strong></span></span></span></p>
 
 </div>
 
 <div class="block block-image is-image" id="block-new59"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 131;top: 2033px;height: 404px;width: 793px;anchor-id: #block-new59;left: 90px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/region_1.png" alt="" style="display: block; width: 793px; height: 404px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/region_1.png" alt="" style="display: block; width: 793px; height: 404px">
 </div>
 
 <div class="block block-text is-text" id="block-55391"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 107;top: 310px;height: 64px;width: 361px;anchor-id: #block-55391;border-style: none;left: 570px;background-color: transparent;background-image: none;">
     <p style="text-align: center; line-height: 0.2;">
         <span style="color:#666666;"><span style="color:99bad4;"><span style="color:99bad4;"><span
-                style="line-height: 0.2;"><strong><span
-                style="font-family: &quot;tahoma&quot;, &quot;geneva&quot;, sans-serif; line-height: 0.2;"><span
-                style="font-size: 16px; line-height: 0.2;">СКАЧАЙТЕ КАТАЛОГ </span></span></strong></span></span></span></span>
+                        style="line-height: 0.2;"><strong><span
+                                style="font-family: &quot;tahoma&quot;, &quot;geneva&quot;, sans-serif; line-height: 0.2;"><span
+                                    style="font-size: 16px; line-height: 0.2;">СКАЧАЙТЕ КАТАЛОГ </span></span></strong></span></span></span></span>
     </p>
 
     <p style="text-align: center; line-height: 0.2;">
         <span style="color:#666666;"><span style="color:99bad4;"><span style="color:99bad4;"><span
-                style="line-height: 0.2;"><strong><span
-                style="font-family: &quot;tahoma&quot;, &quot;geneva&quot;, sans-serif; line-height: 0.2;"><span
-                style="font-size: 16px; line-height: 0.2;">И ОСТАВЬТЕ ЗАЯВКУ НА КОНСУЛЬТАЦИЮ</span></span></strong></span></span></span></span>
+                        style="line-height: 0.2;"><strong><span
+                                style="font-family: &quot;tahoma&quot;, &quot;geneva&quot;, sans-serif; line-height: 0.2;"><span
+                                    style="font-size: 16px; line-height: 0.2;">И ОСТАВЬТЕ ЗАЯВКУ НА КОНСУЛЬТАЦИЮ</span></span></strong></span></span></span></span>
     </p>
 
 </div>
@@ -746,27 +749,27 @@ line-height: 50px;
 text-decoration: none;
 border-radius: 8px;
 color: #ffffff;
-" id="render_new71">Успеть</a><img src="./MPF_files/49_b.png" style="width: 0px; height: 0px;"><img
-        src="./MPF_files/47_b.png" style="width: 0px; height: 0px;">
+" id="render_new71">Успеть</a><img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/49_b.png" style="width: 0px; height: 0px;"><img
+        src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/47_b.png" style="width: 0px; height: 0px;">
     <style>a#render_new71 {
-        background: 0% 0% no-repeat url(http://media.lpgenerator.ru/images/47_b.png#size_254x60) #5c5c5c !important;
-    }
+            background: 0% 0% no-repeat url(http://media.lpgenerator.ru/images/47_b.png#size_254x60) #5c5c5c !important;
+        }
 
-    a#render_new71:hover {
-        background: 0% 0% no-repeat url(http://media.lpgenerator.ru/images/49_b.png#size_254x60) #5c5c5c !important;
-    }
+        a#render_new71:hover {
+            background: 0% 0% no-repeat url(http://media.lpgenerator.ru/images/49_b.png#size_254x60) #5c5c5c !important;
+        }
     </style>
 </div>
 
 
 <div class="block block-image is-image" id="block-new74"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 139;top: 2616px;height: 78px;width: 86px;anchor-id: #block-new74;left: 500px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/03_ar.png" alt="" style="display: block; width: 86px; height: 78px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/03_ar.png" alt="" style="display: block; width: 86px; height: 78px">
 </div>
 
 <div class="block block-html is-html" id="block-new75"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 140;top: 2456px;height: 62px;width: 384px;anchor-id: #block-new75;left: 540px;background-color: transparent;background-image: none;">
-    <script type="text/javascript" src="./MPF_files/b04aeb1993f41b86991e812b7b3177d3.js"></script>
+    <script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/b04aeb1993f41b86991e812b7b3177d3.js"></script>
     <style type="text/css">
         @font-face {
             font-family: 'MyriadProRegular';
@@ -891,8 +894,8 @@ color: #ffffff;
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 138;top: 2520px;height: 180px;width: 363px;anchor-id: #block-new73;left: 80px;background-color: transparent;background-image: none;">
     <p>
         <span style="font-family:arial,helvetica,sans-serif;"><strong><span style="color:#ff3366;"><span
-                style="font-size:36px;"><span style="color:#333333;">Оставьте заявку до окончания</span> АКЦИИ <span
-                style="color:#333333;">и узнайте подробнее!</span></span></span></strong></span></p>
+                        style="font-size:36px;"><span style="color:#333333;">Оставьте заявку до окончания</span> АКЦИИ <span
+                            style="color:#333333;">и узнайте подробнее!</span></span></span></strong></span></p>
 
 </div>
 
@@ -900,7 +903,7 @@ color: #ffffff;
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 116;top: 715px;height: 84px;width: 80px;border-style: none;anchor-id: #block-55401;left: 440px;background-color: transparent;background-image: none;">
     <p style="line-height: 1; text-align: center;">
         <span style="font-size:22px;"><span style="color: rgb(105, 105, 105);"><strong><span
-                style="font-family: arial,helvetica,sans-serif;">ЛЕТ НА РЫНКЕ</span></strong></span></span></p>
+                        style="font-family: arial,helvetica,sans-serif;">ЛЕТ НА РЫНКЕ</span></strong></span></span></p>
 
 </div>
 
@@ -908,7 +911,7 @@ color: #ffffff;
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 115;top: 712px;height: 27px;width: 169px;anchor-id: #block-55400;border-style: none;left: 218px;background-color: transparent;background-image: none;">
     <p style="line-height: 1; text-align: center;">
         <span style="font-size:22px;"><span style="color: rgb(105, 105, 105);"><strong><span
-                style="font-family: arial,helvetica,sans-serif;">КЛИЕНТОВ</span></strong></span></span></p>
+                        style="font-family: arial,helvetica,sans-serif;">КЛИЕНТОВ</span></strong></span></span></p>
 
 </div>
 
@@ -916,7 +919,7 @@ color: #ffffff;
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 129;top: 1748px;height: 126px;width: 811px;border-style: none;anchor-id: #block-new54;left: 90px;background-color: transparent;background-image: none;">
     <p style="text-align: center;">
 	<span style="font-size:24px;"><span style="color: rgb(105, 105, 105);"><span
-            style="font-family: tahoma,geneva,sans-serif;">Вы хотите иметь дополнительный доход в своей сфере?<br>
+                style="font-family: tahoma,geneva,sans-serif;">Вы хотите иметь дополнительный доход в своей сфере?<br>
 	Желаете работать на себя?<br>
 	Получить преимущество над другими компаниями в Вашем регионе?<br>
 	</span></span></span></p>
@@ -925,56 +928,56 @@ color: #ffffff;
 
 <div class="block block-image is-image" id="block-new55"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 130;top: 1759px;height: 17px;width: 17px;anchor-id: #block-new55;left: 150px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/02_d.png" alt="" style="display: block; width: 17px; height: 17px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/02_d.png" alt="" style="display: block; width: 17px; height: 17px">
 </div>
 
 <div class="block block-text is-text" id="block-new60"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 129;top: 1936px;height: 90px;width: 842px;border-style: none;anchor-id: #block-new60;left: 68px;background-color: transparent;background-image: none;">
     <p style="text-align: center;">
         <span style="color:#333333;"><span style="font-size: 48px;"><span
-                style="font-family: tahoma,geneva,sans-serif;">ДЛЯ ВАС ВСЕГДА:</span></span></span></p>
+                    style="font-family: tahoma,geneva,sans-serif;">ДЛЯ ВАС ВСЕГДА:</span></span></span></p>
 
 </div>
 
 <div class="block block-image is-image" id="block-new56"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 130;top: 1795px;height: 17px;width: 17px;anchor-id: #block-new56;left: 315px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/02_d.png" alt="" style="display: block; width: 17px; height: 17px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/02_d.png" alt="" style="display: block; width: 17px; height: 17px">
 </div>
 
 <div class="block block-image is-image" id="block-new47"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 80;top: 1107px;guidelines: on;height: 473px;width: 670px;anchor-id: #block-new47;left: 140px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/tezi-2.png" alt="" style="display: block; width: 670px; height: 473px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/tezi-2.png" alt="" style="display: block; width: 670px; height: 473px">
 </div>
 
 <div class="block block-image is-image" id="block-new57"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 130;top: 1830px;height: 17px;width: 17px;anchor-id: #block-new57;left: 80px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/02_d.png" alt="" style="display: block; width: 17px; height: 17px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/02_d.png" alt="" style="display: block; width: 17px; height: 17px">
 </div>
 
 <div class="block block-image is-image" id="block-new42"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 127;top: 885px;height: 60px;width: 70px;anchor-id: #block-new42;left: 635px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/08_q.png" alt="" style="display: block; width: 70px; height: 60px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/08_q.png" alt="" style="display: block; width: 70px; height: 60px">
 </div>
 
 <div class="block block-text is-text" id="block-new50"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 0px;position: absolute;z-index: 129;border-radius: 16px;border-color: #ffffff;top: 1695px;height: 54px;width: 544px;border-style: none;anchor-id: #block-new50;left: 225px;background-color: transparent;background-image: none;">
     <p style="line-height: 1; text-align: center;">
         <span style="color:#333333;"><span style="font-size: 36px;"><strong><span
-                style="font-family: tahoma,geneva,sans-serif;">&nbsp;Для особых клиентов:</span></strong></span></span>
+                        style="font-family: tahoma,geneva,sans-serif;">&nbsp;Для особых клиентов:</span></strong></span></span>
     </p>
 
 </div>
 
 <div class="block block-image is-image" id="block-new44"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 103;top: 1074px;height: 30px;width: 542px;anchor-id: #block-new44;border-style: none;left: 213px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/ecwideline_2.png" alt="" style="display: block; width: 542px; height: 30px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/ecwideline_2.png" alt="" style="display: block; width: 542px; height: 30px">
 </div>
 
 <div class="block block-text is-text" id="block-new68"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 135;top: 100px;height: 102px;width: 512px;anchor-id: #block-new68;left: 220px;background-color: transparent;background-image: none;">
     <p style="text-align: center;">
         <span style="color:#333333;"><strong><span style="font-size:28px;"><span
-                style="font-family:tahoma,geneva,sans-serif;">ПРОДАЖА ЗУБОТЕХНИЧЕСКИХ ИНСТРУМЕНТОВ по РФ и СНГ</span></span></strong></span>
+                        style="font-family:tahoma,geneva,sans-serif;">ПРОДАЖА ЗУБОТЕХНИЧЕСКИХ ИНСТРУМЕНТОВ по РФ и СНГ</span></span></strong></span>
     </p>
 
 </div>
@@ -990,15 +993,15 @@ line-height: 23px;
 text-decoration: none;
 border-radius: 30px;
 color: #1f181f;
-" id="render_new67">перейти</a><img src="./MPF_files/31_b.png" style="width: 0px; height: 0px;"><img
-        src="./MPF_files/32_b.png" style="width: 0px; height: 0px;">
+" id="render_new67">перейти</a><img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/31_b.png" style="width: 0px; height: 0px;"><img
+        src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/32_b.png" style="width: 0px; height: 0px;">
     <style>a#render_new67 {
-        background: 0% 0% no-repeat url(http://media.lpgenerator.ru/images/32_b.png#size_102x42) #5c5c5c !important;
-    }
+            background: 0% 0% no-repeat url(http://media.lpgenerator.ru/images/32_b.png#size_102x42) #5c5c5c !important;
+        }
 
-    a#render_new67:hover {
-        background: 0% 0% no-repeat url(http://media.lpgenerator.ru/images/31_b.png#size_102x42) #5c5c5c !important;
-    }
+        a#render_new67:hover {
+            background: 0% 0% no-repeat url(http://media.lpgenerator.ru/images/31_b.png#size_102x42) #5c5c5c !important;
+        }
     </style>
 </div>
 
@@ -1006,8 +1009,8 @@ color: #1f181f;
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 114;top: 652px;height: 66px;width: 68px;anchor-id: #block-new21;border-style: none;left: 73px;background-color: transparent;background-image: none;">
     <p style="line-height:1">
 	<span style="color:#ff6633;"><span style="font-family:tahoma,geneva,sans-serif;"><span
-            style="font-size: 48px;"><strong>12<br>
-    </strong></span></span></span></p>
+                style="font-size: 48px;"><strong>12<br>
+                </strong></span></span></span></p>
 
 </div>
 
@@ -1015,8 +1018,8 @@ color: #1f181f;
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 114;top: 652px;height: 66px;width: 63px;anchor-id: #block-new23;border-style: none;left: 464px;background-color: transparent;background-image: none;">
     <p style="line-height:1">
 	<span style="color:#ff6600;"><span style="font-family:tahoma,geneva,sans-serif;"><span
-            style="font-size: 48px;"><strong>6<br>
-    </strong></span></span></span></p>
+                style="font-size: 48px;"><strong>6<br>
+                </strong></span></span></span></p>
 
 </div>
 
@@ -1024,8 +1027,8 @@ color: #1f181f;
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 114;top: 652px;height: 66px;width: 156px;anchor-id: #block-new22;border-style: none;left: 220px;background-color: transparent;background-image: none;">
     <p style="line-height:1">
 	<span style="color:#ff6600;"><span style="font-family:tahoma,geneva,sans-serif;"><span
-            style="font-size: 48px;"><strong>12000<br>
-    </strong></span></span></span></p>
+                style="font-size: 48px;"><strong>12000<br>
+                </strong></span></span></span></p>
 
 </div>
 
@@ -1033,8 +1036,8 @@ color: #1f181f;
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 114;top: 652px;height: 66px;width: 124px;anchor-id: #block-new25;border-style: none;left: 807px;background-color: transparent;background-image: none;">
     <p style="line-height:1">
 	<span style="color:#ff6600;"><span style="font-family:tahoma,geneva,sans-serif;"><span
-            style="font-size: 48px;"><strong>2000<br>
-    </strong></span></span></span></p>
+                style="font-size: 48px;"><strong>2000<br>
+                </strong></span></span></span></p>
 
 </div>
 
@@ -1042,27 +1045,27 @@ color: #1f181f;
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 114;top: 652px;height: 66px;width: 147px;anchor-id: #block-new24;border-style: none;left: 600px;background-color: transparent;background-image: none;">
     <p style="line-height:1">
 	<span style="color:#ff6600;"><span style="font-family:tahoma,geneva,sans-serif;"><span
-            style="font-size: 48px;"><strong>100%<br>
-    </strong></span></span></span></p>
+                style="font-size: 48px;"><strong>100%<br>
+                </strong></span></span></span></p>
 
 </div>
 
 <div class="block block-image is-image" id="block-new27"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 89;top: 630px;height: 80px;width: 80px;anchor-id: #block-new27;left: 65px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/botlgy.png" alt="" style="display: block; width: 80px; height: 80px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/botlgy.png" alt="" style="display: block; width: 80px; height: 80px">
 </div>
 
 <div class="block block-text is-text" id="block-new26"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 83;top: 230px;height: 51px;width: 496px;anchor-id: #block-new26;border-style: none;left: 60px;background-color: transparent;background-image: none;">
     <p>
         <span style="color:#ff3366;"><span style="font-size:22px;"><span style="font-family: tahoma,geneva,sans-serif;"><strong>и
-            получите жидкий триггер в подарок!</strong></span></span></span></p>
+                        получите жидкий триггер в подарок!</strong></span></span></span></p>
 
 </div>
 
 <div class="block block-image is-image" id="block-new29"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 92;top: 630px;height: 80px;width: 80px;anchor-id: #block-new29;left: 443px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/botlgy.png" alt="" style="display: block; width: 80px; height: 80px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/botlgy.png" alt="" style="display: block; width: 80px; height: 80px">
 </div>
 
 <div class="block block-form is-form" id="block-new70"
@@ -1452,39 +1455,39 @@ color: #1f181f;
 </div>
 <div class="block block-image is-image" id="block-55384"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 81;top: 309px;guidelines: on;height: 456px;width: 633px;border-style: none;anchor-id: #block-55384;left: -47px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/mpffoto-3.png" alt="" style="display: block; width: 633px; height: 456px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/mpffoto-3.png" alt="" style="display: block; width: 633px; height: 456px">
 </div>
 
 <div class="block block-image is-image" id="block-55385"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 124;fix-aspect: on;top: 5px;guidelines: on;height: 130px;width: 115px;anchor-id: #block-55385;border-style: none;left: 20px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/mpfk.png" alt="" style="display: block; width: 115px; height: 130px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/mpfk.png" alt="" style="display: block; width: 115px; height: 130px">
 </div>
 
 <div class="block block-image is-image" id="block-55386"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 0px;position: absolute;z-index: 103;top: 180px;height: 19px;width: 951px;border-style: none;anchor-id: #block-55386;left: 10px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/ecwideline_2.png" alt="" style="display: block; width: 951px; height: 19px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/ecwideline_2.png" alt="" style="display: block; width: 951px; height: 19px">
 </div>
 
 <div class="block block-image is-image" id="block-new48"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 103;top: 1606px;height: 30px;width: 542px;anchor-id: #block-new48;border-style: none;left: 222px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/ecwideline_2.png" alt="" style="display: block; width: 542px; height: 30px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/ecwideline_2.png" alt="" style="display: block; width: 542px; height: 30px">
 </div>
 
 <div class="block block-image is-image" id="block-new28"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 93;top: 630px;border-style: none;height: 80px;width: 80px;anchor-id: #block-new28;left: 260px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/botlgy.png" alt="" style="display: block; width: 80px; height: 80px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/botlgy.png" alt="" style="display: block; width: 80px; height: 80px">
 </div>
 
 <div class="block block-text is-text" id="block-new43"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 128;top: 900px;height: 141px;width: 223px;anchor-id: #block-new43;left: 714px;background-color: transparent;background-image: none;">
     <p>
         <span style="color:#444444;"><span style="font-size:14px;"><span
-                style="font-family:times new roman,times,serif;">Интересный инструмент! Очень похеже на SmileLine, в чем-то хуже, в чем-то лучше. Но я бы сравнила несколько вариантов!</span></span></span>
+                    style="font-family:times new roman,times,serif;">Интересный инструмент! Очень похеже на SmileLine, в чем-то хуже, в чем-то лучше. Но я бы сравнила несколько вариантов!</span></span></span>
     </p>
 
     <p>
         <span style="color:#444444;"><span style="font-size:14px;"><span
-                style="font-family:times new roman,times,serif;">Алина Небедова "ВериаДент"</span></span></span></p>
+                    style="font-family:times new roman,times,serif;">Алина Небедова "ВериаДент"</span></span></span></p>
 
 </div>
 
@@ -1492,24 +1495,24 @@ color: #1f181f;
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 133;top: 85px;guidelines: on;height: 88px;width: 374px;border-style: none;anchor-id: #block-new64;left: 575px;background-color: transparent;background-image: none;">
     <p style="line-height: 0.4; text-align: right;">
         <span style="font-family:tahoma,geneva,sans-serif;"><span style="font-size: 18px;"><span
-                style="color: rgb(102, 102, 102); line-height: 0.4;"><span style="line-height: 0.4;"><span
-                style="line-height: 0.4;"><span style="line-height: 0.4;"><span style="line-height: 0.4;">Экспресс доставка по <span
-                style="color:#ff3366;">РФ</span> за <span
-                style="color:#ff3366;">3 дня</span>!</span></span></span></span></span></span></span></p>
+                    style="color: rgb(102, 102, 102); line-height: 0.4;"><span style="line-height: 0.4;"><span
+                            style="line-height: 0.4;"><span style="line-height: 0.4;"><span style="line-height: 0.4;">Экспресс доставка по <span
+                                        style="color:#ff3366;">РФ</span> за <span
+                                        style="color:#ff3366;">3 дня</span>!</span></span></span></span></span></span></span></p>
 
     <p style="line-height: 0.4; text-align: right;">
         <span style="font-family:tahoma,geneva,sans-serif;"><span style="font-size: 18px;"><span
-                style="color: rgb(102, 102, 102); line-height: 0.4;"><span style="line-height: 0.4;"><span
-                style="line-height: 0.4;"><span style="line-height: 0.4;"><span
-                style="line-height: 0.4;">Оплата по <span
-                style="color:#ff3366;">факту</span>!</span></span></span></span></span></span></span></p>
+                    style="color: rgb(102, 102, 102); line-height: 0.4;"><span style="line-height: 0.4;"><span
+                            style="line-height: 0.4;"><span style="line-height: 0.4;"><span
+                                    style="line-height: 0.4;">Оплата по <span
+                                        style="color:#ff3366;">факту</span>!</span></span></span></span></span></span></span></p>
 
     <p style="line-height: 0.4; text-align: right;">
         <span style="font-family:tahoma,geneva,sans-serif;"><span style="font-size: 18px;"><span
-                style="color: rgb(102, 102, 102); line-height: 0.4;"><span style="line-height: 0.4;"><span
-                style="line-height: 0.4;"><span style="line-height: 0.4;"><span
-                style="line-height: 0.4;">Консультации <span
-                style="color:#ff3366;">техников</span>!</span></span></span></span></span></span></span><br>
+                    style="color: rgb(102, 102, 102); line-height: 0.4;"><span style="line-height: 0.4;"><span
+                            style="line-height: 0.4;"><span style="line-height: 0.4;"><span
+                                    style="line-height: 0.4;">Консультации <span
+                                        style="color:#ff3366;">техников</span>!</span></span></span></span></span></span></span><br>
         &nbsp;</p>
 
 </div>
@@ -1518,7 +1521,7 @@ color: #1f181f;
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 128;top: 900px;height: 158px;width: 223px;anchor-id: #block-new41;left: 402px;background-color: transparent;background-image: none;">
     <p>
         <span style="color: rgb(62, 69, 80);"><span style="font-size: 14px;"><span
-                style="font-family: &#39;times new roman&#39;, times, serif;">Это, конечно, качественно отличается от всего, чем я пользовался раньше. Быстро и удобно работать!</span></span></span>
+                    style="font-family: &#39;times new roman&#39;, times, serif;">Это, конечно, качественно отличается от всего, чем я пользовался раньше. Быстро и удобно работать!</span></span></span>
     </p>
 
     <p>
@@ -1529,17 +1532,17 @@ color: #1f181f;
 
 <div class="block block-image is-image" id="block-new40"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 127;top: 885px;height: 60px;width: 70px;anchor-id: #block-new40;left: 326px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/08_q.png" alt="" style="display: block; width: 70px; height: 60px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/08_q.png" alt="" style="display: block; width: 70px; height: 60px">
 </div>
 
 <div class="block block-image is-image" id="block-new61"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 132;top: 2446px;height: 30px;width: 960px;anchor-id: #block-new61;border-style: none;left: 0px;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/ecwideline_2.png" alt="" style="display: block; width: 960px; height: 30px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/ecwideline_2.png" alt="" style="display: block; width: 960px; height: 30px">
 </div>
 
 <div class="block block-image is-image" id="block-55395"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 103;top: 780px;height: 30px;width: 960px;anchor-id: #block-55395;border-style: none;left: 0;background-color: transparent;background-image: none;">
-    <img src="./MPF_files/ecwideline_2.png" alt="" style="display: block; width: 960px; height: 30px">
+    <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/ecwideline_2.png" alt="" style="display: block; width: 960px; height: 30px">
 </div>
 
 
@@ -1969,10 +1972,10 @@ jq_144(function () {
         });
 
         var n = d.getElementsByTagName("script")[0],
-                s = d.createElement("script"),
-                f = function () {
-                    n.parentNode.insertBefore(s, n);
-                };
+            s = d.createElement("script"),
+            f = function () {
+                n.parentNode.insertBefore(s, n);
+            };
         s.type = "text/javascript";
         s.async = true;
         s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
