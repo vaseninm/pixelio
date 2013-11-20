@@ -218,9 +218,15 @@ textarea:-ms-input-placeholder{color:#888}
 .phone{width:44%!important;height:35px!important}
 .time{width:91%!important;height:35px!important}
 
-.ng-valid{background-color:#FF6347}
-.ng-invalid{background-color:#9ACD32}
-/*.formOk{background-color:}*/
+/*.ng-valid{background-color:#FF6347}*/
+/*.ng-invalid{background-color:#9ACD32}*/
+.name.ng-invalid, .phone.ng-invalid, .time.ng-invalid{
+	background-color:#FF6347 !important;
+	color:#000;
+	-webkit-box-shadow:0 0 5px 3px #ff0000 inset;
+	-moz-box-shadow:0 0 5px 3px #ff0000 inset;
+	box-shadow:0 0 5px 3px #ff0000 inset;}
+
 
 #contact-form input[type='submit']{width:auto;height:45px;float:left;font-size:18px;border:0;background-color:#000;color:#f4f4f4;padding:0 20px}
 #contact-form input[type='submit']:hover{color:#f4f4f4;background-color:#222}

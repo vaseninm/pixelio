@@ -200,7 +200,6 @@
 <!-- Точка з -->
 <div class="marginTop30" ng-controller="ContactController">
 	<div class="container" id="zahvat2">
-		<div class="contact pull-left">
             <div class="contact pull-left">
                 <!-- Contact Form -->
                 <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
@@ -213,7 +212,6 @@
                     Заявка отправлена.
                 </div>
             </div>
-		</div>
 		<!-- Subscription-form -->
 		<div class="subscribe pull-right">
 			<h2 class="zahvat-title">Оставьте вашу заявку</h2>
@@ -546,7 +544,7 @@
 		</form>
 		<div class="success" ng-show="sended">
 			Заявка отправлена.
-		</div>W
+		</div>
     </div>
 </div>
 
