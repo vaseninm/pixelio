@@ -14,7 +14,7 @@ defined('APP_CONFIG_NAME') or define('APP_CONFIG_NAME', 'frontend');
 // web application configuration
 return array(
 	'name' => 'Pixelio.ru',
-    'theme' => 'mpf',
+    'theme' => 'azorskaya_lp',
 	'basePath' => realPath(__DIR__ . '/..'),
 	// path aliases
 	'aliases' => array(
