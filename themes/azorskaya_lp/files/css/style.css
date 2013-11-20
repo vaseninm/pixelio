@@ -217,6 +217,11 @@ textarea:-ms-input-placeholder{color:#888}
 .name{float:left;width:43%!important;margin-right:10px;height:35px!important}
 .phone{width:44%!important;height:35px!important}
 .time{width:91%!important;height:35px!important}
+
+.formErr{background-color:#FF6347}
+.formOk{background-color:#9ACD32}
+/*.formOk{background-color:}*/
+
 #contact-form input[type='submit']{width:auto;height:45px;float:left;font-size:18px;border:0;background-color:#000;color:#f4f4f4;padding:0 20px}
 #contact-form input[type='submit']:hover{color:#f4f4f4;background-color:#222}
 button{width:auto;height:45px;font-size:18px;border:0;background-color:#000;color:#f4f4f4;padding:0 20px;margin-bottom:30px}

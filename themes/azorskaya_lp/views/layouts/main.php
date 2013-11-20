@@ -25,6 +25,12 @@
 		<link rel="stylesheet" type="text/css" href="<?= Yii::app()->theme->baseUrl ?>/files/css/style-ie.css" />
 		<![endif]-->
 		
+		<script>
+		
+			var themePath = "<?= Yii::app()->theme->baseUrl ?>";
+			
+		</script>
+		
 		<!--Angular-->
 		<script src="angular/libs/angular.js"></script>
 		<script src="angular/controllers/SiteControllers.js"></script>

@@ -13,10 +13,10 @@ $(function($){
 															   
 					// Components							
 		slides : [	// Slideshow Images
-			{image : 'img/bg1.jpg'},
-			{image : 'img/bg2.jpg'},
-			{image : 'img/bg3.jpg'},
-			{image : 'img/bg4.jpg'},
+			{image : themePath + '/files/img/bg1.jpg'},
+			{image : themePath + '/files/img/bg2.jpg'},
+			{image : themePath + '/files/img/bg3.jpg'},
+			{image : themePath + '/files/img/bg4.jpg'},
 				]	
 				});
 });
