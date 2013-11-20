@@ -218,8 +218,8 @@ textarea:-ms-input-placeholder{color:#888}
 .phone{width:44%!important;height:35px!important}
 .time{width:91%!important;height:35px!important}
 
-.formErr{background-color:#FF6347}
-.formOk{background-color:#9ACD32}
+.ng-valid{background-color:#FF6347}
+.ng-invalid{background-color:#9ACD32}
 /*.formOk{background-color:}*/
 
 #contact-form input[type='submit']{width:auto;height:45px;float:left;font-size:18px;border:0;background-color:#000;color:#f4f4f4;padding:0 20px}
@@ -227,7 +227,7 @@ textarea:-ms-input-placeholder{color:#888}
 button{width:auto;height:45px;font-size:18px;border:0;background-color:#000;color:#f4f4f4;padding:0 20px;margin-bottom:30px}
 button:hover{color:#f4f4f4;background-color:#222}
 
-.success{margin-left:15px;height:15px;color:#00f814;display:none;margin-top:15px;float:left}
+.success{margin-left:15px;height:15px;color:#00f814;margin-top:15px;float:left}
 .subscribe{width:48%}
 .sub-form{margin-top:30px}
 

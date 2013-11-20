@@ -61,16 +61,15 @@ function TeamController($scope, $rootScope, $http, CONFIG) {
 }
 function ContactController($scope, $rootScope, $http, CONFIG) {
     $scope.leftContactModel = {};
+    $scope.sended = false;
     $scope.leftContact = function ($event) {
-        $scope.leftContactModel.phone = jq_144($event.target).parents('div.kakakoetoname').find('input[name=phone]').val();
         $http.post(CONFIG.API_URL + 'clients/leftContact', $scope.leftContactModel).success(function (data) {
             if (data.params.error) {
                 alert('Ошибка на сервере');
                 console.error(data.params.errors);
             } else {
-                alert('Форма отправлена.');
                 $scope.leftContactModel = {};
-                jq_144($event.target).parents('div.kakakoetoname').find('input[name=phone]').val('');
+                $scope.sended = true;
             }
         });
     }

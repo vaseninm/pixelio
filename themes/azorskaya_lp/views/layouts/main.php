@@ -2,8 +2,8 @@
 /* @var $this PxAngularController */
 ?>
 <!DOCTYPE html>
-<html>
-	<head>
+<html ng-app='pixelio'>
+	<head ng-controller="SiteController">
 		<!--Page Title-->
 		<title>ДИЗАЙН ИНТЕРЬЕРА ОТ ПЕРВОЙ ПЛАНИРОВКИ ДО ВЪЕЗДА</title>
 		<!--Meta Tags-->
@@ -98,17 +98,17 @@
 <!-- /Static Slide -->
 
 <!-- Точка з -->
-<div class="marginTop30">
+<div class="marginTop30" ng-controller="ContactController">
 	<div class="container" id="zahvat">
 		<div class="contact pull-left">
 			<!-- Contact Form -->
-			<form method="POST" id="contact-form" name="contact-form">
-				 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." />
-				 <input type="text" name="email" class="fields phone" placeholder="Ваш телефон..."/>
-				 <input type="text" name="time" class="fields time" placeholder="Удобное время звонка..."/>
-				 <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" />
+			<form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
+				 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" ng-required="true" />
+				 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
+				 <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" ng-required="true"/>
+				 <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" ng-disabled="ContactForm.$invalid" />
 			</form>
-			<div class="success">
+			<div class="success" ng-show="sended">
 				Заявка отправлена.
 			</div>
 		</div>
@@ -198,19 +198,21 @@
 
 
 <!-- Точка з -->
-<div class="marginTop30">
+<div class="marginTop30" ng-controller="ContactController">
 	<div class="container" id="zahvat2">
 		<div class="contact pull-left">
-			<!-- Contact Form -->
-			<form method="POST" id="contact-form" name="contact-form">
-				 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." />
-				 <input type="text" name="email" class="fields phone" placeholder="Ваш телефон..."/>
-				 <input type="text" name="time" class="fields time" placeholder="Удобное время звонка..."/>
-				 <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" />
-			</form>
-			<div class="success">
-				Заявка отправлена.
-			</div>
+            <div class="contact pull-left">
+                <!-- Contact Form -->
+                <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
+                    <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" ng-required="true" />
+                    <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
+                    <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" ng-required="true"/>
+                    <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" ng-disabled="ContactForm.$invalid" />
+                </form>
+                <div class="success" ng-show="sended">
+                    Заявка отправлена.
+                </div>
+            </div>
 		</div>
 		<!-- Subscription-form -->
 		<div class="subscribe pull-right">
@@ -308,20 +310,20 @@
 
 
 <!-- Точка з -->
-<section class="marginTop30">
+<section class="marginTop30" ng-controller="ContactController">
 	<div class="container" id="zahvat">
-		<div class="contact pull-left">
-			<!-- Contact Form -->
-			<form method="POST" id="contact-form" name="contact-form">
-				 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." />
-				 <input type="text" name="email" class="fields phone" placeholder="Ваш телефон..."/>
-				 <input type="text" name="time" class="fields time" placeholder="Удобное время звонка..."/>
-				 <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" />
-			</form>
-			<div class="success">
-				Заявка отправлена.
-			</div>
-		</div>
+        <div class="contact pull-left">
+            <!-- Contact Form -->
+            <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
+                <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" ng-required="true" />
+                <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
+                <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" ng-required="true"/>
+                <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" ng-disabled="ContactForm.$invalid" />
+            </form>
+            <div class="success" ng-show="sended">
+                Заявка отправлена.
+            </div>
+        </div>
 		<!-- Subscription-form -->
 		<div class="subscribe pull-right">
 			<h2 class="zahvat-title">Оставьте вашу заявку</h2>
@@ -532,19 +534,19 @@
 
 <!-- Модальное окно -->
 <div style="display: none;">
-    <div class="box-modal clearfix" id="actionModal">	
+    <div class="box-modal clearfix" id="actionModal" ng-controller="ContactController">
         <div class="box-modal_close arcticmodal-close">закрыть</div>
 		<h2 class="zahvat-title">Давайте встретимся</h2>
         <!-- Contact Form -->
-		<form method="POST" id="contact-form" name="contact-form">
-			 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." />
-			 <input type="text" name="email" class="fields phone" placeholder="Ваш телефон..."/>
-			 <input type="text" name="time" class="fields time" placeholder="Удобное время звонка..."/>
-			 <input type="submit" name="send-btn" class="btn1" value="Договориться о встрече" />
+		<form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
+			 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" ng-required="true" />
+			 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
+			 <input type="text" name="time" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" ng-required="true" />
+			 <input type="submit" name="send-btn" class="btn1" value="Договориться о встрече" ng-disabled="ContactForm.$invalid" />
 		</form>
-		<div class="success">
+		<div class="success" ng-show="sended">
 			Заявка отправлена.
-		</div>
+		</div>W
     </div>
 </div>
 
@@ -555,7 +557,6 @@
 	<script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/files/js/supersized.3.2.7.min.js"></script>
 	<script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/files/js/modernizr.custom.28468.js"></script>
 	<script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/files/js/jquery.cslider.js"></script>
-	<script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/files/js/ajax-actions.js"></script>
 	<script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/files/js/jquery.flexslider.js"></script>
 	<script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/files/js/jquery.scrollto.js"></script>
 	<script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/files/js/jquery.arcticmodal-0.3.min.js"></script>
