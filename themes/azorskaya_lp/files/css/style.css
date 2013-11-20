@@ -150,10 +150,10 @@ header h1{text-align:center;margin-top:40px;margin-bottom:0;color:#fff;font-weig
 @keyframes toLeftAnim3{0%{left:3%;opacity:1}99%{left:3%;opacity:0}100%{left:-50%;opacity:0}}
 @keyframes toLeftAnim4{0%{left:60%;opacity:1}40%{left:70%;opacity:1}90%{left:0;opacity:0}100%{left:-50%;opacity:0}}
 
-.zayavka,.gotarif{padding-right:20px;height:50px;text-indent:50px;font-family:;font-size:20px;color:#f4f4f4;line-height:50px}
-.zayavka{background:url(../img/check.png) #9E990A 6% 33% no-repeat;/*margin-left:5px;*//*background-size:32px;*//*font-size:17px;*//*line-height:52px*/}
+.zayavka,.gotarif{padding-right:20px;height:50px;text-indent:50px;font-size:20px;color:#f4f4f4;line-height:50px}
+.zayavka{background:url(../img/check.png) #9E990A 6% 33% no-repeat}
 .gotarif{background:url(../img/check.png) #E66C00 6% 33% no-repeat}
-.zayavka:hover{-webkit-transition:500ms ease;-o-transition:500ms ease;-moz-transition:500ms ease;-ms-transition:500ms ease;color:#f4f4f4;background-color:#333;text-decoration:none}
+.zayavka:hover{color:#f4f4f4;background-color:#333;text-decoration:none;-webkit-transition:500ms ease;-o-transition:500ms ease;-moz-transition:500ms ease;-ms-transition:500ms ease;}
 .gotarif:hover{color:#f4f4f4;background-color:#333;text-decoration:none;-webkit-transition:500ms ease;-o-transition:500ms ease;-moz-transition:500ms ease;-ms-transition:500ms ease}
 .marginTop30{margin-top:30px}
 .marginBottom30{margin-bottom:30px}
@@ -213,7 +213,7 @@ input:-ms-input-placeholder{color:#888;text-indent:5px}
 textarea::-webkit-input-placeholder{color:#888}
 textarea:-moz-placeholder{color:#888}
 textarea:-ms-input-placeholder{color:#888}
-#contact-form input[type='text'], input:focus:required:invalid:focus{background-color:#fff;border:0;border-radius:1px;text-indent:5px;color:#333}
+#contact-form input[type='text'], input:focus:required:invalid:focus{background-color:#fff;border:0;border-radius:3px;text-indent:5px;color:#333}
 
 .name{float:left;width:43%!important;margin-right:10px;height:35px!important}
 .phone{width:44%!important;height:35px!important}
@@ -233,12 +233,12 @@ textarea:-ms-input-placeholder{color:#888}
 	box-shadow:0 0 5px 3px #ff0000 inset !important;}
 
 
-#contact-form input[type='submit']{width:auto;height:45px;float:left;font-size:18px;border:0;background-color:#000;color:#f4f4f4;padding:0 20px}
-#contact-form input[type='submit']:hover{color:#f4f4f4;background-color:#222}
+#contact-form input[type='submit']{width:auto;height:45px;float:left;font-size:18px;border:0;border-radius:3px;background-color:#000;color:#f4f4f4;padding:0 20px}
+#contact-form input[type='submit']:hover{color:#f4f4f4;background-color:#333}
 #contact-form input[disabled]{color:#eee;background-color:#ccc}
 #contact-form input[disabled]:hover{color:#eee;background-color:#ccc}
-button{width:auto;height:45px;font-size:18px;border:0;background-color:#000;color:#f4f4f4;padding:0 20px;margin-bottom:30px}
-button:hover{color:#f4f4f4;background-color:#222}
+button{width:auto;height:45px;font-size:18px;border:0;border-radius:3px;background-color:#000;color:#f4f4f4;padding:0 20px;margin-bottom:30px}
+button:hover{color:#f4f4f4;background-color:#333}
 
 .success{margin-left:15px;height:15px;color:#00f814;margin-top:15px;float:left}
 .subscribe{width:48%}
