@@ -1,11 +1,16 @@
 application/common/lib/Yiinitializr/config/env.lock
 application/backend/runtime
+application/frontend/runtime
 application/console/runtime
 application/api/runtime
 admin/assets
+assets
 application/backend/config/env.php
 application/backend/config/env/dev.php
 application/backend/config/env/prod.php
+application/frontend/config/env.php
+application/frontend/config/env/dev.php
+application/frontend/config/env/prod.php
 application/common/config/env.php
 application/common/config/env/dev.php
 application/common/config/env/prod.php

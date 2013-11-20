@@ -1,0 +1,47 @@
+.da-slider, #holder1, .static-slide{
+	background-color: rgb(255,255,255);
+}
+#top-email, #top-phone {
+	background-color: rgb(255,255,255);
+}
+
+body{
+	background: #FDF5E6 !important;
+}
+#supersized {
+	display: none !important;
+}
+#overlay{
+		display: none;
+}
+.main-slider{
+	display: none;
+}
+.static-slide{
+	display:block !important;
+	width:940px !important;
+	margin-left: auto;
+	margin-right: auto;
+}
+.static-slide .da-img{
+	width: 35% !important;
+}
+.static-slide .googleplay, .static-slide .appstore{
+	background: #000 !important;
+	width:180px !important;
+	height: 50px !important;
+	text-indent:20px !important;
+}
+.items{
+	width:40%;
+	float: left;
+	margin-left:30px; 
+	margin-bottom: 5px;
+}
+.features h2{
+	font-size: 22px;
+	
+}
+.items p{
+	font-size: 13px;	
+}
