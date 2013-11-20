@@ -104,7 +104,7 @@
 			<!-- Contact Form -->
 			<form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
 				 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" ng-required="true" />
-				 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
+				 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" ng-pattern="/^[0-9]+$/"/>
 				 <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" ng-required="true"/>
 				 <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" ng-disabled="ContactForm.$invalid" />
 			</form>
@@ -204,8 +204,8 @@
                 <!-- Contact Form -->
                 <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
                     <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" ng-required="true" />
-                    <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
-                    <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" ng-required="true"/>
+                    <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" ng-pattern="/^[0-9]+$/" />
+                    <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" ng-required="true" />
                     <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" ng-disabled="ContactForm.$invalid" />
                 </form>
                 <div class="success" ng-show="sended">
@@ -314,8 +314,8 @@
             <!-- Contact Form -->
             <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
                 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" ng-required="true" />
-                <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
-                <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" ng-required="true"/>
+                <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" ng-pattern="/^[0-9]+$/" />
+                <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" ng-required="true" />
                 <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" ng-disabled="ContactForm.$invalid" />
             </form>
             <div class="success" ng-show="sended">
@@ -538,7 +538,7 @@
         <!-- Contact Form -->
 		<form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
 			 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" ng-required="true" />
-			 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
+			 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" ng-pattern="/^[0-9]+$/" />
 			 <input type="text" name="time" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" ng-required="true" />
 			 <input type="submit" name="send-btn" class="btn1" value="Договориться о встрече" ng-disabled="ContactForm.$invalid" />
 		</form>
