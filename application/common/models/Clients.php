@@ -1,5 +1,6 @@
 <?php
 use Snowplow\RefererParser\Parser;
+use Zend\Mail;
 
 /**
  * This is the model class for table "clients".
@@ -108,6 +109,18 @@ class Clients extends EActiveRecord
             $this->referrerUrl = $referrer;
             $this->referrerKey = NULL;
         }
+    }
+
+    public function sendClientInfoToEmail($body, $email){
+        $mail = new Mail\Message();
+        $mail->setEncoding("UTF-8");
+        $mail->setBody($body);
+        $mail->setFrom('no-reply@pixelio.ru', 'Уведомитель');
+        $mail->addTo($email, 'Администратор');
+        $mail->setSubject('Новый лид ' . CHtml::encode($this->ip));
+
+        $transport = new Mail\Transport\Sendmail();
+        $transport->send($mail);
     }
 
 	public static function model($className=__CLASS__)
