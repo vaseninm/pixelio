@@ -220,7 +220,7 @@ textarea:-ms-input-placeholder{color:#888}
 
 /*.ng-valid{background-color:#FF6347}*/
 /*.ng-invalid{background-color:#9ACD32}*/
-.name.ng-invalid, .phone.ng-invalid, .time.ng-invalid{
+.ng-dirty.ng-invalid{
 	background-color:#FF6347 !important;
 	color:#000;
 	-webkit-box-shadow:0 0 5px 3px #ff0000 inset;
@@ -230,6 +230,8 @@ textarea:-ms-input-placeholder{color:#888}
 
 #contact-form input[type='submit']{width:auto;height:45px;float:left;font-size:18px;border:0;background-color:#000;color:#f4f4f4;padding:0 20px}
 #contact-form input[type='submit']:hover{color:#f4f4f4;background-color:#222}
+#contact-form input[disabled]{color:#eee;background-color:#ccc}
+#contact-form input[disabled]:hover{color:#eee;background-color:#ccc}
 button{width:auto;height:45px;font-size:18px;border:0;background-color:#000;color:#f4f4f4;padding:0 20px;margin-bottom:30px}
 button:hover{color:#f4f4f4;background-color:#222}
 
