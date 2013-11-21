@@ -173,6 +173,8 @@ img.no-float{float:none}
 .subtittle{margin:30px 0 0 0;font-size:16px;}
 .features h2{font-size:22px;line-height:30px!important;color:#333}
 .features p{color:#333}
+.aboutTxt p{padding:0 30px 15px 30px;font-size:16px}
+.aboutTxt p:first-child{padding-top:30px}
 
 .zahvat-title{color:#fff!important;font-size:40px!important;font-weight:200!important;line-height:30px;margin:35px 0}
 .gray-title{color:#8B8989!important;text-align:center}
