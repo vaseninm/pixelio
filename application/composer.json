@@ -38,7 +38,8 @@
         "2amigos/yiiwheels": "1.0.3",
         "intervention/image": "dev-master",
         "yiiext/activerecord-relation-behavior": "dev-master",
-        "snowplow/referer-parser": "dev-master"
+        "snowplow/referer-parser": "dev-master",
+        "zendframework/zend-mail": "dev-master"
     },
     "autoload": {
         "psr-0": {

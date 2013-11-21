@@ -63,5 +63,6 @@ return array(
         'apiUrl' => '/api',
         'backendUrl' => '/admin',
         'since' => '2008',
+        'adminEmail' => 'vaseninm@gmail.com'
 	)
 );
