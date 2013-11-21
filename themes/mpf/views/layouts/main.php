@@ -595,7 +595,12 @@ color: #ffffff;
                                                                                                 placeholder="Телефон">
     </div>
 </div>
-<div style="display:none"></div>
+
+<div ng-show="sended" style="
+    position: absolute;
+    top: 130px;
+">Заявка отправлена</div>
+
 </form>
 <div class="message" style="display: none;"><a class="redirect" href="http://promo.mpfbrush.ru/typage_5/"></a></div>
 </div>
@@ -1447,9 +1452,10 @@ color: #1f181f;
                                                  ng-model="leftContactModel.email" ng-required="true" value=""
                                                  required="" placeholder="Email*"></div>
 </div>
-<div style="display:none"><input type="hidden" name="csrfmiddlewaretoken"
-                                 value="U8vf1WJkPpbrVTdTNIyTtRK8QHseDpSd"></div>
-</form>
+<div ng-show="sended" style="
+    position: absolute;
+    top: 125px;
+">Заявка отправлена</div>
 <div class="message" style="display: none;">Спасибо за информацию!<a class="redirect" href=""></a></div>
 </div>
 </div>
