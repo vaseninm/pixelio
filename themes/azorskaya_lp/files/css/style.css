@@ -22,9 +22,10 @@ header h1{text-align:center;margin-top:40px;margin-bottom:0;color:#fff;font-weig
 #logo a:hover{text-decoration:none}
 #contTopRight{float:right;}
 #top-phone{width:380px;height:auto;background: rgba(255,255,255,0.9) url('../img/icons/phone.png') no-repeat 20px center;margin-top:10px}
-#top-email{width:380px;height:auto;background: rgba(255,255,255,0.9) url('../img/icons/mail.png') no-repeat 20px center;margin-top:10px}
-#top-phone p{color:#333;text-align:right;padding:20px;font-size:33px;margin-bottom:0}
-#top-email p{color:#B01C19;text-align:right;padding:20px;font-size:30px;margin-bottom:0}
+#top-email{width:380px;height:auto;background: rgba(255,255,255,0.9) url('../img/icons/mail.png') no-repeat 20px center;margin-top:5px}
+#top-phone p{color:#333;text-align:right;padding:20px 20px 0 20px;font-size:33px;margin-bottom:0}
+#top-phone span{text-align:right;color:#333;font-size:20px;display:block;padding:15px 0 10px 0;}
+#top-email p{color:#B01C19;text-align:right;padding:15px 20px;font-size:30px;margin-bottom:0}
 
 .main-slider{margin-top:50px}
 .da-slider{width:100%;min-width:300px;height:430px;position:relative;margin:0 auto;overflow:hidden}

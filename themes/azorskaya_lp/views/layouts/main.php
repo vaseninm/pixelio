@@ -43,7 +43,7 @@
 		<div class="container">
 			<div id="logo"><a href="/"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/logoTop.png" alt="" class=""></a></div>
 			<div id="contTopRight">
-				<div id="top-phone"><p>+7 (905) 539-57-58</p></div>
+				<div id="top-phone"><p>+7 (905) 539-57-58<br><span>Москва и Московская область</span></p></div>
 				<div id="top-email"><p>info@azorskaya.ru</p></div>
 			</div>
 		</div>
@@ -227,11 +227,11 @@
     	<div class="boly-wrapper pull-left">
 			<div id="boly">
 				<h2 class="boly-title left-title">Во многих случаях</h2>
-				<div class="boly-items" id="first-quote"><p>Дизайн-проект выражает ЭГО дизайнера а не Заказчика</p></div>
-				<div class="boly-items"><p>ВСЕГДА есть опасения за качество выполненных работ на стройке.</p></div>
-				<div class="boly-items"><p>Завышенные и необоснованные цены за строителей.</p></div>
-				<div class="boly-items"><p>Срыв сроков - ЛЮБЫХ!</p></div>
-				<div class="boly-items"><p>Все проблемы и пути их решения лежат на Хозяине квартиры.</p></div>				 
+				<div class="boly-items" id="first-quote"><p>Интерьер соответствует вкусу дизайнера а не Заказчика.</p></div>
+				<div class="boly-items"><p>В угоду экономии, качество проектирования и качество работ идёт "под нож".</p></div>
+				<div class="boly-items"><p>Завышенные и необоснованные цены на всё.</p></div>
+				<div class="boly-items"><p>Частые срывы сроков выполнения заказа, вечный форсмажор.</p></div>
+				<div class="boly-items"><p>Все проблемы с ремонтом и пути их решения лежат на плечах Заказчика.</p></div>				 
 			</div>
 		</div>
 		<!-- / div -->
@@ -306,7 +306,7 @@
 				<p>Профессиональный дизайнер интерьеров – это инженер и художник в одном лице. Однако чтобы получить уникальный и неповторимый интерьер, навыка работы 
 				с отделочными материалами и умения грамотно составлять строительную документацию не достаточно. 
 				<b>Важнее всего понять, чего же на самом деле хочет заказчик, и воплотить в жизнь все то, что происходит на уровне воображения.</b></p>
-				<p>Я, Инна Азорская, готова ответить на все вопросы по телефону в Москве, или обсудить предстоящий проект в формате личной встречи за чашечкой кофе в любое, удобное для Вас время.</p>
+				<p>Я, Инна Азорская, готова ответить на все вопросы по телефону <b>+7 (905) 539-57-58</b> в Москве, или обсудить предстоящий проект в формате личной встречи за чашечкой чая или кофе в любое, удобное для Вас время.</p>
 			</div>
 		</div>
 		<div class="marginBottom30"></div>
@@ -400,7 +400,7 @@
 						<br>- Развёртки по стенам
 						<br>- Раскладка плитки и привязка сантехники в санузлах<br><br>
 				</p>
-				<h2>1600р./м<sup>2</sup></h2>
+				<h2>1800р./м<sup>2</sup></h2>
 			</div>
 			</div>
 			<div class="span4 whiteBg" style="border-bottom:5px solid #BDBC2E">
@@ -412,7 +412,7 @@
 				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_pic2.png" alt="" class=""><b>3D визуализация по всем основным помещениям</b></p>
 				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_dollar.png" alt="" class=""><b>Просчёт стоимости материалов прямо в процессе проектирования</b></p>						
 				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_shop.png" alt="" class=""><b>Поездки по магазинам для быстрого подбора отделочных материалов</b><br><br><br></p>
-				<h2>1800р./м<sup>2</sup></h2>
+				<h2>2500р./м<sup>2</sup></h2>
 			</div>
 			</div>
 			<div class="span4">
