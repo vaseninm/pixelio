@@ -1542,6 +1542,13 @@ color: #1f181f;
 
 <div class="block block-image is-image" id="block-55395"
      style="display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;z-index: 103;top: 780px;height: 30px;width: 960px;anchor-id: #block-55395;border-style: none;left: 0;background-color: transparent;background-image: none;">
+    <div style="
+    position: absolute;
+    top: 1px;
+    color: red;
+    width: 100%;
+    text-align: center;
+">Мы работаем вместе с IvoclarVivadent, Vita, IPS, AmmanGirbach, Duceram, ZirkonZahn и др.</div>
     <img src="<?= Yii::app()->theme->baseUrl ?>/MPF_files/ecwideline_2.png" alt="" style="display: block; width: 960px; height: 30px">
 </div>
 
