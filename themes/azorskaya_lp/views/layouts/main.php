@@ -69,7 +69,7 @@
 					<h1>Авторский дизайн</h1>
 					<p>Индивидуальный интерьер только под Вас. <br>Контроль качества работ на всех уровнях.</p>
 					<a href="#demo" class="da-link zayavka">Примеры работ</a>
-					<div class="da-img"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/108.jpg" alt="iphone" /></div>
+					<div class="da-img"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/108.jpg" alt="" /></div>
 				</div>
 		<!-- /Slider No.2 -->
 		<!-- Slider No.3 -->
@@ -77,7 +77,7 @@
 					<h1>Доступно для всех</h1>
 					<p>3 основных пакета Дизайн-проектов. <br>Реальная и прозрачная ценовая политика.</p>
 					<a href="#price" class="da-link gotarif">Выбрать пакет</a>
-					<div class="da-img"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/android.png" alt="image01" /></div>
+					<div class="da-img"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/tarif.jpg" alt="" /></div>
 				</div>
 		<!-- /Slider No.3 -->
 			</div>
