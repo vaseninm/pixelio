@@ -11,6 +11,7 @@ h3{font-weight:200}
 #zahvat{background-color:#E66C00}
 #zahvat2{background-color:#BDBC2E}
 #zahvat3{background-color:#B01C19}
+#zahvat p, #zahvat2 p, #zahvat3 p{color:#fff}
 .tooltip-inner{letter-spacing:1px;font-size:11px}
 #overlay{top:0;width:100%;height:100%;position:fixed;background-repeat:repeat;background-image:url('../img/pattern.png');z-index:-997}
 .main-container{z-index:3}
