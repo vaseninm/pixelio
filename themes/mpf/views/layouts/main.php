@@ -136,6 +136,12 @@
 <div style="position: absolute; display: block;background-position: 0% 0%;background-repeat: repeat;border-width: 1px;position: absolute;width: 100%;height: 130px;top: 2691px;z-index: 1;anchor-id: #block-new82;ordering: 6px;background-image: url(http://media.lpgenerator.ru/images/12_bg.png#size_100x100);left: 0;background-color: transparent;"
      class="outer-section"></div>
 
+<div style="text-align:center; position: absolute; display: block;background-color: #ffffff; border-width: 1px;position: absolute;width: 100%;height: 20px;top: 2821px;z-index: 1;anchor-id: #block-new1488;ordering: 6px;left: 0;background-color: transparent;"
+     class="outer-section">
+    <b>© МатДент Company Все права защищены. Город Снакт-Петербугрг.</b>
+
+     </div>
+
 <div style="position: absolute; display: block;background-position: 0% 0%;background-repeat: no-repeat;border-width: 1px;position: absolute;width: 100%;height: 300px;top: 2391px;z-index: 1;anchor-id: #block-new80;ordering: 5px;left: 0;background-color: transparent;background-image: none;"
      class="outer-section"></div>
 
