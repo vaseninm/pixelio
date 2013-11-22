@@ -90,7 +90,7 @@
 					<h1>Дизайн-студия</h1>
 					<p>Профессиональный дизайн интерьера. <br>Дизайн-студия Инны Азорской возьмёт на себя ВСЕ ваши проблемы с ремонтом!</p>
 					<a href="#" class="da-link zayavka">Примеры работ</a>
-					<div class="da-img"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/inna_azorskaya.jpg" alt="logo" /></div>
+					<div class="da-img"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/inna_azorskaya.jpg" alt="Инна Азорская" /></div>
     	</div>
 </div>
 <!-- /Static Slide -->
