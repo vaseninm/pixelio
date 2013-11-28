@@ -5,11 +5,11 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Pf Carousels'=>array('index'),
-	'Create',
+	'Слайд шоу'=>array('index'),
+	'Добавление элемента',
 );
 ?>
 
-    <h1>Добавление нового PfCarousel</h1>
+    <h1>Добавление нового элемента</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

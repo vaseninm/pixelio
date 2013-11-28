@@ -3,27 +3,27 @@
 /* @var $model PfCarousel */
 
 
-$this->breadcrumbs=array(
-	'Pf Carousels'=>array('index'),
-	'Manage',
+$this->breadcrumbs = array(
+    'Слайд шоу' => array('index'),
+    'Управление',
 );
 ?>
 
-<h1>Управление моделью Pf Carousels</h1>
+    <h1>Управление слайд шоу</h1>
 
-<?php $this->widget('bootstrap.widgets.TbGridView',array(
-'id'=>'pf-carousel-grid',
-'type' => TbHtml::GRID_TYPE_BORDERED,
-'dataProvider'=>$model->search(),
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
+    'id' => 'pf-carousel-grid',
+    'type' => TbHtml::GRID_TYPE_BORDERED,
+    'dataProvider' => $model->search(),
 //'filter'=>$model,
-'columns'=>array(
-		'id',
-		'work_id',
-array(
-'class'=>'bootstrap.widgets.TbButtonColumn',
-'template' => '{update}{delete}',
-),
-),
+    'columns' => array(
+        'id',
+        'work_id',
+        array(
+            'class' => 'bootstrap.widgets.TbButtonColumn',
+            'template' => '{update}{delete}',
+        ),
+    ),
 )); ?>
 
 <?php echo TbHtml::linkButton('Создать', array(

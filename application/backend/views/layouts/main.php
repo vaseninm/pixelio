@@ -25,7 +25,7 @@
 	improve your experience.</p>
 <![endif]-->
 
-<? if (!Yii::app()->user->isGuest) { ?>
+<?php if (!Yii::app()->user->isGuest) { ?>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -50,7 +50,7 @@
         </div>
     </div>
 </div>
-<? } ?>
+<?php } ?>
 <div class="container">
     <?php $this->widget('bootstrap.widgets.TbBreadcrumb', array(
         'links' => $this->breadcrumbs,
