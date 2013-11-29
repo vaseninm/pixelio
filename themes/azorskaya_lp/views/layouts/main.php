@@ -19,6 +19,7 @@
 		<link rel="stylesheet" href="<?= Yii::app()->theme->baseUrl ?>/files/css/flexslider.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="<?= Yii::app()->theme->baseUrl ?>/files/css/arcticmodal.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="<?= Yii::app()->theme->baseUrl ?>/files/css/style.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="<?= Yii::app()->theme->baseUrl ?>/files/css/fancybox.css" type="text/css" media="all">
 		<link rel="stylesheet" href="<?= Yii::app()->theme->baseUrl ?>/files/css/bootstrap-responsive.css" type="text/css" media="screen" />
 		
 		<!--[if IE 8 ]>
@@ -462,13 +463,11 @@
 				<p><br>Имя Фамилия Отчество<br> Москва</p>
 			</div>
 			<div class="span4">
-				<div class="flexslider tablet">
-                    <ul class="slides">
-                        <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1a.jpg" alt=""></li>
-						<li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1b.jpg" alt=""></li>
-                        <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1c.jpg" alt=""></li>
-                    </ul>
-                </div>
+				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1a.jpg" class="fancybox-media" data-title-id="title-1-1" rel="portfolio1"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1a.jpg" alt=""></a>
+				<div class="hiden">
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1b.jpg" class="fancybox-media" data-title-id="title-1-2" rel="portfolio1">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1c.jpg" class="fancybox-media" data-title-id="title-1-3" rel="portfolio1">&nbsp;</a>
+				</div>
 			</div>
 			<div class="span5">
 				<p class="otziv">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -483,13 +482,11 @@
 				<p><br>Имя Фамилия Отчество<br> Москва</p>
 			</div>
 			<div class="span4">
-				<div class="flexslider tablet">
-                    <ul class="slides">
-                        <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2a.jpg" alt=""></li>
-						<li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2b.jpg" alt=""></li>
-                        <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2c.jpg" alt=""></li>
-                    </ul>
-                </div>
+				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2a.jpg" class="fancybox-media" data-title-id="title-2-1" rel="portfolio2"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2a.jpg" alt=""></a>
+				<div class="hiden">
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2b.jpg" class="fancybox-media" data-title-id="title-2-2" rel="portfolio2">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2c.jpg" class="fancybox-media" data-title-id="title-2-3" rel="portfolio2">&nbsp;</a>
+				</div>
 			</div>
 			<div class="span5">
 				<p class="otziv">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -504,13 +501,11 @@
 				<p><br>Имя Фамилия Отчество<br> Москва</p>
 			</div>
 			<div class="span4">
-				<div class="flexslider tablet">
-                    <ul class="slides">
-                        <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3a.jpg" alt=""></li>
-						<li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3b.jpg" alt=""></li>
-                        <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3c.jpg" alt=""></li>
-                    </ul>
-                </div>
+				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3a.jpg" class="fancybox-media" data-title-id="title-3-1" rel="portfolio3"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3a.jpg" alt=""></a>
+				<div class="hiden">
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3b.jpg" class="fancybox-media" data-title-id="title-3-2" rel="portfolio3">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3c.jpg" class="fancybox-media" data-title-id="title-3-3" rel="portfolio3">&nbsp;</a>
+				</div>
 			</div>
 			<div class="span5">
 				<p class="otziv">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -519,12 +514,13 @@
 				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 			</div>
 		</div>
+		<div class="marginBottom30"></div>
 	</div>
 </section>
 
 
 <!-- Команда -->
-<section class="marginTop30 marginBottom30">
+<!--<section class="marginTop30 marginBottom30">
 	<div class="container whiteBg centered" id="">	
 		<h2 class="cnt-title left-title">Мы возьмём на себя Ваши проблемы с ремонтом</h2>
 		<div class="splitter"></div>
@@ -535,6 +531,31 @@
 			</div>
 		</div>
 	</div>
+</section>-->
+
+
+<!-- Точка з -->
+<section class="marginTop30" ng-controller="ContactController">
+	<div class="container" id="zahvat3">
+        <div class="contact pull-left">
+            <!-- Contact Form -->
+            <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
+                <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" ng-required="true" />
+                <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
+                <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" ng-required="true" />
+                <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" ng-disabled="ContactForm.$invalid" />
+            </form>
+            <div class="success" ng-show="sended">
+                Заявка отправлена.
+            </div>
+        </div>
+		<!-- Subscription-form -->
+		<div class="subscribe pull-right">
+			<h2 class="zahvat-title">Оставьте вашу заявку</h2>
+			<p>на проект и наш дизайнер свяжется с вами для обсуждения технического задания.</p>
+		</div>
+	</div>
+	<div class="marginBottom30"></div>
 </section>
 
 
@@ -566,6 +587,8 @@
 	<script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/files/js/jquery.flexslider.js"></script>
 	<script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/files/js/jquery.scrollto.js"></script>
 	<script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/files/js/jquery.arcticmodal-0.3.min.js"></script>
+	<script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/files/js/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/files/js/jquery.fancybox-media.js"></script>
 	<script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/files/js/custom.js"></script>
 </body>
 </html>
