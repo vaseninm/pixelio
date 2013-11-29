@@ -63,6 +63,7 @@ function ContactController($scope, $rootScope, $http, CONFIG) {
     $scope.leftContactModel = {};
     $scope.sended = false;
     $scope.leftContact = function ($event) {
+        $event.preventDefault();
         $http.post(CONFIG.API_URL + 'clients/leftContact', $scope.leftContactModel).success(function (data) {
             if (data.params.error) {
                 alert('Ошибка на сервере');
