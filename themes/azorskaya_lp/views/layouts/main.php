@@ -487,81 +487,141 @@
 				<p><br>Синицина Наталья<br> Москва</p>
 			</div>
 			<div class="span4">
-				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1a.jpg" class="fancybox-media" data-title-id="title-1-1" rel="portfolio1"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1a.jpg" alt=""></a>
+				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1-1.jpg" class="fancybox-media" rel="portfolio1"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/thumb1a.jpg" alt=""></a>
 				<div class="hiden">
-					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1b.jpg" class="fancybox-media" data-title-id="title-1-2" rel="portfolio1">&nbsp;</a>
-					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1c.jpg" class="fancybox-media" data-title-id="title-1-3" rel="portfolio1">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1-2.jpg" class="fancybox-media" rel="portfolio1">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1-3.jpg" class="fancybox-media" rel="portfolio1">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1-4.jpg" class="fancybox-media" rel="portfolio1">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1-5.jpg" class="fancybox-media" rel="portfolio1">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1-6.jpg" class="fancybox-media" rel="portfolio1">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1-7.jpg" class="fancybox-media" rel="portfolio1">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1-8.jpg" class="fancybox-media" rel="portfolio1">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1-9.jpg" class="fancybox-media" rel="portfolio1">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1-10.jpg" class="fancybox-media" rel="portfolio1">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1-11.jpg" class="fancybox-media" rel="portfolio1">&nbsp;</a>
 				</div>
 			</div>
 			<div class="span5">
 				<p class="otziv">
-						Когда мы приобрели большую квартиру, то однозначно решили, что
-						нам нужны услуги дизайнера. Иначе нельзя.<br>
-						Мой любимый тогда журнал "Квартирный вопрос" помог мне в этом.Через
-						этот журнал я и нашла своего дизайнера Инну Азорскую.
-						<br><br>
-						Дизайн моей квартиры мне очень нравится , это так называемый "московский
-						хай-тек".Это была полностью задумка дизайнера, которая прекрасно
-						почувствовала мой вкус и воплотила эту задумку в реальность.
-						В моем домашнем пространстве правильно и точно расставлены все
-						акценты, здесь удобно и приятно находиться.
-						Расширенное пространство гостинной за счет объединения с прихожей и
-						кухней увеличивает визуально площадь. А натяжной потолок переходящий
-						в подвесной уносит тебя ввысь, туда где всегда светло , легко и
-						солнечно....<br>
-						Прекрасно подобрана цветовая гамма квартиры. В такой квартире отдыхаешь, в ней тепло и уютно.
-						Деталь гостиной, на которую обращают внимание все гости, — это камин,
-						имеющий декоративную топку ,а под камином в нише лежит связка настоящих
-						березовых дров. Конечно, он не настоящий, так как наш современный дом не позволяет такую роскошь, но всем кажется,
-						что он самый что ни на есть настоящий.<br>
-						А оформление большого плазменного телевизора в
-						гостиной, который смотрится как огромная картина на стене, благодаря
-						декоративной рамке , окрашенной специальной краской с эффектом " кожи",
-						смотрится потрясающе.
-						<br><br>
-						Я очень благодарна Инне за радость, которую я получаю находясь дома,
-						именно здесь, в "моей крепости" моя семья отдыхает и накапливает энергию для дальнейшей активной жизни.
-						<br><br>			 
-						С уважением, Синицина Наталья.
+					Прекрасно подобрана цветовая гамма квартиры. В такой квартире отдыхаешь, в ней тепло и уютно.
+					Деталь гостиной, на которую обращают внимание все гости, — это камин,
+					имеющий декоративную топку, а под камином в нише лежит связка настоящих
+					березовых дров. Конечно, он не настоящий, так как наш современный дом не позволяет такую роскошь, но всем кажется,
+					что он самый что ни на есть настоящий.
+					<br><br>
+					Я очень благодарна Инне за радость, которую я получаю находясь дома,
+					именно здесь, в "моей крепости" моя семья отдыхает и накапливает энергию для дальнейшей активной жизни.
 				</p>
 			</div>
 		</div>
 		<div class="row-fluid marginBottom30">
 			<div class="span3 centered">
 				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client2.jpg" alt="" class="">
-				<p><br>Имя Фамилия Отчество<br> Москва</p>
+				<p><br>Щербединская Екатерина<br> Москва</p>
 			</div>
 			<div class="span4">
-				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2a.jpg" class="fancybox-media" data-title-id="title-2-1" rel="portfolio2"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2a.jpg" alt=""></a>
+				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2-1.jpg" class="fancybox-media" rel="portfolio2"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/thumb2a.jpg" alt=""></a>
 				<div class="hiden">
-					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2b.jpg" class="fancybox-media" data-title-id="title-2-2" rel="portfolio2">&nbsp;</a>
-					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2c.jpg" class="fancybox-media" data-title-id="title-2-3" rel="portfolio2">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2-2.jpg" class="fancybox-media" rel="portfolio2">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2-3.jpg" class="fancybox-media" rel="portfolio2">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2-4.jpg" class="fancybox-media" rel="portfolio2">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2-5.jpg" class="fancybox-media" rel="portfolio2">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2-6.jpg" class="fancybox-media" rel="portfolio2">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2-7.jpg" class="fancybox-media" rel="portfolio2">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2-8.jpg" class="fancybox-media" rel="portfolio2">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2-9.jpg" class="fancybox-media" rel="portfolio2">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2-10.jpg" class="fancybox-media" rel="portfolio2">&nbsp;</a>
 				</div>
 			</div>
 			<div class="span5">
-				<p class="otziv">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+				<p class="otziv">
+					133 м², много это или мало, думала я с мужем, купив квартиру свободной планировки, продав свою тесную хрущевку. 
+					Просторную  гостиную, спальную, детскую, хорошую кухню, гардеробные, санузлы,  настоящий мраморный камин хотелось видеть нам в нашей новой квартире.    
+					Инна сумела    найти компромисс между нашей мечтой о печном  камине и реальностью квартирой в многоэтажном доме с отсутствием специального дымохода. 
+					Она предложила нам альтернативу - домашний кинотеатр, заключенный в мраморную раму.
+					<br>
+					Моя семья сразу одобрила все решения предложенные Инной. 
+					<br>
+					Будем вас рекомендовать своим друзьям.
+				</p>
 			</div>	
 		</div>
 		<div class="row-fluid marginBottom30">
 			<div class="span3 centered">
 				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client3.jpg" alt="" class="">
-				<p><br>Имя Фамилия Отчество<br> Москва</p>
+				<p><br>Сафронова Екатерина<br> Москва</p>
 			</div>
 			<div class="span4">
-				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3a.jpg" class="fancybox-media" data-title-id="title-3-1" rel="portfolio3"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3a.jpg" alt=""></a>
+				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-1.jpg" class="fancybox-media" rel="portfolio3"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/thumb3a.jpg" alt=""></a>
 				<div class="hiden">
-					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3b.jpg" class="fancybox-media" data-title-id="title-3-2" rel="portfolio3">&nbsp;</a>
-					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3c.jpg" class="fancybox-media" data-title-id="title-3-3" rel="portfolio3">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-2.jpg" class="fancybox-media" rel="portfolio3">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-3.jpg" class="fancybox-media" rel="portfolio3">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-4.jpg" class="fancybox-media" rel="portfolio3">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-5.jpg" class="fancybox-media" rel="portfolio3">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-6.jpg" class="fancybox-media" rel="portfolio3">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-7.jpg" class="fancybox-media" rel="portfolio3">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-8.jpg" class="fancybox-media" rel="portfolio3">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-9.jpg" class="fancybox-media" rel="portfolio3">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-10.jpg" class="fancybox-media" rel="portfolio3">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-11.jpg" class="fancybox-media" rel="portfolio3">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-12.jpg" class="fancybox-media" rel="portfolio3">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-13.jpg" class="fancybox-media" rel="portfolio3">&nbsp;</a>
 				</div>
 			</div>
 			<div class="span5">
-				<p class="otziv">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+				<p class="otziv">
+					Концепция  ремонта квартиры свободной планировки площадью 114 мкв вынашивалась в течение нескольких лет. 
+					За это время был выбран стиль и требования к функциональным особенностям квартиры.  
+					Сочетание собственных идей со свежим  и профессиональным взглядом дизайнера-архитектора Инны Азорской  
+					сделало процесс поиска конкретных решений по дизайну квартиры творческим и приятным. 
+					Концепцию получившегося  дизайн-проекта можно сформулировать так: «современный стиль со смелыми цветовыми и 
+					архитектурными акцентами при максимальной функциональности и уюте». 
+					По прошествии двух лет после окончания ремонта можем сказать, что концепция реализована полностью. 
+					Жить в квартире приятно, удобно и не скучно.  Следует также сказать, что качество строительных и отделочных работ, 
+					осуществлявшихся бригадой, рекомендованной Инной, полностью соответствуют качеству дизайн-проекта. 
+				</p>
+			</div>
+		</div>
+		<div class="row-fluid marginBottom30">
+			<div class="span3 centered">
+				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client4.jpg" alt="" class="">
+				<p><br>Ольга<br>хозяйка дома</p>
+			</div>
+			<div class="span4">
+				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-1.jpg" class="fancybox-media" rel="portfolio4"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/thumb4a.jpg" alt=""></a>
+				<div class="hiden">
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-2.jpg" class="fancybox-media" rel="portfolio4">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-3.jpg" class="fancybox-media" rel="portfolio4">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-4.jpg" class="fancybox-media" rel="portfolio4">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-5.jpg" class="fancybox-media" rel="portfolio4">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-6.jpg" class="fancybox-media" rel="portfolio4">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-7.jpg" class="fancybox-media" rel="portfolio4">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-8.jpg" class="fancybox-media" rel="portfolio4">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-9.jpg" class="fancybox-media" rel="portfolio4">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-10.jpg" class="fancybox-media" rel="portfolio4">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-11.jpg" class="fancybox-media" rel="portfolio4">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-12.jpg" class="fancybox-media" rel="portfolio4">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-13.jpg" class="fancybox-media" rel="portfolio4">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-14.jpg" class="fancybox-media" rel="portfolio4">&nbsp;</a>
+				</div>
+			</div>
+			<div class="span5">
+				<p class="otziv">
+					Мы с мужем всегда мечтали о своем  загородном доме из дерева. 
+					Заказав проект в   строительной организации, которая нам его и построила, мы задумались о том, какой он должен быть внутри. 
+					Нам очень не хотелось, чтобы он превратился в гипсокартоновую коробку, или «баню» как это часто бывает. 
+					Начитавшись о неудачном опыте работы с дизайнерами, мы обратились к друзьям. 
+					Они посоветовали Инну, так как остались довольны  работой с ней. 
+					Мы начали  работать по дизайн-проекту  нашего дома  и не пожалели об этом.
+					<br>					
+					Волнительным для нас был момент, когда мы увидели визуализацию интерьеров. 
+					Мы боялись испортить чудесные образы сделанные Инной, но она   внимательно отнеслась ко всем нашим пожеланиям, 
+					помогла определиться нам с выбором отделочных материалов, подбором мебели. 
+					Особым местом в нашем доме стала большая светлая гостиная с панорамными окнами, камином и балконом второго этажа. 
+					Инне удалось создать для нас уникальный образ нашего дома.
+					<br>
+					Спасибо Вам Инна, нам легко было с вами работать. 
+				</p>
 			</div>
 		</div>
 	</div>
