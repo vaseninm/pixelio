@@ -255,7 +255,7 @@
 		<div class="myWork-wrapper pull-right">
 			<h2 class="good-title left-title greenH2">Как работаем мы</h2>
 			<div class="myWork-items"><h4>Индивидуальный интерьер только под ВАС.</h4></div>
-			<div class="myWork-items"><h4>Контроль качества работ на всех уровных.</h4></div>
+			<div class="myWork-items"><h4>Контроль качества работ на всех уровнях.</h4></div>
 			<div class="myWork-items"><h4>Реальная и прозрачная ценовая политика стройки.</h4></div>
 			<div class="myWork-items"><h4>Оптимизация процесса проектирования и строительных работ для выдерживания сроков.</h4></div>
 			<div class="myWork-items" id="last-item"><h4>Взятие на себя и Решения всех проблем на стройке.</h4></div>	
@@ -273,36 +273,46 @@
 		<div class="row-fluid">
 			<div class="span7">		
 				<div class="row-fluid">
-					<div class="span12">
-						<h2 class="jornalTitle">Август 2012</h2>
+					<div class="span4">
+						<div class="items" style="width:94%">
+							<h2 class="jornalTitle">Август 2012</h2>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa100.jpg" class="fancybox-media" rel="pressa1"><img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa1.jpg" alt="" /></a>
+						</div>
+						<div class="hiden">
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa200.jpg" class="fancybox-media" rel="pressa1">&nbsp;</a>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa200.jpg" class="fancybox-media" rel="pressa1">&nbsp;</a>
+						</div>
+					</div>
+					<div class="span4">
+						<div class="items" style="width:94%">
+							<h2 class="jornalTitle">Август 2012</h2>
+							<img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa1.jpg" alt="" />
+						</div>
+					</div>
+					<div class="span4">
+						<div class="items" style="width:94%">
+							<h2 class="jornalTitle">Август 2012</h2>
+							<img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa1.jpg" alt="" />
+						</div>
 					</div>
 				</div>
 				<div class="row-fluid">
 					<div class="span4">
-					<div class="items" style="width:94%">
-						<img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa1.jpg" alt="" />
+						<div class="items" style="width:94%">
+							<h2 class="jornalTitle">Ноябрь 2009</h2>
+							<img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa2.jpg" alt="" />
 						</div>
 					</div>
-					<div class="span8">
-					<div class="items" style="width:94%">
-						<img class="jornal2" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa100.jpg" alt="" />
-						</div>
-					</div>
-				</div>
-				<div class="row-fluid">
-					<div class="span12">
-						<h2 class="jornalTitle">Ноябрь 2009</h2>
-					</div>
-				</div>
-				<div class="row-fluid">
 					<div class="span4">
-					<div class="items" style="width:94%">
-						<img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa2.jpg" alt="" />
+						<div class="items" style="width:94%">
+							<h2 class="jornalTitle">Август 2012</h2>
+							<img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa1.jpg" alt="" />
 						</div>
 					</div>
-					<div class="span8">
-					<div class="items" style="width:94%">
-						<img class="jornal2" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa200.jpg" alt="" />
+					<div class="span4">
+						<div class="items" style="width:94%">
+							<h2 class="jornalTitle">Август 2012</h2>
+							<img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa1.jpg" alt="" />
 						</div>
 					</div>
 				</div>
