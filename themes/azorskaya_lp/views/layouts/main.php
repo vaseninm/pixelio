@@ -275,44 +275,69 @@
 				<div class="row-fluid">
 					<div class="span4">
 						<div class="items" style="width:94%">
-							<h2 class="jornalTitle">Август 2012</h2>
-							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa100.jpg" class="fancybox-media" rel="pressa1"><img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa1.jpg" alt="" /></a>
+							<h2 class="jornalTitle">Август 2013</h2>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2013-1.jpg" class="fancybox-media" rel="pressa1"><img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2013.jpg" alt="" /></a>
 						</div>
 						<div class="hiden">
-							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa200.jpg" class="fancybox-media" rel="pressa1">&nbsp;</a>
-							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa200.jpg" class="fancybox-media" rel="pressa1">&nbsp;</a>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2013-2.jpg" class="fancybox-media" rel="pressa1">&nbsp;</a>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2013-3.jpg" class="fancybox-media" rel="pressa1">&nbsp;</a>
 						</div>
 					</div>
 					<div class="span4">
 						<div class="items" style="width:94%">
-							<h2 class="jornalTitle">Август 2012</h2>
-							<img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa1.jpg" alt="" />
+							<h2 class="jornalTitle">Март 2013</h2>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa03_2013-1.jpg" class="fancybox-media" rel="pressa2"><img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa03_2013.jpg" alt="" /></a>
+						</div>
+						<div class="hiden">
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa03_2013-2.jpg" class="fancybox-media" rel="pressa2">&nbsp;</a>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa03_2013-3.jpg" class="fancybox-media" rel="pressa2">&nbsp;</a>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa03_2013-4.jpg" class="fancybox-media" rel="pressa2">&nbsp;</a>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa03_2013-5.jpg" class="fancybox-media" rel="pressa2">&nbsp;</a>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa03_2013-6.jpg" class="fancybox-media" rel="pressa2">&nbsp;</a>
 						</div>
 					</div>
 					<div class="span4">
 						<div class="items" style="width:94%">
-							<h2 class="jornalTitle">Август 2012</h2>
-							<img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa1.jpg" alt="" />
+							<h2 class="jornalTitle">Февраль 2013</h2>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2013-1.jpg" class="fancybox-media" rel="pressa3"><img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2013.jpg" alt="" /></a>
+						</div>
+						<div class="hiden">
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2013-2.jpg" class="fancybox-media" rel="pressa3">&nbsp;</a>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2013-3.jpg" class="fancybox-media" rel="pressa3">&nbsp;</a>
 						</div>
 					</div>
 				</div>
 				<div class="row-fluid">
 					<div class="span4">
 						<div class="items" style="width:94%">
+							<h2 class="jornalTitle">Август 2012</h2>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2012-1.jpg" class="fancybox-media" rel="pressa4"><img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2012.jpg" alt="" /></a>
+						</div>
+						<div class="hiden">
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2012-2.jpg" class="fancybox-media" rel="pressa4">&nbsp;</a>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2012-3.jpg" class="fancybox-media" rel="pressa4">&nbsp;</a>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2012-4.jpg" class="fancybox-media" rel="pressa4">&nbsp;</a>
+						</div>
+					</div>
+					<div class="span4">
+						<div class="items" style="width:94%">
 							<h2 class="jornalTitle">Ноябрь 2009</h2>
-							<img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa2.jpg" alt="" />
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2009-1.jpg" class="fancybox-media" rel="pressa5"><img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2009.jpg" alt="" /></a>
+						</div>
+						<div class="hiden">
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2009-2.jpg" class="fancybox-media" rel="pressa5">&nbsp;</a>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2009-3.jpg" class="fancybox-media" rel="pressa5">&nbsp;</a>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2009-4.jpg" class="fancybox-media" rel="pressa5">&nbsp;</a>
 						</div>
 					</div>
 					<div class="span4">
 						<div class="items" style="width:94%">
-							<h2 class="jornalTitle">Август 2012</h2>
-							<img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa1.jpg" alt="" />
+							<h2 class="jornalTitle">Ноябрь 2008</h2>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2008-1.jpg" class="fancybox-media" rel="pressa6"><img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2008.jpg" alt="" /></a>
 						</div>
-					</div>
-					<div class="span4">
-						<div class="items" style="width:94%">
-							<h2 class="jornalTitle">Август 2012</h2>
-							<img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa1.jpg" alt="" />
+						<div class="hiden">
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2008-2.jpg" class="fancybox-media" rel="pressa6">&nbsp;</a>
+							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2008-3.jpg" class="fancybox-media" rel="pressa6">&nbsp;</a>
 						</div>
 					</div>
 				</div>
