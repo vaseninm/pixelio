@@ -178,6 +178,13 @@
                         <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/before1.jpg" alt=""></li>
 						<li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/before2.jpg" alt=""></li>
                         <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/before3.jpg" alt=""></li>
+						<li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/before4.jpg" alt=""></li>
+						<li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/before5.jpg" alt=""></li>
+                        <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/before6.jpg" alt=""></li>
+						<li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/before7.jpg" alt=""></li>
+                        <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/before8.jpg" alt=""></li>
+						<li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/before9.jpg" alt=""></li>
+                        <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/before10.jpg" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -188,6 +195,13 @@
                         <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/after1.jpg" alt=""></li>
 						<li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/after2.jpg" alt=""></li>
                         <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/after3.jpg" alt=""></li>
+						<li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/after4.jpg" alt=""></li>
+						<li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/after5.jpg" alt=""></li>
+                        <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/after6.jpg" alt=""></li>
+						<li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/after7.jpg" alt=""></li>
+                        <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/after8.jpg" alt=""></li>
+						<li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/after9.jpg" alt=""></li>
+                        <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/works/after10.jpg" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -457,7 +471,7 @@
 		
 		<h2 class="cnt-title left-title">Наши заказчики о нас</h2>
 		<div class="splitter"></div>
-		<div class="row-fluid">
+		<div class="row-fluid marginBottom30">
 			<div class="span3 centered">
 				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client1.jpg" alt="" class="">
 				<p><br>Имя Фамилия Отчество<br> Москва</p>
@@ -476,7 +490,7 @@
 				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 			</div>
 		</div>
-		<div class="row-fluid">
+		<div class="row-fluid marginBottom30">
 			<div class="span3 centered">
 				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client2.jpg" alt="" class="">
 				<p><br>Имя Фамилия Отчество<br> Москва</p>
@@ -493,10 +507,9 @@
 				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
 				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-			</div>
-			<div class="marginBottom30"></div>
+			</div>	
 		</div>
-		<div class="row-fluid">
+		<div class="row-fluid marginBottom30">
 			<div class="span3 centered">
 				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client3.jpg" alt="" class="">
 				<p><br>Имя Фамилия Отчество<br> Москва</p>
@@ -515,7 +528,6 @@
 				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 			</div>
 		</div>
-		<div class="marginBottom30"></div>
 	</div>
 </section>
 
