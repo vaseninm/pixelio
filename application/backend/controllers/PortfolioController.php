@@ -112,7 +112,7 @@ class PortfolioController extends PxAdminController
         $this->render('update', array(
             'works' => $works,
             'pages' => $pages,
-            'tags' => $tags = PfTags::getTagsList()
+            'tags' => PfTags::getTagsList()
         ));
     }
 

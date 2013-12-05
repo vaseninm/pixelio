@@ -13,8 +13,10 @@ $this->breadcrumbs = array(
 
 <h1>Редактирование работы <?php echo $works->title; ?></h1>
 
-<?php $this->renderPartial('_form', array(
+<?php
+$this->renderPartial('_form', array(
     'works' => $works,
+    'tags' => $tags,
 )); ?>
 
 <?php

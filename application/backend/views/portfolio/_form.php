@@ -37,13 +37,13 @@
 
         <div class="control-group">
         <?php
-        if (!empty($this->tags)){?>
+        if (!empty($tags)){?>
                 <?php
                 $this->widget('yiiwheels.widgets.select2.WhSelect2', array(
                     'asDropDownList' => true,
                     'model' => $works,
                     'attribute' => 'tags',
-                    'data' => $this->tags,
+                    'data' => $tags,
                     'htmlOptions' => array(
                         'multiple' => true,
                     ),
