@@ -43,7 +43,10 @@
 
 </head>
 <body>
-<!--[if lt IE 9]><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/background.jpg" class="bgImg" /><![endif]-->
+<!--[if lt IE 9]>
+<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/background.jpg" class="bgImg" />
+<div style="position:relative">
+<![endif]-->
 <!-- HEADER HOME  -->
         <section id="home">
 		
@@ -414,6 +417,8 @@
     </div>
 </footer>
 <!-- END FOOTER  -->
+<!--[if lt IE 9]></div><![endif]-->
+
 
 <!-- JAVA SCRIPTS  -->
 <script src="<?= Yii::app()->theme->baseUrl ?>/files/js/jquery.js"></script>
