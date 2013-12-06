@@ -17,6 +17,20 @@
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <style type="text/css">
+        body, html {
+            zoom: 1;
+            background: #3A78C5 !important;
+        }
+
+        img.bgImg {
+            width: 100%;
+            height: auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
     <![endif]-->
 
     <link rel="stylesheet" type="text/css" href="<?= Yii::app()->theme->baseUrl ?>/files/css/bootstrap-combined.css">
@@ -29,6 +43,7 @@
 
 </head>
 <body>
+<!--[if lt IE 9]><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/background.jpg" class="bgImg" /><![endif]-->
 <!-- HEADER HOME  -->
         <section id="home">
 		
