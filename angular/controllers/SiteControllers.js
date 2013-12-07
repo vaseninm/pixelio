@@ -1,18 +1,5 @@
 function SiteController($scope, $rootScope, $http, CONFIG) {
-    $http.post(CONFIG.API_URL + 'clients/register', {
-        referrer: document.referrer,
-        url: document.location.href
-    }).success(function (data) {
-        if (data.params.error) {
-            console.error('Ошибка. Пользователь не добавлен.')
-        } else {
-            if (data.params.isNew) {
-                console.log('Вы успешно добавлены в базу клиентов.')
-            } else {
-                console.log('Вы зашли к нам уже ' + data.params.visits + ' раз.')
-            }
-        }
-    });
+
 }
 
 function PortfolioController($scope, $rootScope, $http, CONFIG) {

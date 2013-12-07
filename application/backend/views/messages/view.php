@@ -1,33 +1,35 @@
 <?php
-/* @var $this ClientsController */
-/* @var $visit Visits */
+/* @var $this MessagesController */
+/* @var $message Messages */
 /* @var $visitsProvider CActiveDataProvider */
-/* @var $messagesProvider CActiveDataProvider */
 ?>
 
 <?php
 $this->breadcrumbs = array(
     'Клиенты' => array('index'),
-    $visit->ip,
+    CHtml::encode($message->name),
 );
 ?>
 
-<h1>Информация о клиенте <?php echo $visit->ip; ?></h1>
+    <h1>Информация о клиенте <?php echo CHtml::encode($message->name); ?></h1>
 
 <?php
 $this->widget('yiiwheels.widgets.detail.WhDetailView', array(
-    'data'=>$visit,
-    'attributes'=>array(
-        'id',
-        'ip',
-        'time',
-        'referrerUrl',
-        'referrerKey',
+    'data' => $message,
+    'attributes' => array(
+        'visit.ip',
+        'name',
+        'phone',
+        'comfortTime',
+        'email',
+        'message',
+        'visit.referrerUrl',
+        'visit.referrerKey',
     ),
 ));
 ?>
 
-<h1>Посещения</h1>
+    <h1>Посещения</h1>
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
     'id' => Visits::model()->getGridId(),
     'type' => TbHtml::GRID_TYPE_BORDERED,
@@ -44,7 +46,7 @@ $this->widget('yiiwheels.widgets.detail.WhDetailView', array(
     ),
 )); ?>
 
-<h1>Сообщения</h1>
+    <h1>Все сообщения</h1>
 
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
     'id' => Messages::model()->getGridId(),

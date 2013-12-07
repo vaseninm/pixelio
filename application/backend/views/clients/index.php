@@ -1,6 +1,6 @@
 <?php
 /* @var $this ClientsController */
-/* @var $model Clients */
+/* @var $model Visits */
 
 
 $this->breadcrumbs = array(
@@ -17,10 +17,8 @@ $this->breadcrumbs = array(
     'dataProvider' => $model->search(),
     'columns' => array(
         'ip',
-        'visits',
-        'name',
-        'email',
-        'phone',
+        'time',
+        'referrerUrl',
         array(
             'class' => 'bootstrap.widgets.TbButtonColumn',
             'template' => '{view}',

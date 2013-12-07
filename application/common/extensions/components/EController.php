@@ -47,7 +47,7 @@ class EController extends CController
 			$finder = CActiveRecord::model($class);
 			$c = new CDbCriteria($criteria);
 			$c->mergeWith(array(
-				'condition' => $finder->tableSchema->primaryKey . '=:id',
+				'condition' => $finder->tableAlias. '.'. $finder->tableSchema->primaryKey . '=:id',
 				'params' => array(':id' => $id),
 			));
 			$model = $finder->find($c);

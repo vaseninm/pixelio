@@ -1,5 +1,5 @@
 <div class="row">
-    <? foreach (Yii::app()->params->itemAt('adminCategories') as $category) { ?>
+    <?php foreach (Yii::app()->params->itemAt('adminCategories') as $category) { ?>
     <div class="span4">
         <h2><?= $category['title'] ?></h2>
 
@@ -11,6 +11,6 @@
             'url' => $this->createUrl('/' . $category['controller']),
         )); ?>
     </div>
-    <? } ?>
+    <?php } ?>
 </div>
 
