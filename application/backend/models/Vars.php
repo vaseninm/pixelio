@@ -89,7 +89,7 @@ class Vars extends EActiveRecord
                 );
             }
         }
-        return self::$vars[$name]['value'];
+        return isset(self::$vars[$name]['value']) ? self::$vars[$name]['value'] : '';
     }
 
 	public static function model($className=__CLASS__)

@@ -5,7 +5,7 @@
 <html ng-app='pixelio'>
 	<head ng-controller="SiteController">
 		<!--Page Title-->
-		<title>ДИЗАЙН ИНТЕРЬЕРА ОТ ПЕРВОЙ ПЛАНИРОВКИ ДО ВЪЕЗДА</title>
+		<title><?= Vars::get('title') ?></title>
 		<!--Meta Tags-->
 		<meta charset="utf-8" />
 		<meta name="keywords" content="Профессиональный дизайн интерьера. Дизайн-студия Инны Азорской возьмёт на себя ВСЕ ваши проблемы с ремонтом! Индивидуальный интерьер только под Вас. Контроль качества работ на всех уровнях." />
