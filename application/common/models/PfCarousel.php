@@ -6,7 +6,7 @@ class PfCarousel extends CActiveRecord
     const TYPE_IMAGE = 'carousel';
 
     const SIZE_IMAGE_WIDTH = 750;
-    const SIZE_IMAGE_HEIGHT = 367;
+    const SIZE_IMAGE_HEIGHT = 400;
 
     public $image;
 
