@@ -16,9 +16,9 @@ $this->breadcrumbs = array(
     'type' => TbHtml::GRID_TYPE_BORDERED,
     'dataProvider' => $model->search(),
     'columns' => array(
+        'id',
         'ip',
-        'time',
-        'referrerUrl',
+        'status',
         array(
             'class' => 'bootstrap.widgets.TbButtonColumn',
             'template' => '{view}',
@@ -27,5 +27,10 @@ $this->breadcrumbs = array(
 )); ?>
 
 <div>
-    Конверсия: <?php echo round(($namedVisiters*100/$allVisiters),2); ?>%
+    Воронка продаж:
+   <ul>
+    <?php foreach($stats as $status): ?>
+        <li><?= $status->status ?>: <?= $status->count ?></li>
+    <?php endforeach; ?>
+   </ul>
 </div>

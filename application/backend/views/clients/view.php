@@ -1,6 +1,6 @@
 <?php
 /* @var $this ClientsController */
-/* @var $visit Visits */
+/* @var $client Clients */
 /* @var $visitsProvider CActiveDataProvider */
 /* @var $messagesProvider CActiveDataProvider */
 ?>
@@ -8,21 +8,19 @@
 <?php
 $this->breadcrumbs = array(
     'Клиенты' => array('index'),
-    $visit->ip,
+    $client->ip,
 );
 ?>
 
-<h1>Информация о клиенте <?php echo $visit->ip; ?></h1>
+<h1>Информация о клиенте <?php echo $client->ip; ?></h1>
 
 <?php
 $this->widget('yiiwheels.widgets.detail.WhDetailView', array(
-    'data'=>$visit,
+    'data'=>$client,
     'attributes'=>array(
         'id',
         'ip',
-        'time',
-        'referrerUrl',
-        'referrerKey',
+        'status',
     ),
 ));
 ?>
@@ -36,11 +34,6 @@ $this->widget('yiiwheels.widgets.detail.WhDetailView', array(
         'time',
         'referrerUrl',
         'referrerKey',
-        array(
-            'class' => 'bootstrap.widgets.TbButtonColumn',
-            'template' => '{view}',
-            'viewButtonUrl' => 'Yii::app()->controller->createUrl("/clients/view",array("id"=>$data->primaryKey))',
-        ),
     ),
 )); ?>
 
@@ -58,6 +51,7 @@ $this->widget('yiiwheels.widgets.detail.WhDetailView', array(
         array(
             'class' => 'bootstrap.widgets.TbButtonColumn',
             'template' => '{view}',
+            'viewButtonUrl' => 'Yii::app()->createUrl("/clients/message", array("id" => $data->id))'
         ),
     ),
 )); ?>

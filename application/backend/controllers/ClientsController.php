@@ -3,6 +3,8 @@
 class ClientsController extends PxAdminController
 {
 
+    public $count;
+
     public function filters()
     {
         return array(
@@ -34,40 +36,41 @@ class ClientsController extends PxAdminController
 
     public function actionIndex()
     {
-        $model = new Visits('search');
+        $model = new Clients('search');
         $model->unsetAttributes(); // clear any default values
         if (isset($_GET['Clients'])) {
             $model->attributes = $_GET['Clients'];
-
         }
         $criteria = new CDbCriteria();
-        $criteria->together = true;
-        $criteria->group = 'ip';
-        $allVisiters = Visits::model()->count($criteria);
-        $criteria->with = 'messages';
-        $criteria->having =  new CDbExpression('COUNT(messages.id) > 0');
-        $namedVisiters = Visits::model()->count($criteria);
+        $criteria->group = 'status';
+        $criteria->select = 'COUNT(id) as count, status';
+        $stats = Clients::model()->findAll($criteria);
         $this->render('index', array(
             'model' => $model,
-            'allVisiters' => $allVisiters,
-            'namedVisiters' => $namedVisiters,
+            'stats' => $stats,
         ));
     }
 
     public function actionView($id) {
 
-        $visit = $this->loadModel('Visits', $id);
+        $client = $this->loadModel('Clients', $id);
         $visitsCriteria = new CDbCriteria();
-        $visitsCriteria->compare('ip', $visit->ip);
+        $visitsCriteria->compare('client_id', $client->id);
         $visitsProvider = new CActiveDataProvider('Visits', array('criteria' => $visitsCriteria));
         $messagesCriteria = new CDbCriteria();
-        $messagesCriteria->with = array('visit');
-        $messagesCriteria->compare('`visit`.`ip`', $visit->ip);
+        $messagesCriteria->compare('client_id', $client->id);
         $messagesProvider = new CActiveDataProvider('Messages', array('criteria' => $messagesCriteria));
         $this->render('view', array(
-            'visit' => $visit,
+            'client' => $client,
             'visitsProvider' => $visitsProvider,
             'messagesProvider' => $messagesProvider,
+        ));
+    }
+
+    public function actionMessage($id) {
+        $visit = $this->loadModel('Messages', $id);
+        $this->render('message', array(
+            'visit' => $visit,
         ));
     }
 

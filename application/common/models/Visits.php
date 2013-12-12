@@ -6,13 +6,13 @@ use Snowplow\RefererParser\Parser;
  *
  * The followings are the available columns in table 'visits':
  * @property integer $id
- * @property string $ip
  * @property string $time
  * @property string $referrerUrl
  * @property string $referrerKey
+ * @property integer $client_id
  *
  * The followings are the available model relations:
- * @property Messages[] $messages
+ * @property Messages $client
  */
 class Visits extends EActiveRecord
 {
@@ -29,9 +29,10 @@ class Visits extends EActiveRecord
 	{
 
 		return array(
-			array('ip, referrerUrl, referrerKey', 'length', 'max'=>255),
+            array('client_id', 'numerical', 'integerOnly'=>true),
+			array('referrerUrl, referrerKey', 'length', 'max'=>255),
 			array('time', 'safe'),
-			array('id, ip, time, referrerUrl, referrerKey', 'safe', 'on'=>'search'),
+			array('id, time, referrerUrl, referrerKey', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -39,7 +40,7 @@ class Visits extends EActiveRecord
 	public function relations()
 	{
 		return array(
-			'messages' => array(self::HAS_MANY, 'Messages', 'visit_id'),
+            'client' => array(self::BELONGS_TO, 'Clients', 'client_id'),
 		);
 	}
 
@@ -61,7 +62,6 @@ class Visits extends EActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('ip',$this->ip,true);
 		$criteria->compare('time',$this->time,true);
 		$criteria->compare('referrerUrl',$this->referrerUrl,true);
 		$criteria->compare('referrerKey',$this->referrerKey,true);
@@ -75,25 +75,6 @@ class Visits extends EActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
-    public static function register() {
-        $model = new self();
-        $model->ip = Yii::app()->request->userHostAddress;
-        $model->time = new CDbExpression('NOW()');
-        $model->parseRefferer(Yii::app()->request->urlReferrer, Yii::app()->request->hostInfo);
-        $model->save();
-        return $model;
-    }
-
-    public static function last($ip = false) {
-        $model = Visits::model()->find(array(
-            'order' => 'time DESC',
-            'condition' => 'ip = :ip',
-            'params' => array(
-                ':ip' => $ip ?: Yii::app()->request->userHostAddress,
-            ),
-        ));
-    }
 
     public function parseRefferer($referrer, $url) {
         $parser = new Parser();

@@ -10,9 +10,9 @@
 class ClientsController extends PxApiController {
 
     public function actionLeftContact() {
-        $visit = Visits::last();
+        $client = Clients::you();
         $model = new Messages();
-        $model->visit_id = $visit->id;
+        $model->client_id = $client->id;
         if (isset($this->request->name)) $model->name = $this->request->name;
         if (isset($this->request->email)) $model->email = $this->request->email;
         if (isset($this->request->message)) $model->message = $this->request->message;
@@ -27,9 +27,7 @@ class ClientsController extends PxApiController {
             $body .= "\t".$model->getAttributeLabel('phone').": " . CHtml::encode($model->phone) . "\n";
             $body .= "\t".$model->getAttributeLabel('message').": " . CHtml::encode($model->message) . "\n";
             $body .= "\t".$model->getAttributeLabel('comfortTime').": " . CHtml::encode($model->comfortTime) . "\n";
-            $body .= "\t".$visit->getAttributeLabel('ip').": " . CHtml::encode($visit->ip) . "\n";
-            $body .= "\t".$visit->getAttributeLabel('referrerUrl').": " . CHtml::encode($visit->referrerUrl) . "\n";
-            $body .= "\t".$visit->getAttributeLabel('referrerKey').": " . CHtml::encode($visit->referrerKey) . "\n";
+            $body .= "\t".$client->getAttributeLabel('ip').": " . CHtml::encode($client->ip) . "\n";
             $body .= "С уважением, Ваш уведомитель. \n";
             $model->sendClientInfoToEmail($body, Yii::app()->params->itemAt('adminEmail'));
         }

@@ -7,15 +7,15 @@ use Zend\Mail;
  *
  * The followings are the available columns in table 'messages':
  * @property integer $id
- * @property integer $visit_id
  * @property string $name
  * @property string $email
  * @property string $phone
  * @property string $message
  * @property string $comfortTime
+ * @property integer $client_id
  *
  * The followings are the available model relations:
- * @property Visits $visit
+ * @property Clients $client
  */
 class Messages extends EActiveRecord
 {
@@ -27,24 +27,24 @@ class Messages extends EActiveRecord
 	public function rules()
 	{
 		return array(
-			array('visit_id', 'numerical', 'integerOnly'=>true),
+			array('client_id', 'numerical', 'integerOnly'=>true),
 			array('name, email, phone, comfortTime', 'length', 'max'=>255),
 			array('message', 'safe'),
-			array('id, visit_id, name, email, phone, message, comfortTime', 'safe', 'on'=>'search'),
+			array('id, client_id, name, email, phone, message, comfortTime', 'safe', 'on'=>'search'),
 		);
 	}
 
 	public function relations()
 	{
 		return array(
-			'visit' => array(self::BELONGS_TO, 'Visits', 'visit_id'),
+			'client' => array(self::BELONGS_TO, 'Clients', 'client_id'),
 		);
 	}
 	public function attributeLabels()
 	{
 		return array(
 			'id' => 'Id',
-			'visit_id' => 'Visit',
+			'client_id' => 'Visit',
 			'name' => 'Имя',
 			'email' => 'Почта',
 			'phone' => 'Телефон',
@@ -57,7 +57,7 @@ class Messages extends EActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('visit_id',$this->visit_id);
+		$criteria->compare('client_id',$this->client_id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('phone',$this->phone,true);
@@ -78,7 +78,11 @@ class Messages extends EActiveRecord
         $mail->setSubject('Новый лид ' . CHtml::encode($this->name));
 
         $transport = new Mail\Transport\Sendmail();
-        $transport->send($mail);
+        try {
+            $transport->send($mail);
+        } catch (Zend\Mail\Exception\RuntimeException $e) {
+            throw new CHttpException('500', 'Localhost?');
+        }
     }
 
 	public static function model($className=__CLASS__)
