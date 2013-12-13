@@ -20,6 +20,8 @@ class ClientsController extends PxApiController {
         if (isset($this->request->comfortTime)) $model->comfortTime = $this->request->comfortTime;
         $result = $model->save();
         if ($result) {
+            $client->status = Clients::STATUS_RESPONDED;
+            $client->save();
             $body = "Новый лид на " . Yii::app()->name. ": \n";
             $body .= "\t".$model->getAttributeLabel('id').": " . CHtml::encode($model->id) . "\n";
             $body .= "\t".$model->getAttributeLabel('name').": " . CHtml::encode($model->name) . "\n";

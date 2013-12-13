@@ -10,6 +10,7 @@ class ClientsController extends PxAdminController
         return array(
             'accessControl',
             'postOnly + delete',
+            'ajaxOnly + changeStatus'
         );
     }
 
@@ -71,6 +72,17 @@ class ClientsController extends PxAdminController
         $visit = $this->loadModel('Messages', $id);
         $this->render('message', array(
             'visit' => $visit,
+        ));
+    }
+
+    public function actionChangeStatus() {
+        $model = $this->loadModel('Clients', Yii::app()->request->getPost('id'));
+        $oldStatus = $model->status;
+        $model->status = Yii::app()->request->getPost('status');
+        $result = $model->save();
+        echo CJSON::encode(array(
+            'result' => $result,
+            'status' => $result ? $model->status : $oldStatus,
         ));
     }
 

@@ -34,6 +34,7 @@ class Clients extends EActiveRecord
 		return array(
 			array('status, ip', 'length', 'max'=>255),
             array('ip', 'unique'),
+            array('status', 'in', 'range'=>array(Clients::STATUS_NEW, Clients::STATUS_RESPONDED, Clients::STATUS_CONTACTED, Clients::STATUS_PAID)),
 			array('id, ip, status', 'safe', 'on'=>'search'),
 		);
 	}

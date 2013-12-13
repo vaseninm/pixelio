@@ -20,7 +20,16 @@ $this->widget('yiiwheels.widgets.detail.WhDetailView', array(
     'attributes'=>array(
         'id',
         'ip',
-        'status',
+        array(
+            'name' => 'status',
+            'type' => 'raw',
+            'value' => CHtml::dropDownList("status", $client->status, array(
+                 Clients::STATUS_NEW => Clients::STATUS_NEW,
+                 Clients::STATUS_RESPONDED => Clients::STATUS_RESPONDED,
+                 Clients::STATUS_CONTACTED => Clients::STATUS_CONTACTED,
+                 Clients::STATUS_PAID => Clients::STATUS_PAID,
+            )),
+        ),
     ),
 ));
 ?>
@@ -55,3 +64,15 @@ $this->widget('yiiwheels.widgets.detail.WhDetailView', array(
         ),
     ),
 )); ?>
+
+<?php Yii::app()->clientScript->registerScript('changeStatus', '
+$("#status").change(function($e) {
+    var self = $(this);
+    $.post("'.$this->createUrl('changeStatus').'", {
+        id: ' . $client->id . ',
+        status: self.val(),
+    }, function (data) {
+        self.val(data.status);
+    }, "json")
+});
+', CClientScript::POS_END); ?>
