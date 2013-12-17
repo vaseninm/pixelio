@@ -1,6 +1,7 @@
 <?php
 /* @var $this ClientsController */
 /* @var $model Visits */
+/* @var $themes Themes[] */
 
 
 $this->breadcrumbs = array(
@@ -19,6 +20,7 @@ $this->breadcrumbs = array(
         'id',
         'ip',
         'status',
+        'theme.name',
         array(
             'class' => 'bootstrap.widgets.TbButtonColumn',
             'template' => '{view}',
@@ -33,4 +35,14 @@ $this->breadcrumbs = array(
         <li><?= $status->status ?>: <?= $status->count ?></li>
     <?php endforeach; ?>
    </ul>
+</div>
+
+<div>
+    АБ тест:
+    <div class="form">
+        <?= CHtml::form($this->createUrl(''), 'GET') ?>
+            <?= CHtml::dropDownList('theme', Yii::app()->request->getParam('theme', 0), (array(0 => 'Все') + CHtml::listData($themes, 'id', 'name'))); ?>
+            <?= CHtml::submitButton('Выбрать') ?>
+        <?= CHtml::endForm(); ?>
+    </div>
 </div>

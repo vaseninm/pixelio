@@ -20,6 +20,7 @@ $this->widget('yiiwheels.widgets.detail.WhDetailView', array(
     'attributes'=>array(
         'id',
         'ip',
+        'theme.name',
         array(
             'name' => 'status',
             'type' => 'raw',

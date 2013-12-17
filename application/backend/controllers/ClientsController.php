@@ -43,12 +43,17 @@ class ClientsController extends PxAdminController
             $model->attributes = $_GET['Clients'];
         }
         $criteria = new CDbCriteria();
+        if (Yii::app()->request->getParam('theme')) {
+            $criteria->compare('theme_id', Yii::app()->request->getParam('theme'));
+            $model->theme_id = Yii::app()->request->getParam('theme');
+        }
         $criteria->group = 'status';
         $criteria->select = 'COUNT(id) as count, status';
         $stats = Clients::model()->findAll($criteria);
         $this->render('index', array(
             'model' => $model,
             'stats' => $stats,
+            'themes' => Themes::model()->findAll(),
         ));
     }
 
@@ -65,13 +70,6 @@ class ClientsController extends PxAdminController
             'client' => $client,
             'visitsProvider' => $visitsProvider,
             'messagesProvider' => $messagesProvider,
-        ));
-    }
-
-    public function actionMessage($id) {
-        $visit = $this->loadModel('Messages', $id);
-        $this->render('message', array(
-            'visit' => $visit,
         ));
     }
 
