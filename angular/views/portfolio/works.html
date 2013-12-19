@@ -15,7 +15,9 @@
 				<div class="jobItems clearfix">
 					<div class="fade">
 						<a title="{{ work.title }}" href="#/work/{{ work.id }}" ng-repeat="work in works">
-							<img alt="{{ work.title }}" ng-src="{{ work.face }}" px-loader="angular/img/loader.gif" />
+							<div class="centered">
+								<img alt="{{ work.title }}" ng-src="{{ work.face }}" px-loader="angular/img/loader.gif" />
+							</div>
 						</a>
 					</div>
 				</div>

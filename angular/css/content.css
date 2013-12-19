@@ -26,19 +26,21 @@ CONTENT
 
 
 /** INDEX PAGE **/
-.job{width:750px;min-height:300px;margin:14px auto;padding:9px 9px 5px 9px;border:1px solid #cebfa8;position:relative}
+.job{width:750px;min-height:400px;margin:14px auto;padding:9px 9px 5px 9px;border:1px solid #cebfa8;position:relative;}
+.job .fade{width:750px;height:400px;display:table-cell;vertical-align: middle;text-align:center}
 .job img{max-width:750px;}
 .txtBlock{width:770px;margin:0 auto;padding:20px 0 0 0}
 div.left{width:48%;padding-right:2%}
 div.right{width:48%;padding-left:2%}
-.txtBlock h2{color:#543c31}
+.txtBlock h2{/*color:#543c31*/color:#AC0000;font-size:27px;margin-bottom:10px}
 .txtBlock h2 img, .txtBlock h2 img{margin:0 10px -3px 0}
 .mark{color:#543c31}
 
 /** PORTFOLIO **/
 .jobTumbs{width:800px;height:600px;margin:14px auto;position:relative;background: transparent url(../img/photo_bg.png)}
-.jobItems a{float:left}
-.jobItems img{width:200px;height:200px;margin-bottom:-4px}
+.jobItems .centered{width:200px;height:200px;display:table-cell;vertical-align: middle;text-align:center}
+.jobItems a{float:left;}
+.jobItems img{max-width:200px;max-height:200px;margin-bottom:-4px}
 .jobItems a img{opacity:1;
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
@@ -66,7 +68,7 @@ div.right{width:48%;padding-left:2%}
 .aboutBg{width:900px;margin:0 auto;background: transparent url(../img/about_bg.png) no-repeat right top;}
 
 /*** COST PAGE ***/
-
+.txtBlock ul{margin:0 0 20px 20px}
 
 /*** CONTACT PAGE ***/
 
