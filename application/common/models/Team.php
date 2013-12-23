@@ -9,6 +9,7 @@
  * @property string $position
  * @property string $about
  * @property int $sort
+ * @property integer $domain_id
  */
 class Team extends EActiveRecord
 {
@@ -34,12 +35,12 @@ class Team extends EActiveRecord
     {
         return array(
             array('fullname, position', 'length', 'max' => 255),
-            array('fullname, position, about', 'required'),
+            array('fullname, position, about, domain_id', 'required'),
             array('face,full', 'file', 'types' => 'png, jpg, gif', 'allowEmpty' => !$this->isNewRecord,),
             array('about', 'safe'),
             array('face', 'common.extensions.image.ImageValidator', 'width' => self::SIZE_FACE_WIDTH, 'height' => self::SIZE_FACE_HEIGHT),
             array('full', 'common.extensions.image.ImageValidator', 'width' => array('min' => self::SIZE_IMAGE_WIDTH)),
-            array('sort', 'numerical', 'integerOnly' => true),
+            array('sort,domain_id', 'numerical', 'integerOnly' => true),
             array('fullname, position', 'safe', 'on' => 'search'),
         );
     }
@@ -113,6 +114,14 @@ class Team extends EActiveRecord
         $criteria = new CDbCriteria();
         $criteria->limit = self::PAGE_SIZE;
         $criteria->offset = ($currentPage - 1) * self::PAGE_SIZE;
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+    }
+
+    public function domain($domain_id)
+    {
+        $criteria = new CDbCriteria();
+        $criteria->compare('domain_id', $domain_id);
         $this->getDbCriteria()->mergeWith($criteria);
         return $this;
     }

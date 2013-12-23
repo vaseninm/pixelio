@@ -8,6 +8,7 @@
  * @property string $name
  * @property string $value
  * @property integer $type
+ * @property integer $domain_id
  */
 class Vars extends EActiveRecord
 {
@@ -22,12 +23,12 @@ class Vars extends EActiveRecord
 	{
 		return array(
 			array('type', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>255),
+			array('name,domain_id', 'length', 'max'=>255),
             array('name', 'match', 'pattern' => '/^[a-z]*$/i'),
 			array('value', 'safe'),
             array('file', 'file', 'types' => 'jpg,jpeg,png,gif', 'allowEmpty' => true),
             array('name', 'unique'),
-            array('name,type,value', 'required'),
+            array('name,type,value, domain_id', 'required'),
             array('type', 'default', 'value' => self::TYPE_TEXT),
             array('type', 'in', 'range' => [self::TYPE_TEXT, self::TYPE_HTML, self::TYPE_IMAGE]),
 			array('id, name, value, type', 'safe', 'on'=>'search'),
@@ -67,6 +68,14 @@ class Vars extends EActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+    public function domain($domain_id)
+    {
+        $criteria = new CDbCriteria();
+        $criteria->compare('domain_id', $domain_id);
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+    }
 
     public static $vars = NULL;
     public static $types = [

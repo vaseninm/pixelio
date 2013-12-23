@@ -9,6 +9,7 @@
  * @property string $desc
  * @property string $url
  * @property integer $sort
+ * @property integer $domain_id
  */
 class SimplePortfolio extends EActiveRecord
 {
@@ -33,8 +34,9 @@ class SimplePortfolio extends EActiveRecord
 	public function rules()
 	{
 		return array(
-			array('sort', 'numerical', 'integerOnly'=>true),
-			array('title, url', 'length', 'max'=>255),
+			array('sort,domain_id', 'numerical', 'integerOnly'=>true),
+            array('domain_id','required'),
+            array('title, url', 'length', 'max'=>255),
 			array('desc', 'safe'),
             array('face,full', 'file', 'types' => 'png, jpg, gif', 'allowEmpty' => !$this->isNewRecord,),
             array('face', 'common.extensions.image.ImageValidator', 'width' => self::SIZE_FACE_WIDTH, 'height' => self::SIZE_FACE_HEIGHT),
@@ -111,6 +113,14 @@ class SimplePortfolio extends EActiveRecord
         $criteria = new CDbCriteria();
         $criteria->limit = self::PAGE_SIZE;
         $criteria->offset = ($currentPage - 1) * self::PAGE_SIZE;
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+    }
+
+    public function domain($domain_id)
+    {
+        $criteria = new CDbCriteria();
+        $criteria->compare('domain_id', $domain_id);
         $this->getDbCriteria()->mergeWith($criteria);
         return $this;
     }

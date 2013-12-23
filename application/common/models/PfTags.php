@@ -8,6 +8,7 @@
  * @property string $title
  * @property string $desc
  * @property integer $price
+ * @property integer $domain_id
  *
  * The followings are the available model relations:
  * @property PfWorks[] works

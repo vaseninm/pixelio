@@ -8,6 +8,7 @@
  * @property string $text
  * @property string $author
  * @property boolean $approve
+ * @property integer $domain_id
  */
 class Feedback extends EActiveRecord
 {
@@ -22,6 +23,8 @@ class Feedback extends EActiveRecord
     {
         return array(
             array('approve', 'boolean'),
+            array('domain_id','required'),
+            array('domain_id', 'numerical', 'integerOnly'=>true),
             array('author', 'length', 'max' => 40),
             array('text', 'length', 'max' => 180),
             array('id, text, author, approve', 'safe', 'on' => 'search'),
@@ -66,6 +69,14 @@ class Feedback extends EActiveRecord
         $criteria = new CDbCriteria();
         $criteria->limit = self::PAGE_SIZE;
         $criteria->offset = ($currentPage - 1)*self::PAGE_SIZE;
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+    }
+
+    public function domain($domain_id)
+    {
+        $criteria = new CDbCriteria();
+        $criteria->compare('domain_id', $domain_id);
         $this->getDbCriteria()->mergeWith($criteria);
         return $this;
     }

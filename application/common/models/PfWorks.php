@@ -11,6 +11,7 @@
  * @property integer $position
  * @property integer $createTime
  * @property integer $face_id
+ * @property integer $domain_id
  *
  * The followings are the available model relations:
  * @property PfPages[] $pages
@@ -32,8 +33,8 @@ class PfWorks extends EActiveRecord
 	public function rules()
 	{
 		return array(
-            array('title,desc','required'),
-			array('status, position, face_id, createTime', 'numerical', 'integerOnly'=>true),
+            array('title,desc,domain_id','required'),
+			array('status, position, face_id, createTime,domain_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>255),
 			array('status', 'issetFace'),
 			array('desc,tags', 'safe'),
@@ -124,6 +125,14 @@ class PfWorks extends EActiveRecord
         $criteria = new CDbCriteria();
         $criteria->limit = self::PAGE_SIZE;
         $criteria->offset = ($currentPage - 1)*self::PAGE_SIZE;
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+    }
+
+    public function domain($domain_id)
+    {
+        $criteria = new CDbCriteria();
+        $criteria->compare('domain_id', $domain_id);
         $this->getDbCriteria()->mergeWith($criteria);
         return $this;
     }

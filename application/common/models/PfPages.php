@@ -7,6 +7,7 @@
  * @property string $title
  * @property integer $position
  * @property integer $work_id
+ * @property integer $domain_id
  *
  * The followings are the available model relations:
  * @property PfWorks $work
@@ -34,11 +35,11 @@ class PfPages extends EActiveRecord
 	public function rules()
 	{
 		return array(
-            array('title,work_id','required'),
+            array('title,work_id,domain_id','required'),
             array('face,full', 'file', 'types'=>'png, jpg, gif', 'allowEmpty' => false,),
             array('face', 'faceValidator'),
 //            array('full', 'imageTypeFilter'),
-            array('position, work_id', 'numerical', 'integerOnly'=>true),
+            array('position, work_id,domain_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>255),
 			array('title', 'safe', 'on'=>'search'),
 		);
@@ -82,6 +83,14 @@ class PfPages extends EActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+    public function domain($domain_id)
+    {
+        $criteria = new CDbCriteria();
+        $criteria->compare('domain_id', $domain_id);
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+    }
 
     public function faceValidator ($attribute, $params) {
         $file = CUploadedFile::getInstance($this, $attribute);

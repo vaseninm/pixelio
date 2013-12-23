@@ -9,6 +9,7 @@
  * @property string $password
  * @property string $role
  * @property integer $createTime
+ *
  */
 class Users extends EActiveRecord
 {

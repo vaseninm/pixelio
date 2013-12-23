@@ -39,9 +39,6 @@ class m131219_190900_domains extends CDbMigration
         $this->addColumn('themes', 'domain_id', 'int');
         $this->createIndex('themes_domain', 'themes', 'domain_id');
 
-        $this->addColumn('users', 'domain_id', 'int');
-        $this->createIndex('users_domain', 'users', 'domain_id');
-
         $this->addColumn('vars', 'domain_id', 'int');
         $this->createIndex('vars_domain', 'vars', 'domain_id');
 

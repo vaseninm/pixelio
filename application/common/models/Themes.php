@@ -7,6 +7,7 @@
  * @property integer $id
  * @property string $name
  * @property integer $strong
+ * @property integer $domain_id
  *
  * The followings are the available model relations:
  * @property Clients[] $clients
@@ -22,8 +23,9 @@ class Themes extends EActiveRecord
 	public function rules()
 	{
 		return array(
-			array('strong', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>255),
+			array('strong,domain_id', 'numerical', 'integerOnly'=>true),
+            array('name, strong, domain_id','required'),
+            array('name', 'length', 'max'=>255),
 
 			array('id, name, strong', 'safe', 'on'=>'search'),
 		);
@@ -57,6 +59,15 @@ class Themes extends EActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+    public function domain($domain_id)
+    {
+        $criteria = new CDbCriteria();
+        $criteria->compare('domain_id', $domain_id);
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+    }
+
 
 	public static function model($className=__CLASS__)
 	{

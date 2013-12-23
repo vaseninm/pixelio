@@ -8,6 +8,7 @@
  * @property string $ip
  * @property string $status
  * @property integer $theme_id
+ * @property integer $domain_id
  *
  * The followings are the available model relations:
  * @property Messages[] $messages
