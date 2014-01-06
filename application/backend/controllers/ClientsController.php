@@ -46,6 +46,7 @@ class ClientsController extends PxAdminController
         $criteria->group = 'status';
         $criteria->select = 'COUNT(id) as count, status';
         $criteria->compare('theme_id', $model->theme_id);
+        $criteria->compare('domain_id', $model->domain_id);
         $stats = Clients::model()->findAll($criteria);
         $this->render('index', array(
             'model' => $model,
