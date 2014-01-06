@@ -35,7 +35,8 @@ class Themes extends EActiveRecord
 	{
 		return array(
 			'clients' => array(self::HAS_MANY, 'Clients', 'theme_id'),
-		);
+            'domain' => array(self::BELONGS_TO, 'Domains', 'domain_id'),
+        );
 	}
 
 	public function attributeLabels()
@@ -44,6 +45,7 @@ class Themes extends EActiveRecord
 			'id' => 'ID',
 			'name' => 'Имя темы',
 			'strong' => 'Вес',
+            'domain_id' => 'Домен',
 		);
 	}
 
@@ -54,6 +56,7 @@ class Themes extends EActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('strong',$this->strong);
+        $criteria->compare('domain_id',$this->domain_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -91,5 +94,14 @@ class Themes extends EActiveRecord
 
     public static function setTheme($name) {
         Yii::app()->setTheme($name);
+    }
+
+    public static function getAll($domain = null) {
+        $criteria = new CDbCriteria();
+        if ($domain) {
+            $criteria->compare('domain_id', $domain);
+        }
+        $models = Themes::model()->findAll($criteria);
+        return CHtml::listData($models, 'id', 'name');
     }
 }

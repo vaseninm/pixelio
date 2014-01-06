@@ -26,6 +26,11 @@ $this->breadcrumbs = array(
             'filter' => Vars::$types,
         ),
         array(
+            'name' => 'domain_id',
+            'value' => '$data->domain->domain',
+            'filter' => Domains::getActive(),
+        ),
+        array(
             'class' => 'bootstrap.widgets.TbButtonColumn',
             'template' => '{update}{delete}',
         ),

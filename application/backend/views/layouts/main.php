@@ -33,7 +33,7 @@
             <?php $this->widget('bootstrap.widgets.TbNav', array(
                 'type' => TbHtml::NAV_TYPE_PILLS,
                 'items' => array(
-                    array('label' => 'Главная админки', 'url' => '/'),
+                    array('label' => 'Главная админки', 'url' => Yii::app()->params->itemAt('backendUrl')),
                     array('label' => 'Разделы админки', 'url'=>'#', 'items' => $this->adminMenu),
                     array('label' => 'Действия', 'url'=>'#', 'items' => $this->menu, 'visible' => !empty($this->menu)),
                 ),

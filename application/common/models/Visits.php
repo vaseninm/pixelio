@@ -10,7 +10,6 @@ use Snowplow\RefererParser\Parser;
  * @property string $referrerUrl
  * @property string $referrerKey
  * @property integer $client_id
- * @property integer $domain_id
  *
  * The followings are the available model relations:
  * @property Messages $client
@@ -30,10 +29,9 @@ class Visits extends EActiveRecord
 	{
 
 		return array(
-            array('client_id, domain_id', 'numerical', 'integerOnly'=>true),
+            array('client_id', 'numerical', 'integerOnly'=>true),
 			array('referrerUrl, referrerKey', 'length', 'max'=>255),
 			array('time', 'safe'),
-            array('domain_id','required'),
 			array('id, time, referrerUrl, referrerKey', 'safe', 'on'=>'search'),
 		);
 	}
@@ -77,14 +75,6 @@ class Visits extends EActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
-    public function domain($domain_id)
-    {
-        $criteria = new CDbCriteria();
-        $criteria->compare('domain_id', $domain_id);
-        $this->getDbCriteria()->mergeWith($criteria);
-        return $this;
-    }
 
     public function parseRefferer($referrer, $url) {
         $parser = new Parser();

@@ -13,6 +13,7 @@ class PxAngularController extends PxController
     public function init()
     {
         parent::init();
+        Domains::current();
         Clients::register();
     }
 

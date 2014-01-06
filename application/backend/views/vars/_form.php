@@ -28,6 +28,7 @@
         'span' => 5, 'maxlength' => 255, 'data-type' => Vars::TYPE_IMAGE,
     )); ?>
 
+    <?php echo $form->dropDownListControlGroup($model, 'domain_id', Domains::getActive(), array('span' => 5)); ?>
 
     <div class="form-actions">
         <?php echo TbHtml::submitButton($model->isNewRecord ? 'Добавить' : 'Сохранить', array(

@@ -37,7 +37,7 @@ class Clients extends EActiveRecord
 		return array(
 			array('status, ip', 'length', 'max'=>255),
             array('ip', 'unique'),
-            array('theme_id', 'numerical', 'integerOnly'=>true),
+            array('theme_id, domain_id', 'numerical', 'integerOnly'=>true),
             array('status', 'in', 'range'=>array(Clients::STATUS_NEW, Clients::STATUS_RESPONDED, Clients::STATUS_CONTACTED, Clients::STATUS_PAID)),
 			array('id, ip, status, theme_id', 'safe', 'on'=>'search'),
 		);
@@ -49,6 +49,7 @@ class Clients extends EActiveRecord
 			'messages' => array(self::HAS_MANY, 'Messages', 'client_id'),
 			'visits' => array(self::HAS_MANY, 'Visits', 'client_id'),
 			'theme' => array(self::BELONGS_TO, 'Themes', 'theme_id'),
+			'domain' => array(self::BELONGS_TO, 'Domains', 'domain_id'),
 		);
 	}
 
@@ -59,6 +60,7 @@ class Clients extends EActiveRecord
 			'ip' => 'Ip',
 			'status' => 'Статус',
 			'theme_id' => 'Тема',
+            'domain_id' => 'Домен',
 		);
 	}
 
@@ -71,6 +73,7 @@ class Clients extends EActiveRecord
 		$criteria->compare('ip',$this->ip,true);
 		$criteria->compare('theme_id',$this->theme_id);
 		$criteria->compare('status',$this->status,true);
+        $criteria->compare('domain_id',$this->domain_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -82,6 +85,14 @@ class Clients extends EActiveRecord
 		return parent::model($className);
 	}
 
+    public function domain($domain_id)
+    {
+        $criteria = new CDbCriteria();
+        $criteria->compare('domain_id', $domain_id);
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+    }
+
 
     public static function register() {
         $client = self::you();
@@ -89,6 +100,7 @@ class Clients extends EActiveRecord
             $client = new self();
             $client->ip = Yii::app()->request->userHostAddress;
             $client->status = self::STATUS_NEW;
+            $client->domain_id = Domains::current()->id;
         }
         if (!$client->theme_id) {
             $theme = Themes::getTheme();
@@ -108,7 +120,7 @@ class Clients extends EActiveRecord
     }
 
     public static function you() {
-        return Clients::model()->findByAttributes(array(
+        return Clients::model()->domain(Domains::current()->id)->findByAttributes(array(
             'ip' => Yii::app()->request->userHostAddress,
         ));
     }

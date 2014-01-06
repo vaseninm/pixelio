@@ -21,6 +21,7 @@ $this->widget('yiiwheels.widgets.detail.WhDetailView', array(
         'id',
         'ip',
         'theme.name',
+        'domain.domain',
         array(
             'name' => 'status',
             'type' => 'raw',

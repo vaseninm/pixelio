@@ -13,7 +13,6 @@ use Zend\Mail;
  * @property string $message
  * @property string $comfortTime
  * @property integer $client_id
- * @property integer $domain_id
  *
  * The followings are the available model relations:
  * @property Clients $client

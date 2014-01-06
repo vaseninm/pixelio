@@ -23,7 +23,7 @@ class Vars extends EActiveRecord
 	{
 		return array(
 			array('type', 'numerical', 'integerOnly'=>true),
-			array('name,domain_id', 'length', 'max'=>255),
+			array('name, domain_id', 'length', 'max'=>255),
             array('name', 'match', 'pattern' => '/^[a-z]*$/i'),
 			array('value', 'safe'),
             array('file', 'file', 'types' => 'jpg,jpeg,png,gif', 'allowEmpty' => true),
@@ -41,7 +41,8 @@ class Vars extends EActiveRecord
 	public function relations()
 	{
 		return array(
-		);
+            'domain' => array(self::BELONGS_TO, 'Domains', 'domain_id'),
+        );
 	}
 
 	public function attributeLabels()
@@ -52,6 +53,7 @@ class Vars extends EActiveRecord
 			'value' => 'Значение',
 			'file' => 'Значение',
 			'type' => 'Тип',
+			'domain_id' => 'Домен',
 		);
 	}
 
@@ -63,6 +65,7 @@ class Vars extends EActiveRecord
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('value',$this->value,true);
 		$criteria->compare('type',$this->type);
+		$criteria->compare('domain_id',$this->domain_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

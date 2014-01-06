@@ -3,28 +3,33 @@
 /* @var $model Themes */
 
 
-$this->breadcrumbs=array(
-	'Themes'=>array('index'),
-	'Manage',
+$this->breadcrumbs = array(
+    'Themes' => array('index'),
+    'Manage',
 );
 ?>
 
-<h1>Управление моделью Themes</h1>
+    <h1>Управление моделью Themes</h1>
 
-<?php $this->widget('bootstrap.widgets.TbGridView',array(
-'id'=>'themes-grid',
-'type' => TbHtml::GRID_TYPE_BORDERED,
-'dataProvider'=>$model->search(),
-//'filter'=>$model,
-'columns'=>array(
-		'id',
-		'name',
-		'strong',
-array(
-'class'=>'bootstrap.widgets.TbButtonColumn',
-'template' => '{update}{delete}',
-),
-),
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
+    'id' => 'themes-grid',
+    'type' => TbHtml::GRID_TYPE_BORDERED,
+    'dataProvider' => $model->search(),
+    'filter' => $model,
+    'columns' => array(
+//        'id',
+        'name',
+        'strong',
+        array(
+            'name' => 'domain_id',
+            'value' => '$data->domain->domain',
+            'filter' => Domains::getActive(),
+        ),
+        array(
+            'class' => 'bootstrap.widgets.TbButtonColumn',
+            'template' => '{update}{delete}',
+        ),
+    ),
 )); ?>
 
 <?php echo TbHtml::linkButton('Создать', array(
