@@ -57,6 +57,11 @@ $('.da-link').click(function (e) {
 $('.goModal').click(function () {
     $('#actionModal').arcticmodal();
 });
+$('#privacyPolicy').click(function () {
+    $('#privacyModal').arcticmodal();
+	return false;
+});
+
 
 /// ******************         FANCYBOX         ******************** ///
 $(document).ready(function() {

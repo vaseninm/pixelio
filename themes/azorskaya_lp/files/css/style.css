@@ -267,6 +267,13 @@ button:hover{color:#f4f4f4;background-color:#333}
 .static-slide .gotarif{position:absolute;bottom:20px;left:20px;width:40%;min-width:180px}
 .static-slide .zayavka{position:absolute;left:5px;bottom:75px;width:40%;min-width:180px}
 
+p.copy{margin-top:15px}
+p.copy a{color:#B01C19 !important}
+p.copy a:hover{color:#}
+/* Конфиденциальность */
+.privacyContent ol, .publicationContent ul{margin-left:20px}
+.privacyContent li{padding:5px}
+
 @media screen and (max-width: 1680px) {
 	.cnt-title{color:#B01C19!important;font-size:38px!important;line-height:38px;}
 	.boly-title{color:#ccc!important;font-size:42px!important;line-height:30px;}
