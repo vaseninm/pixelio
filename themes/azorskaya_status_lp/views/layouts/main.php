@@ -1661,8 +1661,8 @@
 			<!-- success -->
 			<div class="contactFormModalSuccess"  ng-show="sended">
 				<h1 class="modSucc">Спасибо за вашу заявку</h1>
-				<h2 class="modSucc">Менеджер свяжется с Вами</h2>
-				<p class="modSucc">в течении 15 минут</p>
+				<h2 class="modSucc">наш дизайнер в ближайшее время</h2>
+				<p class="modSucc">свяжется с вами</p>
 			</div>
 			<!-- /Content -->
         </section>
@@ -1684,8 +1684,8 @@
 								<!-- Content -->
 								<div class="contactFormModalSuccess2">
 									<h1 class="modSucc">Спасибо за вашу заявку</h1>
-									<h2 class="modSucc">Менеджер свяжется с Вами</h2>
-									<p class="modSucc">в течении 15 минут</p>
+									<h2 class="modSucc">наш дизайнер в ближайшее время</h2>
+									<p class="modSucc">свяжется с вами</p>
 								</div>
 								<!-- /Content -->
 							</section>
