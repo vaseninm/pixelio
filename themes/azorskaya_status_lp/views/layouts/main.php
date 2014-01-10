@@ -1556,6 +1556,11 @@
 
         <p class="copy clearfix"><a href="http://azorskaya.ru/" target="_blank" class="fr">http://azorskaya.ru/</a>info@azorskaya.ru
         </p>
+		<p class="copy">
+			Приобретая продукт, либо оставляя заявку на сайте, Вы соглашаетесь с <a href="#" id="privacyPolicy">условиями политики конфиденциальности</a>.
+			<br>Все авторские права защищены. Полное или частичное копирование материалов сайта запрещено!
+			<br>ООО «Тэрра-Проект» ОГРН 1065010000912
+        </p>
     </div>
 </section>
 

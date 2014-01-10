@@ -142,6 +142,14 @@ $(function(){
 		return false;
 	});
 	
+	$('#privacyPolicy').click(function() {
+		$.arcticmodal({
+			type: 'ajax',
+			url: 'themes/azorskaya_status_lp/views/layouts/privacyPolicy.html'
+		});
+		return false;
+	});
+	
 	/* Временное решение по публикациям */
 	$('#2013_08').click(function() {
 		$.arcticmodal({
