@@ -183,7 +183,7 @@ img.no-float{float:none}
 .gray-title{color:#8B8989!important;text-align:center}
 .gray-title span{font-size:25px}
 .cnt-title, .boly-title, .good-title{}
-.cnt-title{color:#B01C19!important;font-size:46px!important;line-height:46px;}
+.cnt-title{color:#B01C19!important;font-size:46px!important;line-height:30px;}
 .boly-title{color:#ccc!important;font-size:46px!important;line-height:30px;}
 .good-title{color:#BDBC2E!important;font-size:46px!important;line-height:30px;}
 .left-title{margin:35px;font-weight:200!important}
