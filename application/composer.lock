@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "f5e85091a9c991ad2ae57498674334fb",
+    "hash": "3501f486e82a9735daae8278fe530cf6",
     "packages": [
         {
             "name": "2amigos/yiistrap",
@@ -104,12 +104,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "75118e00362164f54c94325990a78f4b3fd4934e"
+                "reference": "48db89ad7bd5f6b384377abc7ad1f96a387eabd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/75118e00362164f54c94325990a78f4b3fd4934e",
-                "reference": "75118e00362164f54c94325990a78f4b3fd4934e",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/48db89ad7bd5f6b384377abc7ad1f96a387eabd9",
+                "reference": "48db89ad7bd5f6b384377abc7ad1f96a387eabd9",
                 "shasum": ""
             },
             "require": {
@@ -123,7 +123,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -146,7 +146,7 @@
                     "role": "Developer"
                 }
             ],
-            "time": "2013-11-17 17:29:42"
+            "time": "2013-12-13 02:49:39"
         },
         {
             "name": "intervention/image",
@@ -154,12 +154,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "2bb7380b5c9a62528253ab0b447b324dc0e34ddd"
+                "reference": "ab884ad94b0861bfa43118eff114af8ee7cf4661"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/2bb7380b5c9a62528253ab0b447b324dc0e34ddd",
-                "reference": "2bb7380b5c9a62528253ab0b447b324dc0e34ddd",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/ab884ad94b0861bfa43118eff114af8ee7cf4661",
+                "reference": "ab884ad94b0861bfa43118eff114af8ee7cf4661",
                 "shasum": ""
             },
             "require": {
@@ -196,7 +196,7 @@
                 "thumbnail",
                 "watermark"
             ],
-            "time": "2013-11-13 14:11:58"
+            "time": "2013-12-30 14:38:30"
         },
         {
             "name": "snowplow/referer-parser",
@@ -204,12 +204,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/snowplow/referer-parser.git",
-                "reference": "0cb681e61298bedfcf0ad541c91c1884327940e9"
+                "reference": "eec87b72e8e8ed311a0b6709ccc36335eaae769d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/snowplow/referer-parser/zipball/0cb681e61298bedfcf0ad541c91c1884327940e9",
-                "reference": "0cb681e61298bedfcf0ad541c91c1884327940e9",
+                "url": "https://api.github.com/repos/snowplow/referer-parser/zipball/eec87b72e8e8ed311a0b6709ccc36335eaae769d",
+                "reference": "eec87b72e8e8ed311a0b6709ccc36335eaae769d",
                 "shasum": ""
             },
             "require-dev": {
@@ -236,7 +236,7 @@
                 }
             ],
             "description": "Snowplow Refer(r)er parser for PHP",
-            "time": "2013-11-11 12:47:57"
+            "time": "2014-01-05 12:47:28"
         },
         {
             "name": "yiiext/activerecord-relation-behavior",
@@ -308,12 +308,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendCrypt.git",
-                "reference": "1adad4ca815cda55350c89046c7db41301276062"
+                "reference": "4ba56cd331b643b81577c3ccfe67ea032ace49b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendCrypt/zipball/1adad4ca815cda55350c89046c7db41301276062",
-                "reference": "1adad4ca815cda55350c89046c7db41301276062",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendCrypt/zipball/4ba56cd331b643b81577c3ccfe67ea032ace49b9",
+                "reference": "4ba56cd331b643b81577c3ccfe67ea032ace49b9",
                 "shasum": ""
             },
             "require": {
@@ -342,7 +342,7 @@
                 "crypt",
                 "zf2"
             ],
-            "time": "2013-11-18 16:00:09"
+            "time": "2014-01-04 13:00:10"
         },
         {
             "name": "zendframework/zend-loader",
@@ -351,12 +351,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendLoader.git",
-                "reference": "bf566b25a6f828128bdd8c7794455d8e36874aac"
+                "reference": "57a2c8a8e051c515a927a094e903e002c4f46701"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendLoader/zipball/bf566b25a6f828128bdd8c7794455d8e36874aac",
-                "reference": "bf566b25a6f828128bdd8c7794455d8e36874aac",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendLoader/zipball/57a2c8a8e051c515a927a094e903e002c4f46701",
+                "reference": "57a2c8a8e051c515a927a094e903e002c4f46701",
                 "shasum": ""
             },
             "require": {
@@ -382,7 +382,7 @@
                 "loader",
                 "zf2"
             ],
-            "time": "2013-11-11 16:00:04"
+            "time": "2014-01-02 18:00:20"
         },
         {
             "name": "zendframework/zend-mail",
@@ -391,12 +391,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendMail.git",
-                "reference": "0e7e9586e1ecb057b5c28fdf005e7d8bb1e02d23"
+                "reference": "80c8bccb70bad79b1a4f3f8b42a96bd90f065290"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendMail/zipball/0e7e9586e1ecb057b5c28fdf005e7d8bb1e02d23",
-                "reference": "0e7e9586e1ecb057b5c28fdf005e7d8bb1e02d23",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendMail/zipball/80c8bccb70bad79b1a4f3f8b42a96bd90f065290",
+                "reference": "80c8bccb70bad79b1a4f3f8b42a96bd90f065290",
                 "shasum": ""
             },
             "require": {
@@ -431,7 +431,7 @@
                 "mail",
                 "zf2"
             ],
-            "time": "2013-11-18 16:00:13"
+            "time": "2014-01-02 19:00:03"
         },
         {
             "name": "zendframework/zend-math",
@@ -440,19 +440,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendMath.git",
-                "reference": "7cba0957e916b705ba280f31919e6acfa3d983fd"
+                "reference": "a5e703c0bb614c6ad8b8dd75e734900ee7a5413f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendMath/zipball/7cba0957e916b705ba280f31919e6acfa3d983fd",
-                "reference": "7cba0957e916b705ba280f31919e6acfa3d983fd",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendMath/zipball/a5e703c0bb614c6ad8b8dd75e734900ee7a5413f",
+                "reference": "a5e703c0bb614c6ad8b8dd75e734900ee7a5413f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "suggest": {
-                "ircmaxell/random-lib": "Fallback random byte generator for Zend\\Math\\Rand if OpenSSL/Mcrypt extensions are unavailable"
+                "ext-bcmath": "If using the bcmath functionality",
+                "ext-gmp": "If using the gmp functionality",
+                "ircmaxell/random-lib": "Fallback random byte generator for Zend\\Math\\Rand if OpenSSL/Mcrypt extensions are unavailable",
+                "zendframework/zend-servicemanager": ">= current version, if using the BigInteger::factory functionality"
             },
             "type": "library",
             "extra": {
@@ -474,7 +477,7 @@
                 "math",
                 "zf2"
             ],
-            "time": "2013-10-02 08:00:14"
+            "time": "2014-01-03 21:00:07"
         },
         {
             "name": "zendframework/zend-mime",
@@ -483,12 +486,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendMime.git",
-                "reference": "34f88da8dc21bc89fce030c4b7f7b0155f59fb99"
+                "reference": "61079afe55462342f6b2e9e2714a1865799c0553"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendMime/zipball/34f88da8dc21bc89fce030c4b7f7b0155f59fb99",
-                "reference": "34f88da8dc21bc89fce030c4b7f7b0155f59fb99",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendMime/zipball/61079afe55462342f6b2e9e2714a1865799c0553",
+                "reference": "61079afe55462342f6b2e9e2714a1865799c0553",
                 "shasum": ""
             },
             "require": {
@@ -515,7 +518,7 @@
                 "mime",
                 "zf2"
             ],
-            "time": "2013-08-21 17:07:24"
+            "time": "2014-01-02 18:00:23"
         },
         {
             "name": "zendframework/zend-servicemanager",
@@ -524,12 +527,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendServiceManager.git",
-                "reference": "3d044e26ab2c35b370636933361e41aeb5d96237"
+                "reference": "08fd4a8a1ba0ea5a126ace76d2af0c40289884e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendServiceManager/zipball/3d044e26ab2c35b370636933361e41aeb5d96237",
-                "reference": "3d044e26ab2c35b370636933361e41aeb5d96237",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendServiceManager/zipball/08fd4a8a1ba0ea5a126ace76d2af0c40289884e6",
+                "reference": "08fd4a8a1ba0ea5a126ace76d2af0c40289884e6",
                 "shasum": ""
             },
             "require": {
@@ -558,7 +561,7 @@
                 "servicemanager",
                 "zf2"
             ],
-            "time": "2013-11-13 15:00:06"
+            "time": "2014-01-04 13:00:26"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -567,12 +570,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendStdlib.git",
-                "reference": "87cf3119fa0e9e2c7f4c01b0b3d092f629c4c874"
+                "reference": "e646729f2274f4552b6a92e38d8e458efe08ebc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/87cf3119fa0e9e2c7f4c01b0b3d092f629c4c874",
-                "reference": "87cf3119fa0e9e2c7f4c01b0b3d092f629c4c874",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/e646729f2274f4552b6a92e38d8e458efe08ebc5",
+                "reference": "e646729f2274f4552b6a92e38d8e458efe08ebc5",
                 "shasum": ""
             },
             "require": {
@@ -602,7 +605,7 @@
                 "stdlib",
                 "zf2"
             ],
-            "time": "2013-11-18 16:00:16"
+            "time": "2014-01-04 13:00:28"
         }
     ],
     "packages-dev": [
