@@ -36,7 +36,7 @@ class Clients extends EActiveRecord
 
 		return array(
 			array('status, ip', 'length', 'max'=>255),
-            array('ip', 'unique'),
+//            array('ip', 'unique'),
             array('theme_id, domain_id', 'numerical', 'integerOnly'=>true),
             array('status', 'in', 'range'=>array(Clients::STATUS_NEW, Clients::STATUS_RESPONDED, Clients::STATUS_CONTACTED, Clients::STATUS_PAID)),
 			array('id, ip, status, theme_id', 'safe', 'on'=>'search'),
