@@ -78,7 +78,7 @@ class Themes extends EActiveRecord
 	}
 
     public static function getTheme() {
-        $themes = self::model()->findAll();
+        $themes = self::model()->domain(Domains::current()->id)->findAll();
         $sumStrong = 0;
         foreach ($themes as $theme) {
             $sumStrong += $theme->strong;
