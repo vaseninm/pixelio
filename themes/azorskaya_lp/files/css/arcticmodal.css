@@ -18,5 +18,19 @@
 	box-shadow: 0 0 0 6px rgba(0, 0, 0, .3);
 	border-radius: 6px;
 }
+.box-modal2 {
+	position: relative;
+	width: 800px;
+	padding: 20px 30px 30px 30px;
+	background: #BDBC2E;
+	color: #333;
+	font: 14px/18px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	box-shadow: 0 0 0 6px rgba(0, 0, 0, .3);
+	border-radius: 6px;
+}
 .box-modal_close { position: absolute; right: 10px; top: 6px; font-size: 16px; line-height: 15px; color: #fff; cursor: pointer; }
 .box-modal_close:hover { color: #666; }
+
+/*.box-modal2 .box-modal_close { position: absolute; right: 10px; top: 6px; font-size: 16px; line-height: 15px; color: #ccc; cursor: pointer; }
+.box-modal2 .box-modal_close:hover { color: #666; }*/
+

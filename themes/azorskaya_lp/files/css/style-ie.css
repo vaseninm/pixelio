@@ -1,13 +1,14 @@
-.da-slider, #holder1, .static-slide{
-	background-color: rgb(255,255,255);
-}
-#top-email, #top-phone {
-	background-color: rgb(255,255,255);
-}
-
 body{
 	background: #FDF5E6 !important;
 }
+.forBgIE{position:relative;background-image:url(../img/pattern.png)}
+.da-slider, #holder1, .static-slide{
+	background: url(../img/white-bg.png)
+}
+#top-email, #top-phone {
+	background: url(../img/white-bg.png);
+}
+header h1{filter:Shadow(Color=#333333,Direction=135,Strength=3)}
 #supersized {
 	display: none !important;
 }
@@ -26,7 +27,7 @@ body{
 .static-slide .da-img{
 	width: 35% !important;
 }
-.static-slide .googleplay, .static-slide .appstore{
+/*.static-slide .googleplay, .static-slide .appstore{
 	background: #000 !important;
 	width:180px !important;
 	height: 50px !important;
@@ -44,4 +45,4 @@ body{
 }
 .items p{
 	font-size: 13px;	
-}
+}*/

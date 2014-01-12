@@ -5,11 +5,12 @@
 <html ng-app='pixelio'>
 	<head ng-controller="SiteController">
 		<!--Page Title-->
-		<title><?= Vars::get('title') ?></title>
+		<title>ДИЗАЙН ИНТЕРЬЕРА ОТ ПЕРВОЙ ПЛАНИРОВКИ ДО ВЪЕЗДА</title>
 		<!--Meta Tags-->
 		<meta charset="utf-8" />
 		<meta name="keywords" content="Профессиональный дизайн интерьера. Дизайн-студия Инны Азорской возьмёт на себя ВСЕ ваши проблемы с ремонтом! Индивидуальный интерьер только под Вас. Контроль качества работ на всех уровнях." />
 		<meta name="description" content="Дизайн интерьер ремонт квартира студия дизайн-студия Инна Азорская дизайнер" />
+		<link rel="shortcut icon" href="<?= Yii::app()->theme->baseUrl ?>/files/img/favicon.ico" type="image/x-icon">
 		<!-- Set Viewport-->
 		<meta name="viewport" content="user-scalable=no,initial-scale=1.0, maximum-scale=1.0 width=device-width" />
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -25,6 +26,16 @@
 		<!--[if IE 8 ]>
 		<link rel="stylesheet" type="text/css" href="<?= Yii::app()->theme->baseUrl ?>/files/css/style-ie.css" />
 		<![endif]-->
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		  <script src="http://phpbbex.com/oldies/oldies.js" charset="utf-8"></script>
+        
+			<style type="text/css">
+				body, html {zoom: 1;}
+				img.bgImg {width: 100%;height: auto;position: fixed;bottom: 0;left: 0;}
+			</style>
+		<![endif]-->
 		
 		<script>
 			var themePath = "<?= Yii::app()->theme->baseUrl ?>";
@@ -38,11 +49,15 @@
 	</head>
 	
 <body id="top">
+<!--[if lt IE 9]>
+<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/bg4.jpg" class="bgImg" />
+<div class="forBgIE">
+<![endif]-->
 	<div id="overlay"></div>
 <!-- Header div -->
 	<header>
 		<div class="container">
-			<div id="logo"><a href="/"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/logoTop.png" alt="" class=""></a></div>
+			<div id="logo"><a href="http://azorskaya.ru/" target="_blank"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/logoTop.png" alt="" class=""></a></div>
 			<div id="contTopRight">
 				<div id="top-phone"><p>+7 (905) 539-57-58<br><span>Москва и Московская область</span></p></div>
 				<div id="top-email"><p>info@azorskaya.ru</p></div>
@@ -88,10 +103,13 @@
 <!-- Static Slide -->
 <div class="static-slide">
     	<div class="container">
-					<h1>Дизайн-студия</h1>
-					<p>Профессиональный дизайн интерьера. <br>Дизайн-студия Инны Азорской возьмёт на себя ВСЕ ваши проблемы с ремонтом!</p>
-					<a href="#" class="da-link zayavka">Примеры работ</a>
-					<div class="da-img"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/inna_azorskaya.jpg" alt="Инна Азорская" /></div>
+			<h1>Дизайн-студия</h1>
+			<p>Профессиональный дизайн интерьера. <br>Дизайн-студия Инны Азорской возьмёт на себя ВСЕ ваши проблемы с ремонтом!<br>
+				Индивидуальный интерьер только под Вас. Контроль качества работ на всех уровнях.<br>
+				Реальная и прозрачная ценовая политика.
+			</p>
+			<a href="#demo" class="da-link zayavka">Примеры работ</a>
+			<div class="da-img"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/inna_azorskaya.jpg" alt="Инна Азорская" /></div>
     	</div>
 </div>
 <!-- /Static Slide -->
@@ -102,19 +120,18 @@
 		<div class="contact pull-left">
 			<!-- Contact Form -->
 			<form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
-				 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" ng-required="true" />
+				 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" />
 				 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
-				 <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" ng-required="true"/>
-				 <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" ng-disabled="ContactForm.$invalid" />
+				 <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" />
+				 <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" />
 			</form>
-			<div class="success" ng-show="sended">
-				Заявка отправлена.
-			</div>
+			<div class="success" ng-show="sended">Заявка отправлена.</div>
+			<div class="error" ng-show="ContactForm.phone.$dirty && ContactForm.phone.$invalid">Заполните поле "Ваш телефон".</div>
 		</div>
 		<!-- Subscription-form -->
 		<div class="subscribe pull-right">
 			<h2 class="zahvat-title">Оставьте вашу заявку</h2>
-			<p>на проект и наш дизайнер свяжется с вами для обсуждения технического задания.</p>
+			<p>на проект, и наш дизайнер свяжется с вами для обсуждения технического задания.</p>
 		</div>
 	</div>
 </div>
@@ -216,19 +233,18 @@
             <div class="contact pull-left">
                 <!-- Contact Form -->
                 <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
-                    <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" ng-required="true" />
+                    <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" />
                     <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
-                    <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" ng-required="true" />
-                    <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" ng-disabled="ContactForm.$invalid" />
+                    <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" />
+                    <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" />
                 </form>
-                <div class="success" ng-show="sended">
-                    Заявка отправлена.
-                </div>
+                <div class="success" ng-show="sended">Заявка отправлена.</div>
+				<div class="error" ng-show="ContactForm.phone.$dirty && ContactForm.phone.$invalid">Заполните поле "Ваш телефон".</div>
             </div>
 		<!-- Subscription-form -->
 		<div class="subscribe pull-right">
 			<h2 class="zahvat-title">Оставьте вашу заявку</h2>
-			<p>на проект и наш дизайнер свяжется с вами для обсуждения технического задания.</p>
+			<p>на проект, и наш дизайнер свяжется с вами для обсуждения технического задания.</p>
 		</div>
 	</div>
 </div>
@@ -293,7 +309,6 @@
 							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa03_2013-3.jpg" class="fancybox-media" rel="pressa2">&nbsp;</a>
 							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa03_2013-4.jpg" class="fancybox-media" rel="pressa2">&nbsp;</a>
 							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa03_2013-5.jpg" class="fancybox-media" rel="pressa2">&nbsp;</a>
-							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa03_2013-6.jpg" class="fancybox-media" rel="pressa2">&nbsp;</a>
 						</div>
 					</div>
 					<div class="span4">
@@ -345,7 +360,7 @@
             <div class="span5">
 				<div class="items">
 					<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/inna_azorskaya.jpg" alt="Инна Азорская" />
-					<h3>Здравствуйте!<br> Меня зовут Инна Азорская, я владелица студии индивидуального дизайна <u>интерьеров класса премиум</u>.</h3>
+					<h3>Здравствуйте!<br> Меня зовут Инна Азорская, наша студия создает интерьеры премиум класса по индивидуальному, только Вашему дизайну.</h3>
 				</div>
             </div>
         </div>
@@ -371,19 +386,18 @@
         <div class="contact pull-left">
             <!-- Contact Form -->
             <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
-                <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" ng-required="true" />
+                <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" />
                 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
-                <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" ng-required="true" />
-                <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" ng-disabled="ContactForm.$invalid" />
+                <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" />
+                <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" />
             </form>
-            <div class="success" ng-show="sended">
-                Заявка отправлена.
-            </div>
+            <div class="success" ng-show="sended">Заявка отправлена.</div>
+			<div class="error" ng-show="ContactForm.phone.$dirty && ContactForm.phone.$invalid">Заполните поле "Ваш телефон".</div>
         </div>
 		<!-- Subscription-form -->
 		<div class="subscribe pull-right">
 			<h2 class="zahvat-title">Оставьте вашу заявку</h2>
-			<p>на проект и наш дизайнер свяжется с вами для обсуждения технического задания.</p>
+			<p>на проект, и наш дизайнер свяжется с вами для обсуждения технического задания.</p>
 		</div>
 	</div>
 </section>
@@ -459,7 +473,7 @@
 				<img class="no-float" src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/coin2.png" alt="Оптимальный" />
 				<h2>Оптимальный</h2>
 				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_doc2.png" alt="" class=""><b>Полный пакет документации для стройки</b></p>						
-				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_pic2.png" alt="" class=""><b>3D визуализация по всем основным помещениям</b></p>
+				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_pic2.png" alt="" class=""><b>3D визуализация по трём основным помещениям</b></p>
 				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_dollar.png" alt="" class=""><b>Просчёт стоимости материалов прямо в процессе проектирования</b></p>						
 				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_shop.png" alt="" class=""><b>Поездки по магазинам для быстрого подбора отделочных материалов</b><br><br><br></p>
 				<h2>2500р./м<sup>2</sup></h2>
@@ -469,16 +483,16 @@
 			<div class="price">
 				<img class="no-float" src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/coin3.png" alt="Люкс дизайн" />
 				<h2>Люкс дизайн</h2>
-				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_star_s.png" alt="" class="">Авторская концепция дизайна с подбором мебели</p>						
-				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_doc3.png" alt="" class="">Полный пакет документации для стройки</p>						
-				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_pic3.png" alt="" class="">3D визуализация по всем основным помещениям, так же включая гардеробные и санузлы</p>						
-				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_map.png" alt="" class="">Выезд к заказчику с материалами, маркетинг всех выбранных позиций по Москве</p>
-				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_star_e.png" alt="" class="">Декораторские работы на объекте<br><br><br></p>
+				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_star_s.png" alt="" class=""><span>Авторская концепция дизайна с подбором мебели</span></p>						
+				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_doc3.png" alt="" class=""><span>Полный пакет документации для стройки</span></p>						
+				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_pic3.png" alt="" class=""><span>3D визуализация по всем основным помещениям, так же включая гардеробные и санузлы</span></p>						
+				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_map.png" alt="" class=""><span>Выезд к заказчику с материалами, маркетинг всех выбранных позиций по Москве</span></p>
+				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_star_e.png" alt="" class=""><span>Декораторские работы на объекте<br><br><br></span></p>
 				<h2>4000р./м<sup>2</sup></h2>
 			</div>
 			</div>
 		</div>
-		<h2 class="gray-title left-title">ОТ 12 ТЫС.РУБ. СТРОИТЕЛЬНЫЕ И ОТДЕЛОЧНЫЕ РАБОТЫ ПОД КЛЮЧ <br><span>(ЦЕНА НА 1 М<sup>2</sup> БЕЗ УЧЕТА СТОИМОСТИ МАТЕРИАЛОВ)</span></h2>
+		<h2 class="gray-title left-title">ОТ 12 ТЫС.РУБ. СТРОИТЕЛЬНЫЕ И ОТДЕЛОЧНЫЕ РАБОТЫ ПОД КЛЮЧ <br><span>(ЦЕНА НА 1 М<sup>2</sup> ПОЛА, БЕЗ УЧЕТА СТОИМОСТИ МАТЕРИАЛОВ)</span></h2>
 	</div>
 </section>
 
@@ -502,6 +516,7 @@
 
 <!-- Отзывы -->
 <section class="marginTop30" id="demo">
+	<a name="demo"></a>
 	<div class="container" id="holder1">
 		
 		<h2 class="cnt-title left-title">Наши заказчики о нас</h2>
@@ -533,7 +548,7 @@
 					имеющий декоративную топку, а под камином в нише лежит связка настоящих
 					березовых дров. Конечно, он не настоящий, так как наш современный дом не позволяет такую роскошь, но всем кажется,
 					что он самый что ни на есть настоящий.
-					<br><br>
+					<br>
 					Я очень благодарна Инне за радость, которую я получаю находясь дома,
 					именно здесь, в "моей крепости" моя семья отдыхает и накапливает энергию для дальнейшей активной жизни.
 				</p>
@@ -649,6 +664,41 @@
 				</p>
 			</div>
 		</div>
+		<div class="row-fluid marginBottom30">
+			<div class="span3 centered">
+				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client5.jpg" alt="" class="">
+				<p><br>Елена Степанова<br> Москва</p>
+			</div>
+			<div class="span4">
+				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c5-1.jpg" class="fancybox-media" rel="portfolio5"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/thumb5a.jpg" alt=""></a>
+				<div class="hiden">
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c5-2.jpg" class="fancybox-media" rel="portfolio5">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c5-3.jpg" class="fancybox-media" rel="portfolio5">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c5-4.jpg" class="fancybox-media" rel="portfolio5">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c5-5.jpg" class="fancybox-media" rel="portfolio5">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c5-6.jpg" class="fancybox-media" rel="portfolio5">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c5-7.jpg" class="fancybox-media" rel="portfolio5">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c5-8.jpg" class="fancybox-media" rel="portfolio5">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c5-9.jpg" class="fancybox-media" rel="portfolio5">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c5-10.jpg" class="fancybox-media" rel="portfolio5">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c5-11.jpg" class="fancybox-media" rel="portfolio5">&nbsp;</a>
+					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c5-12.jpg" class="fancybox-media" rel="portfolio5">&nbsp;</a>
+				</div>
+			</div>
+			<div class="span5">
+				<p class="otziv">
+					Мы с мужем достаточно долго шли к покупке большой квартиры. И вот, наконец, наша мечта осуществилась - квартира приобретена.<br> 
+					Через "седьмые руки" мы узнали об Инне Азорской. Посмотрев портфолио на сайте, поняли, что ее работы нам близки по стилю, решили встретиться.<br> 
+					За все время работы (а это - более года вместе с самим ремонтом) оговариваемые сроки не были нарушены ни разу 
+					(мы, в свою очередь, тоже не нарушали сроки оплаты работы, заказа материалов, мебели и т.д., ведь соблюдение сроков процесс обоюдный). 
+					Инна несколько дней потратила с нами на поездку по торговым точкам в поисках решений. 
+					При этом она грамотно и корректно руководила процессом выбора, чтобы мы не утонули в море предложений, четко следовали заданному нами же стилю, 
+					не кидались из крайности в крайность, увидев какое-то оригинальное решение, которое категорически не вписывалось бы в идею нашего дома.<br> 
+					Мы, в лице Инны, нашли не просто нашего дизайнера, но и близкого человека. Мы обожаем наш дом, и понимаем, что без ее таланта и каждодневного кропотливого труда, 
+					такой гармонии и уюта у нас в доме не было бы.! Спасибо тебе!
+				</p>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -670,28 +720,38 @@
 
 <!-- Точка з -->
 <section class="marginTop30" ng-controller="ContactController">
-	<div class="container" id="zahvat3">
+	<div class="container" id="zahvat2">
         <div class="contact pull-left">
             <!-- Contact Form -->
             <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
-                <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" ng-required="true" />
+                <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" />
                 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
-                <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" ng-required="true" />
-                <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" ng-disabled="ContactForm.$invalid" />
+                <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" />
+                <input type="submit" name="send-btn" class="btn1" value="Отправить заявку" />
             </form>
-            <div class="success" ng-show="sended">
-                Заявка отправлена.
-            </div>
+            <div class="success" ng-show="sended">Заявка отправлена.</div>
+			<div class="error" ng-show="ContactForm.phone.$dirty && ContactForm.phone.$invalid">Заполните поле "Ваш телефон".</div>
         </div>
 		<!-- Subscription-form -->
 		<div class="subscribe pull-right">
 			<h2 class="zahvat-title">Оставьте вашу заявку</h2>
-			<p>на проект и наш дизайнер свяжется с вами для обсуждения технического задания.</p>
+			<p>на проект, и наш дизайнер свяжется с вами для обсуждения технического задания.</p>
 		</div>
 	</div>
 	<div class="marginBottom30"></div>
 </section>
 
+<section class="marginTop30">
+	<div class="container centered" id="holder1">
+		<p class="copy">
+			Приобретая продукт, либо оставляя заявку на сайте, Вы соглашаетесь с <a href="#" id="privacyPolicy">условиями политики конфиденциальности</a>.
+			<br>Все авторские права защищены. Полное или частичное копирование материалов сайта запрещено!
+			<br>ООО «Тэрра-Проект» ОГРН 1065010000912
+        </p>
+	</div>
+</section>
+
+<!--[if lt IE 9]></div><![endif]-->
 
 <!-- Модальное окно -->
 <div style="display: none;">
@@ -700,14 +760,53 @@
 		<h2 class="zahvat-title">Давайте встретимся</h2>
         <!-- Contact Form -->
 		<form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
-			 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" ng-required="true" />
+			 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" />
 			 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
-			 <input type="text" name="time" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" ng-required="true" />
-			 <input type="submit" name="send-btn" class="btn1" value="Договориться о встрече" ng-disabled="ContactForm.$invalid" />
+			 <input type="text" name="time" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" />
+			 <input type="submit" name="send-btn" class="btn1" value="Договориться о встрече" />
 		</form>
-		<div class="success" ng-show="sended">
-			Заявка отправлена.
-		</div>
+		<div class="success" ng-show="sended">Заявка отправлена.</div>
+		<div class="error" ng-show="ContactForm.phone.$dirty && ContactForm.phone.$invalid">Заполните поле "Ваш телефон".</div>
+    </div>
+</div>
+
+<!-- Модальное окно -->
+<div style="display: none;">
+    <div class="box-modal2 clearfix" id="privacyModal">
+        <div class="box-modal_close arcticmodal-close">закрыть</div>
+		<section class="privacyContent">
+			<!-- Content -->
+			<h1>Политика конфиденциальности</h1>
+			<p>Мы высоко ценим Ваш интерес к нашему проекту и уважаем всех пользователей нашего ресурса. 
+			Защита персональных данных для нас очень важна. Мы соблюдаем правила защиты персональных 
+			данных и защиты ваших данных от несанкционированного доступа третьих лиц (защита персональных данных).</p>
+			<p>Заполнение формы с контактными данными означает безоговорочное согласие с настоящей Политикой 
+			конфиденциальности и указанными в ней условиями обработки персональной информации.</p>
+			<h3>Ниже приводится информация об обработке персональных данных.</h3>
+			<ol> 
+				<li> <b>Персональные данные. Цель сбора и обработки персональных данных.</b>
+					<ul>
+						<li> Вы всегда можете посетить данную страницу, не раскрывая никакой персональной информации.</li>
+						<li> Под персональными данными понимается любая информация, относящаяся к определенному или определяемому на основании такой информации физическому лицу.</li>
+						<li> Наша компания собирает и использует персональные данные, необходимые для выполнения Вашего запроса, это – имя и электронный адрес.</li>
+						<li> Наша компания не проверяет достоверность персональных данных, предоставляемых физическими лицами, и не проверяет их дееспособность.</li>
+					</ul>
+				</li>
+				<li> <b>Условия обработки персональной информации покупателя и её передачи третьим лицам.</b>
+					<ul>
+						<li> При обработке персональных данных посетителей сайта наша компания руководствуется Федеральным законом РФ «О персональных данных».</li>
+						<li> В отношении персональной информации покупателя сохраняется ее конфиденциальность.</li>
+						<li> Наша компания не передает персональные данные третьим лицам.</li>
+					</ul>
+				</li>
+				<li> <b>Меры, применяемые для защиты персональной информации пользователей.</b>
+					<ul>
+						<li> Наша компания принимает необходимые и достаточные организационные и технические меры для защиты персональной информации пользователя от неправомерного или случайного доступа, 
+						уничтожения, изменения, блокирования, копирования, распространения, а также от иных неправомерных действий с ней третьих лиц.</li>
+					</ul>
+				</li>
+			</ol>
+		</section>
     </div>
 </div>
 

@@ -18,7 +18,7 @@ $(function ($) {
             {image: themePath + '/files/img/bg1.jpg'},
             {image: themePath + '/files/img/bg2.jpg'},
             {image: themePath + '/files/img/bg3.jpg'},
-            {image: themePath + '/files/img/bg4.jpg'},
+            {image: themePath + '/files/img/bg4.jpg'}
         ]
     });
 });
@@ -57,6 +57,11 @@ $('.da-link').click(function (e) {
 $('.goModal').click(function () {
     $('#actionModal').arcticmodal();
 });
+$('#privacyPolicy').click(function () {
+    $('#privacyModal').arcticmodal();
+	return false;
+});
+
 
 /// ******************         FANCYBOX         ******************** ///
 $(document).ready(function() {
@@ -77,7 +82,7 @@ $(document).ready(function() {
             title: {
                 type: 'inside'
             }
-        },
+        }/*,
         beforeLoad: function() {
             var el, id = $(this.element).data('title-id');
             if (id) {
@@ -86,7 +91,7 @@ $(document).ready(function() {
                     this.title = el.html();
                 }
             }
-        }
+        }*/
     });
 });
 
