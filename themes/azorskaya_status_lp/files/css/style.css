@@ -635,7 +635,7 @@ input[type="search"], input[type="tel"], input[type="color"]{
 .contactFormModalSuccess p.modSucc{font-size:40px;text-align:center}
 
 .contactFormModalSuccess2{background: #E5E9EA;/*width:550px;*/height:400px;text-align:center}
-.contactFormModalSuccess2 h1.modSucc{color:#333;padding-top:100px}
+.contactFormModalSuccess2 h1.modSucc{color:#333;padding-top:100px;font-size:45px}
 .contactFormModalSuccess2 h2.modSucc{color:#333;font-size:40px;font-weight:normal;font-family:PFDinTextCondProLight,"Trebuchet MS","Helvetica CY",sans-serif;}
 .contactFormModalSuccess2 p.modSucc{font-size:40px;text-align:center;color:#C53500;}
 .modal-overlay{background-color: rgb(0, 0, 0);background-color: rgba(0, 0, 0, .8);}
