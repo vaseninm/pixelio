@@ -567,11 +567,11 @@
 			<fieldset>
 				<div class="fl">
 					<label for="name">Введите Ваше имя:*</label>
-					<input type="text" value="" id="" name="name" class="text"/>
+					<input type="text" value="" id="" name="name" class="text" ng-model="leftContactModel.name" ng-required="true" />
 				</div>
 				<div class="fr">
 					<label for="phone">Введите телефон:*</label>
-					<input type="text" value="" id="" name="phone" class="text"/>
+					<input type="text" value="" id="" name="phone" class="text" ng-model="leftContactModel.phone" ng-required="true" />
 				</div>
 				<div class="clr">
 					<input type="submit" class="buttonForm" value="Отправить нам заявку"/>
