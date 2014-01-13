@@ -586,7 +586,7 @@
 						<tr>
 							<td class="modal-container_i2">
 								<div class="box-modal clearfix" id="successFormModal">
-									<div class="box-modal_close" ng-click="clearSebded($event)"></div>
+									<div class="box-modal_close" ng-click="clearSended($event)"></div>
 									<!-- Content Container -->
 									<section class="contactFormModalContent">
 										<!-- Content -->
@@ -1308,7 +1308,7 @@
 						<tr>
 							<td class="modal-container_i2">
 								<div class="box-modal clearfix" id="successFormModal">
-									<div class="box-modal_close" ng-click="clearSebded($event)"></div>
+									<div class="box-modal_close" ng-click="clearSended($event)"></div>
 									<!-- Content Container -->
 									<section class="contactFormModalContent">
 										<!-- Content -->
@@ -1605,7 +1605,7 @@
 							<tr>
 								<td class="modal-container_i2">
 									<div class="box-modal clearfix" id="successFormModal">
-										<div class="box-modal_close" ng-click="clearSebded($event)"></div>
+										<div class="box-modal_close" ng-click="clearSended($event)"></div>
 										<!-- Content Container -->
 										<section class="contactFormModalContent">
 											<!-- Content -->
