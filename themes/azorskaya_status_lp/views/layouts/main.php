@@ -579,7 +579,7 @@
 			</fieldset>
 		</form>
 		<!-- Модальное окно success -->
-		<div class="modal-overlay" ng-show="sended">
+		<div class="modal-overlay" ng-show="sended" ng-click="clearSended($event)">
 			<div class="modal-container">
 				<table class="modal-container_i">
 					<tbody>
@@ -1301,7 +1301,7 @@
             </fieldset>
         </form>
 		<!-- Модальное окно success -->
-		<div class="modal-overlay" ng-show="sended">
+		<div class="modal-overlay" ng-show="sended" ng-click="clearSended($event)">
 			<div class="modal-container">
 				<table class="modal-container_i">
 					<tbody>
@@ -1598,7 +1598,7 @@
                 </fieldset>
             </form>
 			<!-- Модальное окно success -->
-			<div class="modal-overlay" ng-show="sended">
+			<div class="modal-overlay" ng-show="sended" ng-click="clearSended($event)">
 				<div class="modal-container">
 					<table class="modal-container_i">
 						<tbody>

@@ -613,12 +613,12 @@ input[type="search"], input[type="tel"], input[type="color"]{
 .horizontal .buttonForm:hover{background-position: 0 -58px;}
 .horizontal .buttonForm:active{box-shadow:2px 2px 2px rgba(0,0,0,0.4) inset}
 
-.titleForm{text-align:right;color:#fff;text-transform:uppercase;font-size:21px;font-weight:normal;font-family: PFDinTextCondProLight, "Trebuchet MS", "Helvetica CY", sans-serif;}
+.titleForm{width:280px;height:36px;text-align:right;color:#fff;text-transform:uppercase;font-size:21px;font-weight:normal;font-family: PFDinTextCondProLight, "Trebuchet MS", "Helvetica CY", sans-serif;}
 .jobForm input.text, textarea.text{border: 0;margin-right:0}
 .jobForm input.text{width:268px}
 .jobForm textarea.text{resize:vertical;width:268px;height:70px}
 .jobForm .buttonForm{margin-top:5px;width:280px;height:36px;border:1px solid #bcc1a8;color:#fff;background:transparent url(../img/greenBut_bg.png) repeat-x;text-transform:uppercase;font-size:22px;font-weight:normal;font-family: PFDinTextCondProLight, "Trebuchet MS", "Helvetica CY", sans-serif;box-shadow:2px 2px 5px rgba(0,0,0,0.4)}
-.jobForm div{width:280px;height:36px;}
+.jobForm div{}
 .jobForm .buttonForm:hover{background-position: 0 -36px;}
 .jobForm .buttonForm:active{box-shadow:2px 2px 2px rgba(0,0,0,0.4) inset}
 
