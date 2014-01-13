@@ -61,4 +61,8 @@ function ContactController($scope, $rootScope, $http, CONFIG) {
             }
         });
     }
+	$scope.clearSended = function ($event) {
+		$event.preventDefault();
+		$scope.sended = false;
+	}
 }
