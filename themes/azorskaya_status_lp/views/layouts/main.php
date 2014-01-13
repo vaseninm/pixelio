@@ -578,6 +578,33 @@
 				</div>
 			</fieldset>
 		</form>
+		<!-- Модальное окно success -->
+		<div class="modal-overlay" ng-show="sended">
+			<div class="modal-container">
+				<table class="modal-container_i">
+					<tbody>
+						<tr>
+							<td class="modal-container_i2">
+								<div class="box-modal clearfix" id="successFormModal">
+									<div class="box-modal_close"></div>
+									<!-- Content Container -->
+									<section class="contactFormModalContent">
+										<!-- Content -->
+										<div class="contactFormModalSuccess2">
+											<h1 class="modSucc">Спасибо за вашу заявку</h1>
+											<h2 class="modSucc">наш дизайнер в ближайшее время</h2>
+											<p class="modSucc">свяжется с вами</p>
+										</div>
+										<!-- /Content -->
+									</section>
+									<!-- /Content Container -->
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</div>
 	</div>
 </section>
@@ -1273,6 +1300,33 @@
                 </div>
             </fieldset>
         </form>
+		<!-- Модальное окно success -->
+		<div class="modal-overlay" ng-show="sended">
+			<div class="modal-container">
+				<table class="modal-container_i">
+					<tbody>
+						<tr>
+							<td class="modal-container_i2">
+								<div class="box-modal clearfix" id="successFormModal">
+									<div class="box-modal_close"></div>
+									<!-- Content Container -->
+									<section class="contactFormModalContent">
+										<!-- Content -->
+										<div class="contactFormModalSuccess2">
+											<h1 class="modSucc">Спасибо за вашу заявку</h1>
+											<h2 class="modSucc">наш дизайнер в ближайшее время</h2>
+											<p class="modSucc">свяжется с вами</p>
+										</div>
+										<!-- /Content -->
+									</section>
+									<!-- /Content Container -->
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
     </div>
 </div>
 </div>
@@ -1543,6 +1597,33 @@
                     </div>
                 </fieldset>
             </form>
+			<!-- Модальное окно success -->
+			<div class="modal-overlay" ng-show="sended">
+				<div class="modal-container">
+					<table class="modal-container_i">
+						<tbody>
+							<tr>
+								<td class="modal-container_i2">
+									<div class="box-modal clearfix" id="successFormModal">
+										<div class="box-modal_close"></div>
+										<!-- Content Container -->
+										<section class="contactFormModalContent">
+											<!-- Content -->
+											<div class="contactFormModalSuccess2">
+												<h1 class="modSucc">Спасибо за вашу заявку</h1>
+												<h2 class="modSucc">наш дизайнер в ближайшее время</h2>
+												<p class="modSucc">свяжется с вами</p>
+											</div>
+											<!-- /Content -->
+										</section>
+										<!-- /Content Container -->
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
         </div>
     </div>
 </section>
@@ -1675,33 +1756,7 @@
     </div>
 </div>
 
-<!-- Модальное окно success -->
-<div class="modal-overlay" ng-show="sended">
-	<div class="modal-container">
-		<table class="modal-container_i">
-			<tbody>
-				<tr>
-					<td class="modal-container_i2">
-						<div class="box-modal clearfix" id="successFormModal">
-							<div class="box-modal_close"></div>
-							<!-- Content Container -->
-							<section class="contactFormModalContent">
-								<!-- Content -->
-								<div class="contactFormModalSuccess2">
-									<h1 class="modSucc">Спасибо за вашу заявку</h1>
-									<h2 class="modSucc">наш дизайнер в ближайшее время</h2>
-									<p class="modSucc">свяжется с вами</p>
-								</div>
-								<!-- /Content -->
-							</section>
-							<!-- /Content Container -->
-						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-</div>
+
 
 <!-- Javascript -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
