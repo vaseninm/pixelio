@@ -59,6 +59,7 @@ function ContactController($scope, $rootScope, $http, $timeout, CONFIG) {
                 alert('Ошибка на сервере');
                 console.error(data.params.errors);
             } else {
+                $scope.leftContactModel = {};
                 $scope.ContactForm.$setPristine();
                 $scope.sended = true;
 				$timeout(function(){ 
