@@ -29,6 +29,7 @@ class Messages extends EActiveRecord
 		return array(
 			array('client_id', 'numerical', 'integerOnly'=>true),
 			array('name, email, phone, comfortTime', 'length', 'max'=>255),
+			array('phone', 'required'),
 			array('message', 'safe'),
 			array('id, client_id, name, email, phone, message, comfortTime', 'safe', 'on'=>'search'),
 		);
