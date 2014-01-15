@@ -1293,7 +1293,7 @@
                 <label for="phone">Введите телефон:*</label>
                 <input type="text" value="" id="" name="phone" class="text"  ng-model="leftContactModel.phone" ng-required="true" />
                 <label for="text">Сообщение:*</label>
-                <textarea name="text" class="text" ng-model="leftContactModel.text" ng-required="true"></textarea>
+                <textarea name="text" class="text" ng-model="leftContactModel.text"></textarea>
 
                 <div class="cell">
                     <input type="submit" class="buttonForm" value="Отправить"/>
@@ -1737,7 +1737,7 @@
                     <label for="phone">Введите телефон:*</label>
                     <input type="text" value="" id="" name="phone" class="text" ng-model="leftContactModel.phone" ng-required="true" />
                     <label for="text">Удобное время для звонка:</label>
-                    <input type="text" value="" id="" name="comfortTime" class="text" ng-model="leftContactModel.comfortTime" ng-required="true" />
+                    <input type="text" value="" id="" name="comfortTime" class="text" ng-model="leftContactModel.comfortTime" />
 
                     <div>
                         <input type="submit" class="buttonForm" value="Отправить заявку" />

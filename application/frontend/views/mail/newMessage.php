@@ -1,7 +1,9 @@
-Новое сообщение на лид на <?= $domain->domain ?>:
-<?= $message->getAttributeLabel('name') ?>: <?= CHtml::encode($message->name) ?>
-<?= $message->getAttributeLabel('email') ?>: <?= CHtml::encode($message->email) ?>
-<?= $message->getAttributeLabel('phone') ?>: <?= CHtml::encode($message->phone) ?>
-<?= $message->getAttributeLabel('message') ?>: <?= CHtml::encode($message->message) ?>
-<?= $message->getAttributeLabel('comfortTime') ?>: <?= CHtml::encode($message->comfortTime) ?>
-<?= $client->getAttributeLabel('ip') ?>:  <?= CHtml::encode($client->ip) ?>
+<p><b>Новое сообщение на лид на <?= $domain->domain ?>:</b></p>
+<hr>
+<p><?= $message->getAttributeLabel('name') ?>: <?= CHtml::encode($message->name) ?></p>
+<p><?= $message->getAttributeLabel('email') ?>: <?= CHtml::encode($message->email) ?></p>
+<p><?= $message->getAttributeLabel('phone') ?>: <?= CHtml::encode($message->phone) ?></p>
+<p><?= $message->getAttributeLabel('message') ?>: <?= CHtml::encode($message->message) ?></p>
+<p><?= $message->getAttributeLabel('comfortTime') ?>: <?= CHtml::encode($message->comfortTime) ?></p>
+<p><?= $client->getAttributeLabel('ip') ?>:  <?= CHtml::encode($client->ip) ?></p>
+<hr>
