@@ -28,7 +28,7 @@ Yii::app()->clientScript->registerCssFile('/admin/css/singin.css');
         <?php echo TbHtml::linkButton('На сайт', array(
             'color' => TbHtml::BUTTON_COLOR_SUCCESS,
             'size' => TbHtml::BUTTON_SIZE_DEFAULT,
-            'url' => $this->createUrl('/site/logout'),
+            'url' => '/',
         )); ?>
     </form>
 
