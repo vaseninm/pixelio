@@ -46,18 +46,24 @@ function TeamController($scope, $rootScope, $http, CONFIG) {
         });
     });
 }
-function ContactController($scope, $rootScope, $http, CONFIG) {
+function ContactController($scope, $rootScope, $http, $timeout, CONFIG) {
     $scope.leftContactModel = {};
     $scope.sended = false;
     $scope.leftContact = function ($event) {
         $event.preventDefault();
+		if ($scope.ContactForm.$invalid) {
+			return true;
+		} 
         $http.post(CONFIG.API_URL + 'clients/leftContact', $scope.leftContactModel).success(function (data) {
             if (data.params.error) {
                 alert('Ошибка на сервере');
                 console.error(data.params.errors);
             } else {
-                $scope.leftContactModel = {};
+                $scope.ContactForm.$setPristine();
                 $scope.sended = true;
+				$timeout(function(){ 
+					$scope.sended = false; 
+				}, 5000);
             }
         });
     }
