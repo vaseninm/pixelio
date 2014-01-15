@@ -20,18 +20,11 @@ class ClientsController extends PxApiController {
         if (isset($this->request->comfortTime)) $model->comfortTime = $this->request->comfortTime;
         $result = $model->save();
         if ($result) {
-            $client->status = Clients::STATUS_RESPONDED;
-            $client->save();
-            $body = "Новый лид на " . Yii::app()->name. ": \n";
-            $body .= "\t".$model->getAttributeLabel('id').": " . CHtml::encode($model->id) . "\n";
-            $body .= "\t".$model->getAttributeLabel('name').": " . CHtml::encode($model->name) . "\n";
-            $body .= "\t".$model->getAttributeLabel('email').": " . CHtml::encode($model->email) . "\n";
-            $body .= "\t".$model->getAttributeLabel('phone').": " . CHtml::encode($model->phone) . "\n";
-            $body .= "\t".$model->getAttributeLabel('message').": " . CHtml::encode($model->message) . "\n";
-            $body .= "\t".$model->getAttributeLabel('comfortTime').": " . CHtml::encode($model->comfortTime) . "\n";
-            $body .= "\t".$client->getAttributeLabel('ip').": " . CHtml::encode($client->ip) . "\n";
-            $body .= "С уважением, Ваш уведомитель. \n";
-            $model->sendClientInfoToEmail($body, Yii::app()->params->itemAt('adminEmail'));
+            if ($client->status === Clients::STATUS_NEW) {
+				$client->status = Clients::STATUS_RESPONDED;	
+				$client->save();
+			}
+            $model->sendClientInfoToEmail();
         }
         $this->answer = array(
             'error' => !$result,

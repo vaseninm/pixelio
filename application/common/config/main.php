@@ -32,6 +32,7 @@ return array(
 		'application.helpers.*',
 		'application.models.*',
         'vendor.2amigos.yiistrap.helpers.*',
+		'vendor.vernes.yiimailer.YiiMailer',
 	),
 	'components' => array(
 		'errorHandler' => array(
@@ -63,6 +64,7 @@ return array(
         'apiUrl' => '/api',
         'backendUrl' => '/admin',
         'since' => '2008',
-        'adminEmail' => 'vaseninm@gmail.com'
+        'adminEmail' => 'vaseninm@gmail.com',
+		'YiiMailer' => include __DIR__ . '/mail.php',
 	)
 );

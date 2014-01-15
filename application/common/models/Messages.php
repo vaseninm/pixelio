@@ -69,20 +69,17 @@ class Messages extends EActiveRecord
 		));
 	}
 
-    public function sendClientInfoToEmail($body, $email){
-        $mail = new Mail\Message();
-        $mail->setEncoding("UTF-8");
-        $mail->setBody($body);
+    public function sendClientInfoToEmail(){
+        $mail = new YiiMailer('newMessage', array(
+			'message' => $this, 
+			'client' => Clients::you(), 
+			'domain' => Domains::current(),
+		));
+		
         $mail->setFrom('no-reply@pixelio.ru', 'Уведомитель');
-        $mail->addTo($email, 'Администратор');
-        $mail->setSubject('Новый лид ' . CHtml::encode($this->name));
-
-        $transport = new Mail\Transport\Sendmail();
-        try {
-            $transport->send($mail);
-        } catch (Zend\Mail\Exception\RuntimeException $e) {
-            throw new CHttpException('500', 'Localhost?');
-        }
+		$mail->setSubject('Новый лид ' . CHtml::encode(Domains::current()->domain));
+		
+		Notice::sendEmail($mail);
     }
 
 	public static function model($className=__CLASS__)
