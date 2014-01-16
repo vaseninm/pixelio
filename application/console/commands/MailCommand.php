@@ -15,11 +15,16 @@ class MailCommand extends CConsoleCommand {
 		$domainList = array();
 
 		foreach ($noticeList as $noticeItem) {
-			isset($domainList[$noticeItem->domain_id]) && $domainList[$noticeItem->domain_id] = array();
+			if (!isset($domainList[$noticeItem->domain_id])) {
+				$domainList[$noticeItem->domain_id] = array(
+					'domain' => null,
+					'notice' => array(),
+				);
+			}
 			$domainList[$noticeItem->domain_id]['domain'] = $noticeItem->domain;
 			$domainList[$noticeItem->domain_id]['notice'][] = $noticeItem;
 		}
-		
+				
 		foreach ($domainList as $domain) {
 			$criteria = new CDbCriteria();
 			$criteria->with = array('client');
@@ -64,9 +69,13 @@ class MailCommand extends CConsoleCommand {
 				'domain' => $domain['domain'],
 			));
 			$mail->setFrom('no-reply@pixelio.ru', 'Уведомитель');
-			$mail->setSubject('TЕжедневный отчет по ' . CHtml::encode($domain['domain']->domain));
+			$mail->setSubject('Ежедневный отчет по ' . CHtml::encode($domain['domain']->domain));
 			$mail->setTo(CHtml::listData($domain['notice'], 'id', 'address'));
-			$mail->send();
+			if ($mail->send()) {
+				echo 'Отправка отчета по домену ' . CHtml::encode($domain['domain']->domain) . ' завершена.';
+			} else {
+				echo 'Отправка отчета по домену ' . CHtml::encode($domain['domain']->domain) . ' завершилось ошибкой.';
+			}
 		}
 	}
 
