@@ -68,13 +68,13 @@ class MailCommand extends CConsoleCommand {
 				'stat' => $stat,
 				'domain' => $domain['domain'],
 			));
-			$mail->setFrom('no-reply@pixelio.ru', 'Уведомитель');
+			$mail->setFrom('no-reply@' . $domain['domain']->domain, 'Уведомитель');
 			$mail->setSubject('Ежедневный отчет по ' . CHtml::encode($domain['domain']->domain));
 			$mail->setTo(CHtml::listData($domain['notice'], 'id', 'address'));
 			if ($mail->send()) {
-				echo 'Отправка отчета по домену ' . CHtml::encode($domain['domain']->domain) . ' завершена.';
+				echo 'Отправка отчета по домену ' . CHtml::encode($domain['domain']->domain) . ' завершена.' . PHP_EOL;
 			} else {
-				echo 'Отправка отчета по домену ' . CHtml::encode($domain['domain']->domain) . ' завершилось ошибкой.';
+				echo 'Отправка отчета по домену ' . CHtml::encode($domain['domain']->domain) . ' завершилось ошибкой.'  . PHP_EOL;
 			}
 		}
 	}
