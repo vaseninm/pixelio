@@ -13,7 +13,7 @@ defined('APP_CONFIG_NAME') or define('APP_CONFIG_NAME', 'backend');
 
 // web application configuration
 return array(
-	'name' => 'Админка Pixelio.ru',
+	'name' => 'Админка',
 	'basePath' => realPath(__DIR__ . '/..'),
 	// path aliases
 	'aliases' => array(

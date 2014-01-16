@@ -29,7 +29,7 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="<?= Yii::app()->params->itemAt('frontendUrl') ?>">Pixelio Web Studio</a>
+            <a class="brand" href="<?= Yii::app()->params->itemAt('frontendUrl') ?>"><?= Yii::app()->params->itemAt('author') ?></a>
             <?php $this->widget('bootstrap.widgets.TbNav', array(
                 'type' => TbHtml::NAV_TYPE_PILLS,
                 'items' => array(
@@ -61,7 +61,7 @@
     <?php echo $content; ?>
     <hr>
     <footer>
-        <p>&copy; Pixelio <?= Yii::app()->params->itemAt('since') ?> &#8211 <?= date('Y') ?>. <?= Yii::t('app', '{n} год|{n} года|{n} лет|{n} года', (date('Y') - Yii::app()->params->itemAt('since')));?> на рынке.</p>
+        <p>&copy; <?= Yii::app()->params->itemAt('author') ?> <?= Yii::app()->params->itemAt('since') ?> &#8211 <?= date('Y') ?>.<!-- <?= Yii::t('app', '{n} год|{n} года|{n} лет|{n} года', (date('Y') - Yii::app()->params->itemAt('since')));?> на рынке.--></p>
     </footer>
 </div>
 

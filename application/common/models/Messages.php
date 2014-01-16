@@ -80,7 +80,7 @@ class Messages extends EActiveRecord
 			'domain' => Domains::current(),
 		));
 		
-        $mail->setFrom('no-reply@pixelio.ru', 'Уведомитель');
+        $mail->setFrom('no-reply@' . Domains::current()->domain, 'Уведомитель');
 		$mail->setSubject('Новый лид ' . CHtml::encode(Domains::current()->domain));
 		
 		Notice::sendEmail($mail);
