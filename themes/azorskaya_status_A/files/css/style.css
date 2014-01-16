@@ -117,7 +117,7 @@ td.imgTable img:hover{
 	-ms-transform:scale(1.25);
 	-o-transform:scale(1.25);
 	transform:scale(1.25)}
-.topTable a{display:block;color:#fff;text-decoration:none;text-transform:uppercase;font-size:24px;font-family: PFDinTextCondProLight, "Trebuchet MS", "Helvetica CY", sans-serif;}
+.topTable a{display:block;color:#fff;text-decoration:none;text-transform:uppercase;font-size:24px;font-family: PFDinTextCondProLight, PFDinTextCondProRegular, "Trebuchet MS", "Helvetica CY", sans-serif;}
 td.aboutTable a{height:104px;padding:73px 20px 0 20px}
 td.jobTable a{height:114px;padding:63px 20px 0 20px}
 td.servTable a{height:100px;padding:77px 20px 0 20px}
@@ -131,7 +131,7 @@ td.clientTable a{height:114px;padding:63px 20px 0 20px}
 .town{padding:0 20px 0 0;text-align:right;color:#ddafa7;font-size:18px;font-family: PFDinTextCondProLight, "Trebuchet MS", "Helvetica CY", sans-serif}
 .email{margin-bottom:15px;background:transparent url(../img/icon_mail.png) no-repeat 0 50%;}
 .callMe{width:304px;height:36px;margin:0 auto;border:1px solid #bcc1a8;}
-.callMe a{display:block;width:304px;height:36px;color:#fff;background:transparent url(../img/greenBut_bg.png) repeat-x;text-transform:uppercase;font-size:22px;font-weight:normal;font-family: PFDinTextCondProLight, "Trebuchet MS", "Helvetica CY", sans-serif;box-shadow:2px 2px 5px rgba(0,0,0,0.4)}
+.callMe a{display:block;width:304px;height:36px;color:#fff;background:transparent url(../img/greenBut_bg.png) repeat-x;text-transform:uppercase;font-size:22px;font-weight:normal;font-family: PFDinTextCondProLight, PFDinTextCondProRegular, "Trebuchet MS", "Helvetica CY", sans-serif;box-shadow:2px 2px 5px rgba(0,0,0,0.4)}
 .callMe a div{width:304px;height:36px;}
 .callMe a:hover{background-position: 0 -36px;}
 .callMe a:active{box-shadow:2px 2px 2px rgba(0,0,0,0.4) inset}
@@ -307,7 +307,7 @@ SECTION BEST
 .bestContainer .fl{padding:15px;}
 .bestItem{width:270px;height:170px;padding:15px;background:#E5E8D5;}
 .bestItem img{width:200px;height:100px;}
-.bestItem p{font-size:24px;color:#444a2e;font-family: PFDinTextCondProLight, "Trebuchet MS", "Helvetica CY", sans-serif;}
+.bestItem p{font-size:24px;color:#444a2e;font-family: PFDinTextCondProLight, PFDinTextCondProRegular, "Trebuchet MS", "Helvetica CY", sans-serif;}
 .bestItem p span{font-size:30px;font-family: PFDinTextCondProMedium, "Trebuchet MS", "Helvetica CY", sans-serif;}
 a.button1{display:block;width:1020px;height:58px;margin:0 auto;background: #C33100 url(../img/button_bg.png) repeat-x;text-align:center;color:#fff;text-decoration:none;text-transform:uppercase;font-size:30px;font-family: PFDinTextCondProRegular, "Trebuchet MS", "Helvetica CY", sans-serif;box-shadow:2px 2px 5px rgba(0,0,0,0.4)}
 a.button1:hover{background-position:0 -58px}
@@ -490,7 +490,7 @@ SECTION COFFE
 .step6{background: transparent url(../img/step6.png) no-repeat 50% 50%}
 .step7{background: transparent url(../img/step7.png) no-repeat 50% 50%}
 .step7 span{font-size:15px;}
-.txt{width:260px;padding:16px 0 0 16px;font-size:24px;font-family: PFDinTextCondProLight, "Trebuchet MS", "Helvetica CY", sans-serif;}
+.txt{width:260px;padding:16px 0 0 16px;font-size:24px;font-family: PFDinTextCondProLight, PFDinTextCondProRegular, "Trebuchet MS", "Helvetica CY", sans-serif;}
 a.button{display:block;width:490px;height:58px;margin:10px 0 0 16px;background: #C33100 url(../img/button_bg.png) repeat-x;text-align:center;color:#fff;text-decoration:none;text-transform:uppercase;font-size:30px;font-family: PFDinTextCondProRegular, "Trebuchet MS", "Helvetica CY", sans-serif;box-shadow:5px 5px 5px rgba(0,0,0,0.4)}
 a.button:hover{background-position:0 -58px}
 a.button:active{box-shadow:2px 2px 2px rgba(0,0,0,0.8) inset;/*margin:11px 0 -1px 16px*/}
@@ -503,7 +503,7 @@ SECTION JOB
 .job .fl{width:340px;text-align:center}
 .triangle2{padding-bottom:30px;background: #808765 url(../img/triangle2.jpg) no-repeat 50% 100%}
 .itemJob{width:300px;height:300px;margin:0 20px;text-align:center;position:relative;overflow:hidden}
-.coverJob a{color:#3e4428;font-size:20px;font-family: PFDinTextCondProLight, "Trebuchet MS", "Helvetica CY", sans-serif;}
+.coverJob a{color:#3e4428;font-size:20px;font-family: PFDinTextCondProLight, PFDinTextCondProRegular, "Trebuchet MS", "Helvetica CY", sans-serif;}
 .coverJob{width:300px;height:300px;background: transparent url(../img/cover_job.png) no-repeat;position:absolute;top:0;left:0;z-index:2}
 .coverJob div{width:300px;height:305px;}
 .itemJob img{
@@ -518,7 +518,7 @@ SECTION JOB
 	-ms-transform:scale(1.25);
 	-o-transform:scale(1.25);
 	transform:scale(1.25)}
-p.jobDesc{color:#e5e8d5;font-size:24px;font-family: PFDinTextCondProLight, "Trebuchet MS", "Helvetica CY", sans-serif;padding:10px 20px 25px 20px}
+p.jobDesc{color:#e5e8d5;font-size:24px;font-family: PFDinTextCondProLight, PFDinTextCondProRegular, "Trebuchet MS", "Helvetica CY", sans-serif;padding:10px 20px 25px 20px}
 .hiddenGalery, .hidden{display: none;visibility: hidden;}
 /* fancybox */
 .fancybox-skin{background:#3E4428 !important;}
@@ -546,7 +546,7 @@ SECTION ZAKAZ
 .youHave{width:222px;height:173px;margin:30px 59px 0 59px;background: rgb(86,67,61);background: rgba(86,67,61,0.95)}
 .youHave2{width:300px;height:173px;margin:30px 20px 0 20px;background: rgb(86,67,61);background: rgba(86,67,61,0.95)}
 .youHave3{width:300px;height:177px;margin:30px 20px 20px 20px;background: transparent url(../img/figure.png) no-repeat 0 0}
-.youHave p, .youHave2 p, .youHave3 p{padding:5px 35px 0 35px;color:#fff;font-size:24px;font-family: PFDinTextCondProLight, "Trebuchet MS", "Helvetica CY", sans-serif;}
+.youHave p, .youHave2 p, .youHave3 p{padding:5px 35px 0 35px;color:#fff;font-size:24px;font-family: PFDinTextCondProLight, PFDinTextCondProRegular, "Trebuchet MS", "Helvetica CY", sans-serif;}
 .youHave3 p{padding:18px 10px 0 10px;}
 .youHave img, .youHave2 img{height:52px;width:52px;padding-top:15px}
 .call{padding:5px 0 30px 0}
@@ -579,7 +579,7 @@ SECTION CLIENT
 	transform:scale(1.25)}
 .clientName{text-align:center;color:#3e4428;padding:10px 0 30px 0}
 .clientDesc{background:#fff;border:1px dashed #97998B;}
-.clientDesc p{color:#3e4428;padding:20px;font-size:22px;font-family: PFDinTextCondProLight, "Trebuchet MS", "Helvetica CY", sans-serif;}
+.clientDesc p{color:#3e4428;padding:20px;font-size:22px;font-family: PFDinTextCondProLight, PFDinTextCondProRegular, "Trebuchet MS", "Helvetica CY", sans-serif;}
 .clientForm{margin-bottom:40px;padding:25px 20px 20px 20px;background:#B73911;}
 
 /* карусель */
@@ -593,7 +593,7 @@ SECTION CLIENT
 /************************************************************************************
 FORM
 *************************************************************************************/
-label {display: block;margin-bottom: 5px;color:#fff;font-family: PFDinTextCondProLight, "Trebuchet MS", "Helvetica CY", sans-serif;}
+label {display: block;margin-bottom: 5px;color:#fff;font-family: PFDinTextCondProLight, PFDinTextCondProRegular, "Trebuchet MS", "Helvetica CY", sans-serif;}
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], 
 input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], 
 input[type="week"], input[type="number"], input[type="email"], input[type="url"], 
@@ -613,7 +613,7 @@ input[type="search"], input[type="tel"], input[type="color"]{
 .horizontal .buttonForm:hover{background-position: 0 -58px;}
 .horizontal .buttonForm:active{box-shadow:2px 2px 2px rgba(0,0,0,0.4) inset}
 
-.titleForm{width:280px;height:36px;text-align:right;color:#fff;text-transform:uppercase;font-size:21px;font-weight:normal;font-family: PFDinTextCondProLight, "Trebuchet MS", "Helvetica CY", sans-serif;}
+.titleForm{width:280px;height:36px;text-align:right;color:#fff;text-transform:uppercase;font-size:21px;font-weight:normal;font-family: PFDinTextCondProLight, PFDinTextCondProRegular, "Trebuchet MS", "Helvetica CY", sans-serif;}
 .jobForm input.text, textarea.text{border: 0;margin-right:0}
 .jobForm input.text{width:268px}
 .jobForm textarea.text{resize:vertical;width:268px;height:70px}
