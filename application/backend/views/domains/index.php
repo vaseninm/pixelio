@@ -4,12 +4,12 @@
 
 
 $this->breadcrumbs=array(
-	'Domains'=>array('index'),
-	'Manage',
+	'Домены'=>array('index'),
+	'Управление',
 );
 ?>
 
-<h1>Управление моделью Domains</h1>
+<h1>Управление доменами</h1>
 
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
 'id'=>'domains-grid',

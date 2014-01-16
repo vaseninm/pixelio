@@ -5,11 +5,11 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Themes'=>array('index'),
-	'Create',
+	'Темы'=>array('index'),
+	'Добавление темы',
 );
 ?>
 
-    <h1>Добавление нового Themes</h1>
+    <h1>Добавление новой темы</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

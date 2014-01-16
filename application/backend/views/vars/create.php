@@ -6,7 +6,7 @@
 <?php
 $this->breadcrumbs=array(
 	'Фразы'=>array('index'),
-	'Создание',
+	'Добавление',
 );
 ?>
 

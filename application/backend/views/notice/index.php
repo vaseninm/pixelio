@@ -4,12 +4,12 @@
 
 
 $this->breadcrumbs = array(
-	'Notices' => array('index'),
-	'Manage',
+	'Уведомления' => array('index'),
+	'Управление',
 );
 ?>
 
-<h1>Управление моделью Notices</h1>
+<h1>Управление получателями уведомлений</h1>
 
 <?php
 $this->widget('bootstrap.widgets.TbGridView', array(

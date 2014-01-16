@@ -5,11 +5,11 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Notices'=>array('index'),
-	'Create',
+	'Уведомления'=>array('index'),
+	'Добавление получателя',
 );
 ?>
 
-    <h1>Добавление нового Notice</h1>
+    <h1>Добавление получателя</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

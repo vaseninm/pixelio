@@ -5,11 +5,11 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Domains'=>array('index'),
-	'Create',
+	'Домены'=>array('index'),
+	'Добавление домена',
 );
 ?>
 
-    <h1>Добавление нового Domains</h1>
+    <h1>Добавление нового домена</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

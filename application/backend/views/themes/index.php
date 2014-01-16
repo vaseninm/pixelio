@@ -4,12 +4,12 @@
 
 
 $this->breadcrumbs = array(
-    'Themes' => array('index'),
-    'Manage',
+    'Темы' => array('index'),
+    'Управление',
 );
 ?>
 
-    <h1>Управление моделью Themes</h1>
+    <h1>Управление темами</h1>
 
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
     'id' => 'themes-grid',
