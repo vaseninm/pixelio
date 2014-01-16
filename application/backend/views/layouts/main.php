@@ -39,7 +39,7 @@
                 ),
             )); ?>
             <span class="pull-right">
-                    <span class="lead muted text-right">Привет, <?= Yii::app()->user->name ?>!</span>
+                    <span class="mylead text-right">Привет, <?= Yii::app()->user->name ?>!</span>
                     <?php echo TbHtml::linkButton('Выход', array(
                         'color' => TbHtml::BUTTON_COLOR_DANGER,
                         'size' => TbHtml::BUTTON_SIZE_DEFAULT,

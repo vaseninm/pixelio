@@ -28,7 +28,7 @@ class VarsController extends PxAdminController
         $return = parent::beforeAction($action);
         $this->menu = array(
             array('label' => 'Фразы', 'url' => array('index')),
-            array('label' => 'Создать фразу', 'url' => array('create')),
+            array('label' => 'Добавить фразу', 'url' => array('create')),
         );
         return $return;
     }

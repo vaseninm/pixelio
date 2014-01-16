@@ -26,8 +26,8 @@ array('deny',
 protected function beforeAction($action) {
 $return = parent::beforeAction($action);
 $this->menu = array(
-array('label' => 'Domains', 'url' => array('index')),
-array('label' => 'Создать Domains', 'url' => array('create')),
+array('label' => 'Домены', 'url' => array('index')),
+array('label' => 'Добавить домен', 'url' => array('create')),
 );
 return $return;
 }

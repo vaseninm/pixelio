@@ -26,8 +26,8 @@ array('deny',
 protected function beforeAction($action) {
 $return = parent::beforeAction($action);
 $this->menu = array(
-array('label' => 'Notice', 'url' => array('index')),
-array('label' => 'Создать Notice', 'url' => array('create')),
+array('label' => 'Уведомления', 'url' => array('index')),
+array('label' => 'Добавить получателя', 'url' => array('create')),
 );
 return $return;
 }

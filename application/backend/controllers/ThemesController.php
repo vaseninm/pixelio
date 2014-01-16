@@ -26,8 +26,8 @@ array('deny',
 protected function beforeAction($action) {
 $return = parent::beforeAction($action);
 $this->menu = array(
-array('label' => 'Themes', 'url' => array('index')),
-array('label' => 'Создать Themes', 'url' => array('create')),
+array('label' => 'Темы', 'url' => array('index')),
+array('label' => 'Добавить тему', 'url' => array('create')),
 );
 return $return;
 }
