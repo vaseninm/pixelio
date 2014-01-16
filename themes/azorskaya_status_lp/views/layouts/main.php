@@ -9,8 +9,8 @@
     <title>Студия дизайна интерьеров Инны Азорской</title>
 	<meta name="keywords" content="Профессиональный дизайн интерьера. Дизайн-студия Инны Азорской возьмёт на себя ВСЕ ваши проблемы с ремонтом! Индивидуальный интерьер только под Вас. Контроль качества работ на всех уровнях." />
 	<meta name="description" content="Дизайн интерьер ремонт квартира студия дизайн-студия Инна Азорская дизайнер" />
-		
-    <link rel="shortcut icon" href="<?= Yii::app()->theme->baseUrl ?>/files/img/favicon.png" type="image/x-icon">
+
+	<link rel="shortcut icon" href="<?= Yii::app()->theme->baseUrl ?>/files/img/favicon.ico" type="image/x-icon">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
