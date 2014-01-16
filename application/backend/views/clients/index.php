@@ -1,8 +1,6 @@
 <?php
 /* @var $this ClientsController */
-/* @var $model Visits */
-/* @var $themes Themes[] */
-
+/* @var $model Clients */
 
 $this->breadcrumbs = array(
     'Клиенты' => array('index'),
@@ -18,7 +16,7 @@ $this->breadcrumbs = array(
         'type' => TbHtml::GRID_TYPE_BORDERED,
         'dataProvider' => $model->search(),
         'filter' => $model,
-        'ajaxUpdate' => 'sales',
+        'ajaxUpdate' => 'sales,conversion',
         'columns' => array(
 //        'id',
             'ip',
@@ -41,12 +39,14 @@ $this->breadcrumbs = array(
     )); ?>
 
     <div id="sales">
-        Воронка продаж:
-        <div>Оплатившие: <?= isset($sales[Clients::STATUS_PAID]) ? $sales[Clients::STATUS_PAID] : 0 ?></div>
-        <div>Вышедшие на
-            связь: <?= isset($sales[Clients::STATUS_CONTACTED]) ? $sales[Clients::STATUS_CONTACTED] : 0 ?></div>
-        <div>Оставившие
-            координаты: <?= isset($sales[Clients::STATUS_RESPONDED]) ? $sales[Clients::STATUS_RESPONDED] : 0 ?></div>
-        <div>Зашедшие: <?= isset($sales[Clients::STATUS_NEW]) ? $sales[Clients::STATUS_NEW] : 0 ?></div>
+        <b>Воронка продаж:</b>
+        <div>Оплатившие: <?= $sales[Clients::STATUS_PAID] ?></div>
+        <div>Вышедшие на связь: <?= $sales[Clients::STATUS_CONTACTED] ?></div>
+        <div>Оставившие координаты: <?= $sales[Clients::STATUS_RESPONDED] ?></div>
+        <div>Зашедшие: <?= $sales[Clients::STATUS_NEW] ?></div>
+    </div>
+	<p></p>
+    <div id="conversion">
+        <b>Конверсия:</b> <?= $conversion ?>%
     </div>
 </div>

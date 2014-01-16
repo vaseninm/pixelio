@@ -13,6 +13,7 @@ use Zend\Mail;
  * @property string $message
  * @property string $comfortTime
  * @property integer $client_id
+ * @property string $time
  *
  * The followings are the available model relations:
  * @property Clients $client
@@ -28,10 +29,10 @@ class Messages extends EActiveRecord
 	{
 		return array(
 			array('client_id', 'numerical', 'integerOnly'=>true),
-			array('name, email, phone, comfortTime', 'length', 'max'=>255),
+			array('name, email, phone, comfortTime, time', 'length', 'max'=>255),
 			array('phone', 'required'),
 			array('message', 'safe'),
-			array('id, client_id, name, email, phone, message, comfortTime', 'safe', 'on'=>'search'),
+			array('id, client_id, name, email, phone, message, comfortTime, time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,6 +52,7 @@ class Messages extends EActiveRecord
 			'phone' => 'Телефон',
 			'message' => 'Сообщение',
 			'comfortTime' => 'Удобное время',
+			'time' => 'Время отправки',
 		);
 	}
 	public function search()
@@ -63,6 +65,7 @@ class Messages extends EActiveRecord
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('phone',$this->phone,true);
 		$criteria->compare('message',$this->message,true);
+		$criteria->compare('time',$this->time,true);
 		$criteria->compare('comfortTime',$this->comfortTime,true);
 
 		return new CActiveDataProvider($this, array(
@@ -82,6 +85,11 @@ class Messages extends EActiveRecord
 		
 		Notice::sendEmail($mail);
     }
+	
+	public function afterConstruct() {
+		parent::afterConstruct();
+		$this->time = new CDbExpression('NOW()');
+	}
 
 	public static function model($className=__CLASS__)
 	{

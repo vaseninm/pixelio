@@ -9,6 +9,7 @@
  * @property string $status
  * @property integer $theme_id
  * @property integer $domain_id
+ * @property string update_time
  *
  * The followings are the available model relations:
  * @property Messages[] $messages
@@ -36,7 +37,7 @@ class Clients extends EActiveRecord
 
 		return array(
 			array('status, ip', 'length', 'max'=>255),
-//            array('ip', 'unique'),
+            array('domain_id', 'required'),
             array('theme_id, domain_id', 'numerical', 'integerOnly'=>true),
             array('status', 'in', 'range'=>array(Clients::STATUS_NEW, Clients::STATUS_RESPONDED, Clients::STATUS_CONTACTED, Clients::STATUS_PAID)),
 			array('id, ip, status, theme_id', 'safe', 'on'=>'search'),
@@ -95,7 +96,7 @@ class Clients extends EActiveRecord
 
 
     public static function register() {
-        $client = self::you();
+        $client = Clients::you();
         if (!$client) {
             $client = new self();
             $client->ip = Yii::app()->request->userHostAddress;
@@ -118,10 +119,43 @@ class Clients extends EActiveRecord
         $visit->save();
         return $client;
     }
+	
+	public function beforeSave() {
+		if (parent::beforeSave()) {
+			$this->update_time = new CDbExpression('NOW()');
+			return true;
+		}
+		return false;
+	}
 
+		/**
+	 * @return Clients
+	 */
     public static function you() {
         return Clients::model()->domain(Domains::current()->id)->findByAttributes(array(
             'ip' => Yii::app()->request->userHostAddress,
         ));
     }
+	
+	public static function getSales($userCriteria) {
+		$criteria = new CDbCriteria();
+		$criteria->group = 'status';
+        $criteria->select = 'COUNT(id) as count, status';
+		$criteria->mergeWith($userCriteria);
+		$sales = CHtml::listData(Clients::model()->findAll($criteria), 'status', 'count');
+		$fill = array(
+			Clients::STATUS_NEW => 0,
+			Clients::STATUS_RESPONDED => 0,
+			Clients::STATUS_CONTACTED => 0,
+			Clients::STATUS_PAID => 0,	
+		);
+		return ($sales + $fill);
+	}
+	
+	public static function getConversion($userCriteria) {
+		$sales = Clients::getSales($userCriteria);
+		$all = array_sum($sales);
+		if ($all === 0) return 0;
+		return round(($all - $sales[Clients::STATUS_NEW]) * 100 / $all);
+	}
 }

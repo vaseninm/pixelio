@@ -59,6 +59,7 @@ $this->widget('yiiwheels.widgets.detail.WhDetailView', array(
         'name',
         'email',
         'phone',
+        'time',
         array(
             'class' => 'bootstrap.widgets.TbButtonColumn',
             'template' => '{view}',

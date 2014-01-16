@@ -25,7 +25,7 @@ class Notice extends CActiveRecord
 		return array(
 			array('domain_id', 'numerical', 'integerOnly'=>true),
 			array('type, address', 'length', 'max'=>255),
-			array('domain_id', 'required'),
+			array('domain_id,type', 'required'),
 			array('id, type, address, domain_id', 'safe', 'on'=>'search'),
 		);
 	}
