@@ -63,8 +63,8 @@ return array(
         'frontendUrl' => '/',
         'apiUrl' => '/api',
         'backendUrl' => '/admin',
-        'author' => 'Дима Ковин',
-        'since' => '1986',
+        'author' => 'Affiche',
+        'since' => '2014',
         'adminEmail' => 'vaseninm@gmail.com',
 		'YiiMailer' => include __DIR__ . '/mail.php',
 	)

@@ -61,7 +61,7 @@
     <?php echo $content; ?>
     <hr>
     <footer>
-        <p>&copy; <?= Yii::app()->params->itemAt('author') ?> <?= Yii::app()->params->itemAt('since') ?> &#8211 <?= date('Y') ?>. <?= Yii::t('app', '{n} год|{n} года|{n} лет|{n} года', (date('Y') - Yii::app()->params->itemAt('since')));?> на рынке.</p>
+        <p>&copy; <?= Yii::app()->params->itemAt('author') ?> <?= Yii::app()->params->itemAt('since') ?> &#8211 <?= date('Y') ?>.<!-- <?= Yii::t('app', '{n} год|{n} года|{n} лет|{n} года', (date('Y') - Yii::app()->params->itemAt('since')));?> на рынке.--></p>
     </footer>
 </div>
 
