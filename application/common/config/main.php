@@ -64,7 +64,7 @@ return array(
         'apiUrl' => '/api',
         'backendUrl' => '/admin',
         'author' => 'Affiche',
-        'since' => '2014',
+        'since' => '2013',
         'adminEmail' => 'vaseninm@gmail.com',
 		'YiiMailer' => include __DIR__ . '/mail.php',
 	)
