@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="keywords" content="Профессиональный дизайн интерьера. Дизайн-студия Инны Азорской возьмёт на себя ВСЕ ваши проблемы с ремонтом! Индивидуальный интерьер только под Вас. Контроль качества работ на всех уровнях." />
 		<meta name="description" content="Дизайн интерьер ремонт квартира студия дизайн-студия Инна Азорская дизайнер" />
-		<link rel="shortcut icon" href="<?= Yii::app()->theme->baseUrl ?>/files/img/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="<?= Yii::app()->theme->baseUrl ?>/files/img/favicon.png" type="image/png">
 		<!-- Set Viewport-->
 		<meta name="viewport" content="user-scalable=no,initial-scale=1.0, maximum-scale=1.0 width=device-width" />
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
