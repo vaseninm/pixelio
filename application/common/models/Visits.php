@@ -82,7 +82,7 @@ class Visits extends EActiveRecord
         if ($parseRefferer->isKnown()) {
 //            $referrer->getMedium(); // "Search"
             $this->referrerUrl = $parseRefferer->getSource(); // "Google"
-            $this->referrerKey = $parseRefferer->getTerm();   // "gateway oracle cards denise linn"
+            $this->referrerKey = $parseRefferer->getSearchTerm();   // "gateway oracle cards denise linn"
         } else {
             $this->referrerUrl = $referrer;
             $this->referrerKey = NULL;
