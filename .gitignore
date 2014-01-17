@@ -26,6 +26,10 @@ index
 
 /backend/www/assets
 /backend/runtime
+
+/admin/www/assets
+/admin/runtime
+
 /frontend/www/assets
 /frontend/runtime
 
@@ -38,6 +42,8 @@ index
 /console/config/local.php
 /backend/config/env.php
 /backend/config/local.php
+/admin/config/env.php
+/admin/config/local.php
 /frontend/config/env.php
 /frontend/config/local.php
 

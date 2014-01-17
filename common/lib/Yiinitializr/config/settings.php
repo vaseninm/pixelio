@@ -26,6 +26,7 @@ return array(
 					'frontend' => $root . '/frontend/config',
 					'console' => $root . '/console/config',
 					'backend' => $root . '/backend/config',
+					'admin' => $root . '/admin/config',
 					'common' => $root . '/common/config',
                     'api' => $root . '/api/config',
 				),
@@ -33,11 +34,13 @@ return array(
 					'frontend' => $root . '/frontend',
 					'console' => $root . '/console',
 					'backend' => $root . '/backend',
+					'admin' => $root . '/admin',
                     'api' => $root . '/api'
 				),
 				'assets' => array(
 					$root . '/frontend/www',
 					$root . '/backend/www',
+					$root . '/admin/www',
 				)
 			),
 			'files' => array(
@@ -46,6 +49,7 @@ return array(
 					'frontend' => array('env', 'local'),
 					'console' => array('env', 'local'),
 					'backend' => array('env', 'local'),
+					'admin' => array('env', 'local'),
 					'common' => array('env', 'local'),
                     'api' => array('env', 'local'),
 				)
