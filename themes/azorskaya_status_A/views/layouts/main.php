@@ -79,29 +79,29 @@
 
         <div class="publications"></div>
 
-        <div class="allPublication"><a href="#" id="allPublication"></a></div>
+        <div class="allPublication"><a href="#" id="allPublication" onclick="yaCounter23550703.reachGoal('VIEW_ALL_PUBLICATION_A'); return true;"></a></div>
 
-        <div class="publcTitle1"><a href="#" id="2013_08">Август 2013</a></div>
+        <div class="publcTitle1"><a href="#" id="2013_08" onclick="yaCounter23550703.reachGoal('VIEW_08_2013_PUBLICATION_A'); return true;">Август 2013</a></div>
         <div class="publication1"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2013.jpg"/>
         </div>
 
-        <div class="publcTitle2"><a href="#" id="2013_03">Март 2013</a></div>
+        <div class="publcTitle2"><a href="#" id="2013_03" onclick="yaCounter23550703.reachGoal('VIEW_03_2013_PUBLICATION_A'); return true;">Март 2013</a></div>
         <div class="publication2"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa03_2013.jpg"/>
         </div>
 
-        <div class="publcTitle3"><a href="#" id="2013_02">Февраль 2013</a></div>
+        <div class="publcTitle3"><a href="#" id="2013_02" onclick="yaCounter23550703.reachGoal('VIEW_02_2013_PUBLICATION_A'); return true;">Февраль 2013</a></div>
         <div class="publication3"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa02_2013.jpg"/>
         </div>
 
-        <div class="publcTitle4"><a href="#" id="2012_08">Август 2012</a></div>
+        <div class="publcTitle4"><a href="#" id="2012_08" onclick="yaCounter23550703.reachGoal('VIEW_08_2012_PUBLICATION_A'); return true;">Август 2012</a></div>
         <div class="publication4"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2012.jpg"/>
         </div>
 
-        <div class="publcTitle5"><a href="#" id="2009_11">Ноябрь 2009</a></div>
+        <div class="publcTitle5"><a href="#" id="2009_11" onclick="yaCounter23550703.reachGoal('VIEW_11_2009_PUBLICATION_A'); return true;">Ноябрь 2009</a></div>
         <div class="publication5"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2009.jpg"/>
         </div>
 
-        <div class="publcTitle6"><a href="#" id="2008_11">Ноябрь 2008</a></div>
+        <div class="publcTitle6"><a href="#" id="2008_11" onclick="yaCounter23550703.reachGoal('VIEW_11_2008_PUBLICATION_A'); return true;">Ноябрь 2008</a></div>
         <div class="publication6"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2008.jpg"/>
         </div>
 
@@ -549,21 +549,21 @@
 		</div>
 		<div class="tableShow clearfix" id="tableShow">
 			<div class="viewAll">
-				<a href="#" class="btn-slide" id="btn-slide">смотреть все услуги</a>
+				<a href="#" class="btn-slide" id="btn-slide" onclick="yaCounter23550703.reachGoal('VIEW_TARIF_A'); return true;">смотреть все услуги</a>
 			</div>
-			<div class="arrow3 fr trianglM" id="arrow3">
+			<div class="arrow3 fr trianglM" id="arrow3" onclick="yaCounter23550703.reachGoal('VIEW_TARIF_A'); return true;">
 				<div></div>
 			</div>
-			<div class="arrow2 fr color trianglB" id="arrow2">
+			<div class="arrow2 fr color trianglB" id="arrow2" onclick="yaCounter23550703.reachGoal('VIEW_TARIF_A'); return true;">
 				<div></div>
 			</div>
-			<div class="arrow1 fr trianglM" id="arrow1">
+			<div class="arrow1 fr trianglM" id="arrow1" onclick="yaCounter23550703.reachGoal('VIEW_TARIF_A'); return true;">
 				<div></div>
 			</div>
 		</div>
 	</div>
 	<div class="priceForm horizontal clearfix" ng-controller="ContactController">
-		<form method="post" action="" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
+		<form method="post" action="" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23550703.reachGoal('TARIF_FORM_A'); return true;">
 			<fieldset>
 				<div class="fl">
 					<label for="name">Введите Ваше имя:*</label>
@@ -656,7 +656,7 @@
     <div class="itemJob">
         <div class="coverJob">
             <div class="cell"><a href="<?= Yii::app()->theme->baseUrl ?>/files/img/job/job_1/01.jpg"
-                                 class="fancybox-media" data-title-id="title-1-1" rel="portfolio1">смотреть
+                                 class="fancybox-media" data-title-id="title-1-1" rel="portfolio1" onclick="yaCounter23550703.reachGoal('VIEW_GALERY_1_A'); return true;">смотреть
                     подробности</a></div>
         </div>
         <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/job/thumb_job_1.jpg"/>
@@ -816,7 +816,7 @@
     <div class="itemJob">
         <div class="coverJob">
             <div class="cell"><a href="<?= Yii::app()->theme->baseUrl ?>/files/img/job/job_2/01.jpg"
-                                 class="fancybox-media" data-title-id="title-2-1" rel="portfolio2">смотреть
+                                 class="fancybox-media" data-title-id="title-2-1" rel="portfolio2" onclick="yaCounter23550703.reachGoal('VIEW_GALERY_2_A'); return true;">смотреть
                     подробности</a></div>
         </div>
         <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/job/thumb_job_2.jpg"/>
@@ -946,7 +946,7 @@
     <div class="itemJob">
         <div class="coverJob">
             <div class="cell"><a href="<?= Yii::app()->theme->baseUrl ?>/files/img/job/job_3/01.jpg"
-                                 class="fancybox-media" data-title-id="title-3-1" rel="portfolio3">смотреть
+                                 class="fancybox-media" data-title-id="title-3-1" rel="portfolio3" onclick="yaCounter23550703.reachGoal('VIEW_GALERY_3_A'); return true;">смотреть
                     подробности</a></div>
         </div>
         <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/job/thumb_job_3.jpg"/>
@@ -1030,7 +1030,7 @@
     <div class="itemJob">
         <div class="coverJob">
             <div class="cell"><a href="<?= Yii::app()->theme->baseUrl ?>/files/img/job/job_4/01.jpg"
-                                 class="fancybox-media" data-title-id="title-4-1" rel="portfolio4">смотреть
+                                 class="fancybox-media" data-title-id="title-4-1" rel="portfolio4" onclick="yaCounter23550703.reachGoal('VIEW_GALERY_4_A'); return true;">смотреть
                     подробности</a></div>
         </div>
         <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/job/thumb_job_4.jpg"/>
@@ -1166,7 +1166,7 @@
     <div class="itemJob">
         <div class="coverJob">
             <div class="cell"><a href="<?= Yii::app()->theme->baseUrl ?>/files/img/job/job_5/01.jpg"
-                                 class="fancybox-media" data-title-id="title-5-1" rel="portfolio5">смотреть
+                                 class="fancybox-media" data-title-id="title-5-1" rel="portfolio5" onclick="yaCounter23550703.reachGoal('VIEW_GALERY_5_A'); return true;">смотреть
                     подробности</a></div>
         </div>
         <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/job/thumb_job_5.jpg"/>
@@ -1286,7 +1286,7 @@
 <div class="fl">
     <div class="jobForm" ng-controller="ContactController">
         <div class="titleForm">Напишите нам</div>
-        <form method="post" action="" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
+        <form method="post" action="" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23550703.reachGoal('GALERY_FORM_A'); return true;">
             <fieldset>
                 <label for="name">Введите Ваше имя:*</label>
                 <input type="text" value="" id="" name="name" class="text" ng-model="leftContactModel.name" ng-required="true" />
@@ -1398,7 +1398,7 @@
                 </div>
                 <p class="clientName">Анна Княжева, г. Москва</p>
             </div>
-            <div class="fr">
+            <div class="fr" onclick="yaCounter23550703.reachGoal('VIEW_CLIENT_1_A'); return true;">
                 <div class="clientGalery">
                     <ul>
                         <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/client/photo_client1/01.jpg"/></li>
@@ -1444,7 +1444,7 @@
                 </div>
                 <p class="clientName">Сафронова Екатерина, г. Москва</p>
             </div>
-            <div class="fr">
+            <div class="fr" onclick="yaCounter23550703.reachGoal('VIEW_CLIENT_2_A'); return true;">
                 <div class="clientGalery">
                     <ul>
                         <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/client/photo_client2/01.jpg"/></li>
@@ -1484,7 +1484,7 @@
                 </div>
                 <p class="clientName">Щербединская Екатерина, г. Москва</p>
             </div>
-            <div class="fr">
+            <div class="fr" onclick="yaCounter23550703.reachGoal('VIEW_CLIENT_3_A'); return true;">
                 <div class="clientGalery">
                     <ul>
                         <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/client/photo_client3/01.jpg"/></li>
@@ -1519,7 +1519,7 @@
                 </div>
                 <p class="clientName">Милкова Ирина, г. Дубна</p>
             </div>
-            <div class="fr">
+            <div class="fr" onclick="yaCounter23550703.reachGoal('VIEW_CLIENT_4_A'); return true;">
                 <div class="clientGalery">
                     <ul>
                         <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/client/photo_client4/01.jpg"/></li>
@@ -1558,7 +1558,7 @@
                 </div>
                 <p class="clientName">Армен Торосян</p>
             </div>
-            <div class="fr">
+            <div class="fr" onclick="yaCounter23550703.reachGoal('VIEW_CLIENT_5_A'); return true;">
                 <div class="clientGalery">
                     <ul>
                         <li><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/client/photo_client5/01.jpg"/></li>
@@ -1582,7 +1582,7 @@
             </div>
         </div>
         <div class="clientForm horizontal clearfix" ng-controller="ContactController">
-            <form method="post" action="" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
+            <form method="post" action="" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23550703.reachGoal('CLIENT_FORM_A'); return true;">
                 <fieldset>
                     <div class="fl">
                         <label for="name">Введите Ваше имя:*</label>
@@ -1635,10 +1635,10 @@
             <div class="cell">встретиться за кофе</div>
         </a>
 
-        <p class="copy clearfix"><a href="http://azorskaya.ru/" target="_blank" class="fr">http://azorskaya.ru/</a>info@azorskaya.ru
+        <p class="copy clearfix"><a href="http://azorskaya.ru/" target="_blank" class="fr" onclick="yaCounter23550703.reachGoal('GO_MAIN_SITE_A'); return true;">http://azorskaya.ru/</a>info@azorskaya.ru
         </p>
 		<p class="copy">
-			Приобретая продукт, либо оставляя заявку на сайте, Вы соглашаетесь с <a href="#" id="privacyPolicy">условиями политики конфиденциальности</a>.
+			Приобретая продукт, либо оставляя заявку на сайте, Вы соглашаетесь с <a href="#" id="privacyPolicy" onclick="yaCounter23550703.reachGoal('VIEW_PRIVATE_A'); return true;">условиями политики конфиденциальности</a>.
 			<br>Все авторские права защищены. Полное или частичное копирование материалов сайта запрещено!
 			<br>ООО «Тэрра-Проект» ОГРН 1065010000912
         </p>
@@ -1730,7 +1730,7 @@
         <!-- Content Container -->
         <section class="contactFormModalContent">
             <!-- Content -->
-            <form method="post" action="" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
+            <form method="post" action="" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23550703.reachGoal('POPAP_FORM_A'); return true;">
                 <fieldset>
                     <label for="name">Введите Ваше имя:*</label>
                     <input type="text" value="" id="" name="name" class="text" ng-model="leftContactModel.name" ng-required="true" />
