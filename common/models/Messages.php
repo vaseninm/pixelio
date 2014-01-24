@@ -72,6 +72,13 @@ class Messages extends EActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public function period($start, $end) {
+		$criteria = new CDbCriteria();
+		$criteria->addBetweenCondition('`t`.`time`', $start, $end);
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+	}
 
     public function sendClientInfoToEmail(){
         $mail = new YiiMailer('newMessage', array(

@@ -24,6 +24,15 @@ return array(
 			'enableParamLogging' => false,
 			'charset' => 'utf8',
 		),
+		'log'=>array(
+            'class'=>'CLogRouter',
+            'routes'=>array(
+                array(
+                    'class'=>'CWebLogRoute',
+					'categories'=>'system.db.*',
+                ),
+            ),
+        ),
 	),
 	'params' => array(
 		'yii.handleErrors'   => true,

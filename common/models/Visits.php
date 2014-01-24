@@ -75,6 +75,13 @@ class Visits extends EActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public function period($start, $end) {
+		$criteria = new CDbCriteria();
+		$criteria->addBetweenCondition('`t`.`time`', $start, $end);
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+	}
 
     public function parseRefferer($referrer, $url) {
         $parser = new Parser();

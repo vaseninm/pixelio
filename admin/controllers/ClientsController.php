@@ -39,13 +39,16 @@ class ClientsController extends PxAdminController
     {
         $model = new Clients('search');
         $model->unsetAttributes(); // clear any default values
-		$model->user(Yii::app()->user->id);
+		$model
+//			->period('2012-01-23 00:00:00', '2015-01-25 00:00:00')
+			->user(Yii::app()->user->id);
         if (isset($_GET['Clients'])) {
             $model->attributes = $_GET['Clients'];
         }
         $criteria = new CDbCriteria();
         $criteria->compare('theme_id', $model->theme_id);
         $criteria->compare('domain_id', $model->domain_id);
+//		$criteria->scopes[] = array('period' => array('2012-01-23 00:00:00', '2015-01-25 00:00:00')); 
         $this->render('index', array(
             'model' => $model,
             'sales' => Clients::getSales($criteria),

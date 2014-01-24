@@ -101,7 +101,13 @@ class Clients extends EActiveRecord
         $this->getDbCriteria()->mergeWith($criteria);
         return $this;
 	}
-
+	
+	public function period($start, $end) {
+		$criteria = new CDbCriteria();
+		$criteria->addBetweenCondition('`t`.`update_time`', $start, $end);
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+	}
 
     public static function register() {
         $client = Clients::you();
