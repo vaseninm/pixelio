@@ -4,7 +4,7 @@ return array(
     'layoutPath' => 'frontend.views.layouts',
     'baseDirPath' => 'webroot.images.mail',
     'savePath' => 'frontend.www.assets.mail',
-    'testMode' => true,
+    'testMode' => false,
     'layout' => 'mail',
     'CharSet' => 'UTF-8',
 );
