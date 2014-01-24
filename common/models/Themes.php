@@ -70,6 +70,14 @@ class Themes extends EActiveRecord
         $this->getDbCriteria()->mergeWith($criteria);
         return $this;
     }
+	
+	public function user($user_id) {
+		$criteria = new CDbCriteria();
+		$criteria->with = array('domain');
+        $criteria->compare('domain.user_id', $user_id);
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+	}
 
 
 	public static function model($className=__CLASS__)
@@ -101,7 +109,7 @@ class Themes extends EActiveRecord
         if ($domain) {
             $criteria->compare('domain_id', $domain);
         }
-        $models = Themes::model()->findAll($criteria);
+        $models = Themes::model()->user(Yii::app()->user->id)->findAll($criteria);
         return CHtml::listData($models, 'id', 'name');
     }
 }

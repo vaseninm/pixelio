@@ -1,0 +1,343 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "47c2572877835cde571c9195bb580483",
+    "packages": [
+        {
+            "name": "2amigos/yiistrap",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/2amigos/yiistrap.git",
+                "reference": "1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/2amigos/yiistrap/zipball/1.0.1",
+                "reference": "1.0.1",
+                "shasum": ""
+            },
+            "require-dev": {
+                "codeception/codeception": "@stable",
+                "crisu83/yii-composer": "dev-master",
+                "php": ">=5.3.0",
+                "yiisoft/yii": "1.1.13"
+            },
+            "type": "library",
+            "extra": {
+                "yii-install-writable": [
+                    "tests/_log"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Christoffer Niska",
+                    "email": "christoffer.niska@gmail.com",
+                    "homepage": "http://www.cniska.net/"
+                },
+                {
+                    "name": "Antonio Ramirez",
+                    "email": "ramirez.cobos@gmail.com",
+                    "homepage": "http://www.ramirezcobos.com/"
+                }
+            ],
+            "description": "Twitter Bootstrap for the Yii PHP framework. Own maintained version.",
+            "keywords": [
+                "bootstrap",
+                "yii"
+            ],
+            "time": "2013-08-04 17:41:54"
+        },
+        {
+            "name": "2amigos/yiiwheels",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/2amigos/yiiwheels.git",
+                "reference": "1.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/2amigos/yiiwheels/zipball/1.0.3",
+                "reference": "1.0.3",
+                "shasum": ""
+            },
+            "require": {
+                "2amigos/yiistrap": "1.0.1"
+            },
+            "require-dev": {
+                "php": ">=5.3.0",
+                "yiisoft/yii": "1.1.13"
+            },
+            "type": "yii-extension",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Antonio Ramirez",
+                    "email": "ramirez.cobos@gmail.com",
+                    "homepage": "http://www.ramirezcobos.com/"
+                }
+            ],
+            "description": "Extension library for Yiistrap, Yii Twitter's Bootstrap.",
+            "keywords": [
+                "bootstrap",
+                "yii"
+            ],
+            "support": {
+                "source": "https://github.com/2amigos/yiiwheels/tree/master",
+                "issues": "https://github.com/2amigos/yiiwheels/issues"
+            },
+            "time": "2013-08-11 16:04:01"
+        },
+        {
+            "name": "illuminate/support",
+            "version": "dev-master",
+            "target-dir": "Illuminate/Support",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/support.git",
+                "reference": "c7dfd1bad63f9ac5c3491112c21c14475b1c331e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/c7dfd1bad63f9ac5c3491112c21c14475b1c331e",
+                "reference": "c7dfd1bad63f9ac5c3491112c21c14475b1c331e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.7.2",
+                "patchwork/utf8": "1.1.*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Illuminate\\Support": ""
+                },
+                "files": [
+                    "Illuminate/Support/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com",
+                    "homepage": "https://github.com/taylorotwell",
+                    "role": "Developer"
+                }
+            ],
+            "time": "2014-01-14 01:36:14"
+        },
+        {
+            "name": "intervention/image",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Intervention/image.git",
+                "reference": "a7e2c81783b94161378a6bbaddf033a8ac38444c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/a7e2c81783b94161378a6bbaddf033a8ac38444c",
+                "reference": "a7e2c81783b94161378a6bbaddf033a8ac38444c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "illuminate/support": "4.*",
+                "php": ">=5.3.0"
+            },
+            "suggest": {
+                "intervention/imagecache": "Caching extension for the Intervention Image library"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Intervention\\Image": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Vogel",
+                    "email": "oliver@olivervogel.net",
+                    "homepage": "http://olivervogel.net/"
+                }
+            ],
+            "description": "Image handling and manipulation library with support for Laravel 4 integration",
+            "homepage": "http://intervention.olivervogel.net/image/",
+            "keywords": [
+                "gd",
+                "image",
+                "laravel",
+                "thumbnail",
+                "watermark"
+            ],
+            "time": "2014-01-14 16:03:01"
+        },
+        {
+            "name": "snowplow/referer-parser",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/snowplow/referer-parser.git",
+                "reference": "6337e59014475bb65188718e84ffe917c7f62933"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/snowplow/referer-parser/zipball/6337e59014475bb65188718e84ffe917c7f62933",
+                "reference": "6337e59014475bb65188718e84ffe917c7f62933",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.*",
+                "symfony/yaml": "*"
+            },
+            "suggest": {
+                "symfony/yaml": "Support for YAML configuration file"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Snowplow\\RefererParser": "php/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lars Strojny",
+                    "email": "lars@strojny.net"
+                }
+            ],
+            "description": "Snowplow Refer(r)er parser for PHP",
+            "time": "2014-01-06 11:00:03"
+        },
+        {
+            "name": "vernes/yiimailer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vernes/YiiMailer.git",
+                "reference": "9161ae1b2489f99f4befbd12db0fd9c145a8b6de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/vernes/YiiMailer/archive/9161ae1b2489f99f4befbd12db0fd9c145a8b6de.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "yii-extension",
+            "description": "Yii extension for sending emails with layouts using PHPMailer",
+            "homepage": "https://github.com/vernes/YiiMailer",
+            "time": "2013-06-03 22:31:13"
+        },
+        {
+            "name": "yiiext/activerecord-relation-behavior",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiiext/activerecord-relation-behavior.git",
+                "reference": "413accf93c0d9a30f9725a5d185b1b41367a8fb5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiiext/activerecord-relation-behavior/zipball/413accf93c0d9a30f9725a5d185b1b41367a8fb5",
+                "reference": "413accf93c0d9a30f9725a5d185b1b41367a8fb5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.1.0",
+                "yiisoft/yii": ">=1.1.6"
+            },
+            "type": "yii-extension",
+            "autoload": {
+                "classmap": [
+                    "EActiveRecordRelationBehavior.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Carsten Brandt",
+                    "email": "mail@cebe.cc",
+                    "homepage": "http://cebe.cc/",
+                    "role": "Core framework development"
+                }
+            ],
+            "description": "Inspired by and put together the awesomeness of many yii extensions that aim to improve saving of related records. Comes with 100% test coverage and well structured and clean code so it can savely be used in enterprise production enviroment.",
+            "homepage": "https://github.com/yiiext/activerecord-relation-behavior",
+            "keywords": [
+                "active-record",
+                "extension",
+                "yii"
+            ],
+            "time": "2013-10-10 09:45:30"
+        },
+        {
+            "name": "yiisoft/yii",
+            "version": "1.1.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii.git",
+                "reference": "f0fee98ee84f70f1f3652f65562c9670e919cb4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/yiisoft/yii/archive/f0fee98ee84f70f1f3652f65562c9670e919cb4e.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "library",
+            "description": "Yii PHP Framework",
+            "homepage": "https://github.com/yiisoft/yii"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "intervention/image": 20,
+        "yiiext/activerecord-relation-behavior": 20,
+        "snowplow/referer-parser": 20,
+        "vernes/yiimailer": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}

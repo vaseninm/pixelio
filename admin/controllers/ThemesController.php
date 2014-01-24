@@ -1,97 +1,86 @@
 <?php
 
-class ThemesController extends PxAdminController
-{
+class ThemesController extends PxAdminController {
 
-public function filters()
-{
-return array(
-'accessControl',
-'postOnly + delete',
-);
-}
+	public function filters() {
+		return array(
+			'accessControl',
+			'postOnly + delete',
+		);
+	}
 
-public function accessRules()
-{
-return array(
-array('allow',
-'roles' => array(Users::ROLE_ADMIN),
-),
-array('deny',
-'users' => array('*'),
-),
-);
-}
+	public function accessRules() {
+		return array(
+			array('allow',
+				'roles' => array(Users::ROLE_USER),
+			),
+			array('deny',
+				'users' => array('*'),
+			),
+		);
+	}
 
-protected function beforeAction($action) {
-$return = parent::beforeAction($action);
-$this->menu = array(
-array('label' => 'Темы', 'url' => array('index')),
-array('label' => 'Добавить тему', 'url' => array('create')),
-);
-return $return;
-}
+	protected function beforeAction($action) {
+		$return = parent::beforeAction($action);
+		$this->menu = array(
+			array('label' => 'Темы', 'url' => array('index')),
+			array('label' => 'Добавить тему', 'url' => array('create')),
+		);
+		return $return;
+	}
 
-public function actionIndex()
-{
-$model=new Themes('search');
-$model->unsetAttributes();  // clear any default values
-if(isset($_GET['Themes']))
-$model->attributes=$_GET['Themes'];
+	public function actionIndex() {
+		$model = new Themes('search');
+		$model->unsetAttributes();  // clear any default values
+		$model->user(Yii::app()->user->id);
+		if (isset($_GET['Themes']))
+			$model->attributes = $_GET['Themes'];
 
-$this->render('index',array(
-'model'=>$model,
-));
-}
+		$this->render('index', array(
+			'model' => $model,
+		));
+	}
 
-public function actionCreate()
-{
-$model=new Themes;
+	public function actionCreate() {
+		$model = new Themes;
 
-$this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
-if(isset($_POST['Themes']))
-{
-$model->attributes=$_POST['Themes'];
-if($model->save())
-$this->redirect(array('index'));
-}
+		if (isset($_POST['Themes'])) {
+			$model->attributes = $_POST['Themes'];
+			if ($model->save())
+				$this->redirect(array('index'));
+		}
 
-$this->render('create',array(
-'model'=>$model,
-));
-}
+		$this->render('create', array(
+			'model' => $model,
+		));
+	}
 
+	public function actionUpdate($id) {
+		$model = $this->loadModel('Themes', $id);
 
-public function actionUpdate($id)
-{
-$model=$this->loadModel('Themes', $id);
+		$this->performAjaxValidation($model);
 
-$this->performAjaxValidation($model);
+		if (isset($_POST['Themes'])) {
+			$model->attributes = $_POST['Themes'];
+			if ($model->save())
+				$this->refresh();
+		}
 
-if(isset($_POST['Themes']))
-{
-$model->attributes=$_POST['Themes'];
-if($model->save())
-$this->refresh();
-}
+		$this->render('update', array(
+			'model' => $model,
+		));
+	}
 
-$this->render('update',array(
-'model'=>$model,
-));
-}
+	public function actionDelete($id) {
+		if (Yii::app()->request->isPostRequest) {
+			$this->loadModel('Themes', $id)->delete();
 
-public function actionDelete($id)
-{
-if(Yii::app()->request->isPostRequest)
-{
-$this->loadModel('Themes', $id)->delete();
-
-if(!isset($_GET['ajax']))
-$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
-}
-else
-throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
-}
+			if (!isset($_GET['ajax']))
+				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
+		} else
+			throw new CHttpException(400, 'Invalid request. Please do not repeat this request again.');
+	}
 
 }

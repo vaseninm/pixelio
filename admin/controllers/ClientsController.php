@@ -18,7 +18,7 @@ class ClientsController extends PxAdminController
     {
         return array(
             array('allow',
-                'roles' => array(Users::ROLE_ADMIN),
+                'roles' => array(Users::ROLE_USER),
             ),
             array('deny',
                 'users' => array('*'),
@@ -39,6 +39,7 @@ class ClientsController extends PxAdminController
     {
         $model = new Clients('search');
         $model->unsetAttributes(); // clear any default values
+		$model->user(Yii::app()->user->id);
         if (isset($_GET['Clients'])) {
             $model->attributes = $_GET['Clients'];
         }

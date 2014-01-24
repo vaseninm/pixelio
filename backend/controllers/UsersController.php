@@ -1,6 +1,6 @@
 <?php
 
-class UsersController extends PxAdminController
+class UsersController extends PxBackendController
 {
 
     public $defaultAction = 'admin';

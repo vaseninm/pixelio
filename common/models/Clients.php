@@ -93,6 +93,14 @@ class Clients extends EActiveRecord
         $this->getDbCriteria()->mergeWith($criteria);
         return $this;
     }
+	
+	public function user($user_id) {
+		$criteria = new CDbCriteria();
+		$criteria->with = array('domain');
+        $criteria->compare('domain.user_id', $user_id);
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+	}
 
 
     public static function register() {

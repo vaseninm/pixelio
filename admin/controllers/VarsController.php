@@ -15,7 +15,7 @@ class VarsController extends PxAdminController
     {
         return array(
             array('allow',
-                'roles' => array(Users::ROLE_ADMIN),
+                'roles' => array(Users::ROLE_USER),
             ),
             array('deny',
                 'users' => array('*'),
@@ -37,6 +37,7 @@ class VarsController extends PxAdminController
     {
         $model = new Vars('search');
         $model->unsetAttributes(); // clear any default values
+		$model->user(Yii::app()->user->id);
         if (isset($_GET['Vars']))
             $model->attributes = $_GET['Vars'];
 

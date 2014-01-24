@@ -9,6 +9,7 @@
  * @property string $status
  * @property string $create_time
  * @property string $update_time
+ * @property int $user_id
  */
 class Domains extends EActiveRecord
 {
@@ -65,10 +66,18 @@ class Domains extends EActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public function user($user_id) {
+		$criteria = new CDbCriteria();
+        $criteria->compare('user_id', $user_id);
+        $this->getDbCriteria()->mergeWith($criteria);
+        return $this;
+	}
 
-    public function beforeSave() {
+	public function beforeSave() {
         if ($this->isNewRecord) {
             $this->create_time = new CDbExpression('NOW()');
+            $this->user_id = Yii::app()->user->id;
         }
         $this->update_time = new CDbExpression('NOW()');
         return true;
@@ -98,8 +107,10 @@ class Domains extends EActiveRecord
         return Domains::$current;
     }
 
-    public static function getActive() {
-        $models = Domains::model()->findAllByAttributes(array('status' => Domains::STATUS_ACTIVE));
+	public static function getActive() {
+        $models = Domains::model()
+				->user(Yii::app()->user->id)
+				->findAllByAttributes(array('status' => Domains::STATUS_ACTIVE));
         return CHtml::listData($models, 'id', 'domain');
     }
 }

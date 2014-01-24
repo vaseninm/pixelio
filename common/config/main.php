@@ -62,7 +62,7 @@ return array(
 		'php.timezone'       => 'UTC',
         'frontendUrl' => '/',
         'apiUrl' => '/api',
-        'backendUrl' => '/admin',
+        'adminUrl' => '/admin',
         'author' => 'Affiche',
         'since' => '2013',
         'adminEmail' => 'vaseninm@gmail.com',
