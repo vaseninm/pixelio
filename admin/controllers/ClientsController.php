@@ -37,10 +37,13 @@ class ClientsController extends PxAdminController
 
     public function actionIndex()
     {
-        $model = new Clients('search');
+        $startDate = date('Y-m-d H:i:s', Yii::app()->request->getParam('startDate', 0));
+        $endDate = gmdate('Y-m-d H:i:s', Yii::app()->request->getParam('endDate', time()));
+					
+		$model = new Clients('search');
         $model->unsetAttributes(); // clear any default values
 		$model
-//			->period('2012-01-23 00:00:00', '2015-01-25 00:00:00')
+			->period($startDate, $endDate)
 			->user(Yii::app()->user->id);
         if (isset($_GET['Clients'])) {
             $model->attributes = $_GET['Clients'];
@@ -48,7 +51,7 @@ class ClientsController extends PxAdminController
         $criteria = new CDbCriteria();
         $criteria->compare('theme_id', $model->theme_id);
         $criteria->compare('domain_id', $model->domain_id);
-//		$criteria->scopes[] = array('period' => array('2012-01-23 00:00:00', '2015-01-25 00:00:00')); 
+		$criteria->scopes[] = array('period' => array($startDate, $endDate)); 
         $this->render('index', array(
             'model' => $model,
             'sales' => Clients::getSales($criteria),
