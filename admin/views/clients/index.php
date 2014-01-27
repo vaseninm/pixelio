@@ -41,18 +41,8 @@ $this->breadcrumbs = array(
 	?>
 
     <div id="sales">
-        <b>Воронка продаж:</b>
-        <div>Оплатившие: <?= $sales[Clients::STATUS_PAID] ?></div>
-        <div>Вышедшие на связь: <?= $sales[Clients::STATUS_CONTACTED] ?></div>
-        <div>Оставившие координаты: <?= $sales[Clients::STATUS_RESPONDED] ?></div>
-        <div>Зашедшие: <?= $sales[Clients::STATUS_NEW] ?></div>
-    </div>
-	<p></p>
-    <div id="conversion">
-        <b>Конверсия:</b> <?= $conversion ?>%
-    </div>
-
-	<div id="dateRange">
+        <h3>Воронка продаж:</h3>
+		<div id="dateRange">
 		<?php
 		$this->widget('yiiwheels.widgets.daterangepicker.WhDateRangePicker', array(
 			'name' => 'daterangepickertest',
@@ -92,5 +82,16 @@ $this->breadcrumbs = array(
 			}',
 		));
 		?>
-	</div>
+		</div>
+        <div>Оплатившие: <?= $sales[Clients::STATUS_PAID] ?></div>
+        <div>Вышедшие на связь: <?= $sales[Clients::STATUS_CONTACTED] ?></div>
+        <div>Оставившие координаты: <?= $sales[Clients::STATUS_RESPONDED] ?></div>
+        <div>Зашедшие: <?= $sales[Clients::STATUS_NEW] ?></div>
+    </div>
+	<p></p>
+    <div id="conversion">
+        <p class="lead">Конверсия: <?= $conversion ?>%</p>
+    </div>
+	<p></p>
+	
 </div>
