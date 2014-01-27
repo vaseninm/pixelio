@@ -63,6 +63,7 @@ return array(
         'frontendUrl' => '/',
         'apiUrl' => '/api',
         'adminUrl' => '/admin',
+        'backendUrl' => 'http://pliv.ru/backend',
         'author' => 'Affiche',
         'since' => '2013',
         'adminEmail' => 'vaseninm@gmail.com',
