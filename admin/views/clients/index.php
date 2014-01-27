@@ -40,9 +40,9 @@ $this->breadcrumbs = array(
 	));
 	?>
 
-    <div id="sales">
-        <h3>Воронка продаж:</h3>
-		<div id="dateRange">
+    
+    <h3>Воронка продаж:</h3>
+	<div id="dateRange">
 		<?php
 		$this->widget('yiiwheels.widgets.daterangepicker.WhDateRangePicker', array(
 			'name' => 'daterangepickertest',
@@ -82,7 +82,8 @@ $this->breadcrumbs = array(
 			}',
 		));
 		?>
-		</div>
+	</div>
+	<div id="sales">
         <div>Оплатившие: <?= $sales[Clients::STATUS_PAID] ?></div>
         <div>Вышедшие на связь: <?= $sales[Clients::STATUS_CONTACTED] ?></div>
         <div>Оставившие координаты: <?= $sales[Clients::STATUS_RESPONDED] ?></div>
