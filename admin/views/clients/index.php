@@ -63,7 +63,7 @@ $this->breadcrumbs = array(
 				),
 				'locale' => array(
 					'applyLabel' => 'Применить',
-					'cancelLabel' => 'Очистить',
+					'clearLabel' => 'Отмена',
 					'fromLabel' => 'От',
 					'toLabel' => 'До',
 					'customRangeLabel' => 'Ручной выбор',
