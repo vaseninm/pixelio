@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "47c2572877835cde571c9195bb580483",
+    "hash": "62053dca133579a87b7e60a592deb69f",
     "packages": [
         {
             "name": "2amigos/yiistrap",
@@ -104,12 +104,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "c7dfd1bad63f9ac5c3491112c21c14475b1c331e"
+                "reference": "62bd7c22593daca1e0de5812be62cffedaf59953"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/c7dfd1bad63f9ac5c3491112c21c14475b1c331e",
-                "reference": "c7dfd1bad63f9ac5c3491112c21c14475b1c331e",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/62bd7c22593daca1e0de5812be62cffedaf59953",
+                "reference": "62bd7c22593daca1e0de5812be62cffedaf59953",
                 "shasum": ""
             },
             "require": {
@@ -146,7 +146,7 @@
                     "role": "Developer"
                 }
             ],
-            "time": "2014-01-14 01:36:14"
+            "time": "2014-01-18 23:30:43"
         },
         {
             "name": "intervention/image",
@@ -154,12 +154,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "a7e2c81783b94161378a6bbaddf033a8ac38444c"
+                "reference": "c56d00ff732ae7a0e1a2150faa9b24cb4da2f680"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/a7e2c81783b94161378a6bbaddf033a8ac38444c",
-                "reference": "a7e2c81783b94161378a6bbaddf033a8ac38444c",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/c56d00ff732ae7a0e1a2150faa9b24cb4da2f680",
+                "reference": "c56d00ff732ae7a0e1a2150faa9b24cb4da2f680",
                 "shasum": ""
             },
             "require": {
@@ -196,7 +196,17 @@
                 "thumbnail",
                 "watermark"
             ],
-            "time": "2014-01-14 16:03:01"
+            "time": "2014-01-16 14:29:33"
+        },
+        {
+            "name": "miloschuman/yii-highcharts",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "http://github.com/miloschuman/yii-highcharts",
+                "reference": "master"
+            },
+            "type": "library"
         },
         {
             "name": "snowplow/referer-parser",
@@ -204,12 +214,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/snowplow/referer-parser.git",
-                "reference": "6337e59014475bb65188718e84ffe917c7f62933"
+                "reference": "2708c0a060c35900a84150d171e39760bb6813d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/snowplow/referer-parser/zipball/6337e59014475bb65188718e84ffe917c7f62933",
-                "reference": "6337e59014475bb65188718e84ffe917c7f62933",
+                "url": "https://api.github.com/repos/snowplow/referer-parser/zipball/2708c0a060c35900a84150d171e39760bb6813d3",
+                "reference": "2708c0a060c35900a84150d171e39760bb6813d3",
                 "shasum": ""
             },
             "require-dev": {
@@ -236,7 +246,7 @@
                 }
             ],
             "description": "Snowplow Refer(r)er parser for PHP",
-            "time": "2014-01-06 11:00:03"
+            "time": "2014-01-27 20:49:52"
         },
         {
             "name": "vernes/yiimailer",

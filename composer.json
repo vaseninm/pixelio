@@ -31,6 +31,18 @@
         {
             "type": "composer",
             "url": "http://packages.phundament.com"
+        },
+        {
+            "type":"package",
+            "package":{
+                "name":"miloschuman/yii-highcharts",
+                "version":"1.0.0",
+                "source":{
+                    "type":"git",
+                    "url":"http://github.com/miloschuman/yii-highcharts",
+                    "reference":"master"
+                }
+            }
         }
     ],
     "require": {
@@ -39,8 +51,8 @@
         "intervention/image": "dev-master",
         "yiiext/activerecord-relation-behavior": "dev-master",
         "snowplow/referer-parser": "dev-master",
-		"vernes/yiimailer": "dev-master"
-		
+		"vernes/yiimailer": "dev-master",
+        "miloschuman/yii-highcharts": "1.0.0"
     },
     "autoload": {
         "psr-0": {
