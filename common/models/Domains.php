@@ -29,6 +29,10 @@ class Domains extends EActiveRecord
 	public function rules()
 	{
 		return array(
+			array('domain, status, user_id', 'required'),
+			array('domain', 'unique'),
+			array('domain', 'match', 'pattern' => '/^([a-zA-ZА-Я0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$/'),
+			array('status', 'in', 'range' => Domains::getStatusList()),
 			array('domain, status', 'length', 'max'=>255),
 			array('create_time, update_time', 'safe'),
 			array('id, domain, status, create_time, update_time', 'safe', 'on'=>'search'),
@@ -38,6 +42,7 @@ class Domains extends EActiveRecord
 	public function relations()
 	{
 		return array(
+			'user' => array(self::BELONGS_TO, 'Users', 'user_id'),
 		);
 	}
 
@@ -49,6 +54,7 @@ class Domains extends EActiveRecord
 			'status' => 'Статус',
 			'create_time' => 'Время создания',
 			'update_time' => 'Время обновления',
+			'user_id' => 'Пользователь',
 		);
 	}
 
@@ -77,7 +83,6 @@ class Domains extends EActiveRecord
 	public function beforeSave() {
         if ($this->isNewRecord) {
             $this->create_time = new CDbExpression('NOW()');
-            $this->user_id = Yii::app()->user->id;
         }
         $this->update_time = new CDbExpression('NOW()');
         return true;
@@ -113,4 +118,24 @@ class Domains extends EActiveRecord
 				->findAllByAttributes(array('status' => Domains::STATUS_ACTIVE));
         return CHtml::listData($models, 'id', 'domain');
     }
+	
+	public static function getStatusLabelList() {
+		return array(
+			Domains::STATUS_ACTIVE => 'Активный',
+			Domains::STATUS_NEW => 'Неактивирован',
+			Domains::STATUS_BLOCKED => 'Заблокирован',
+			Domains::STATUS_DELETED => 'Удален',
+		);
+	}
+	
+	public static function getStatusLabel($status) {
+		$statusList = Domains::getStatusLabelList();
+		
+		return isset($statusList[$status]) ? $statusList[$status] : 'Неизветный';
+	}
+	
+	public static function getStatusList() {
+		return array_keys(Domains::getStatusLabelList());
+	}
+	
 }

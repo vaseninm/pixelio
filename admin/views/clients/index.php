@@ -19,7 +19,6 @@ $this->breadcrumbs = array(
 		'filter' => $model,
 		'ajaxUpdate' => 'sales,conversion',
 		'columns' => array(
-//        'id',
 			'ip',
 			'status',
 			array(

@@ -28,6 +28,11 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 			'value' => 'Domains::getStatusLabel($data->status)',
 			'filter' => Domains::getStatusLabelList(),
 		),
+		array(
+			'name' => 'user_id',
+			'value' => '$data->user->username',
+//			'filter' => Domains::getStatusLabelList(),
+		),
 		'create_time',
 		'update_time',
 		array(

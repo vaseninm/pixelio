@@ -1,6 +1,6 @@
 <?php
 
-class DomainsController extends PxAdminController {
+class DomainsController extends PxBackendController {
 
 	public function filters() {
 		return array(
@@ -12,7 +12,7 @@ class DomainsController extends PxAdminController {
 	public function accessRules() {
 		return array(
 			array('allow',
-				'roles' => array(Users::ROLE_USER),
+				'roles' => array(Users::ROLE_ADMIN),
 			),
 			array('deny',
 				'users' => array('*'),
@@ -32,7 +32,6 @@ class DomainsController extends PxAdminController {
 	public function actionIndex() {
 		$model = new Domains('search');
 		$model->unsetAttributes();  // clear any default values
-		$model->user(Yii::app()->user->id);
 		if (isset($_GET['Domains']))
 			$model->attributes = $_GET['Domains'];
 
@@ -48,8 +47,6 @@ class DomainsController extends PxAdminController {
 
 		if (isset($_POST['Domains'])) {
 			$model->attributes = $_POST['Domains'];
-			$model->status = Domains::STATUS_NEW;
-			$model->user_id = Yii::app()->user->id;
 			if ($model->save()) {
 				Yii::app()->user->setFlash(TbHtml::ALERT_COLOR_SUCCESS, 'Домен успешно добавлен');
 				$this->redirect(array('index'));
