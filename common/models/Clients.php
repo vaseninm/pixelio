@@ -97,7 +97,7 @@ class Clients extends EActiveRecord
 	public function user($user_id) {
 		$criteria = new CDbCriteria();
 		$criteria->with = array('domain');
-        $criteria->compare('domain.user_id', $user_id);
+        $criteria->compare('`domain`.`user_id`', $user_id);
         $this->getDbCriteria()->mergeWith($criteria);
         return $this;
 	}
@@ -153,8 +153,8 @@ class Clients extends EActiveRecord
 	
 	public static function getSales($userCriteria) {
 		$criteria = new CDbCriteria();
-		$criteria->group = 'status';
-        $criteria->select = 'COUNT(id) as count, status';
+		$criteria->group = 't.status';
+        $criteria->select = 'COUNT(t.id) as count, t.status';
 		$criteria->mergeWith($userCriteria);
 		$sales = CHtml::listData(Clients::model()->findAll($criteria), 'status', 'count');
 		$fill = array(

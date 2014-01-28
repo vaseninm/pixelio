@@ -51,7 +51,12 @@ class ClientsController extends PxAdminController
         $criteria = new CDbCriteria();
         $criteria->compare('theme_id', $model->theme_id);
         $criteria->compare('domain_id', $model->domain_id);
-		$criteria->scopes[] = array('period' => array($startDate, $endDate)); 
+        $criteria->scopes[] = array(
+            'period' => array($startDate, $endDate),
+        );
+        $criteria->scopes[] = array(
+            'user' => array(Yii::app()->user->id),
+        );
         $this->render('index', array(
             'model' => $model,
             'sales' => Clients::getSales($criteria),
