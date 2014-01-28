@@ -40,6 +40,7 @@ $this->breadcrumbs = array(
 	));
 	?>
 
+<hr>
 <div class="row-fluid">
 	<div class="span5">    
 		<h2>Воронка продаж:</h2>
