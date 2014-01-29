@@ -39,6 +39,7 @@ $this->breadcrumbs = array(
 	));
 	?>
 
+<hr>
 <div class="row-fluid">
 	<div class="span5">    
 		<h2>Воронка продаж:</h2>
@@ -97,71 +98,43 @@ $this->breadcrumbs = array(
 	</div>
 	<div class="span7">
 		<!-- Графическая воронка -->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script type="text/javascript">jQuery.noConflict();</script>
-		<script src="http://code.highcharts.com/highcharts.js"></script>
-		<script src="http://code.highcharts.com/modules/funnel.js"></script>
+        <?php
+        $this->widget(
+            'vendor.miloschuman.yii-highcharts.highcharts.HighchartsWidget', array(
+                'options' => array(
+                    'title'  => array(
+                        'text' => 'Воронка продаж',
+                        'x' => -50,
+                    ),
+                    'chart' => array(
+                        'type' => 'funnel',
+                        'marginRight' => 100,
+                    ),
+                    'plotOptions' => array(
+                        'series' => array(
+                            'neckWidth' => '30%',
+                            'neckHeight' => '50%',
+                        ),
+                    ),
+                    'legend' => array(
+                        'enabled' => false,
+                    ),
+                    'series' => array(
+                        array(
+                            'name' => 'Посетителей',
+					        'data' =>  array(
+                                array('Зашедшие', $sales[Clients::STATUS_NEW]),
+                                array('Оставившие координаты', $sales[Clients::STATUS_RESPONDED]),
+                                array('Вышедшие на связь', $sales[Clients::STATUS_CONTACTED]),
+                                array('Оплатившие', $sales[Clients::STATUS_PAID]),
+                            ),
+                        ),
+                    ),
+                ),
+                'scripts' => array('modules/funnel'),
+            ));
+        ?>
 
-		<div id="container" style="min-width: 270px; max-width: 600px; height: 270px; margin: 0 auto"></div>
-		<script type="text/javascript">
-
-		(function($){ // encapsulate jQuery
-
-		$(function () {
-			
-			$('#container').highcharts({
-				chart: {
-					type: 'funnel',
-					marginRight: 100
-				},
-				title: {
-					text: 'Графическое представление',
-					x: -50
-				},
-				plotOptions: {
-					series: {
-						dataLabels: {
-							enabled: true,
-							format: '<b>{point.name}</b> ({point.y:,.0f})',
-							color: 'black',
-							softConnector: true
-						},
-						neckWidth: '30%',
-						neckHeight: '50%'
-						
-						//-- Вид воронки
-						// height: pixels or percent (высота излива)
-						// width: pixels or percent (ширина излива)
-					}
-				},
-				legend: {
-					enabled: false
-				},
-				series: [{
-					name: 'Посетителей',
-					data: [
-						['Зашедшие', 1900],
-						['Оставившие координаты', 1000],
-						['Вышедшие на связь', 500],
-						['Оплатившие',    200],
-					   // ['Бла-бла-бла',    0]
-					]
-				}]
-			});
-		});
-		})(jQuery);
-		</script>
-		<script>
-		// color theme
-		Highcharts.theme = {
-			colors: ['#058DC7', '#50B432', '#DDDF00', '#ED561B', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
-			//colors: ['#DDDF0D', '#55BF3B', '#DF5353', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee', '#55BF3B', '#aaeeee'],
-			//colors: ['#24CBE5', '#058DC7', '#50B432', '#ED561B', '#DDDF00', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
-			//colors: ['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce', '#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a'],
-		   };
-		   // Apply the theme
-		var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
-		</script>
 	</div>
 </div>	
 </div>
