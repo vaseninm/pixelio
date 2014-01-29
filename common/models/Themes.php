@@ -112,4 +112,15 @@ class Themes extends EActiveRecord
         $models = Themes::model()->user(Yii::app()->user->id)->findAll($criteria);
         return CHtml::listData($models, 'id', 'name');
     }
+
+    public static function getThemeCatalogs(){
+        $dirname = Yii::getPathOfAlias('frontend.www.themes');
+        $themes = array();
+        foreach (scandir($dirname) as $file) {
+            if (is_dir($dirname . '/' . $file) && !in_array($file, array('.', '..'))) {
+                $themes[] = $file;
+            }
+        }
+        return $themes;
+    }
 }
