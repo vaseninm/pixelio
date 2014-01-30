@@ -8,7 +8,7 @@
 <?php
 $this->breadcrumbs = array(
 	'Клиенты' => array('index'),
-	$client->ip,
+	'Клиент ' . $client->ip,
 );
 ?>
 

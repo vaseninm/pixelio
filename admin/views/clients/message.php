@@ -7,8 +7,9 @@
 
 <?php
 $this->breadcrumbs = array(
-	'Сообщение' => array('index'),
-	$model->client->ip,
+	'Клиенты' => array('index'),
+	'Клиент ' . $model->client->ip => array('view', 'id' => $model->client->id),
+	'Сообщение #' . $model->id,
 );
 ?>
 
