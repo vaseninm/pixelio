@@ -161,7 +161,7 @@ class Clients extends EActiveRecord
 			Clients::STATUS_NEW => 0,
 			Clients::STATUS_RESPONDED => 0,
 			Clients::STATUS_CONTACTED => 0,
-			Clients::STATUS_PAID => 0,	
+			Clients::STATUS_PAID => 0,
 		);
 		return ($sales + $fill);
 	}
@@ -171,5 +171,14 @@ class Clients extends EActiveRecord
 		$all = array_sum($sales);
 		if ($all === 0) return 0;
 		return round(($all - $sales[Clients::STATUS_NEW]) * 100 / $all);
+	}
+
+	public static function getSaleLabels () {
+		return array(
+			Clients::STATUS_NEW => 'Зашедшие',
+			Clients::STATUS_RESPONDED => 'Оставившие координаты',
+			Clients::STATUS_CONTACTED => 'Вышедшие на связь',
+			Clients::STATUS_PAID => 'Оплатившие',
+		);
 	}
 }

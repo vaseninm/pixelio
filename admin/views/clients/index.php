@@ -17,7 +17,10 @@ $this->breadcrumbs = array(
 		'type' => TbHtml::GRID_TYPE_BORDERED,
 		'dataProvider' => $model->search(),
 		'filter' => $model,
-		'ajaxUpdate' => 'sales,conversion',
+		'ajaxUpdate' => 'conversion',
+		'afterAjaxUpdate' => 'function (id, data) {
+			$(document).trigger("updateSales", $(data).find("#saleJs").text());
+		}',
 		'columns' => array(
 			'ip',
 			'status',
@@ -86,8 +89,7 @@ $this->breadcrumbs = array(
 			</div>
 			<div id="sales">
 				<?php
-				$this->widget(
-						'vendor.miloschuman.yii-highcharts.highcharts.HighchartsWidget', array(
+				$this->widget('vendor.miloschuman.yii-highcharts.highcharts.HighchartsWidget', array(
 					'options' => array(
 						'title' => array(
 							'text' => 'Воронка продаж',
@@ -96,22 +98,17 @@ $this->breadcrumbs = array(
 						'chart' => array(
 							'type' => 'funnel',
 							'marginRight' => 100,
-							'events' => array(),
-							'click'  => new CJavaScriptExpression('
-							function(e) {
-								var x = e.xAxis[0].value,
-								y = e.yAxis[0].value,
-								series = this.series[0];
-
-								series.setData(' . CJavaScript::jsonEncode(array(
-										array('Зашедшие', $sales[Clients::STATUS_NEW]),
-										array('Оставившие координаты', $sales[Clients::STATUS_RESPONDED]),
-										array('Вышедшие на связь', $sales[Clients::STATUS_CONTACTED]),
-										array('Оплатившие', $sales[Clients::STATUS_PAID]),
-									)) . ');
-
-							}
-							'),
+							'events' => array(
+								'load'  => new CJavaScriptExpression('
+								function(e) {
+									var series = this.series[0];
+									$(document).bind("updateSales", function(e, data) {
+										var sales = $.parseJSON(data);
+										series.setData(sales);
+									});
+								}
+								'),
+							),
 						),
 						'plotOptions' => array(
 							'series' => array(
@@ -125,12 +122,7 @@ $this->breadcrumbs = array(
 						'series' => array(
 							array(
 								'name' => 'Посетителей',
-								'data' => array(
-									array('Зашедшие', $sales[Clients::STATUS_NEW]),
-									array('Оставившие координаты', $sales[Clients::STATUS_RESPONDED]),
-									array('Вышедшие на связь', $sales[Clients::STATUS_CONTACTED]),
-									array('Оплатившие', $sales[Clients::STATUS_PAID]),
-								),
+								'data' => new CJavaScriptExpression('$.parseJSON($("#saleJs").text())'),
 							),
 						),
 					),
@@ -144,6 +136,13 @@ $this->breadcrumbs = array(
 			</div>
 			<p></p>
 		</div>
-
-	</div>	
+	</div>
+</div>
+<div id="saleJs" style="display: none">
+	<?= CJSON::encode(array(
+		array(Clients::getSaleLabels()[Clients::STATUS_NEW], $sales[Clients::STATUS_NEW]),
+		array(Clients::getSaleLabels()[Clients::STATUS_RESPONDED], $sales[Clients::STATUS_RESPONDED]),
+		array(Clients::getSaleLabels()[Clients::STATUS_CONTACTED], $sales[Clients::STATUS_CONTACTED]),
+		array(Clients::getSaleLabels()[Clients::STATUS_PAID], $sales[Clients::STATUS_PAID]),
+	)); ?>
 </div>
