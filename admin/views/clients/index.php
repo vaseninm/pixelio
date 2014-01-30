@@ -23,7 +23,11 @@ $this->breadcrumbs = array(
 		}',
 		'columns' => array(
 			'ip',
-			'status',
+			array(
+				'name' => 'status',
+				'value' => 'Clients::getSaleLabels()[$data->status]',
+				'filter' => Clients::getSaleLabels(),
+			),
 			array(
 				'name' => 'theme_id',
 				'value' => '$data->theme->name',
