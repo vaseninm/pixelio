@@ -13,11 +13,11 @@
 
     <?php echo $form->errorSummary($model); ?>
 
-    <?php echo $form->textFieldControlGroup($model, 'name', array('span' => 5, 'maxlength' => 255)); ?>
+    <?php echo $form->dropDownListControlGroup($model, 'name', Themes::getThemeCatalogs(), array('span' => 5, 'displaySize' => 1)); ?>
 
     <?php echo $form->textFieldControlGroup($model, 'strong', array('span' => 5)); ?>
 
-    <?php echo $form->dropDownListControlGroup($model, 'domain_id', Domains::getActive(), array('span' => 5)); ?>
+    <?php echo $form->dropDownListControlGroup($model, 'domain_id', Domains::getActive(), array('span' => 5, 'displaySize' => 1)); ?>
 
 
     <div class="form-actions">
