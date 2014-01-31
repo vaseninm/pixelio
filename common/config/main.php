@@ -10,7 +10,7 @@
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
 return array(
-    'language' => 'ru',
+	'language' => 'ru',
 	'preload' => array('log'),
 	'aliases' => array(
 		'frontend' => dirname(__FILE__) . '/../..' . '/frontend',
@@ -31,7 +31,7 @@ return array(
 		'application.components.*',
 		'application.helpers.*',
 		'application.models.*',
-        'vendor.2amigos.yiistrap.helpers.*',
+		'vendor.2amigos.yiistrap.helpers.*',
 		'vendor.vernes.yiimailer.YiiMailer',
 	),
 	'components' => array(
@@ -48,25 +48,24 @@ return array(
 				),
 			),
 		),
-        'authManager' => array(
-            'class' => 'PxPhpAuthManager',
-            'defaultRoles' => array('guest'),
-        ),
-        'user'=>array(
-            'class' => 'PxWebUser',
-        ),
+		'authManager' => array(
+			'class' => 'PxPhpAuthManager',
+		),
+		'user'=>array(
+			'class' => 'PxWebUser',
+		),
 	),
 	'params' => array(
 		// php configuration
 		'php.defaultCharset' => 'utf-8',
 		'php.timezone'       => 'UTC',
-        'frontendUrl' => '/',
-        'apiUrl' => '/api',
-        'adminUrl' => '/admin',
-        'backendUrl' => 'http://pliv.ru/backend',
-        'author' => 'Affiche',
-        'since' => '2013',
-        'adminEmail' => 'vaseninm@gmail.com',
+		'frontendUrl' => '/',
+		'apiUrl' => '/api',
+		'adminUrl' => '/admin',
+		'backendUrl' => 'http://pliv.ru/backend',
+		'author' => 'Affiche',
+		'since' => '2013',
+		'adminEmail' => 'vaseninm@gmail.com',
 		'YiiMailer' => include __DIR__ . '/mail.php',
 	)
 );
