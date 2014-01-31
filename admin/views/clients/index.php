@@ -47,8 +47,8 @@ $this->breadcrumbs = array(
 	?>
 
 	<hr>
-	<div class="row-fluid">
-		<div class="span5">    
+<!--	<div class="row-fluid">-->
+<!--		<div class="span12">-->    
 			<h2>Воронка продаж:</h2>
 			<div id="dateRange">
 				<?php
@@ -91,7 +91,16 @@ $this->breadcrumbs = array(
 				));
 				?>
 			</div>
-			<div id="sales">
+			
+			<div class="funelContainer">
+				<div class="funel1"><div>Зашедшие<br><b>10273</b></div></div>
+				<div class="funel2"><div>Оставившие координаты<br><b>100</b></div></div>
+				<div class="funel3"><div>Вышедшие на связь<br><b>80</b></div></div>
+				<div class="funel4"><div>Оплатившие<br><b>8</b></div></div>
+				<div class="funelBg"></div>
+			</div>
+			
+			<div id="sales" style="display:none">
 				<?php
 				$this->widget('vendor.miloschuman.yii-highcharts.highcharts.HighchartsWidget', array(
 					'options' => array(
@@ -139,8 +148,8 @@ $this->breadcrumbs = array(
 				<p class="lead">Конверсия: <?= $conversion ?>%</p>
 			</div>
 			<p></p>
-		</div>
-	</div>
+<!--		</div>-->
+<!--	</div>-->
 </div>
 <div id="saleJs" style="display: none">
 	<?= CJSON::encode(array(
