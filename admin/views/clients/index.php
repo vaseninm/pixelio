@@ -23,7 +23,11 @@ $this->breadcrumbs = array(
 		}',
 		'columns' => array(
 			'ip',
-			'status',
+			array(
+				'name' => 'status',
+				'value' => 'Clients::getSaleLabels()[$data->status]',
+				'filter' => Clients::getSaleLabels(),
+			),
 			array(
 				'name' => 'theme_id',
 				'value' => '$data->theme->name',
@@ -43,8 +47,8 @@ $this->breadcrumbs = array(
 	?>
 
 	<hr>
-	<div class="row-fluid">
-		<div class="span5">    
+	<div  style="min-width: 410px; max-width: 600px; height: 400px; margin: 0 auto">
+		   
 			<h2>Воронка продаж:</h2>
 			<div id="dateRange">
 				<?php
@@ -92,7 +96,7 @@ $this->breadcrumbs = array(
 				$this->widget('vendor.miloschuman.yii-highcharts.highcharts.HighchartsWidget', array(
 					'options' => array(
 						'title' => array(
-							'text' => 'Воронка продаж',
+							'text' => 'Графическое представление',
 							'x' => -50,
 						),
 						'chart' => array(
@@ -135,7 +139,7 @@ $this->breadcrumbs = array(
 				<p class="lead">Конверсия: <?= $conversion ?>%</p>
 			</div>
 			<p></p>
-		</div>
+		
 	</div>
 </div>
 <div id="saleJs" style="display: none">

@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "62053dca133579a87b7e60a592deb69f",
+    "hash": "512aaf27e6670b596ee30d3bda5d691a",
     "packages": [
         {
             "name": "2amigos/yiistrap",
@@ -104,12 +104,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "62bd7c22593daca1e0de5812be62cffedaf59953"
+                "reference": "f1b7dbe401254a87efacbcbf027c91a2c311c9a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/62bd7c22593daca1e0de5812be62cffedaf59953",
-                "reference": "62bd7c22593daca1e0de5812be62cffedaf59953",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/f1b7dbe401254a87efacbcbf027c91a2c311c9a4",
+                "reference": "f1b7dbe401254a87efacbcbf027c91a2c311c9a4",
                 "shasum": ""
             },
             "require": {
@@ -146,7 +146,7 @@
                     "role": "Developer"
                 }
             ],
-            "time": "2014-01-18 23:30:43"
+            "time": "2014-01-30 05:20:30"
         },
         {
             "name": "intervention/image",

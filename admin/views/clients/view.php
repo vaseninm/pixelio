@@ -7,8 +7,8 @@
 
 <?php
 $this->breadcrumbs = array(
-    'Клиенты' => array('index'),
-    $client->ip,
+	'Клиенты' => array('index'),
+	'Клиент ' . $client->ip,
 );
 ?>
 
@@ -16,66 +16,61 @@ $this->breadcrumbs = array(
 
 <?php
 $this->widget('yiiwheels.widgets.detail.WhDetailView', array(
-    'data'=>$client,
-    'attributes'=>array(
-        'id',
-        'ip',
-        'theme.name',
-        'domain.domain',
-        array(
-            'name' => 'status',
-            'type' => 'raw',
-            'value' => CHtml::dropDownList("status", $client->status, array(
-                 Clients::STATUS_NEW => Clients::STATUS_NEW,
-                 Clients::STATUS_RESPONDED => Clients::STATUS_RESPONDED,
-                 Clients::STATUS_CONTACTED => Clients::STATUS_CONTACTED,
-                 Clients::STATUS_PAID => Clients::STATUS_PAID,
-            )),
-        ),
-    ),
+	'data'=>$client,
+	'attributes'=>array(
+		'id',
+		'ip',
+		'theme.name',
+		'domain.domain',
+		array(
+			'name' => 'status',
+			'type' => 'raw',
+			'value' => CHtml::dropDownList("status", $client->status, Clients::getSaleLabels()),
+		),
+	),
 ));
 ?>
 
 <h1>Посещения</h1>
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
-    'id' => Visits::model()->getGridId(),
-    'type' => TbHtml::GRID_TYPE_BORDERED,
-    'dataProvider' => $visitsProvider,
-    'columns' => array(
-        'time',
-        'referrerUrl',
-        'referrerKey',
-    ),
+	'id' => Visits::model()->getGridId(),
+	'type' => TbHtml::GRID_TYPE_BORDERED,
+	'dataProvider' => $visitsProvider,
+	'columns' => array(
+		'time',
+		'referrerUrl',
+		'referrerKey',
+	),
 )); ?>
 
 <h1>Сообщения</h1>
 
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
-    'id' => Messages::model()->getGridId(),
-    'type' => TbHtml::GRID_TYPE_BORDERED,
-    'dataProvider' => $messagesProvider,
-    'columns' => array(
-        'id',
-        'name',
-        'email',
-        'phone',
-        'time',
-        array(
-            'class' => 'bootstrap.widgets.TbButtonColumn',
-            'template' => '{view}',
-            'viewButtonUrl' => 'Yii::app()->createUrl("/clients/message", array("id" => $data->id))'
-        ),
-    ),
+	'id' => Messages::model()->getGridId(),
+	'type' => TbHtml::GRID_TYPE_BORDERED,
+	'dataProvider' => $messagesProvider,
+	'columns' => array(
+		'id',
+		'name',
+		'email',
+		'phone',
+		'time',
+		array(
+			'class' => 'bootstrap.widgets.TbButtonColumn',
+			'template' => '{view}',
+			'viewButtonUrl' => 'Yii::app()->createUrl("/clients/message", array("id" => $data->id))'
+		),
+	),
 )); ?>
 
 <?php Yii::app()->clientScript->registerScript('changeStatus', '
 $("#status").change(function($e) {
-    var self = $(this);
-    $.post("'.$this->createUrl('changeStatus').'", {
-        id: ' . $client->id . ',
-        status: self.val(),
-    }, function (data) {
-        self.val(data.status);
-    }, "json")
+	var self = $(this);
+	$.post("'.$this->createUrl('changeStatus').'", {
+		id: ' . $client->id . ',
+		status: self.val(),
+	}, function (data) {
+		self.val(data.status);
+	}, "json")
 });
 ', CClientScript::POS_END); ?>
