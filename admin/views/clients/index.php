@@ -93,10 +93,10 @@ $this->breadcrumbs = array(
 			</div>
 			
 			<div class="funelContainer">
-				<div class="funel1"><div>Зашедшие<br><b>10273</b></div></div>
-				<div class="funel2"><div>Оставившие координаты<br><b>100</b></div></div>
-				<div class="funel3"><div>Вышедшие на связь<br><b>80</b></div></div>
-				<div class="funel4"><div>Оплатившие<br><b>8</b></div></div>
+				<div class="funel1"><div style="height:70px;">Зашедшие<br><b>10273</b></div></div>
+				<div class="funel2"><div style="height:70px;">Оставившие координаты<br><b>100</b></div></div>
+				<div class="funel3"><div style="height:70px;">Вышедшие на связь<br><b>80</b></div></div>
+				<div class="funel4"><div style="height:70px;">Оплатившие<br><b>8</b></div></div>
 				<div class="funelBg"></div>
 			</div>
 			
