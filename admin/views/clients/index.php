@@ -47,8 +47,8 @@ $this->breadcrumbs = array(
 	?>
 
 	<hr>
-	<div  style="min-width: 410px; max-width: 600px; height: 400px; margin: 0 auto">
-		   
+	<div class="row-fluid">
+		<div class="span5">    
 			<h2>Воронка продаж:</h2>
 			<div id="dateRange">
 				<?php
@@ -96,7 +96,7 @@ $this->breadcrumbs = array(
 				$this->widget('vendor.miloschuman.yii-highcharts.highcharts.HighchartsWidget', array(
 					'options' => array(
 						'title' => array(
-							'text' => 'Графическое представление',
+							'text' => 'Воронка продаж',
 							'x' => -50,
 						),
 						'chart' => array(
@@ -139,7 +139,7 @@ $this->breadcrumbs = array(
 				<p class="lead">Конверсия: <?= $conversion ?>%</p>
 			</div>
 			<p></p>
-		
+		</div>
 	</div>
 </div>
 <div id="saleJs" style="display: none">
