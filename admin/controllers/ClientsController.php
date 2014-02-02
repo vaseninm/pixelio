@@ -38,7 +38,7 @@ class ClientsController extends PxAdminController
 	public function actionIndex()
 	{
 		$startDate = date('Y-m-d H:i:s', Yii::app()->request->getParam('startDate', 0));
-		$endDate = gmdate('Y-m-d H:i:s', Yii::app()->request->getParam('endDate', time()));
+		$endDate = date('Y-m-d H:i:s', Yii::app()->request->getParam('endDate', time()));
 					
 		$model = new Clients('search');
 		$model->unsetAttributes(); // clear any default values

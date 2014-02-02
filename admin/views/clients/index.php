@@ -17,7 +17,7 @@ $this->breadcrumbs = array(
 		'type' => TbHtml::GRID_TYPE_BORDERED,
 		'dataProvider' => $model->search(),
 		'filter' => $model,
-		'ajaxUpdate' => 'conversion',
+		'ajaxUpdate' => 'conversion,sales',
 		'afterAjaxUpdate' => 'function (id, data) {
 			$(document).trigger("updateSales", $(data).find("#saleJs").text());
 		}',
@@ -47,8 +47,6 @@ $this->breadcrumbs = array(
 	?>
 
 	<hr>
-<!--	<div class="row-fluid">-->
-<!--		<div class="span12">-->    
 			<h2>Воронка продаж:</h2>
 			<div id="dateRange">
 				<?php
@@ -92,70 +90,29 @@ $this->breadcrumbs = array(
 				?>
 			</div>
 			
-			<div class="funelContainer">
-				<div class="funel1"><div style="height:70px;">Зашедшие<br><b>10273</b></div></div>
-				<div class="funel2"><div style="height:70px;">Оставившие координаты<br><b>100</b></div></div>
-				<div class="funel3"><div style="height:70px;">Вышедшие на связь<br><b>80</b></div></div>
-				<div class="funel4"><div style="height:70px;">Оплатившие<br><b>8</b></div></div>
+			<div id="sales" class="funelContainer">
+				<div class="funel1"><div style="height:70px;">
+					<?= Clients::getSaleLabels()[Clients::STATUS_NEW] ?>
+					<br><b><?= $sales[Clients::STATUS_NEW] ?></b>
+				</div></div>
+				<div class="funel2"><div style="height:70px;">
+						<?= Clients::getSaleLabels()[Clients::STATUS_RESPONDED] ?>
+						<br><b><?= $sales[Clients::STATUS_RESPONDED] ?></b>
+				</div></div>
+				<div class="funel3"><div style="height:70px;">
+						<?= Clients::getSaleLabels()[Clients::STATUS_CONTACTED] ?>
+						<br><b><?= $sales[Clients::STATUS_CONTACTED] ?></b>
+				</div></div>
+				<div class="funel4"><div style="height:70px;">
+						<?= Clients::getSaleLabels()[Clients::STATUS_PAID] ?>
+						<br><b><?= $sales[Clients::STATUS_PAID] ?></b>
+				</div></div>
 				<div class="funelBg"></div>
 			</div>
 			
-			<div id="sales" style="display:none">
-				<?php
-				$this->widget('vendor.miloschuman.yii-highcharts.highcharts.HighchartsWidget', array(
-					'options' => array(
-						'title' => array(
-							'text' => 'Воронка продаж',
-							'x' => -50,
-						),
-						'chart' => array(
-							'type' => 'funnel',
-							'marginRight' => 100,
-							'events' => array(
-								'load'  => new CJavaScriptExpression('
-								function(e) {
-									var series = this.series[0];
-									$(document).bind("updateSales", function(e, data) {
-										var sales = $.parseJSON(data);
-										series.setData(sales);
-									});
-								}
-								'),
-							),
-						),
-						'plotOptions' => array(
-							'series' => array(
-								'neckWidth' => '30%',
-								'neckHeight' => '50%',
-							),
-						),
-						'legend' => array(
-							'enabled' => false,
-						),
-						'series' => array(
-							array(
-								'name' => 'Посетителей',
-								'data' => new CJavaScriptExpression('$.parseJSON($("#saleJs").text())'),
-							),
-						),
-					),
-					'scripts' => array('modules/funnel'),
-				));
-				?>
-			</div>
 			<p></p>
 			<div id="conversion">
 				<p class="lead">Конверсия: <?= $conversion ?>%</p>
 			</div>
 			<p></p>
-<!--		</div>-->
-<!--	</div>-->
-</div>
-<div id="saleJs" style="display: none">
-	<?= CJSON::encode(array(
-		array(Clients::getSaleLabels()[Clients::STATUS_NEW], $sales[Clients::STATUS_NEW]),
-		array(Clients::getSaleLabels()[Clients::STATUS_RESPONDED], $sales[Clients::STATUS_RESPONDED]),
-		array(Clients::getSaleLabels()[Clients::STATUS_CONTACTED], $sales[Clients::STATUS_CONTACTED]),
-		array(Clients::getSaleLabels()[Clients::STATUS_PAID], $sales[Clients::STATUS_PAID]),
-	)); ?>
 </div>
