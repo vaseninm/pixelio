@@ -137,7 +137,7 @@ $(function(){
 	$('#allPublication').click(function() {
 		$.arcticmodal({
 			type: 'ajax',
-			url: 'themes/azorskaya_status_B/views/layouts/allPublication.html'
+			url: 'themes/azorskaya_status_A/views/layouts/allPublication.html'
 		});
 		return false;
 	});
@@ -145,7 +145,7 @@ $(function(){
 	$('#privacyPolicy').click(function() {
 		$.arcticmodal({
 			type: 'ajax',
-			url: 'themes/azorskaya_status_B/views/layouts/privacyPolicy.html'
+			url: 'themes/azorskaya_status_A/views/layouts/privacyPolicy.html'
 		});
 		return false;
 	});
@@ -154,42 +154,42 @@ $(function(){
 	$('#2013_08').click(function() {
 		$.arcticmodal({
 			type: 'ajax',
-			url: 'themes/azorskaya_status_B/views/layouts/2013_08.html'
+			url: 'themes/azorskaya_status_A/views/layouts/2013_08.html'
 		});
 		return false;
 	});
 	$('#2013_03').click(function() {
 		$.arcticmodal({
 			type: 'ajax',
-			url: 'themes/azorskaya_status_B/views/layouts/2013_03.html'
+			url: 'themes/azorskaya_status_A/views/layouts/2013_03.html'
 		});
 		return false;
 	});
 	$('#2013_02').click(function() {
 		$.arcticmodal({
 			type: 'ajax',
-			url: 'themes/azorskaya_status_B/views/layouts/2013_02.html'
+			url: 'themes/azorskaya_status_A/views/layouts/2013_02.html'
 		});
 		return false;
 	});
 	$('#2012_08').click(function() {
 		$.arcticmodal({
 			type: 'ajax',
-			url: 'themes/azorskaya_status_B/views/layouts/2012_08.html'
+			url: 'themes/azorskaya_status_A/views/layouts/2012_08.html'
 		});
 		return false;
 	});
 	$('#2009_11').click(function() {
 		$.arcticmodal({
 			type: 'ajax',
-			url: 'themes/azorskaya_status_B/views/layouts/2009_11.html'
+			url: 'themes/azorskaya_status_A/views/layouts/2009_11.html'
 		});
 		return false;
 	});
 	$('#2008_11').click(function() {
 		$.arcticmodal({
 			type: 'ajax',
-			url: 'themes/azorskaya_status_B/views/layouts/2008_11.html'
+			url: 'themes/azorskaya_status_A/views/layouts/2008_11.html'
 		});
 		return false;
 	});
