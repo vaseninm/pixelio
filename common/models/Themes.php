@@ -118,7 +118,7 @@ class Themes extends EActiveRecord
         $themes = array();
         foreach (scandir($dirname) as $file) {
             if (is_dir($dirname . '/' . $file) && !in_array($file, array('.', '..'))) {
-                $themes[] = $file;
+                $themes[$file] = $file;
             }
         }
         return $themes;
