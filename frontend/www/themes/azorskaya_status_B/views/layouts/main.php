@@ -651,7 +651,7 @@
 <section class="triangle2 job" id="job">
 <div class="wrap clearfix">
 <h1>Наши работы</h1>
-<? $this->renderPartial('_galery_1'); ?>
+<?php $this->renderPartial('//layouts/_galery_1'); ?>
 <!-- Блок одной галереи -->
 <div class="fl">
     <div class="itemJob">
