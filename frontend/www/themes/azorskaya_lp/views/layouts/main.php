@@ -119,7 +119,7 @@
 	<div class="container" id="zahvat">
 		<div class="contact pull-left">
 			<!-- Contact Form -->
-			<form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
+			<form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('TOP_FORM_A'); return true;">
 				 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" />
 				 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
 				 <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" />
@@ -232,7 +232,7 @@
 	<div class="container" id="zahvat2">
             <div class="contact pull-left">
                 <!-- Contact Form -->
-                <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
+                <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('BOLI_FORM_A'); return true;">
                     <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" />
                     <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
                     <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" />
@@ -385,7 +385,7 @@
 	<div class="container" id="zahvat">
         <div class="contact pull-left">
             <!-- Contact Form -->
-            <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
+            <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('PUBLICATION_FORM_A'); return true;">
                 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" />
                 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
                 <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" />
@@ -723,7 +723,7 @@
 	<div class="container" id="zahvat2">
         <div class="contact pull-left">
             <!-- Contact Form -->
-            <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
+            <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('BOTTOM_FORM_A'); return true;">
                 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" />
                 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
                 <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" />
@@ -759,7 +759,7 @@
         <div class="box-modal_close arcticmodal-close">закрыть</div>
 		<h2 class="zahvat-title">Давайте встретимся</h2>
         <!-- Contact Form -->
-		<form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)">
+		<form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('POPAP_FORM_A'); return true;">
 			 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" />
 			 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
 			 <input type="text" name="time" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" />
@@ -823,5 +823,34 @@
 	<script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/files/js/jquery.fancybox.pack.js"></script>
     <script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/files/js/jquery.fancybox-media.js"></script>
 	<script type="text/javascript" src="<?= Yii::app()->theme->baseUrl ?>/files/js/custom.js"></script>
+	
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter23855146 = new Ya.Metrika({id:23855146,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/23855146" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->	
+	
 </body>
 </html>
