@@ -524,6 +524,8 @@
 		<?php $this->renderPartial('//layouts/_galery_5'); ?>
 		<?php $this->renderPartial('//layouts/_galery_6'); ?>
 		<div class="clr"></div>
+		<?php $this->renderPartial('//layouts/_galery_7'); ?>
+		<?php $this->renderPartial('//layouts/_galery_8'); ?>
 	</div>
 </section>
 
