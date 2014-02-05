@@ -8,7 +8,7 @@
         </div>
         <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/job/thumb_job_1.jpg"/>
     </div>
-    <p class="jobDesc">Жилой дом в поселке Павлово площадью 530 м<sup>2</sup></p>
+    <p class="jobDesc">Квартира в Москве, площадью 124.3 м<sup>2</sup></p>
 
     <div class="hiddenGalery">
         <a href="<?= Yii::app()->theme->baseUrl ?>/files/img/job/job_1/02.jpg" class="fancybox-media"
@@ -43,116 +43,74 @@
            data-title-id="title-1-16" rel="portfolio1">&nbsp;</a>
         <a href="<?= Yii::app()->theme->baseUrl ?>/files/img/job/job_1/17.jpg" class="fancybox-media"
            data-title-id="title-1-17" rel="portfolio1">&nbsp;</a>
-        <a href="<?= Yii::app()->theme->baseUrl ?>/files/img/job/job_1/18.jpg" class="fancybox-media"
-           data-title-id="title-1-18" rel="portfolio1">&nbsp;</a>
-        <a href="<?= Yii::app()->theme->baseUrl ?>/files/img/job/job_1/19.jpg" class="fancybox-media"
-           data-title-id="title-1-19" rel="portfolio1">&nbsp;</a>
-        <a href="<?= Yii::app()->theme->baseUrl ?>/files/img/job/job_1/20.jpg" class="fancybox-media"
-           data-title-id="title-1-20" rel="portfolio1">&nbsp;</a>
-        <a href="<?= Yii::app()->theme->baseUrl ?>/files/img/job/job_1/21.jpg" class="fancybox-media"
-           data-title-id="title-1-21" rel="portfolio1">&nbsp;</a>
-        <a href="<?= Yii::app()->theme->baseUrl ?>/files/img/job/job_1/22.jpg" class="fancybox-media"
-           data-title-id="title-1-22" rel="portfolio1">&nbsp;</a>
-        <a href="<?= Yii::app()->theme->baseUrl ?>/files/img/job/job_1/23.jpg" class="fancybox-media"
-           data-title-id="title-1-23" rel="portfolio1">&nbsp;</a>
-        <a href="<?= Yii::app()->theme->baseUrl ?>/files/img/job/job_1/24.jpg" class="fancybox-media"
-           data-title-id="title-1-24" rel="portfolio1">&nbsp;</a>
 
         <div id="title-1-1" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №1</h2>
-            <div class="fancybody">Лестница – спираль, плавно соединяет два этажа.</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №1</h2>
+            <div class="fancybody">Люстру с хрустальными подвесками прекрасно дополняет скрытая подсветка за потолочными карнизами.</div>
         </div>
         <div id="title-1-2" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №2</h2>
-            <div class="fancybody">Витраж на двери дополняет легкость холла.</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №2</h2>
+            <div class="fancybody">Серебристые оттенки создают романтический флер и контрастируют с теплой шоколадной гаммой текстиля.</div>
         </div>
         <div id="title-1-3" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №3</h2>
-            <div class="fancybody">Напольная плитка подчеркивает зону отдыха.</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №3</h2>
+            <div class="fancybody">Цветовым акцентом является мозаика в санузле.</div>
         </div>
         <div id="title-1-4" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №4</h2>
-            <div class="fancybody">Оригинальные двери отделяют гостиную и кухню.</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №4</h2>
+            <div class="fancybody">Гардеробная за раздвижными дверями помогает поддерживать порядок, не перегружая интерьер лишними деталями.</div>
         </div>
         <div id="title-1-5" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №5</h2>
-            <div class="fancybody">Камин добавляет гостиной уют.</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №5</h2>
+            <div class="fancybody">Оригинальное решение оформления мебели.</div>
         </div>
         <div id="title-1-6" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №6</h2>
-            <div class="fancybody">Белая кухонная мебель придает легкости и света в интерьере</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №6</h2>
+            <div class="fancybody">Нежные розовые тона штор и пуфа, оживляют интерьер комнаты.</div>
         </div>
         <div id="title-1-7" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №7</h2>
-            <div class="fancybody">Приятная цветовая гамма построена на комбинациях спокойных и теплых оттенков.</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №7</h2>
+            <div class="fancybody">Пескоструйный рисунок на зеркальных дверях, гармонирует с узором обоев.</div>
         </div>
         <div id="title-1-8" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №8</h2>
-            <div class="fancybody">Нестандартное цветовое решение столовой.</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №8</h2>
+            <div class="fancybody">Логично и компактно продуманно пространство.</div>
         </div>
         <div id="title-1-9" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №9</h2>
-            <div class="fancybody">Интерьер зрительно объединен общей концепцией цветового дизайна.</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №9</h2>
+            <div class="fancybody">Декоративные элементы, применены аккуратно и не навязчиво.</div>
         </div>
         <div id="title-1-10" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №10</h2>
-            <div class="fancybody">Оригинальное решение подголовника кровати.</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №10</h2>
+            <div class="fancybody">Укладка по диагонали напольного покрытия из паркетной доски, зрительно расширяет помещение.</div>
         </div>
         <div id="title-1-11" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №11</h2>
-            <div class="fancybody">Светлое, наполненное воздухом пространство, манит отдохнуть после рабочего дня.</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №11</h2>
+            <div class="fancybody">Оригинальная фреска, создает ощущение глубины и перспективы, растворяет границы реальности.</div>
         </div>
         <div id="title-1-12" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №12</h2>
-            <div class="fancybody">Плавные переходы стен позволили сохранить чистоту линий.</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №12</h2>
+            <div class="fancybody">Декоративный рисунок на полу дополняет решение стен.</div>
         </div>
         <div id="title-1-13" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №13</h2>
-            <div class="fancybody">Элементы узоров на стене подчеркивают целостность образа.</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №13</h2>
+            <div class="fancybody">Камин с деревянным резным порталом, придает городским апартаментам черты аристократизма.</div>
         </div>
         <div id="title-1-14" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №14</h2>
-            <div class="fancybody">Обилие дневного света, поддержанного цветовой гаммой, добавляет ощущения легкости</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №14</h2>
+            <div class="fancybody">Потолочная лепная розетка, подчеркивает  красоту хрустальной люстры.</div>
         </div>
         <div id="title-1-15" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №15</h2>
-            <div class="fancybody">Особым акцентом стала люстра, прекрасно дополненная настольной лампой.</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №15</h2>
+            <div class="fancybody">Текстильные обои с богатой фактурой, напоминают дворцовые гобелены.</div>
         </div>
         <div id="title-1-16" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №16</h2>
-            <div class="fancybody">Цветовая гамма создает эффект таинственности и теплоты.</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №16</h2>
+            <div class="fancybody">Светлые тона зрительно раздвигают границы помещения и наполняют его цветом.</div>
         </div>
         <div id="title-1-17" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №17</h2>
-            <div class="fancybody">Оригинальное сочетание японских мотивов.</div>
-        </div>
-        <div id="title-1-18" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №18</h2>
-            <div class="fancybody">Интерьер выдержан в едином стиле и колористической гамме.</div>
-        </div>
-        <div id="title-1-19" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №19</h2>
-            <div class="fancybody">Необычное решение потолка.</div>
-        </div>
-        <div id="title-1-20" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №20</h2>
-            <div class="fancybody">Четкие геометрические формы предметов мебели, выигрышно подчеркнуты цветовой гаммой кабинета.</div>
-        </div>
-        <div id="title-1-21" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №21</h2>
-            <div class="fancybody">Ванная комната выдержана в чистых, светлых тонах.</div>
-        </div>
-        <div id="title-1-22" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №22</h2>
-            <div class="fancybody">Оригинальное решение душевой кабины.</div>
-        </div>
-        <div id="title-1-23" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №23</h2>
-            <div class="fancybody">Просторная ванная комната оформлена с изяществом.</div>
-        </div>
-        <div id="title-1-24" class="info hidden">
-            <h2>Жилой дом в поселке Павлово площадью 530 м<sup>2</sup> №24</h2>
-            <div class="fancybody">Золотые мотивы прекрасно подчеркивают легкость.</div>
+            <h2>Квартира в Москве, площадью 124.3 м<sup>2</sup> №17</h2>
+            <div class="fancybody">Пространство прихожей зрительно расширенно с помощью зеркальной стены.</div>
         </div>
     </div>
 </div>
