@@ -70,11 +70,11 @@ class Clients extends EActiveRecord
 	{
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('ip',$this->ip,true);
-		$criteria->compare('theme_id',$this->theme_id);
-		$criteria->compare('status',$this->status,true);
-        $criteria->compare('domain_id',$this->domain_id);
+		$criteria->compare('`t`.`id`',$this->id);
+		$criteria->compare('`t`.`ip`',$this->ip,true);
+		$criteria->compare('`t`.`theme_id`',$this->theme_id);
+		$criteria->compare('`t`.`status`',$this->status,true);
+        $criteria->compare('`t`.`domain_id`',$this->domain_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

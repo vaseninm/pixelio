@@ -65,7 +65,6 @@ class ClientsController extends PxAdminController
 	}
 
 	public function actionView($id) {
-
 		$client = $this->loadModel('Clients', $id);
 		$visitsCriteria = new CDbCriteria();
 		$visitsCriteria->compare('client_id', $client->id);
