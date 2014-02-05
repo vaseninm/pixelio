@@ -22,12 +22,12 @@ class Vars extends EActiveRecord
 	public function rules()
 	{
 		return array(
-			array('type', 'numerical', 'integerOnly'=>true),
-			array('name, theme_id', 'length', 'max'=>255),
+			array('type, theme_id', 'numerical', 'integerOnly'=>true),
+			array('name', 'length', 'max'=>255),
 			array('name', 'match', 'pattern' => '/^[a-z]*$/i'),
 			array('value', 'safe'),
 			array('file', 'file', 'types' => 'jpg,jpeg,png,gif', 'allowEmpty' => true),
-			array('name', 'unique'),
+			array('name', 'uniqueNameAndTheme'),
 			array('name,type,value, theme_id', 'required'),
 			array('type', 'default', 'value' => self::TYPE_TEXT),
 			array('type', 'in', 'range' => [self::TYPE_TEXT, self::TYPE_HTML, self::TYPE_IMAGE]),
@@ -61,11 +61,11 @@ class Vars extends EActiveRecord
 	{
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('value',$this->value,true);
-		$criteria->compare('type',$this->type);
-		$criteria->compare('theme_id',$this->theme_id);
+		$criteria->compare('t.id',$this->id);
+		$criteria->compare('t.name',$this->name,true);
+		$criteria->compare('t.value',$this->value,true);
+		$criteria->compare('t.type',$this->type);
+		$criteria->compare('t.theme_id',$this->theme_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -119,5 +119,22 @@ class Vars extends EActiveRecord
 		return parent::model($className);
 	}
 
+	/**
+	 * @param $attribute
+	 * @param array $params
+	 * @todo unique validator class
+	 */
+	public function uniqueNameAndTheme($attribute,$params=array())
+	{
+		if(!$this->hasErrors())
+		{
+			$params['criteria']=array(
+				'condition'=>'name=:name AND theme_id=:theme_id',
+				'params'=>array(':name'=>$this->name, ':theme_id'=>$this->theme_id),
+			);
+			$validator=CValidator::createValidator('unique',$this,$attribute,$params);
+			$validator->validate($this,array($attribute));
+		}
+	}
 
 }
