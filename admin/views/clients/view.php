@@ -50,7 +50,6 @@ $this->widget('yiiwheels.widgets.detail.WhDetailView', array(
 	'type' => TbHtml::GRID_TYPE_BORDERED,
 	'dataProvider' => $messagesProvider,
 	'columns' => array(
-		'id',
 		'name',
 		'email',
 		'phone',

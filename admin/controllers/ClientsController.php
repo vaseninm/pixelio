@@ -68,10 +68,20 @@ class ClientsController extends PxAdminController
 		$client = $this->loadModel('Clients', $id);
 		$visitsCriteria = new CDbCriteria();
 		$visitsCriteria->compare('client_id', $client->id);
-		$visitsProvider = new CActiveDataProvider('Visits', array('criteria' => $visitsCriteria));
+		$visitsProvider = new CActiveDataProvider('Visits', array(
+			'criteria' => $visitsCriteria,
+			'sort' => array(
+				'defaultOrder' => array('time' => CSort::SORT_DESC),
+			),
+		));
 		$messagesCriteria = new CDbCriteria();
 		$messagesCriteria->compare('client_id', $client->id);
-		$messagesProvider = new CActiveDataProvider('Messages', array('criteria' => $messagesCriteria));
+		$messagesProvider = new CActiveDataProvider('Messages', array(
+			'criteria' => $messagesCriteria,
+			'sort' => array(
+				'defaultOrder' => array('time' => CSort::SORT_DESC),
+			),
+		));
 		$this->render('view', array(
 			'client' => $client,
 			'visitsProvider' => $visitsProvider,
