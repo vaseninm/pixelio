@@ -27,7 +27,7 @@ class Vars extends EActiveRecord
 			array('name', 'match', 'pattern' => '/^[a-z]*$/i'),
 			array('value', 'safe'),
 			array('file', 'file', 'types' => 'jpg,jpeg,png,gif', 'allowEmpty' => true),
-			array('name', 'uniqueNameAndTheme'),
+			array('name,theme_id', 'uniqueNameAndTheme'),
 			array('name,type,value, theme_id', 'required'),
 			array('type', 'default', 'value' => self::TYPE_TEXT),
 			array('type', 'in', 'range' => [self::TYPE_TEXT, self::TYPE_HTML, self::TYPE_IMAGE]),
