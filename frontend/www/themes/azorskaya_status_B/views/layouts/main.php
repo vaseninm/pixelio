@@ -81,7 +81,7 @@
 
 				<h3>Базовый</h3>
 
-				<p>(от 1600 – 2000 руб. м<sup>2</sup>)</p>
+				<p>(от <?= Vars::get('priceBase') ?> руб. м<sup>2</sup>)</p>
 
 			</div>
 		</div>
@@ -91,7 +91,7 @@
 
 				<h3>Оптимальный</h3>
 
-				<p>(от 2000 – 2500 руб. м<sup>2</sup>)</p>
+				<p>(от <?= Vars::get('priceOptimum') ?> руб. м<sup>2</sup>)</p>
 			</div>
 		</div>
 		<div class="flp">
@@ -100,7 +100,7 @@
 
 				<h3>Люкс</h3>
 
-				<p>(от 3600 – 4000 руб. м<sup>2</sup>)</p>
+				<p>(от <?= Vars::get('priceLux') ?> руб. м<sup>2</sup>)</p>
 			</div>
 		</div>
 	</div>
