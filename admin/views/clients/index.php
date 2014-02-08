@@ -30,7 +30,7 @@ $this->breadcrumbs = array(
 			),
 			array(
 				'name' => 'theme_id',
-				'value' => '$data->theme->name',
+				'value' => 'isset($data->theme) ? $data->theme->name : ""',
 				'filter' => Themes::getAll($model->domain_id),
 			),
 			array(
