@@ -24,7 +24,7 @@ class MailCommand extends CConsoleCommand {
 			'year' => array(array('period' => array(
 						date('Y-m-d H:m:i', strtotime('-1 year')),
 						date('Y-m-d H:m:i')
-					))),
+			))),
 		);
 
 		$domainList = array();
@@ -81,20 +81,19 @@ class MailCommand extends CConsoleCommand {
 				$stat['conversion'] = Clients::getConversion($criteria);
 				$statistics[$type] = $stat;
 			}
-		}
 
-
-		$mail = new YiiMailer('weeklyStatistic', array(
-			'statistics' => $statistics,
-			'domain' => $domain['domain'],
-		));
-		$mail->setFrom('no-reply@' . $domain['domain']->domain, 'Уведомитель');
-		$mail->setSubject('Ежедневный отчет по ' . CHtml::encode($domain['domain']->domain));
-		$mail->setTo(CHtml::listData($domain['notice'], 'id', 'address'));
-		if ($mail->send()) {
-			echo 'Отправка отчета по домену ' . CHtml::encode($domain['domain']->domain) . ' завершена.' . PHP_EOL;
-		} else {
-			echo 'Отправка отчета по домену ' . CHtml::encode($domain['domain']->domain) . ' завершилось ошибкой.' . PHP_EOL;
+			$mail = new YiiMailer('weeklyStatistic', array(
+				'statistics' => $statistics,
+				'domain' => $domain['domain'],
+			));
+			$mail->setFrom('no-reply@' . $domain['domain']->domain, 'Уведомитель');
+			$mail->setSubject('Ежедневный отчет по ' . CHtml::encode($domain['domain']->domain));
+			$mail->setTo(CHtml::listData($domain['notice'], 'id', 'address'));
+			if ($mail->send()) {
+				echo 'Отправка отчета по домену ' . CHtml::encode($domain['domain']->domain) . ' завершена.' . PHP_EOL;
+			} else {
+				echo 'Отправка отчета по домену ' . CHtml::encode($domain['domain']->domain) . ' завершилось ошибкой.' . PHP_EOL;
+			}
 		}
 	}
 
