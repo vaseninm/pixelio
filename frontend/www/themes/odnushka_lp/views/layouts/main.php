@@ -88,7 +88,7 @@
                 <span class="bigger_fat">ОДНОКОМНАТНЫХ КВАРТИР</span>
             </div>
             <div class="place_block">
-                <span class="large_semifat">В МОСКВЕ И МОСКОВКОЙ ОБЛАСТИ</span><br>
+                <span class="large_semifat">В МОСКВЕ И МОСКОВСКОЙ ОБЛАСТИ</span><br>
                 <span class="small_semifat">стоимость проектирования однокомнатной</span><br>
                 <span class="medium_semifat">квартиры любой площади</span><br>
             </div>
