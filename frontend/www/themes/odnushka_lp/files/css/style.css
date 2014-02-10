@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Tahoma, sans-serif;
 }
 
 
@@ -115,7 +115,7 @@ li {
 
 
 .typical_title_segment {
-    background: url(../images/after_head_bg.png) no-repeat center top;
+    background: url(../images/after_head_bg.jpg) no-repeat center top;
 }
 
 .diz_title {
@@ -200,7 +200,7 @@ li {
 }
 
 .adventage_segment {
-    background: url(../images/advantage_bg.png) no-repeat top center;
+    background: url(../images/advantage_bg.jpg) no-repeat top center;
 }
 .adventage_segment .left {
     width: 50%;
@@ -232,7 +232,7 @@ li {
 slider-segment===================================================================*/
 
 .slider_segment {
-    background: url(../images/slider_segment_bg.png) no-repeat top center;
+    background: url(../images/slider_segment_bg.jpg) no-repeat top center;
     padding: 0 0 100px 0;
 }
 
@@ -461,7 +461,7 @@ margin-left: -115px;
 toggle-segment=================================================================================*/
 
 .toggle_segment {
-    background: url(../images/toggle_segment_bg.png) top center;
+    background: url(../images/toggle_segment_bg.jpg) top center;
     padding: 20px 0;
 }
 
@@ -594,7 +594,7 @@ toggle-segment==================================================================
 
 
 .work_segment {
-    background: url(../images/work_segment_bg.png) no-repeat center top;
+    background: url(../images/work_segment_bg.jpg) no-repeat center top;
     padding: 0 0 50px 0;
 
 }
@@ -729,7 +729,7 @@ toggle-segment==================================================================
 }
 
 .comment_segment {
-    background: url(../images/comment_segment_bg.png) no-repeat top center;
+    background: url(../images/comment_segment_bg.jpg) no-repeat top center;
     padding: 0 0 150px 0;
 }
 .comment_segment .bx-wrapper .bx-viewport {
@@ -830,14 +830,14 @@ toggle-segment==================================================================
 /*start-jast-form-segment
 ==================================================*/
 .jast_form_segment {
-    background: url(../images/jast_form_segment_bg.png) no-repeat center top;
+    background: url(../images/jast_form_segment_bg.jpg) no-repeat center top;
 }
 
 /*start-footer
 ===================================================*/
 
 .footer {
-    background: url(../images/footer_bg.png) no-repeat top center;
+    background: url(../images/footer_bg.jpg) no-repeat top center;
     padding: 0 0  115px 0;
 
 }
