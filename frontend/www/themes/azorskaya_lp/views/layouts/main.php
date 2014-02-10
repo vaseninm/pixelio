@@ -464,7 +464,7 @@
 						<br>- Развёртки по стенам
 						<br>- Раскладка плитки и привязка сантехники в санузлах<br><br>
 				</p>
-				<h2><?= Vars::get('priceBase') ?>р./м<sup>2</sup></h2>
+				<h2><?= Phrases::get('priceBase') ?>р./м<sup>2</sup></h2>
 			</div>
 			</div>
 			<div class="span4 whiteBg" style="border-bottom:5px solid #BDBC2E">
@@ -476,7 +476,7 @@
 				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_pic2.png" alt="" class=""><b>3D визуализация по трём основным помещениям</b></p>
 				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_dollar.png" alt="" class=""><b>Просчёт стоимости материалов прямо в процессе проектирования</b></p>						
 				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_shop.png" alt="" class=""><b>Поездки по магазинам для быстрого подбора отделочных материалов</b><br><br><br></p>
-				<h2><?= Vars::get('priceOptimum') ?>р./м<sup>2</sup></h2>
+				<h2><?= Phrases::get('priceOptimum') ?>р./м<sup>2</sup></h2>
 			</div>
 			</div>
 			<div class="span4">
@@ -488,11 +488,11 @@
 				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_pic3.png" alt="" class=""><span>3D визуализация по всем основным помещениям, так же включая гардеробные и санузлы</span></p>						
 				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_map.png" alt="" class=""><span>Выезд к заказчику с материалами, маркетинг всех выбранных позиций по Москве</span></p>
 				<p class="subtittle clearfix"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icons/icon_star_e.png" alt="" class=""><span>Декораторские работы на объекте<br><br><br></span></p>
-				<h2><?= Vars::get('priceLux') ?>р./м<sup>2</sup></h2>
+				<h2><?= Phrases::get('priceLux') ?>р./м<sup>2</sup></h2>
 			</div>
 			</div>
 		</div>
-		<h2 class="gray-title left-title">ОТ <?= Vars::get('turnkeyWorks') ?> ТЫС.РУБ. СТРОИТЕЛЬНЫЕ И ОТДЕЛОЧНЫЕ РАБОТЫ ПОД КЛЮЧ <br><span>(ЦЕНА НА 1 М<sup>2</sup> ПОЛА, БЕЗ УЧЕТА СТОИМОСТИ МАТЕРИАЛОВ)</span></h2>
+		<h2 class="gray-title left-title">ОТ <?= Phrases::get('turnkeyWorks') ?> ТЫС.РУБ. СТРОИТЕЛЬНЫЕ И ОТДЕЛОЧНЫЕ РАБОТЫ ПОД КЛЮЧ <br><span>(ЦЕНА НА 1 М<sup>2</sup> ПОЛА, БЕЗ УЧЕТА СТОИМОСТИ МАТЕРИАЛОВ)</span></h2>
 	</div>
 </section>
 

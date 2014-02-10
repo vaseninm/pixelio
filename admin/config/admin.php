@@ -114,7 +114,7 @@ return array(
             array(
                 'title' => 'Переменные',
                 'desc' => 'Используйте переменные в шаблонах. Редактируйте ваши тексты.',
-                'controller' => 'vars',
+                'controller' => 'phrases',
             ),
             array(
                 'title' => 'Уведомления',
