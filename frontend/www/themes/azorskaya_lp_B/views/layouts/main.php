@@ -119,7 +119,7 @@
 	<div class="container" id="zahvat">
 		<div class="contact pull-left">-->
 			<!-- Contact Form -->
-			<!--<form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('TOP_FORM_A'); return true;">
+			<!--<form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('TOP_FORM_B'); return true;">
 				 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" />
 				 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
 				 <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" />
@@ -376,7 +376,7 @@
 	<div class="container" id="zahvat2">
             <div class="contact pull-left">
                 <!-- Contact Form -->
-                <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('BOLI_FORM_A'); return true;">
+                <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('BOLI_FORM_B'); return true;">
                     <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" />
                     <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
                     <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" />
@@ -570,7 +570,7 @@
 	<div class="container" id="zahvat">
         <div class="contact pull-left">
             <!-- Contact Form -->
-            <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('PUBLICATION_FORM_A'); return true;">
+            <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('PUBLICATION_FORM_B'); return true;">
                 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" />
                 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
                 <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" />
@@ -721,7 +721,7 @@
 	<div class="container" id="zahvat2">
         <div class="contact pull-left">
             <!-- Contact Form -->
-            <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('BOTTOM_FORM_A'); return true;">
+            <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('BOTTOM_FORM_B'); return true;">
                 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" />
                 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
                 <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" />
@@ -757,7 +757,7 @@
         <div class="box-modal_close arcticmodal-close">закрыть</div>
 		<h2 class="zahvat-title">Давайте встретимся</h2>
         <!-- Contact Form -->
-		<form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('POPAP_FORM_A'); return true;">
+		<form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('POPAP_FORM_B'); return true;">
 			 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" />
 			 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
 			 <input type="text" name="time" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" />
