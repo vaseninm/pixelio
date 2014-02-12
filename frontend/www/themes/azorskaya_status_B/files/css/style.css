@@ -501,7 +501,7 @@ SECTION JOB
 *************************************************************************************/
 .job h1{color:#E4E7D4;padding:40px 0 32px 0;text-transform:uppercase;font-size:70px;text-align:center;font-weight: 200;font-family: PFDinTextCondProMedium, "Trebuchet MS", "Helvetica CY", sans-serif;}
 .job .fl{width:340px;text-align:center}
-.triangle2{padding-bottom:30px;background: #808765 url(../img/triangle2.jpg) no-repeat 50% 100%}
+.triangle2{padding-bottom:30px;background: #808765 url(../img/triangle2.jpg) no-repeat 50% 100%;/*B*/border-top:16px solid #444a2e/*B*/}
 .itemJob{width:300px;height:300px;margin:0 20px;text-align:center;position:relative;overflow:hidden}
 .coverJob a{color:#3e4428;font-size:20px;font-family: PFDinTextCondProLight, PFDinTextCondProRegular, "Trebuchet MS", "Helvetica CY", sans-serif;}
 .coverJob{width:300px;height:300px;background: transparent url(../img/cover_job.png) no-repeat;position:absolute;top:0;left:0;z-index:2}
@@ -538,7 +538,7 @@ p.jobDesc{color:#e5e8d5;font-size:24px;font-family: PFDinTextCondProLight, PFDin
 SECTION ZAKAZ
 *************************************************************************************/
 .triangle3{background: #E5E9EA url(../img/triangle3.jpg) no-repeat 50% 0}
-.zakaz{border-bottom:20px solid #808766}
+.zakaz{/*border-bottom:20px solid #808766*/}/* B */
 .zakaz h1{color:#fff;padding:90px 0 15px 0;text-transform:uppercase;font-size:36px;text-align:center;font-weight: 200;font-family: PFDinTextCondProMedium, "Trebuchet MS", "Helvetica CY", sans-serif;background: #55443D url(../img/triangle4.jpg) no-repeat 50% 0}
 .zakaz .wrap{background: transparent url(../img/zakaz.jpg) no-repeat 50% 100%;}
 .zakaz .fl{width:340px;text-align:center}

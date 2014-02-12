@@ -68,6 +68,76 @@
     </table>
 </div>
 
+<section class="triangle2 job" id="job">
+	<div class="wrap clearfix">
+		<h1>Наши работы</h1>
+		<?php $this->renderPartial('//layouts/_galery_1'); ?>
+		<?php $this->renderPartial('//layouts/_galery_2'); ?>
+		<?php $this->renderPartial('//layouts/_galery_3'); ?>
+		<div class="clr"></div>
+		<?php $this->renderPartial('//layouts/_galery_4'); ?>
+		<?php $this->renderPartial('//layouts/_galery_5'); ?>
+		<?php $this->renderPartial('//layouts/_galery_6'); ?>
+		<div class="clr"></div>
+		<?php $this->renderPartial('//layouts/_galery_7'); ?>
+		<?php $this->renderPartial('//layouts/_galery_8'); ?>
+	</div>
+</section>
+
+<section class="zakaz triangle3" id="zakaz">
+    <div class="wrap clearfix">
+        <h1>Закажите дизайн-проект сегодня и вы получите</h1>
+
+        <div class="fl">
+            <div class="youHave relative">
+                <div class="ribbon"></div>
+                <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icon_att.png"/>
+
+                <p>Бесплатно<br>3 варианта планировки.</p>
+            </div>
+        </div>
+        <div class="fl">
+            <div class="youHave2">
+                <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icon_smile.png"/>
+
+                <p>Индивидуальный интерьер, только под Ваши требования.</p>
+            </div>
+        </div>
+        <div class="fl">
+            <div class="youHave">
+                <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icon_doc.png"/>
+
+                <p>Качественная проектная документация.</p>
+            </div>
+        </div>
+        <div class="clr"></div>
+        <div class="fl">
+            <div class="youHave">
+                <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icon_circle.png"/>
+
+                <p>Гарантия эксклюзивности дизайн-проекта!</p>
+            </div>
+        </div>
+        <div class="fl">
+            <div class="youHave3">
+                <p>Расчёт сметы, а также скидки дизайнера на отделочные материалы у партнёров поставщиков.</p>
+            </div>
+        </div>
+        <div class="fl">
+            <div class="youHave">
+                <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icon_clock.png"/>
+
+                <p>Соблюдение сроков проектирования.</p>
+            </div>
+        </div>
+        <div class="clr call">
+            <a class="button2 goFormModal" href="#">
+                <div class="cell">заказать звонок</div>
+            </a>
+        </div>
+    </div>
+</section>
+
 <section class="price">
 	<div class="wrap" id="service">
 	<h1>Три основных пакета</h1>
@@ -513,75 +583,7 @@
 	</div>
 </section>
 
-<section class="triangle2 job" id="job">
-	<div class="wrap clearfix">
-		<h1>Наши работы</h1>
-		<?php $this->renderPartial('//layouts/_galery_1'); ?>
-		<?php $this->renderPartial('//layouts/_galery_2'); ?>
-		<?php $this->renderPartial('//layouts/_galery_3'); ?>
-		<div class="clr"></div>
-		<?php $this->renderPartial('//layouts/_galery_4'); ?>
-		<?php $this->renderPartial('//layouts/_galery_5'); ?>
-		<?php $this->renderPartial('//layouts/_galery_6'); ?>
-		<div class="clr"></div>
-		<?php $this->renderPartial('//layouts/_galery_7'); ?>
-		<?php $this->renderPartial('//layouts/_galery_8'); ?>
-	</div>
-</section>
 
-<section class="zakaz triangle3" id="zakaz">
-    <div class="wrap clearfix">
-        <h1>Закажите дизайн-проект сегодня и вы получите</h1>
-
-        <div class="fl">
-            <div class="youHave relative">
-                <div class="ribbon"></div>
-                <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icon_att.png"/>
-
-                <p>Бесплатно<br>3 варианта планировки.</p>
-            </div>
-        </div>
-        <div class="fl">
-            <div class="youHave2">
-                <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icon_smile.png"/>
-
-                <p>Индивидуальный интерьер, только под Ваши требования.</p>
-            </div>
-        </div>
-        <div class="fl">
-            <div class="youHave">
-                <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icon_doc.png"/>
-
-                <p>Качественная проектная документация.</p>
-            </div>
-        </div>
-        <div class="clr"></div>
-        <div class="fl">
-            <div class="youHave">
-                <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icon_circle.png"/>
-
-                <p>Гарантия эксклюзивности дизайн-проекта!</p>
-            </div>
-        </div>
-        <div class="fl">
-            <div class="youHave3">
-                <p>Расчёт сметы, а также скидки дизайнера на отделочные материалы у партнёров поставщиков.</p>
-            </div>
-        </div>
-        <div class="fl">
-            <div class="youHave">
-                <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/icon_clock.png"/>
-
-                <p>Соблюдение сроков проектирования.</p>
-            </div>
-        </div>
-        <div class="clr call">
-            <a class="button2 goFormModal" href="#">
-                <div class="cell">заказать звонок</div>
-            </a>
-        </div>
-    </div>
-</section>
 
 <section class="footer" id="footer">
     <div class="wrap">
