@@ -81,6 +81,7 @@
 		<div class="clr"></div>
 		<?php $this->renderPartial('//layouts/_galery_7'); ?>
 		<?php $this->renderPartial('//layouts/_galery_8'); ?>
+		<?php $this->renderPartial('//layouts/_galery_9'); ?>
 	</div>
 </section>
 
