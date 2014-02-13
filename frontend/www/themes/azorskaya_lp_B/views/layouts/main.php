@@ -717,11 +717,11 @@
 
 
 <!-- Точка з -->
-<section class="marginTop30" ng-controller="ContactController">
+<!--<section class="marginTop30" ng-controller="ContactController">
 	<div class="container" id="zahvat2">
-        <div class="contact pull-left">
+        <div class="contact pull-left">-->
             <!-- Contact Form -->
-            <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('BOTTOM_FORM_B'); return true;">
+           <!-- <form method="POST" id="contact-form" name="ContactForm" novalidate ng-submit="leftContact($event)" onsubmit="yaCounter23855146.reachGoal('BOTTOM_FORM_B'); return true;">
                 <input type="text" name="name" class="fields name" placeholder="Ваше имя..." ng-model="leftContactModel.name" />
                 <input type="text" name="phone" class="fields phone" placeholder="Ваш телефон..." ng-model="leftContactModel.phone" ng-required="true" />
                 <input type="text" name="comfortTime" class="fields time" placeholder="Удобное время звонка..." ng-model="leftContactModel.comfortTime" />
@@ -729,15 +729,15 @@
             </form>
             <div class="success" ng-show="sended">Заявка отправлена.</div>
 			<div class="error" ng-show="ContactForm.phone.$dirty && ContactForm.phone.$invalid">Заполните поле "Ваш телефон".</div>
-        </div>
+        </div>-->
 		<!-- Subscription-form -->
-		<div class="subscribe pull-right">
+		<!--<div class="subscribe pull-right">
 			<h2 class="zahvat-title">Оставьте вашу заявку</h2>
 			<p>на проект, и наш дизайнер свяжется с вами для обсуждения технического задания.</p>
 		</div>
 	</div>
 	<div class="marginBottom30"></div>
-</section>
+</section>-->
 
 <section class="marginTop30">
 	<div class="container centered" id="holder1">
