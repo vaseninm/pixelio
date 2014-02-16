@@ -70,6 +70,7 @@
 
 <section class="triangle2 job" id="job">
 	<div class="wrap clearfix">
+		<div class="descriptor"><span>Студия дизайна интерьеров Инны Азорской</span><br>Готовый проект точно в срок за 3 недели от <?= Vars::get('threeWeekWorks') ?> р.м<sup>2</sup></div>
 		<h1>Наши работы</h1>
 		<?php $this->renderPartial('//layouts/_galery_1'); ?>
 		<?php $this->renderPartial('//layouts/_galery_2'); ?>

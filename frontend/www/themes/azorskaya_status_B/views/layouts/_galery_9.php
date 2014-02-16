@@ -8,7 +8,7 @@
         </div>
         <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/job/thumb_job_9.jpg"/>
     </div>
-    <p class="jobDesc">Квартира в Москве, площадь 140 м<sup>2</sup></p>
+    <p class="jobDesc">Квартира в Москве, площадью 140 м<sup>2</sup></p>
 
     <div class="hiddenGalery">
         <a href="<?= Yii::app()->theme->baseUrl ?>/files/img/job/job_9/02.jpg" class="fancybox-media"

@@ -227,7 +227,7 @@ SECTION JORNAL
 .publcTitle3 a, 
 .publcTitle4 a, 
 .publcTitle5 a, 
-.publcTitle6 a{color:#fff;text-decoration:none}
+.publcTitle6 a{color:#fff;text-decoration:none;display:block}
 .publcTitle1{position:absolute;right:234px;top:322px;width:143px;height:20px;
 	-webkit-transform: rotate(-10deg);
 	-moz-transform: rotate(-10deg);
@@ -499,6 +499,8 @@ a.button div{width:490px;height:58px;}
 /************************************************************************************
 SECTION JOB
 *************************************************************************************/
+.descriptor{color:#fff;font-size:40px;text-align:center;padding-top:40px;}
+.descriptor span{font-size:58px;font-family:PFDinTextCondProMedium,"Trebuchet MS","Helvetica CY",sans-serif}
 .job h1{color:#E4E7D4;padding:40px 0 32px 0;text-transform:uppercase;font-size:70px;text-align:center;font-weight: 200;font-family: PFDinTextCondProMedium, "Trebuchet MS", "Helvetica CY", sans-serif;}
 .job .fl{width:340px;text-align:center}
 .triangle2{padding-bottom:30px;background: #808765 url(../img/triangle2.jpg) no-repeat 50% 100%;/*B*/border-top:16px solid #444a2e/*B*/}

@@ -32,43 +32,43 @@
 
         <div id="title-7-1" class="info hidden">
             <h2>Квартира в Москве, площадью 70 м<sup>2</sup> №1</h2>
-            <div class="fancybody">...</div>
+            <div class="fancybody">Главное украшение «студии» - необычное фотопанно  на керамическое плитке фартука с  изображением спящего младенца.</div>
         </div>
         <div id="title-7-2" class="info hidden">
             <h2>Квартира в Москве, площадью 70 м<sup>2</sup> №2</h2>
-            <div class="fancybody">...</div>
+            <div class="fancybody">Одну стену прихожей украсили композицией из зеркал</div>
         </div>
         <div id="title-7-3" class="info hidden">
             <h2>Квартира в Москве, площадью 70 м<sup>2</sup> №3</h2>
-            <div class="fancybody">...</div>
+            <div class="fancybody">Неповторимые интонации интерьеру придает декоративное панно сделанное по заказу на основе фотоматериала бельгийской фотохудожницы Анны Гедес.</div>
         </div>
         <div id="title-7-4" class="info hidden">
             <h2>Квартира в Москве, площадью 70 м<sup>2</sup> №4</h2>
-            <div class="fancybody">...</div>
+            <div class="fancybody">Отделанная в светлых тонах прихожая выглядит просторнее.</div>
         </div>
         <div id="title-7-5" class="info hidden">
             <h2>Квартира в Москве, площадью 70 м<sup>2</sup> №5</h2>
-            <div class="fancybody">...</div>
+            <div class="fancybody">На общем сдержанном фоне немногие красные детали выглядят нарядно.</div>
         </div>
         <div id="title-7-6" class="info hidden">
             <h2>Квартира в Москве, площадью 70 м<sup>2</sup> №6</h2>
-            <div class="fancybody">...</div>
+            <div class="fancybody">Центром композиции в ванной стала овальная купель на ножками перегородка украшенная панно из мелкой мозаики.</div>
         </div>
         <div id="title-7-7" class="info hidden">
             <h2>Квартира в Москве, площадью 70 м<sup>2</sup> №7</h2>
-            <div class="fancybody">...</div>
+            <div class="fancybody">Зеркальные створки шкафа-купе в спальной из стекла и дверь в ванную «расширили» узкий проход между помещениями</div>
         </div>
         <div id="title-7-8" class="info hidden">
             <h2>Квартира в Москве, площадью 70 м<sup>2</sup> №8</h2>
-            <div class="fancybody">...</div>
+            <div class="fancybody">Дневной свет в ванную из спальной проникает  благодаря стеклянной перегородке с дверью по всей ширине и высоте проема. </div>
         </div>
         <div id="title-7-9" class="info hidden">
             <h2>Квартира в Москве, площадью 70 м<sup>2</sup> №9</h2>
-            <div class="fancybody">...</div>
+            <div class="fancybody">Ступени в ванную облицованы мозаикой.</div>
         </div>
         <div id="title-7-10" class="info hidden">
             <h2>Квартира в Москве, площадью 70 м<sup>2</sup> №10</h2>
-            <div class="fancybody">...</div>
+            <div class="fancybody">Узкую ванную комнату визуально расширяет выгнутая перегородка с мозаичным панно.</div>
         </div>
     </div>
 </div>
