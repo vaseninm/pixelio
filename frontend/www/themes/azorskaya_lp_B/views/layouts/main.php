@@ -63,7 +63,13 @@
 				<div id="top-email"><p>info@azorskaya.ru</p></div>
 			</div>
 		</div>
+		<div class="marginTop30">
+		<div id="holder1" class="container">
 		<h1>ДИЗАЙН ИНТЕРЬЕРА ОТ ПЕРВОЙ ПЛАНИРОВКИ ДО ВЪЕЗДА</h1>
+		<h2>Готовый проект с нуля за 1 месяц от <?= Vars::get('threeWeekWorks') ?> р.м<sup>2</sup></h2>
+		<h3>Профессиональная строительная бригада под авторским надзором дизайнера. Точное соответствие ТЗ.</h3>
+		</div>
+		</div>
 	</header>
 <!-- /Header div -->
 

@@ -585,7 +585,101 @@
 	</div>
 </section>
 
+<section class="jornal" id="about">
+    <div class="shadow"></div>
+    <div class="wrap relative jornalSection clearfix">
+        <div class="desc fl">Интерьер от известного дизайнера Инны Азорской …</div>
+        <div class="desc2 fr">
+            <p>Наша студия выполнит весь комплекс проектных и строительных работ по Вашей квартире, начиная от дизайна
+                проекта и заканчивая Вашим переездом в новую квартиру.</p>
+        </div>
 
+        <div class="publications"></div>
+
+        <div class="allPublication"><a href="#" id="allPublication" onclick="yaCounter23550703.reachGoal('VIEW_ALL_PUBLICATION_B'); return true;"></a></div>
+
+        <div class="publcTitle1"><a href="#" id="2013_08" onclick="yaCounter23550703.reachGoal('VIEW_08_2013_PUBLICATION_B'); return true;">Август 2013</a></div>
+        <div class="publication1"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2013.jpg"/>
+        </div>
+
+        <div class="publcTitle2"><a href="#" id="2013_03" onclick="yaCounter23550703.reachGoal('VIEW_03_2013_PUBLICATION_B'); return true;">Март 2013</a></div>
+        <div class="publication2"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa03_2013.jpg"/>
+        </div>
+
+        <div class="publcTitle3"><a href="#" id="2013_02" onclick="yaCounter23550703.reachGoal('VIEW_02_2013_PUBLICATION_B'); return true;">Февраль 2013</a></div>
+        <div class="publication3"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa02_2013.jpg"/>
+        </div>
+
+        <div class="publcTitle4"><a href="#" id="2012_08" onclick="yaCounter23550703.reachGoal('VIEW_08_2012_PUBLICATION_B'); return true;">Август 2012</a></div>
+        <div class="publication4"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2012.jpg"/>
+        </div>
+
+        <div class="publcTitle5"><a href="#" id="2009_11" onclick="yaCounter23550703.reachGoal('VIEW_11_2009_PUBLICATION_B'); return true;">Ноябрь 2009</a></div>
+        <div class="publication5"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2009.jpg"/>
+        </div>
+
+        <div class="publcTitle6"><a href="#" id="2008_11" onclick="yaCounter23550703.reachGoal('VIEW_11_2008_PUBLICATION_B'); return true;">Ноябрь 2008</a></div>
+        <div class="publication6"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2008.jpg"/>
+        </div>
+
+    </div>
+</section>
+
+<section class="triangle1"></section>
+
+<section class="best">
+    <div class="wrap">
+        <h1>Звоните и заказывайте</h1>
+
+        <!--<div class="clearfix bestContainer">
+            <div class="fl">
+                <div class="bestItem cell">
+                    <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/best1.png"/>
+
+                    <p>Более 50 реализованных проектов</p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="bestItem cell">
+                    <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/best2.png"/>
+
+                    <p>Публикации в известных журналах</p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="bestItem cell">
+                    <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/best3.png"/>
+
+                    <p>Профессионально подготовленная документация</p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="bestItem cell">
+                    <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/best4.png"/>
+
+                    <p>Индивидуальный - только Ваш дизайн интерьера</p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="bestItem cell">
+                    <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/best5.png"/>
+
+                    <p><span>6 лет опыта работы</span></p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="bestItem cell">
+                    <img src="<?= Yii::app()->theme->baseUrl ?>/files/img/best6.png"/>
+
+                    <p>Выдерживание сроков проектирования</p>
+                </div>
+            </div>
+        </div>-->
+        <!--<a href="#" class="button1 goFormModal">
+            <div class="cell">заказать обратный звонок</div>
+        </a>-->
+    </div>
+</section>
 
 <section class="footer" id="footer">
     <div class="wrap">
