@@ -39,7 +39,7 @@
             <td class="aboutTable" id="jsMenu"><a href="#zakaz">Заказать</a></td>
             <td class="imgTable"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/t1.jpg"/></td>
             <td class="jobTable" id="jsMenu"><a href="#job">Примеры работ</a></td>
-            <!--<td class="clientTable" id="jsMenu"><a href="#client">Наши клиенты</a></td>--><td class="imgTable"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/t5.jpg"/></td>
+            <td class="aboutTable" id="jsMenu"><a href="#about">О нас</a></td><!--<td class="imgTable"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/t5.jpg"/></td>-->
             <td class="formTable" colspan="2" valign="top">
                 <div class="phone">+7 (905) 539 57 58</div>
                 <div class="town">Москва и Московская область</div>
