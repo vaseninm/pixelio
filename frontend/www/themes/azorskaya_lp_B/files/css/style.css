@@ -300,8 +300,8 @@ p.copy a:hover{color:#}
 	.es-nav span.es-nav-prev{background-position:18px}*/
 	h2.jornalTitle{font-weight:200;margin-bottom:10px; margin-left:0px;font-size:20px}
 	}
-@media(max-width:747px){
-
+@media(max-width:800px){
+	h2.jornalTitle{font-size:16px}
 	}
 @media(max-width:640px){
 	.da-slide h1{font-size:32px}
