@@ -313,6 +313,14 @@ p.copy a:hover{color:#}
 	.otziv{padding:0 20px 20px 20px}
 	/*.es-nav span.es-nav-next,.es-nav span.es-nav-prev{background-size:28px;background-position:23px;width:70px;height:70px;background-color:#f4f4f4;border-radius:40px;z-index:2000}
 	.es-nav span.es-nav-prev{background-position:18px}*/
+	.static-slide p{position:absolute;width:45%;top:90px;left:20px;color:#333;font-size:15px;height:auto;overflow:hidden;font-style:italic;font-weight:400;font-style:italic}
+	.static-slide .zayavka{position:absolute;left:5px;bottom:10px;width:40%;min-width:180px}
+	.box-modal{width:300px}
+	.static-slide{height:500px}
+	.cnt-title, .boly-title, .good-title, .zahvat-title, header h1{font-size:28px !important}
+	h2.coffe, h2.gray-title, .privacyContent h1, header h3{font-size:20px !important}
+	.gray-title span{font-size:16px}
+	.box-modal2{width:280px}
 	}
 @media(max-width:480px){
 	/*.name{width:43%;margin-right:6px}
@@ -322,6 +330,7 @@ p.copy a:hover{color:#}
 	/*.es-nav span.es-nav-next{right:3px}
 	.es-nav span.es-nav-prev{left:3px}*/
 	.items{width:80%}
+	
 	}
 @media(max-width:320px){
 	/*.email-box{width:250px!important}
