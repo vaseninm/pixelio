@@ -201,7 +201,7 @@
 				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client1.jpg" alt="" class="">
 				<p><br>Синицина Наталья<br> Москва</p>
 			</div>
-			<div class="span4">
+			<div class="span4 centered">
 				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1-1.jpg" class="fancybox-media" rel="portfolio1"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/thumb1a.jpg" alt=""></a>
 				<div class="hiden">
 					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1-2.jpg" class="fancybox-media" rel="portfolio1">&nbsp;</a>
@@ -234,7 +234,7 @@
 				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client2.jpg" alt="" class="">
 				<p><br>Щербединская Екатерина<br> Москва</p>
 			</div>
-			<div class="span4">
+			<div class="span4 centered">
 				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2-1.jpg" class="fancybox-media" rel="portfolio2"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/thumb2a.jpg" alt=""></a>
 				<div class="hiden">
 					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2-2.jpg" class="fancybox-media" rel="portfolio2">&nbsp;</a>
@@ -266,7 +266,7 @@
 				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client3.jpg" alt="" class="">
 				<p><br>Сафронова Екатерина<br> Москва</p>
 			</div>
-			<div class="span4">
+			<div class="span4 centered">
 				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-1.jpg" class="fancybox-media" rel="portfolio3"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/thumb3a.jpg" alt=""></a>
 				<div class="hiden">
 					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-2.jpg" class="fancybox-media" rel="portfolio3">&nbsp;</a>
@@ -302,7 +302,7 @@
 				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client4.jpg" alt="" class="">
 				<p><br>Ольга<br>хозяйка дома</p>
 			</div>
-			<div class="span4">
+			<div class="span4 centered">
 				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-1.jpg" class="fancybox-media" rel="portfolio4"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/thumb4a.jpg" alt=""></a>
 				<div class="hiden">
 					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-2.jpg" class="fancybox-media" rel="portfolio4">&nbsp;</a>
@@ -344,7 +344,7 @@
 				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client5.jpg" alt="" class="">
 				<p><br>Елена Степанова<br> Москва</p>
 			</div>
-			<div class="span4">
+			<div class="span4 centered">
 				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c5-1.jpg" class="fancybox-media" rel="portfolio5"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/thumb5a.jpg" alt=""></a>
 				<div class="hiden">
 					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c5-2.jpg" class="fancybox-media" rel="portfolio5">&nbsp;</a>
@@ -480,7 +480,7 @@
 		<div class="row-fluid">
 			<div class="span7">		
 				<div class="row-fluid">
-					<div class="span4">
+					<div class="span4 centered">
 						<div class="items" style="width:94%">
 							<h2 class="jornalTitle">Август 2013</h2>
 							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2013-1.jpg" class="fancybox-media" rel="pressa1"><img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2013.jpg" alt="" /></a>
@@ -490,7 +490,7 @@
 							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2013-3.jpg" class="fancybox-media" rel="pressa1">&nbsp;</a>
 						</div>
 					</div>
-					<div class="span4">
+					<div class="span4 centered">
 						<div class="items" style="width:94%">
 							<h2 class="jornalTitle">Март 2013</h2>
 							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa03_2013-1.jpg" class="fancybox-media" rel="pressa2"><img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa03_2013.jpg" alt="" /></a>
@@ -502,7 +502,7 @@
 							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa03_2013-5.jpg" class="fancybox-media" rel="pressa2">&nbsp;</a>
 						</div>
 					</div>
-					<div class="span4">
+					<div class="span4 centered">
 						<div class="items" style="width:94%">
 							<h2 class="jornalTitle">Февраль 2013</h2>
 							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2013-1.jpg" class="fancybox-media" rel="pressa3"><img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2013.jpg" alt="" /></a>
@@ -513,7 +513,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="row-fluid">
+				<div class="row-fluid centered">
 					<div class="span4">
 						<div class="items" style="width:94%">
 							<h2 class="jornalTitle">Август 2012</h2>
@@ -525,7 +525,7 @@
 							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa08_2012-4.jpg" class="fancybox-media" rel="pressa4">&nbsp;</a>
 						</div>
 					</div>
-					<div class="span4">
+					<div class="span4 centered">
 						<div class="items" style="width:94%">
 							<h2 class="jornalTitle">Ноябрь 2009</h2>
 							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2009-1.jpg" class="fancybox-media" rel="pressa5"><img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2009.jpg" alt="" /></a>
@@ -536,7 +536,7 @@
 							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2009-4.jpg" class="fancybox-media" rel="pressa5">&nbsp;</a>
 						</div>
 					</div>
-					<div class="span4">
+					<div class="span4 centered">
 						<div class="items" style="width:94%">
 							<h2 class="jornalTitle">Ноябрь 2008</h2>
 							<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2008-1.jpg" class="fancybox-media" rel="pressa6"><img class="jornal" src="<?= Yii::app()->theme->baseUrl ?>/files/img/pressa/pressa11_2008.jpg" alt="" /></a>

@@ -526,7 +526,7 @@
 				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client1.jpg" alt="" class="">
 				<p><br>Синицина Наталья<br> Москва</p>
 			</div>
-			<div class="span4">
+			<div class="span4 centered">
 				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1-1.jpg" class="fancybox-media" rel="portfolio1"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/thumb1a.jpg" alt=""></a>
 				<div class="hiden">
 					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c1-2.jpg" class="fancybox-media" rel="portfolio1">&nbsp;</a>
@@ -559,7 +559,7 @@
 				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client2.jpg" alt="" class="">
 				<p><br>Щербединская Екатерина<br> Москва</p>
 			</div>
-			<div class="span4">
+			<div class="span4 centered">
 				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2-1.jpg" class="fancybox-media" rel="portfolio2"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/thumb2a.jpg" alt=""></a>
 				<div class="hiden">
 					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c2-2.jpg" class="fancybox-media" rel="portfolio2">&nbsp;</a>
@@ -591,7 +591,7 @@
 				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client3.jpg" alt="" class="">
 				<p><br>Сафронова Екатерина<br> Москва</p>
 			</div>
-			<div class="span4">
+			<div class="span4 centered">
 				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-1.jpg" class="fancybox-media" rel="portfolio3"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/thumb3a.jpg" alt=""></a>
 				<div class="hiden">
 					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c3-2.jpg" class="fancybox-media" rel="portfolio3">&nbsp;</a>
@@ -627,7 +627,7 @@
 				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client4.jpg" alt="" class="">
 				<p><br>Ольга<br>хозяйка дома</p>
 			</div>
-			<div class="span4">
+			<div class="span4 centered">
 				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-1.jpg" class="fancybox-media" rel="portfolio4"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/thumb4a.jpg" alt=""></a>
 				<div class="hiden">
 					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c4-2.jpg" class="fancybox-media" rel="portfolio4">&nbsp;</a>
@@ -669,7 +669,7 @@
 				<img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/client5.jpg" alt="" class="">
 				<p><br>Елена Степанова<br> Москва</p>
 			</div>
-			<div class="span4">
+			<div class="span4 centered">
 				<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c5-1.jpg" class="fancybox-media" rel="portfolio5"><img src="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/thumb5a.jpg" alt=""></a>
 				<div class="hiden">
 					<a href="<?= Yii::app()->theme->baseUrl ?>/files/img/clients/c5-2.jpg" class="fancybox-media" rel="portfolio5">&nbsp;</a>
