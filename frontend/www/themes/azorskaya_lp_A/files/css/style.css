@@ -291,17 +291,35 @@ p.copy a:hover{color:#}
 	.da-slide h1{font-size:42px}
 	.features{width:100%}
 	.contact{width:95%}
-	/*#name{width:44%;margin-right:8px}
-	#email{width:45%}*/
 	.subscribe{width:90%;float:left;margin-left:30px;padding-bottom:30px}
-	/*.es-nav span.es-nav-next,.es-nav span.es-nav-prev{background-size:28px;background-position:23px;width:70px;height:70px;background-color:#f4f4f4;border-radius:40px;z-index:2000}
-	.es-nav span.es-nav-prev{background-position:18px}*/
 	h2.jornalTitle{font-weight:200;margin-bottom:10px; margin-left:0px;font-size:20px}
 	}
-@media(max-width:768px){
+@media(max-width:800px){
+	#logo a{padding:50px 30px}
+	#top-phone, #top-email{width:310px}
+	#top-phone p, #top-email p{font-size:26px}
+	#top-phone span{font-size:16px}
 	h2.jornalTitle{font-size:16px}
+	.box-modal2{width:600px}
+	h2.boly-title, h2.good-title{font-size:30px !important}
+	h2.gray-title{font-size:26px !important}
+	.gray-title span{font-size:20px !important}
+	.myWork-items h4{font-size:16px !important;line-height:16px}
+	.zahvat-title{margin:15px 0}
+	.items h3{font-size:22px !important;line-height:30px}
+	.howWeDo{font-size:20px !important;}
+	.price h2{font-size:24px !important;}
+	}
+@media(max-width:768px){
+	.otziv{padding:0 30px 30px 30px}
+	h2.jornalTitle{font-size:20px}
+	.price h2{font-size:30px !important;}
 	}
 @media(max-width:640px){
+	#logo a{padding:50px}
+	#top-phone, #top-email{width:380px}
+	#top-phone p, #top-email p{font-size:33px}
+	#top-phone span{font-size:20px}
 	.da-slide h1{font-size:32px}
 	#last-box{display:none}
 	.boly-wrapper{width:100%}
@@ -309,27 +327,42 @@ p.copy a:hover{color:#}
 	.main-slider{display:none}
 	.static-slide{display:block}
 	.otziv{padding:0 20px 20px 20px}
-	/*.es-nav span.es-nav-next,.es-nav span.es-nav-prev{background-size:28px;background-position:23px;width:70px;height:70px;background-color:#f4f4f4;border-radius:40px;z-index:2000}
-	.es-nav span.es-nav-prev{background-position:18px}*/
 	.static-slide p{position:absolute;width:45%;top:90px;left:20px;color:#333;font-size:15px;height:auto;overflow:hidden;font-style:italic;font-weight:400;font-style:italic}
 	.static-slide .zayavka{position:absolute;left:5px;bottom:10px;width:40%;min-width:180px}
-	.box-modal{width:300px}
-	.static-slide{height:500px}
-	.cnt-title, .boly-title, .good-title, .zahvat-title, header h1{font-size:28px !important}
+	.box-modal{width:500px}
+	.static-slide{height:450px}
+	.cnt-title, .zahvat-title, header h1{font-size:28px !important}
+	.boly-title, .good-title{}
 	h2.coffe, h2.gray-title, .privacyContent h1, header h3{font-size:20px !important}
 	.gray-title span{font-size:16px}
-	.box-modal2{width:280px}
+	.box-modal2{width:480px}
+	}
+@media(max-width:600px){
+	.box-modal{width:460px}
+	.box-modal2{width:440px}
 	}
 @media(max-width:480px){
-	/*.name{width:43%;margin-right:6px}
-	#email{width:44%}*/
+	.box-modal, .box-modal2{width:320px}
+	.static-slide{height:500px}
+	.gray-title span{font-size:12px !important}
 	.contact,.subscribe{margin-left:15px}
 	.submit-btn{margin-top:10px}
-	/*.es-nav span.es-nav-next{right:3px}
-	.es-nav span.es-nav-prev{left:3px}*/
 	.items{width:80%}
+	
 	}
 @media(max-width:320px){
-	/*.email-box{width:250px!important}
-	#email{width:42%;}*/
+	#logo a{padding:40px 5px}
+	#logo a img{width:238px}
+	#top-phone, #top-email{width:250px}
+	#top-phone p, #top-email p{font-size:20px}
+	#top-phone span{font-size:14px}
+	.cnt-title, .zahvat-title, header h1{font-size:20px !important}
+	header h1{margin-top:10px}
+	header h2{font-size:18px !important}
+	.static-slide h1{font-size:30px !important}
+	.static-slide{height:680px}
+	.static-slide .zayavka{min-width:160px}
+	.features h2{font-size:16px !important}
+	#holder2{display:none}
+	
 	}
