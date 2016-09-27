@@ -1,3 +1,0 @@
-Pixelio
-=======
-Pixelio CMS
